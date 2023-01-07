@@ -1,0 +1,17 @@
+- Metadata
+    - Source: https://medium.com/wholistique/tim-ferriss-system-for-mastering-any-skill-is-pure-genius-f9c43a42c25d
+	- Author: Tim Ferriss
+	- #productivity 
+- Step 1: Make a systematic study of how to effective do something
+    - You can't just read a book, but make it a **systematic process**
+    - Ask the experts in the field you want to succeed in **very specific questions**
+    - Look for patterns from examples and study it
+- Step 2: Apply, track and iterate
+    - Do various A/B testing and keep track of all the logs
+    - Meta analysis of yourself and iterate on notes
+    - Master micro-experiments and documentation
+- Step 3: Follow through
+    - You won't get to test and perfect your system if you don't put in the work
+- Step 4: Reflect and review often
+    - What can I do to make tomorrow better
+    - [[Five minute journal]]

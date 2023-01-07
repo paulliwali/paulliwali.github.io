@@ -1,0 +1,21 @@
+- Daily Notes
+    - Every day, there is a default note being created
+    - In October 2020, I implemented a daily log template for the daily notes for better organization and helps to facilitate some actionable notes
+- Graph Overview
+    - All your notes connected together
+- All Pages
+    - All your notes listed
+- Shortcuts
+    - Add your favorites notes here
+- Note components
+    - Page
+        - Each note resides on a page, and can be interconnected by referencing it with `[[]]` or `#` or `::`
+        - The difference being that `#` only supports notes with a single word
+    - Block
+        - Each point is a block, and can be interconnected between notes by referencing it with `(())`
+    - Typical markdown support with LaTeX math
+    - If you click on the bullet of the block, you can open it up to edit on its own
+    - ==To highlight== use `cmd+h`
+    - To embed images use ![image] (url), for example ![yosemite](https://images.unsplash.com/photo-1498429089284-41f8cf3ffd39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80)
+    - Or I can upload an image by using the backslash and upload from computer
+- Edit themes by adding code to [[roam/css]]

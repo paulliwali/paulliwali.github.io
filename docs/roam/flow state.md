@@ -1,0 +1,2 @@
+- A state of deep work where you lose track of time and can keep going as the work becomes effortless
+- Termed by Csikzentmihalyi in 1975

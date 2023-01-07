@@ -1,0 +1,17 @@
+- Metadata:
+    - Author: Tim Urban
+    - Source: https://waitbutwhy.com/2015/12/the-tail-end.html
+    - #personal #reflection
+- Instead of measuring your life in units of time, you can measure it by events or activities
+    - How many winters
+    - How many Superbowl
+    - How many books to read
+    - How many US presidential elections
+    - How many Chinese food for dinners
+- However, these things have a relatively stable rate but there are things that are very unequally spread out in one's life
+    - Time with parents - once you graduate from high school, you have used up 93% of in-person parent time - **we are in the tail end**
+    - Time with siblings, friends, etc
+- Takeaways
+    - Living in the same place as the people you love matters
+    - Priorities matter - make sure the list of people you spend time with is created by you
+    - Quality time matters - keep the fact that you are in the tail end in your mind when you are with them and treat this time as precious as anything else

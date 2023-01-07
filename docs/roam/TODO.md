@@ -1,0 +1,2 @@
+- Testing a scenario, I think the reason my queries for today’s tasks is catching tasks with dated time is because the query for `[[today]]` is actually referencing the daily log’s time
+    - Yup, confirmed, making tasks in the daily log will be caught in that day regardless of the date tag afterwards

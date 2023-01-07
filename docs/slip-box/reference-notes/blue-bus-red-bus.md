@@ -1,0 +1,11 @@
+- **Metadata**
+    - Author: Mayberry 1973
+    - Tags: #statistics 
+- A famous example depicting the shortcomings of N-way structure for alternatives that are correlated
+- Consider a city where 50% of travelers choose car (C) and 50% choose bus (B)
+    - Assume: $C_C = C_B$
+    - In a __stroke of genius__, the manager paint half the buses red (RB) and half the buses blue (BB), while maintaining the same level of performance: $C_{RB} = C_{BB} = C_C$
+    - Thus, the probability of the car using logit formulation is now: $$P_C = \frac{\exp(-\beta C_C)}{\exp(-\beta C_C) + \exp(-\beta C_{RB}) + \exp(-\beta C_{BB})}$$
+	- Which given the above assumptions, reduces the probability of a user choosing a car to decrease of 50% to 33%
+- Applying the __nested structure__ to this problem gives a more reasonable result: $$P_C = \frac{1}{1+exp(-\lambda_1 (C_B - C_C))}$$ where $$P_B = 1-P_C$$; $$P_{RB} = \frac{1}{1+\exp(-\lambda_2(C_{BB}-C_{RB})}$$; $$P_{BB} = 1 - P_{RB}$$; $$C_B = \frac{-1}{\lambda_2}\log(\exp(-\lambda_2 C_{RB}) + \exp(-\lambda_2 C_{BB}))$$; And $\lambda_1$ and $\lambda_2$ are the primary and secondary split parameters
+    - If $C_B = C_C$, this model will correctly assign 50% to the car and 25% to each bus options

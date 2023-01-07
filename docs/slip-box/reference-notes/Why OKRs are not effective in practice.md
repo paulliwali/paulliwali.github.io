@@ -1,0 +1,12 @@
+* They don't take enough of the leader's time
+	- OKRs should be tightly integrated between individuals, teams, groups and company
+	- Leaders should spend most of the time setting goals and measurements, instead of on execution
+- The process starts too late and takes too long
+	- This becomes a death spiral with project deadlines
+- OKRs aren't fully committed to
+	- You might be already working on something that is not aligned with OKRs and convince yourself that is also very important
+- There are no real consequences for failing OKRs
+	- Just write new OKRs or push them to the next quarter
+	- ==Goals should be the last thing you consider, identify the high levels of the stack clearly articulated such that the goals make sense and measure progress towards a strategic outcome==
+- Strategy is the overarching direction the company is moving towards, they are **not goals**
+	- Mission -> Company Strategy -> Product Strategy -> Product Roadmap -> Product Goals

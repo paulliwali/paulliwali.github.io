@@ -1,0 +1,83 @@
+- ==Retrospective is highlighted==
+- 2022
+    - Q1
+        - [ ] Finish [[Why We Sleep]]
+            - ==[0] Didn't read at all this quarter, been spending more time on iPad before bed - need to curb and change this habit in the next quarter==
+        - [x] Teach Nobo "bang" and "heel" command
+            - ==[0.9] "Bang" is not as consistent as some of her best tricks but she knows of it and can do it. "Heel" (command is follow) is in good progress, with treat on hand she can follow closely on sidewalks for a block or two==
+        - [x] Write blog on learn about the yield curve and prediction of recession, and answer how long after the inverse yield curve occurs do recession occur
+            - learn about the yield curve and prediction of recession, and answer how long after the inverse yield curve occurs do recession occur
+            - ==[0] Didn't do==
+        - Finish the [[aaronson-oracle-baseball]] fork
+            - ==[0] Didn't do==
+    - Q2
+        - [x] Finish [[Why We Sleep]] #books
+            - ==[1] Done==
+        - [x] Write blog on learn about the yield curve and prediction of recession, and answer how long after the inverse yield curve occurs do recession occur #finance
+            - ==[1] Done==
+        - [ ] Finish the [[aaronson-oracle-baseball]] fork #programming
+            - ==[0] Didn't do==
+        - [x] Diversify investments #finance
+			- Pay back credit card debit (15k)
+			- Max annual contribution to traditional IRA account
+			- Change 401(k) contribution to 100% to max out contributions of $20,500 for 2 pay cheques and then change to 12% for the rest of the year
+				- Changed to 90% on [[May 18th, 2022]
+			- ==[1] Done==
+    - Q3
+        - [ ] Finish [[Inside of a Dog - What Dogs See, Smell, and Know]]
+        - [x] Book club with Aaron on [[Bad Blood]]
+            - ==[1] Done== had our first meeting for [[☕️ Finer Things Book Club]]
+        - [ ] Finish the [[aaronson-oracle-baseball]] fork
+	        - ==[0] Did not do== 
+        - [ ] Finish [[Hands On Machine Learning]]
+	        - ==[0.5] Did a few chapters==
+	- Q4
+		- [ ] Finish [[Black Swan]]
+			- ==0.5 halfway through==
+		- [ ] Finish the [[aaronson-oracle-baseball]] fork
+			- ==0 Did not do==
+		- [ ] Finish [[Hands On Machine Learning]]
+			- ==0.5 Did not do==
+	- Year in review
+		- I didn't feel like I was productive in programming and self-learning
+		- Was more accountable in reading books
+- 2023
+	- Goals for the year
+		- Consistent progress on reading, meditating and exercising
+			- [[◶ Trackers]]
+		- 1 programming side project
+			- [[aaronson-oracle-baseball]]
+			- [[number voting website]]
+		- 2 programming skill
+			- [[Hands On Machine Learning]]
+			- Work on [[🕸 Personal Website]]
+		- 10 books
+			- [[Black Swan]]
+			- [[The Lonely City]]
+			- [[Principles]]
+			- [[Tools of Titans]]
+			- [[How to Win Friends & Influence People]]
+			- [[Crying in H Mart]]
+			- [[Liar's Poker]]
+			- [[Atomic Habits]]
+			- [[I want to die but I want to eat tteokbokki]]
+			- [[Inadequate Equilibrium]]
+		- 5 blog posts
+			- [[Movie poster characteristics and pie charts]]
+			- [[ChatGPT article on yield curve inversion]]
+			- [[Til2022]]
+		- 2 physical goals
+			- Hike a 4+ day hike
+				- [[West Coast Trial]]
+			- 180lbs
+	- Q1
+		- [x] Publish [[Til2022]]
+		- [x] Migrate to Docusuarus for [[🕸 Personal Website]]
+		- [ ] Finish [[Black Swan]]
+		- [ ] Personal Finance
+			- [x] Adjust 401k contribution to get full employer match
+			- [ ] Transfer IRA to Robinhood, convert to ROTH
+			- [ ] Contribute annual max to ROTH
+	- Q2
+	- Q3
+	- Q4

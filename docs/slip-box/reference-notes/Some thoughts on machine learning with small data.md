@@ -1,0 +1,13 @@
+Metadata
+	- Author: [niklasriewald](https://niklasriewald.com/author/niklasriewald/)
+	- URL: https://niklasriewald.com/2022/06/02/some-thoughts-on-machine-learning-with-small-data/
+	- #data-science #article 
+- Summary: Techniques for making machine learning work with small data is not discussed upon because companies usually boast about large data-sets. However, lots of the time there are only limited amount of data available
+	- Metalearning techniques are useful here to train on __adjacent problems__
+		- Few-shot learning, transfer learning and multi-task learning
+		- Augmenting data or create synthetic data
+		- https://www.youtube.com/watch?v=0rZtSwNOTQo&list=PLoROMvodv4rMC6zfYmnD7UG3LVvwaITY5
+		- https://arxiv.org/abs/2009.14379
+	- Inject domain knowledge by determining constraints like monotonically, convexity, and pairwise trust into the model directly
+		- Your assumption has to be accurate and holds up over time
+- Notes:

@@ -1,0 +1,8 @@
+- **Metadata**
+    - Source: https://www.rand.org/blog/2020/05/leading-with-the-proper-use-of-scientific-evidence.html
+    - Author: Tom Ling
+    - Tags: #science
+- ==Science should be based on a willingness to be wrong and an openness to new evidence==
+- Poor science is not when it is wrong in its predictions, but when it claims an unwarranted level of certainty
+- A fact is like a note, it is the same in different pieces of music but can act in very different roles and invoke different responses
+    - ==Knowing the distribution and frequency of the note in a piece will also not tell you how the piece sounds==

@@ -1,0 +1,33 @@
+- **Metadata**
+    - #journal #personal #braindump
+- A list of thoughts I have while working through this breakup
+- I cry more times than I eat.
+- Struggling to move on despite setting myself up with the right environment around me 
+- My unconscious mind start to wander into the past and re examine __EVERYTHING__ through this lens and it is not healthy 
+- One moment I am sad, another moment I am angry, then I become furious and I become sad. 
+- Tough times don't last, tough people do
+- I am able to separate the root cause and the mistake into two things. 
+- And I am having a lot of trouble when I think about what she did - she lied to me.
+- I don't know how to feel about it except just anguish and loneliness 
+- Somedays I can understand the situation and feel somewhat at ease with it. Somedays it's so overwhelming that I think I am living a dream. 
+- There are two big parts. One has to do with us and one has to do with the actual event. Without her the second component grows, lingers and multiplies with my wandering thoughts. It sometimes consume my entire mind and sends me down a dark path of self hatred. That part will never be gone but can it be healed? 
+- I somehow convinced myself thinking about the actual event does no good because I won't know how the different scenarios will actually impact how I feel. If in time the situation comes up where I have to examine it because she wants to make this work. Then I will examine it. 
+- Right now it's just letting time do its work and live my life one thing at a time. Because that's all I can ever do. 
+- Be grateful for meeting her and making these memories. Those are important to my life and who I am as a person. So just be thankful that our relationship even happened. 
+- In an alternative universe. I would not be sad or heartbroken because we never had 8 years with each other. And I don't want to live that universe. 
+- Be grateful that this makes me a better human being with better sense of myself and better equipped in coping with difficult emotions. 
+- I misjudged her mental fortitude and her ability to take on pressure. I thought that from her studying habits and work ethic she is capable of doing anything. But I guess that's just not true. Or her heart has moved on already and I am just painting an optimistic picture. 
+- She has no feelings for me and did those things. 
+- She wants something new and fun, and was able to lie to me. Why should I hold onto someone like that? Why should I care about someone like that?
+- “Soulmates are not found, they are made.” #quotes
+- It takes time and effort to make a bond like that and it will take more time and effort to repair one. 
+- The idea that more experience will make one more sure about a decision is not wrong but it doesn't mean one can't make a decision without it. If it's hard to make that decisions without knowing all the alternatives, that's normal parts of life. It comes with a type of mentality or personality and I think I need someone like that. 
+- Feeling lot better, able to get on with my daily routines of healthy living. Isn't thinking so negatively about what happened. There are still events that triggers more emotional responses and times I would imagine different outcomes of the future. However overall I am in a better place for me to take care of myself. 
+- Maybe my timeline is moving too fast but that's just who I am. Last night I dreamed about the breakup and I was not sad or mad. I was just okay. It kept me up because I am just running through different scenarios but none of them made me emotional. 
+- I think it will be very difficult for me to accept her as my girlfriend again. But life is funny, it is never the way you plan it to be.
+- There is no perfect person, you need to think about systems that can keep the two of you in a good spot. 
+- I like a "clean" fighter, someone who can navigate difficult times and approach conflicts from a POV that is for the betterment of the relationship.
+- I like someone who can derive satisfaction from doing the things they like. Does not need the approval of the public to justify doing something they want to do. 
+- I think that someone who acts with everyone else is eventually how that person will act with you. No one is the exception to the rule, and don't rely on being the exception to the rule forever. Find someone that acts how you like them to act to strangers, acquaintances, family, friends and you. 
+- Happiness is when you are content with imperfections. Find someone who is truly happy with themselves because you can work on the relationship together. 
+- “I had all and then most of you, some and now none of you” #quotes

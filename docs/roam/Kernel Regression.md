@@ -1,0 +1,9 @@
+- A kernel is a density function that satisfies the following 3 properties
+    - Symmetric: $$K(-x) = K(x)$$
+    - Sum to 1: $$\int{K(x)dx=1}$$
+    - Non negative: $$K(x)>=\forall{x}$$
+- Using the kernel function, we can map the feature variables to a higher dimension, then the problem can be easily classified or predicted
+- For example, a cluster of points on a 2D plane might not be able to be classified with a line; but when mapped to a 3D plane it might be able to be classified with a hyperplane
+- **Polynomial kernel** is a commonly used function where it maps the feature to the various higher powered combinations
+    - $$X = (x_1, x_2)$$
+    - $$\phi{(X)} = (x_1, x_2)^2 = (x^2_1 + 2x_1x_2 + x^2_2)$$ 

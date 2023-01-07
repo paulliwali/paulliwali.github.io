@@ -1,0 +1,22 @@
+- **Metadata**
+    - Author: Ben Akiva
+    - Source: https://ocw.mit.edu/courses/civil-and-environmental-engineering/1-201j-transportation-systems-analysis-demand-and-economics-fall-2008/lecture-notes/MIT1_201JF08_lec05.pdf
+    - #transportation #academic
+- Framework
+    - Long term and short term decisions create feedback loops
+    - Model this complex process into a feasible set of choices
+- Trip Based
+    - 4-step model, each trip is a connection between an origin and destination
+    - Typical purposes are HBW, HBS, HBO, NHB
+    - Limitations of this approach
+- Tour Based
+    - Chain trips into tours
+    - Lacks an integrated schedule pattern
+    - Doesn't integrate with time (toll schedule, school schedule)
+- Activity Based
+    - Travel is derived from activities
+    - Tours are independent
+    - People face time and space constraint to limit their activities
+    - Activity and travel decisions are made in context of the overall schedule
+    - Activity pattern -> primary tours -> secondary tours
+    - Limitation being that a large choice set can result in unrealistic behavior, and high computation requirement

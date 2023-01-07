@@ -1,0 +1,9 @@
+- 👆 Short Summary (1 takeaway)
+- 🧐 Why I am reading this book?
+    - Start of a book club with Aaron
+- 📖 Chapter reviews
+    - The author goes into some very dry descriptions of fluff description to make the scenes more realistic
+    - The story is gripping but it was written in a documentation style
+    - It shows the power a captivating speaker and charismatic personality can have 
+- 🙊 Great quotes
+- ✅ Actionable items

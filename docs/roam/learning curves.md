@@ -1,0 +1,6 @@
+- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fforever-learning%2Fk7ovDoreED.png?alt=media&token=d7d8a6c7-b9c2-430b-b2e2-2439ef5b6f2c)
+    - The training curve is measuring the cumulative error as more training instances are added. So where there are only 1 or 2 instances, the model is fitting perfectly resulting in 0 RMSE
+    - The validation curve is measuring the cumulative error when applying the trained model to the full validation set, initially the model trained with small set size does not generalize well so the error is high but slowly approaches a the error of the training error
+    - This is a typical graph of an underfitting model
+- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fforever-learning%2Fgq7-mVuttU.png?alt=media&token=3976c9b0-4bb6-4683-994a-e1bc245d3856)
+    - This model is trained using a 10th degree polynomial model and the validation error drops off much more 

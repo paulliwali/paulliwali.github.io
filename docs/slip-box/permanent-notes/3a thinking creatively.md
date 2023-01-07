@@ -1,0 +1,5 @@
+- In order to make progress in a new field, you have to allow your mind to daydream the possibilities and seize that tiny detail that might enlarge itself to become an innovative solution
+    - You can't just bookkeep solutions and instructions from the past and expect to arrive at the solution
+- Also, solutions to problems don't come to you when you are working on it. You arrive at solutions at random times but you can cultivate that environment by talking to yourself like a poet would
+    - Then only when the creative solution strike, then become logical and orderly to document the process
+- [[3b feature-positive effect]]

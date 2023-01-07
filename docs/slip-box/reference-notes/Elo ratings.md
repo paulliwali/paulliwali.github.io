@@ -1,0 +1,14 @@
+- A common ranking system for chess, soccer, e-sports
+- Ratings depend on the final score of each game and where it was played
+- Teams __always__ gain Elo points after winning games and lose points after losing them
+    - More points for upset wins and winning by wider margins
+- The system is zero-sum, however many points one team wins the opposing team loses them
+- K-factor
+    - Determines how quickly the rating reacts to new game results
+    - Optimal k-factor for NBA was found to be 20 by [538](https://fivethirtyeight.com/features/how-we-calculate-nba-elo-ratings/)
+    - This value is higher than baseball and it makes sense because basketball is subject to less randomness and better teams win more often than not
+-  Home court advantage
+    - Set to 100 Elo ranting points in NBA
+- Margin of victory $\frac{(MOV+3)^{0.8}}{7.5+0.006\times elo_{diff}}$
+- Elo ranking is carried over year-to-year to maintain some sense of memory
+    - Uses 3/4 of the rating to start a new season and 1/4 of the league average

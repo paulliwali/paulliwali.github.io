@@ -1,0 +1,3 @@
+- ==Penalizes large errors==
+- Address the problems of ordinary least squares by imposing a penalty on the size of the coefficients
+- The parameter $$\alpha$$ will control the shrinkage which makes the coefficients more robust to collinearity

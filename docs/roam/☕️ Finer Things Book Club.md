@@ -1,0 +1,21 @@
+- [[August 21st, 2022]]
+    - Book: [[Bad Blood]]
+    - What’s your overall impression
+        - A: it was good, read it fast. Fun read. Crime like genre. Some fluff
+        - Give a solid 8.5
+    - What your thoughts on Elizabeth
+        - A: absolutely nutso 
+        - P: being confident and able to talk can go a long way
+    - Favorite character
+        - A: Walgreen tech guy who didn’t believe in Theranos
+        - P: Sunny Belwani because he is crazy
+    - Least favorite character
+        - A: hates Dr J because its the start of the end and the Safeway guy who were both FOMO
+        - P: George Shultz because he sold out his grandson and try to blackmail him
+    - Memorable scene/quote
+        - A: the whole ending part once the first journalistic piece to come out
+        - P: when Elizabeth was able to convince the board to keep and then she fired them
+    - Next book [[Black Swan]]
+        - 3. Monte Cristo [1pt + 1pt]
+        - 1. The Black Swan [3pt + 3pt]
+        - 2. Shoedog [2pt + 2pt]

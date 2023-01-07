@@ -1,0 +1,2 @@
+- One key role the slip-box system serves for our brain is to offload the low rewarding task of memory from our brain, so it can focus on high rewarding tasks of comprehension and synthesis of information for problem solving
+- It requires self-discipline to feed the system with high quality inputs to build this system to be effective when needed 

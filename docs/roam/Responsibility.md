@@ -1,0 +1,12 @@
+- **Metadata**
+    - Author: qntm
+    - URL: https://qntm.org/responsibility
+- [[til2021]] Halting Problem
+    - A problem in computing theory that asks if you were given the description of an arbitrary program and input, can you determine if the program will finish running or run forever
+    - [[Alan Turing]] in 1936 proved that a general algorithm to solve this problem for all program-input pairs is not possible
+    - This proof is contingent on the mathematical definition of a computer and program - [[Turing Machine]]
+- Built a infinitely powerful computer and ran a universe simulator
+    - Found themselves in the simulated universe and realized they are also simulating another universe
+    - __Reminds me of Rick and Morty when Rick built a universe to power the engines of his vehicle__
+- They realized they are more likely to be in a chain of quantum universe simulator rather than the one that's at the top
+    - But at some point down the chain of quantum universe simulation, they reach equilibrium between the various levels where each universe behaves **exactly** like the one below and above

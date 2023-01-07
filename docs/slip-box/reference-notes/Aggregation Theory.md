@@ -1,0 +1,6 @@
+- Ben Thompson presents this for a way to understand high-tech companies
+- A specialized version of what economists call a two-sided market theory
+- Asserts that
+    - The quality of the user experience, rather than control over distribution, is what determines the winners in digital markets
+    - A lead based on quality is self-reenforcing, because either more suppliers are attracted or the winner, with more customers, gets more feedback on what makes for a better product
+- Aggregators are in this manner different than traditional monopolists, for they "win by building ever better products for consumers"

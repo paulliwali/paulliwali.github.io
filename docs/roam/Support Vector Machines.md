@@ -1,0 +1,11 @@
+- Support vectors are margins added around the decision boundary to allow the model to __feel__ the data
+- Soft margin
+    - allows for instances to be within the margins
+    - most common type of SVM
+- Hard margin
+    - no instances are allowed to be within the margins
+- The width of the margins are typically denoted with $$\epsilon$$
+- The construction of the error function is to ensure __flatness__ by minimizing the coefficients to ensure there are no overfitting **and** minimize the residual error to be less than the margin width $$\epsilon$$
+    - The model may not exist to satisfy the hard margin condition, leading to a surrogate function using slack variables which is the soft margin condition
+    - Solving this problem involves [[Quadratic Programming]]
+    - 

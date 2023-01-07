@@ -1,0 +1,11 @@
+- SHAP - SHapley Additive exPlanations
+- A commonly used algorithm to understand what decisions ML models are making
+- Based on Shapley values, a concept from game theory
+    - The "game" is reproducing the outcome of the model
+    - The "players" are the features included in the model
+    - ==Shapley quantifies the contribution that each player brings to the game==
+    - ==SHAP quantifies the contribution that each feature briings to the prediction made by the model==
+- It calculates the marginal contribution between each variation of the model with increasing number of features
+    - The marginal contributions are weighted by the reciprocal of the number of features in that category
+    - **summing the SHAP values of each feature of a given observation yields the difference between the prediction of the model and the null model**
+- Common libraries employ approximations and sampling to avoid training $$2^F$$ models for F features

@@ -1,0 +1,41 @@
+#transportation #modelling 
+- Standard attributes
+    - ul2 freeflow speed
+    - ul3 capacity
+- Network transaction file
+    - using a (a=) to add one-(two-)way links
+- Network Editor
+    - Regarding auxiliary lanes (weaving lanes) on the highway, if the auxiliary lane lasts from one interchange to another, then code that as a full lane (Assumption made by GGHM, not necessarily the case for other models)
+        - If the lanes only last half the length from one interchange to another, don't code that in as a full lane.
+    - Lane widening on the highway should be applied from ramp to ramp
+    - Ramp often have lower capacity and lower speed, however highway to highway interchange that doesn't involve ramps but slightly sharper turns could also have lower capacity (debatable), i.e. 427/403 interchange.
+- The shortest path worksheet
+    - Helpful to identify unconnected OD pairs in the network
+    - `Pce` pointer to the generic attribute in the first alternative scenario
+        - `Pce->@attribute` assign `@attribute` from first alternative scenario to the pointer
+        - `Pce->Pce->@attribute` points to the second alternative scenario
+    - `isMarked` can be used in combination with selecting a list of items and right-click mark selected to show multiple selected items on the worksheet
+- Compare networks
+    - Helpful to identify differences between edits/changes made on different networks
+    - Use the style legend to narrow the search
+- Filter commands
+    - `mode ~ 'c'` returns links where the mode contains 'c'
+    - `which(i, num, num2, ...)` returns the position which node correspond to node numbered num. Filter will display all non-zero results, so this is an easier way to batch display several nodes.
+    - `hasPce` has a corresponding node/link in alternative scenario
+    - `not(hasPce)` doesn't have a corresponding node/link in alternative scenario
+- Network Calculator
+    - Inheritance 
+        - When one needs to transfer properties from link to node (and vice versa), network calculator can easily perform this set of tasks. Make sure the results is set prior to any calculation.
+            - The aggregation pointer is used to perform different calculations (i.e. sum, max, min)
+- Transit
+    - Boarding and alighting
+        - Boarding and alighting for each transit link is assigned at the `i_node` of the link
+        - Therefore, the last transit link in a particular segment is connected to a __hidden link__ in order to have a corresponding `i_node`
+        - Sanity checks
+            - `when j>0; ttf!=0`
+            - `when j==0; noali==0`
+            - `when segno==1; noboa==0`
+    - Transit segments
+        - Transit properties are often defined by segment (collection of links) as opposed to link based
+            - This allows for coexistence of different transit lines
+        - TTF are transit VDF equivalents, they are often dependent on the volume on the link with a penalty

@@ -1,0 +1,14 @@
+- **Metadata**
+    - Source: https://journals.sagepub.com/doi/10.1177/2399808320934308
+    - Author: Michael Batty
+    - Tags: #transportation #modelling
+- Cities and their planning seem to be unpredictable, when looking back in the past 40 years
+- Yet we feel like we can build models to make predictions about complex systems
+- In the past 75 years, science has moved from a stance where we believed in 'good' prediction to prediction is now 'difficult'
+    - Coronavirus has proven that even short term events may no longer be predictable
+- Because of a model's uncertainty, to ensure models are useful one must use many models
+- Transportation modeling difficult because we continually invent and reinvent how cities operate by changing the conditions, and this creates numerous feedback loops that is impossible to model
+- It is often accepted that shorter term forecasting is more accurate than long term forecasting, ==as if the amount of change is dependent on time - **it is not** - it is dependent on the kind of change==
+    - Change is never smooth, __always volatile__
+    - ==Remove the illusion that cities can absorb the change easily with little disruption==
+        - ==**This is probably because the use of continuous values in models**==

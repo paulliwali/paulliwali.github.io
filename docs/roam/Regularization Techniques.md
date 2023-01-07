@@ -1,0 +1,6 @@
+- A way to constrain the model such that it will harder to overfit
+- To regularize polynomial models, we can reduce the number of degrees
+- To regularize linear models, we can constrain the weights
+    - [[Ridge Regression]]
+    - [[Lasso Regression]]
+    - [[Elastic Net]]

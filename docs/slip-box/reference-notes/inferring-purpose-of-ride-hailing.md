@@ -1,0 +1,30 @@
+- **Metadata**
+    - Source: https://uttri.utoronto.ca/files/2020/03/2020-02-14-Sanjana-Hossain-presentation-file.pdf
+    - Author: Santana Hossain, [[Khandker Nurul Habib]]
+    - Tags: #transportation #academic
+- Data fusion
+    - **The process of enriching the quality of a sample of travel data by combining it with other data sources**
+    - Smart card, GPS, cellular data, survey data, census data, land use data
+    - Driven by the lack of comprehensive household travel surveys due to low response rates, under-representation, general errors
+    - As well as the higher requirements from more advanced [[travel-demand-models]]
+- Data fusion process
+    - Identify appropriate datasets based on purpose of fusion
+    - Examine data characteristics of each of the sources
+    - Identify common (similar) data elements
+    - Analyze and integrate datasets using fusion techniques
+- **This thesis used fused datasets to estimate trip purposes from survey data and apply it to trajectory datas**
+    - There is a need to infer trip purposes from trajectory data in order to make the most use of them
+    - Estimation using the survey data fused with enhanced points of interest data and census data
+    - Application on the ride-hailing trajectory data fused with enhanced points of interest and census data to infer trip purpose
+    - Tested MNL, NL, and mixed Multinomial logit
+    - Empirical analysis using City of Toronto’s anonymize ride-hailing trajectory data
+        - 17 million trips
+        - Pick up and drop off location
+        - Land use variables used were private dwellings in destination dissemination area (DA), manufacturing POI in origin/destination DA, educational POI in origin/destination DA, finance and insurance POI, professional/science/technical POI, public administration POI, private dwelling density in origin DA, retail trade POI, accommodation and food services POI, arts, entertainment and recreation POI, health care and social assistance POI, fiancé and insurance POI, other services POI, private dwelling density
+        - Separate coefficients estimated for each timer period to capture their effects on trip purpose
+        - Weekday vs weekend
+        - Seasonality
+    -  Compared the performance between econometric models and ML (random forest classifier)
+        - ==__Did not find a better fit with ML__==
+    - Limitation of this research
+        - ==Key assumption made was that ride-hailing trips have the same conditional probability as the trips in the survey data==

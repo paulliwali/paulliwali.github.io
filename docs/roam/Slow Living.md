@@ -1,0 +1,25 @@
+- Metadata:
+	- #personal #self-improvement 
+__Faster is not necessarily better__
+- Started with the "slow food movement" in Italy
+	- Emphasizes traditional food production techniques that compass a core lifestyle that encourages a slower approach to aspects of everyday life
+- Goal is the create room for a __more conscious enjoyment of life__
+	- By getting off the manic roller-coaster of instant gratification
+	- S - sustainable
+	- L - local
+	- O - organic
+	- W - whole
+- Practices of slow-living include the following practices
+	- Eat your meals mindfully, paying attention to the food and not TV or phone
+	- Take technology breaks, silence all notifications
+	- Limit time on social media
+	- Read a book/madidate/listen to podcasts during long breaks
+	- Saying "no"
+	- Don't multitask, focus on one thing at a time
+	- Spend more time outdoor
+- How to overcome FOMO or YOLO? Consider the following deathbed wishes:
+	- To have lived a more authentic life instead of the one others expected
+	- To have __not__ worked so hard
+	- To have expressed their feelings more
+	- To have stayed in touch with friends
+	- To have let themselves be happier

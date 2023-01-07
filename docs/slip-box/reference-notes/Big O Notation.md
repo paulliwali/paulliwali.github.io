@@ -1,0 +1,8 @@
+- Metadata
+    - Source: https://justin.abrah.ms/computer-science/big-o-notation-explained.html
+    - Tags: #programming
+- Big O is a way to describe the complexity of an algorithm
+- O(1) is constant time, the worst scenario is always the same no matter the size of input
+- O(n) is linear time, the worst scenario is the length of the input it passed through
+- O(n^2) is when the worst scenario increases more as the length of the input increases
+- For functions with different O() values, take the biggest term

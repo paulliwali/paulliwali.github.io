@@ -1,0 +1,15 @@
+- Metadata
+	- Source: https://www.quantamagazine.org/how-bells-theorem-proved-spooky-action-at-a-distance-is-real-20210720/
+	- #physics #article
+- Proved "spooky action at a distance" is real
+- **Locality** is a physics principle that says
+	> An event in one part of the world cannot instantly affect what happens far away #til2021
+	- It is a bedrock assumption about physics
+- In 1935, Albert Einstein and two colleagues showed that quantum mechanics allows for **entanglement**
+	- "spooky action at a distance"
+- In 1964, John Stewart Bell demoted locality by proving quantum mechanics can prove outcomes of certain far-apart measurement than any local theory could
+- How Bell's theorem showed entanglement is real
+	- When two particles are entangled, measuring the properties of one particle affects the property of the other particle regardless of distance
+	- Consider the property spin, which can be "up" or "down"
+	- Bell's theorem said that the upper bound on the correlations allowed by local hidden variable theories is 67%
+		- So if the experiment can break this inequality then something more than locality is the feature of these particles

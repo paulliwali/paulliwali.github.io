@@ -1,0 +1,1 @@
+- Complex library used for distributed numerical computation, used to train and run large neural networks efficiently by distributing across GPU

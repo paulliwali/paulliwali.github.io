@@ -1,0 +1,14 @@
+- Geometry and algebra were discovered together
+    - They worked as two sides of the coin, because algebra was just an abstracted form of geometry
+    - The quadratic equation was solved using geometry, specifically constructing squares 
+    - However, the cubic equation was unable to be solved for a very long time using similar methods
+    - The compressed cubic equation was eventually solved but it was still left with a few edge cases where the solution was unable to provide an answer because it created negative square roots
+- The imaginary number was a concept invented to solve the issues of negative square root
+    - This diverged algebra from geometry because it was no longer something physically meaningful - or so we thought
+- Many years later, Schrodinger developed a wave function to describe everything we know about the atom and in this formula he used the imaginary number 
+    - Because of its special property
+    - When multiplying the imaginary number on itself, you effectively rotate 90 degrees in the complex plane
+    - If you traverse in x-axis while rotating, you plot out the function $$e^{ix}$$
+    - This function forms sine function in the real plane and cosine function in the imaginary plane
+    - It also has special properties such as stationary when derived
+- So a concept that was born out of necessity and was thought to deviate algebra from reality, was the key to tie back into describing a fundamental property of the universe

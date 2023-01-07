@@ -1,0 +1,19 @@
+- Personal belongings
+    - Lump Sum of $3,000 to purchase goods
+    - $250 in excessive baggage
+- Flight + Travel Request
+    - $65 on the day of travel, save itemize receipts
+    - Transportation to/from airport
+- Lease Termination
+    - Signed copy of lease
+    - Notice to vacate
+    - Landlord's response with lease break
+    - Proof of payment
+    - Up to 1 month
+- Misc Allowance
+    - $3000 to be used for incidentals, no receipts needed
+- Tax Services
+    - Deloitte will help with both sides
+    - Had a conversation with the Canadian side on [[October 5th, 2020]]
+- Visa Fees ($50)
+    - Reimbursable with a receipt and proof of payment

@@ -1,0 +1,16 @@
+- **Metadata**
+    - Source: https://www.oreilly.com/library/view/practical-statistics-for/9781491952955/ch04.html
+    - Author: Peter Bruce
+    - Tags: #books #statistics
+- ## Chapter 4 - Regression and Prediction
+    - ### Confidence and Prediction Intervals
+        - Confidence intervals are uncertainty intervals placed around regression coefficients and predictions
+        - Bootstrap algorithm to understand this
+            - 1. Consider each row as a single "ticket" and place n tickets in a box
+            - 2. Draw a ticket at random, record the values, and replace it in the box
+            - 3. Repeat step 2 n times; which is one bootstrap resample
+            - 4.Fit a regression to the bootstrap sample, and record the estimated coefficients
+            - 5. Repeat step 2 to 4, say, 1000 times
+            - 6. Which is 1000 bootstrap values for each coefficient; find the appropriate percentiles for each one to get the confidence interval
+            - 7. This can be re-formulated to show the prediction interval
+            - 8. **Prediction interval** gives uncertainty around a single value, **confidence interval **pertains to a mean or other statistic calculated from multiple values

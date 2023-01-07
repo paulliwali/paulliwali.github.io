@@ -1,0 +1,29 @@
+- A common way for our brain to make judgemental errors that is repeatable and rooted in a explainable way
+- No one is immune to this and certain context makes this condition worse
+- Individual Level
+    - Automation Bias
+        - Confidence in machines, programs and code
+        - Neglect to inject personal judgement
+    - Barnum Effect
+        - See myself __accurately__ described in __vague__ and __generic__ descriptions of personality
+        - i.e. Myers Briggs, Astrology
+    - Base rate neglect fallacy
+        - Not including the overall statistics into consideration
+    - Belief bias
+        - When something is inline with your a prior belief it is more true
+    - Choice supportive bias
+        - After making a decision, you exaggerate the benefits from that choice
+    - Fundamental attribution error
+        - Assign importance to the individual as the locus of agency in interpreting our own everyday life and the behaviors of others
+- Interpersonal Level
+    - Blind spot bias
+        - Others are more biased than I am
+- Intergroup Level
+    - Echo chamber
+        - When everyone agrees with you, you feel more correct
+- Availability Heuristic
+    - Effort justification bias
+        - I evaluate an outcome based on the effort
+    - Illusion of transparency
+        - I believe my thoughts and feelings are more accessible to others than they actually are
+- 

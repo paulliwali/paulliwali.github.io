@@ -1,0 +1,8 @@
+- Metadata
+    - #programming
+    - https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses
+- [100 - 199]: information responses
+- [200 - 299]: success responses
+- [300 - 399]: redirects
+- [400 - 499]: client errors
+- [500 - 599]: server errors

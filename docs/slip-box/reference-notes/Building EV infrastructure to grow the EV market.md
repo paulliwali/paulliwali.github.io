@@ -1,0 +1,24 @@
+- **Metadata**
+    - Source: 
+    - Author: Mark Peterson
+    - Tags: #electric-vehicles
+- How to go about building the EV infrastructure?
+- Cost per station varies based on the capacity so there are two options given a certain amount of capital
+    - Build a small number of high-capacity stations
+    - Build a large number of low-capacity stations
+- The author argues that __building a large number of low-capacity station is better__
+    - Because it covers more area
+    - Faster charging is nice, but it is not necessary to make most EV routes possible
+    - ==I have to disagree, and need proof that users would rather want this over faster charging. I think psychologically if the stations are placed in strategic places, then the faster charging is actually the more appealing aspect.==
+- Primer on EV charging
+    - An EV battery holds capacity measured in kilowatt-hours (kWh)
+    - To get the battery charged, there are different levels of voltage
+        - Household (120V) will add 1kWh per hour which is a rate of 1kW
+        - Household (240V) will charge at a rate of 6.6kW
+        - DC current will charge at a rate from 25kW to 150kW
+    - The author states that the jump from 6.6kW to 25kW is the biggest, and add in the fact that it is must cheaper to operate, he argues that this size should be the default EV station
+- Reflection
+    - This article is pretty outdated, the battery size he was imagining was way too small and the time he was considering is not realistic for most non-ev enthusiasts to use
+    - Also he advocates spread as many low level-3 charging stations as much as possible to cover the most amount of space because that will make __all trips__ possible with EV which will push the EV adoption
+    - This might not be the problem, if most commuter trips are serviced by home charging and workplace charging, but rather it is the one-off, long-distance trips that needs the attention
+    - For those trips, faster charge rates is the most important factor

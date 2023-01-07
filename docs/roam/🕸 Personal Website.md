@@ -1,0 +1,20 @@
+- Look into refreshing the design of the website
+    - [x] Setup a better blogging architecture - using [Docusuarus](https://docusaurus.io/)
+- [ ] Machine learning basketball project, college-predictor
+    - [ ] Win share distribution vs win share players vs success #sports
+    - [ ] Use CausalImpact for NBA defensive stats and actual points prevented
+- [ ] Build a mini database with NBA stats
+- [ ] Predict game outcomes of NFL games
+- [ ] Using flutter to build the Almondandcashews game
+- [ ] (un)chess using flutter
+- [ ] Statistical analysis of when to trust “pass-d” or “run-d” ranking when projecting WR/RB fantasy players
+- [ ] Numero game using flutter
+- [ ] [[aaronson-oracle-baseball]]
+- [ ] Blogs
+    - Autonomous trucks undercutting rail
+    - 2x freight travel due to autonomous driving technology
+    - price per KM of different modes of travel in NA (USA) with considerations for VOT
+    - ~~learn about the yield curve and prediction of recession, and answer how long after the inverse yield curve occurs do recession occur?~~
+    - MVP winners are statistically the best or the best “story”
+    - [[Making Sense of the Data Science Stack]]
+    - ~~2021TIL~~

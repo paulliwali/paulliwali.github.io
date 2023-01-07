@@ -1,0 +1,5 @@
+- Adding powers to the linear regression model in order fit non-linear data
+    - Also adds all combination of features up to the given degree, giving the ability to capture interactions
+- The more powers we add to the polynomial model the better we will be able to capture the data, but that will lead to overfitting
+    - One way is to use cross-validation metrics to ensure we are not overfitting
+    - Another way is to plot [[learning curves]] of the model

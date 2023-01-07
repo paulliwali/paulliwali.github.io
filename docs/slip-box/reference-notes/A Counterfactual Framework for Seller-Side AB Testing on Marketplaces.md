@@ -1,0 +1,13 @@
+- Metadata
+    - Facebook
+    - Source: https://research.fb.com/wp-content/uploads/2020/07/A-Counterfactual-Framework-for-Seller-Side-AB-Testing-on-Marketplaces.pdf
+- Related to [[Primer on casual inference]]
+- Many consumer products are two-sided marketplaces or sharing-economy products
+- The search and recommender systems behind these systems are [[terra-cotta]] ==optimized for objectives like click-through, purchase, or booking rates, which are mostly tied to the consumer side of the marketplace==
+    - Counterfactual framework for seller-side A/B testing can overcome the challenge of doing seller-side A/B testing that arises when the impact assessed from the test is artificially changed because of sample size
+    - Standard A/B testing framework may not be generalizable to the entire seller population 
+- Counterfactual framework
+    - [[terra-cotta]] ==[[counterfactual]]== - are conditional sentences which discuss what would have been true under different circumstances
+    - The items in the treatment group are ranked the same regardless of experiment exposure rate
+    - The items in the control group are ranked where they would be if the status quo is applied to all sellers
+    - Show the framework satisfies the stable unit treatment value assumption since the experience that sellers receive is only affected by their own treatment and independent of the treatment of other sellers

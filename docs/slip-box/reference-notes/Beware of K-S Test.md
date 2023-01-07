@@ -1,0 +1,20 @@
+ - Metadata
+	- Author:
+	- URL: https://asaip.psu.edu/Articles/beware-the-kolmogorov-smirnov-test/
+	- #article #statistics #programming 
+- Summary: K-S test has various limitations and Anderson-Darling or Cramer-von Mises would be better.
+- Notes:
+	- [[Kolmogorov-Smirnov test]] is a nonparametric hypothesis test that measures the probability that a chosen univariate 
+		- Dataset is drawn from the same parent population as the second dataset (two-sample K-S test) or a continuous model (the one-sample K-S test)
+		- K-S test is based on measuring the supremum (greatest) distance between the empirical distribution function (EDF) of a univariate dataset and the comparison step function of the second dataset (or ites cumulative distribution function)
+		- The underlying distribution is assumed to be **continuous**.
+		- Benefits of the K-S test is that it is distribution free, universally applied (no restrictions on sample size), critical values are widely available, can serve as goodness-of-fit test and easy to compute.
+		- However, it is misleading in many ways as well.
+			- **K-S test require the EDFs to differ in a global fashion near the center of the distribution, but if the distributions are adjusted to have the same mean values**
+			- **So if the EDFs cross each other multiple times and the maximum deviation is reduced, a better test would be the Cramer-von Mises (CvM) test**
+	- [[Cramer-von Mises test]] measures the sum of square deviations between the EDFs.
+		- If the EDFs have differences near the beginning or end of distributions, K-S and CvM don't do well because the differences at the ends are small
+	- [[Anderson-Darling test]] was developed as a weighted CvM test to overcome this
+		- K-S test probabilities are wrong if the model was derived from the dataset
+		- To overcome this, we can bootstrap the sample
+		- The K-S test cannot be applied in 2 or more dimensions

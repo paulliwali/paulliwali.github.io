@@ -1,0 +1,18 @@
+- **Metadata**
+    - Tags: [[video]] [[productivity]]
+- Motivation 
+    - take control
+- Focus 
+    - ignore distractions
+- Goal Setting
+    - 2 kinds, stretch goals and immediate goals
+- Decision Making
+    - probabilistic thinking model
+- Innovation
+    - mix it up
+- Absorbing Data
+    - make data harder to learn, so it becomes stickier
+- Managing Others
+    - make sure everyone is utilized
+- Teams
+    - how a team interacts

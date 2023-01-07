@@ -1,0 +1,1 @@
+- Deep learning API that is used to train and run neural networks, used on top of [[TensorFlow]], [[Theano]], [[CNTK]] to help interface the algorithms and functions

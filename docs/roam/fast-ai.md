@@ -1,0 +1,25 @@
+- ==Deep learning is a computer technique to extract and transform data by using multiple layers of neural networks==
+- What I’ll learn in this class
+    - How to train models that achieve state-of-the-art results in computer vision, natural language processing, tabular data, and collaborative filtering
+    - How to turn and deploy models into web applications
+    - Why and how deep learning models work
+    - Latest deep learning techniques that really matter in practice
+    - Implement stochastic gradient descent and a complete training loop from scratch
+    - Techniques
+        - [ ] random forests and gradient boosting [[future]]
+        - [ ] affine functions and nonlinearities [[future]]
+        - [ ] parameters and activation [[future]]
+        - [ ] random initialization and transfer learning [[future]]
+        - [ ] SGD, momentum, Adam, and other optimizer [[future]]
+        - [ ] convolutions [[future]]
+        - [ ] batch normalization [[future]]
+        - [ ] dropout [[future]]
+        - [ ] data augmentation [[future]]
+        - [ ] weight decay [[future]]
+        - [ ] image classification and regression [[future]]
+        - [ ] entity and word embedding [[future]]
+        - [ ] recurrent neural networks (RNNs) [[future]]
+        - [ ] segmentation [[future]]
+-  Tools
+    - Will be learning these concepts using [fastai](https://course.fast.ai/), [fastcore](https://github.com/fastai/fastcore), [pytorch](https://pytorch.org/) and the [gradient](https://console.paperspace.com/login) environment
+- [Lesson 1]([[fast-ai-lesson-1]])

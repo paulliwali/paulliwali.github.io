@@ -1,0 +1,27 @@
+* Metadata
+	- Author: 
+	- URL: https://www.quantamagazine.org/the-sun-was-dimmer-when-earth-formed-how-did-life-emerge-20220127/
+	- #article #science
+- Summary:
+	- Sun is getting brighter, which meant that when Earth was just starting to facilitate life 4.4 billion years ago when we know there was water, the sun was 30% dimmer and the Earth should -7 degrees
+	- #til2022 Faint Young Sun Paradox
+		- 🌐: https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2011RG000375
+		- 💁‍♂️: The Sun was too dim to heat up water on Earth 4 billion years ago, but evidence of liquid water on Earth was found. In the Sun's core, hydrogen fuses into helium which produces energy, as the amount of hydrogen decreases, the core shrinks, the fusion rate increases, the sun gets brighter.
+			- Carl Sagan and George Mullen proposed Earth's atmosphere was thicker back then, trapping the heat with carbon dioxide (a greenhouse gas)
+		- 🤔: Does this mean that our understanding of what life needs to start is wrong? Or we are wrong about the age of the sun?
+	- Hadean eon (4.6 billion to 4 billion years ago), an object the size of Mars collided with Earth and formed the Moon
+		- This caused the temperature of Earth to rise and cool over tens of millions of years
+		- Zircon crystals which are terrestrial solids which dates back to 4.4 billion years and the oxygen structure shows they may have interacted with water
+		- Life were observed in zircon crystals 4.1 billion years ago
+		- #til2022 How Moon was Formed?
+			- 🌐: https://www.quantamagazine.org/what-made-the-moon-new-ideas-try-to-rescue-a-troubled-theory-20170802/
+			- 💁‍♂️: Textbooks say that the Moon was formed when a Mars sized object collided with Earth 4.6 billion years ago. However recent evidence are contradicting this theory.
+			- 🤔:
+	- Then 2.4 billion years ago, the first "snowball Earth" event happened, when the temperature dropped and glaciers reached all the way to the equators
+		- CO2 from volcanoes __may__ have allowed our planet to reverse the process
+		- Then 2 billion years ago, the Sun became luminous enough to heat Earth up
+	- Other sources of heat were suggested to help this, methane from living things and tidal heating from the close proximity of the Moon
+	- The faint Sun might have saved life on earth, because a hotter sun might have evaporated all the water into the atmosphere
+	- This is trickier on Mars, where the recent NAA's Perseverance rover showed signs of liquid water 3.7 billion years ago 
+- Notes:
+	- Life on Earth was a rare occurrence even in a vast universe with millions of candidates

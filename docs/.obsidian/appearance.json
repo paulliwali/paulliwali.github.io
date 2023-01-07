@@ -1,0 +1,10 @@
+{
+  "accentColor": "",
+  "monospaceFontFamily": "FiraCode Nerd Font Mono",
+  "textFontFamily": "FiraCode Nerd Font",
+  "enabledCssSnippets": [
+    "theme"
+  ],
+  "cssTheme": "Minimal",
+  "translucency": true
+}

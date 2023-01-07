@@ -1,0 +1,24 @@
+- Tiago Forte's course on capturing, organizing, and sharing your knowledge using digital notes
+- We spent countless hours receiving information yet we only retain a small percentage of it
+    - Because our brain is for having ideas, not storing them
+    - ==Building a second brain is a methodology for saving and systematically recalling us of the ideas, inspirations, insights and connections we have gained through experience==
+    - Moving the task of remembering information allows our biological brain to do the things it is good at
+- Consolidation of the different sources of experience to create a ongoing live document is the goal
+- Part 1: Remember
+    - First step of the second brain is to capture the ideas and insights you think are worth saving
+    - Most of the time, this capturing process is haphazard and fragmented
+    - ==We need to be deliberate== - I have tried various systems to capture knowledge and still trying to find one that I can do consistently and find value from
+    - Think like a curator - instead of funnelling all the experience in, try to be objective, opinionated, and reflective
+    - Organize your content by project - by grouping information with projects it gives them purpose
+    - Keep only what resonates - training ourselves to notice what resonates in a deep level will improve our senses to discover opportunities 
+- Part 2: Connect
+    - With enough information, certain things will trigger your pool of knowledge and you can connect new ideas with stored insights
+    - This process can be made deliberate by distilling my notes into actionable, bite-sized summaries
+    - Design notes for future self - edit it constantly for my future self
+    - ==Summarize progressively==, at different levels of detail - notes have to be light and easy to digest. Progressive summary helps with this by saving only the best parts and summarizing chunks of these parts every once in a while and then summarize those summaries
+    - Organize opportunistically - because you can't forecast how these notes will be useful in the future, don't try to optimize from the get go. Instead ==try to optimize the notes each time I use it, so the most useful ones rise to the top organically==
+- Part 3: Create
+    - All the work is to allow me to create tangible results in the real world
+    - With this second brain, I can create something and draw on everything I have experienced throughout life
+    - Don't consume passively, put it to use - this is a common trap for people who likes learning, they never put new knowledge to use but rather learn and learn non-stop without end
+    - Create smaller, reusable units of work - think of solving small chunks of work instead of an entire project

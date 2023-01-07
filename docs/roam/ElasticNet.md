@@ -1,0 +1,3 @@
+- ==Combines both of lasso and ridge==
+- It will try to learn a sparse model like Lasso and retain regularization properties of ridge
+- Tuned with $\alpha$ and $l1_{ratio}$ parameters

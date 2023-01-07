@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "title": "Functional Data Engineering",
+      "path": "slip-box/reference-notes/Functional Data Engineering.md"
+    },
+    {
+      "type": "file",
+      "title": "The Tail End",
+      "path": "slip-box/reference-notes/The Tail End.md"
+    }
+  ]
+}

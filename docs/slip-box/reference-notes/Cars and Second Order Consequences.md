@@ -1,0 +1,20 @@
+- **Metadata**
+    - Source: https://www.ben-evans.com/benedictevans/2017/3/20/cars-and-second-order-consequences
+    - Author: Benedict Evans
+    - Metadata: #finance #article #ideas 
+- Global stock of cars in 2017 is around 1.1 billion, the two major shifts of [electric vehicle]([[electric-vehicle]]) and [autonomous driving]([[autonomous-cars]]) will eventually cycle into this stock
+- Direct impact of these two shifts will have profound effects on oil production and traffic accidents
+- **But what about second and third ordered effects?**
+    - Then what....okay, then what?
+- Second order effects of EV
+    - Tobacco purchase at gas stations
+        - Well over half of US's tobacco sales are from convenience stores
+    - Highways are funded by gas taxes
+    - Electricity consumption, off-peak scheduling
+- Second order effects of autonomous driving
+    - Costs from vehicle damage has a large economic effect
+    - Removes the need to reserve land for parking
+    - Increases road capacity
+    - Removes jobs for drivers
+    - Cheaper on-demand rides
+    - This will change how cities are built, how downtown and suburbs will interact, how big-box retail and stores will be situated

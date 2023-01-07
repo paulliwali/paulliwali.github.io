@@ -1,0 +1,6 @@
+- 👆 Short Summary (1 takeaway)
+    - The ingenuity of the problem solving side engineering and theoretical reasoning of science is aptly captured in this book
+- 🧐 Why I am reading this book?
+- 📖 Chapter reviews
+- 🙊 Great quotes
+- ✅ Actionable items

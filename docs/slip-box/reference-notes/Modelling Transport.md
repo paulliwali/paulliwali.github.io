@@ -1,0 +1,1063 @@
+- **Metadata**
+    - Author: Juan de Dwios Ortuzar and Luis G. Willumsend
+    - Tags: #transportation #books #academic
+- 👆 Short Summary (1 takeaway)
+    - Comprehensive review of the historical and current state of practice for transportation modelling
+- 🧐 Why I am reading this book?
+    - To review the core concepts of transportation modelling in preparation for new job at Tesla
+    - [[February 20th, 2021]] 5 month in, I have not really made use of this knowledge actively. There are some tangential thought experiments that brings some up but maybe 20% useful
+- 📖 Chapter reviews
+    - ## 1.0 Introduction
+        - ### 1.1 Transport Planning and Modeling
+            - Globalization and telecommunications are two major trends that transformed the 21st century
+            - A model is only realistic from a particular point of view
+        - ### 1.2 Characteristics of Transport Problems
+            - The demand for transportation is derived, people don't travel (except sightseeing) for the sake of travel, it is often to satisfy a need (work, school, shopping)
+            - A good transportation system widens the opportunities to satisfy these needs
+            - Transport demand has strong dynamic elements, it peaks with direction, time, and space
+                - This makes modelling demand interesting but also difficult
+            - The supply for transportation is a service and not a good
+                - __Thus, you can't stock it and prepare it for high demand__
+            - Transportation systems are comprised of two things: fixed assets (infrastructure) and mobile units (vehicles)
+                - These two things and a set of rules on how these two things coordinate makes up any transportation system
+            - Investment in transportation infrastructure is __lumpy__ and takes a long time to carry out
+                - Also creates disruption to the existing service
+                - Most importantly, infrastructure for transportation is largely political for most countries
+            - Congestion occurs when the demand for the infrastructure approaches or reaches the capacity it can service
+                - There is a perceived cost of congestion for all users due to the longer travel time
+                - There is also an external cost added to all other users with each additional user
+            - The role of transportation planning is to satisfy both short-term and long-term supply and demand
+            - Development trap occurs when car-ownership increases, people can live and work irrespective of transit development which leads to urban sprawl - low-density development that is ineffectively served by public transit, which leads to further congestion.
+        - ### 1.3 Modeling and Decision Making
+            - There are 2 main decision making paradigms
+                - Substantive rationality: people know their objective and evaluates the different choices to achieve their objective 2. This assumption is has problems with specifying the objective beyond cost-related measures and alienation of decision makers who do not accept this analytical style of thinking
+                - Muddling through: people mix various high-level objectives, intermediate goals, immediate actions as an approach to make decisions
+            - It is much better to be roughly right than precisely wrong - John Maynard Keynes
+            - There are 4 main dimensions of model resolution
+                - Space: from zones to addresses
+                - Unit of analysis: from trips to household/person stratas to synthesized individuals
+                - Behavioural responses: route choice actions, changes in time of travel, mode, destination, tour frequency, and even land use and economic activity impacts
+                - Time: can be discrete or continuous. Discrete time can cover a full day (national models), time periods or smaller time intervals. Continuous time can allow for dynamic handling of traffic and behavioural responses
+        - ### 1.4 Issue in Transport Modeling
+            - Main usage of models in practice is for __conditional forecasting__ which is producing estimates for a dependent variables based on independent variables
+            - Aggregate and disaggregate modelling
+                - a key design decision based on the availability of data and the need for the model
+                - Aggregate models were the norm up to 1970s, but they are criticized for inflexible, inaccurate and costly
+                - Dissagregate models started to be popular during 1980s, but they require high statistical and economietric skills from the modeller
+                - The main difference lies in the treatment of the description of behaviour, particularly during the model development process
+            - Cross-section or time-series
+                - Cross-section approach assumes that a measure of the response to incremental change may simply be found by computing the derivatives of a demand function with respect to the policy variables in question
+                    - this brings up two drawbacks, a given cross-sectional data set may correspond to a particular 'history' of changes and data collected at only one point in time will usually fail to discriminate between alternative model formulations
+                - This led people to believe that where possible, longitudinal or time-series data should be used to construct more dependable forecasting models
+            - Revealed and stated preferences
+                - Observations on varies circumstances and reactions in transportation is often not available, and is was almost axiomatic that modelling transport demand should be based on __revealed preference data__
+                - Stated preference techniques, borrowed from market research, were put forward as a way of experimenting with transport-related choices
+        - ### 1.5 Structure of the Classic Transport Model
+            - Zone and network system -> Collection of planning and transportation data (base year and forecast) -> Trip generation -> Trip distribution -> Mode split -> Assignment
+            - Not the only structure but one of the most common
+        - ### 1.6 Continuous Transport Planning
+            - Models needs to be used within a decision process:
+                - Formulation of the problem: a mismatch between expactations and perceived reality with reference to ojectives, standards, and constraints
+                - Collection of data: gather information of the current state
+                - Construction of an analytical model: choosing the simplest approach to describe the system of interest
+                - Generation of solution: from experience to automated optimization
+                - Forecast future values of the planning variables
+                - Testing the model and solution: under different scenarios to confirm its reasonableness
+                - Evaluation of solutions: using a combination of economic analysis, political judgement and engineer thinking to judge the recommendation
+                - Implementation of the solution
+    - ## 2.0 Mathematics Prerequisite
+        - ### 2.3 Matrix Algebra
+            - Multiplication is non-commutative, the columns and rows are multiplied and summed
+            - Inverse of a matrix is such that $$B^{-1}B=BB^{-1}=I$$ and may not always exist
+                - If this exists, B is non-singular
+            - Division between A and B is the pre- or post- multiplication of the inverse of B
+        - ### 2.4 Logarithmic and Exponential Function
+            - $$log_e(x)$$ is the integral of $$\frac{1}{x}$$
+            - e is defined as $$log_e(e)=1$$
+            - $$log(1) = 0$$
+            - $$log(uv) = log(u)+log(v)$$
+            - $$e^{x}$$ is defined as the number w such that $$log(w) = x$$
+        - ### 2.5 Elementary Mathematical Statistics
+            - Expected value is the weighted average times probability
+            - ==Normal distribution has a mean of 0 and variance of 1==
+                - ==Central Limit Theorem states if we have n variables x that distribute with any distribution with finite variance, it can approach normal distribution after "standardizing" and if n is greater than or equal to 30==
+            - Maximum likelihood is the most well-known and often used method of estimating parameters to deduce population characteristics from sample data
+                - Good estimators are unbiased, or at least asymtotically unbiased
+                - They are efficient, minimal variance
+                - They are consistent
+            - Hypothesis testing is based on taking a hypothesis and using to sample to verify that if null Hypothesis is true and we can accept the null Hypothesis or the null Hypothesis is false and we can reject the null Hypothesis
+                - The Type I and II errors occur when we see the opposite
+                - It is ideal to have low probability of both errors, but it is impossible to decrease the likelihood of one error without increasing the likelihood of the other error
+    - ## 3.0 Data and Space
+        - ### 3.1 Basic Sampling Theory
+            - The difficulties of sampling are ensuring the sample is __representative__, and able to extract valid conclusions from this sample
+            - Sampling method are usually based some random sampling:
+                - Simple random sampling
+                - Stratified random sampling
+            - If these methods do not have enough data to do representative sample, then one might use choice based sampling
+                - This method can be useful with less data, but can form biases
+            - Central limit theorem postulates that the estimates of the mean from the a sample tend to become distributed Normal as the sample size increases
+        - ### 3.2 Errors in Modelling and Forecasting
+            - **The goal of modelling is forecasting**, thus an important problem is to find which combination of model complexity and data accuracy best fits the required forecasting precision and study budget
+            - Errors that affect this are:
+                - **Those that could cause even correct models to yield incorrect forecasts (errors in the prediction, transference and aggregation errors)**
+                - **Those that actually cause incorrect models to be estimated (measurement, sampling and specification)**
+            - Measurement errors are inherent in the process of measuring the data, can be improved with better data-collecion process
+                - Another common problem is the perception error inherent to the traveller when they report data
+            - Sampling errors arise due to finite data sets, and to improve them requires squared effort
+            - Specification errors are due to the misunderstanding or lack of understanding of the problem which can cause modellers to include irrelevant variables, omission of relevant variables, not allowing for __taste variations__ on the part of the individuals, inappropriate model formulation
+            - Transfer errors occurs when the model developed for a specific context is inappropriately applied in another (time and space), although the ones from temporal transfer might need to be accepted
+            - Aggregation errors are the result of forecasting for a group of individuals when the modelling was estimated on individuals
+            - The duality of model complexity and data accuracy is a constant struggle for modellers
+                - Concentrate the improvement effort on those variables with a large error
+                - Concentrate the effort on the most relevant variables
+        - ### 3.3 Basic Data-Collection Methods
+            - This chapter contains information to help design a travel demand survey of various kinds, which is not relevant for me right now
+                - Current best practice suggests that the data set should have the following:
+                    - Consideration of stage-based trip data, relate specific modes to specific locations/times of day/trip lengths
+                    - Inclusion of all modes of travel
+                    - Measurements of highly disaggregated levels of trip purposes
+                    - Coverage of the broadest possible time period
+                    - Data from __all__ members of the household
+                    - Information robust enough to be used even at a disaggregate level
+                    - Part of an integrated data collection system incorporating household interviews as well as origin-destination data from other sources such as cordon surveys
+                - Data sources include:
+                    - Household surveys, used to generate data for trip generation, distribution and mode split
+                    - Intercept surveys: external cordons, used to catch people crossing the study border, and internal cordons
+                    - Traffic and person counts, for calibration and validation
+                    - Travel time surveys, for calibration and validation
+                    - Other related data
+                        - Land-use inventory which gives the modeller information on zone types, parking spaces
+                        - Infrastructure and services inventories which gives public and private transport networks, fares, frequencies, traffic signals
+                        - Information from special surveys on attitudes and elasticity of demands
+        - ### 3.4 Stated Preference Surveys
+            - RP data may be limited in several ways
+                - Not enough data on alternative choices to give variability
+                - Not enough information will be revealed to analyze secondary factors such as security, decor, and publicly displayed information on a user's decision
+                - Lack of data for entirely new modes without good substitute
+            - **Contingent Valuation (CV), conjoint analysis (CA) and stated choices (SC) are three SP techniques with SC being the most common**
+            - CV deals solely with eliciting __willingness-to-pay__ information for various policy or poduct options
+                - 4 types of CV questions are direct questioning, biding games, payment options and referendum choices
+            - CA examines the preferences, and even WTP, not only for the entire policy as a whole, __but also of the individual characteristics of the object(s) under study__
+                - CA surveys have heavy criticism, so it is not often used
+            - SC is similar to CA insofar as a set of alternatives are presented, but instead of ranking them, __the respondents are asked to choose their preferred alternative from among a subset of the total number of hypothetical alternatives constructed by the analyst__
+                - SC also typically presets a small subset of all available alternatives, changing this subset during the survey
+                - Biggest issue is the how much faith can we put on individual actually doing what they state they would do
+                - Early on, in 1970s only 50% of the people seem to actually do what they state and later on this improved
+                    - This could be because the data-collection method improved
+        - ### 3.5 Network and Zoning Systems
+            - Zoning system is used to aggregate the individual households and premises into manageable chunks for modelling purposes'
+                - zone size must be such that the aggregation error casued by the assumptions that all activities are concentrated at the centroid is not too large
+                - should be compatible with other administrative divisions, particularly census
+                - should be homogeneous as possible in their land use and/or population
+                - zone boundaries must be compatible with cordons and screen-lines
+                - shape of the zones should allow for easy determination of their centroid connectors
+                - zones do not have to be of equal size
+            - Network is a key component of the supply side of modelling
+                - normal practice is to model the network as a directed graph
+                - links are characterized by several attributes such as length, speed, number of lanes and so on
+                - one should include in the network at least one level below the links of interest
+            - Most current assignment techniques assume __that drivers seek to minimize a linear combination of time, distance, and tolls__, or generalized cost of route choice
+    - ## 4.0 Trip Generation Modelling
+        - This stage predicts the total number of trips generated by each origin zone and attracted to each destination zone
+            - start with the trips of the individuals or households who reside in each zone
+            - directly with some properties of the zones (population, employment, number of cars, etc)
+        - __Viewed as a trip frequency problem__
+            - how many shopping trips will be carried out by this person type during a representative week
+        - ### 4.1 Introduction
+            - Sojourn is a short period of stay in a particular location, is usually associated with a purpose (work, study, shopping, leisure)
+            - Activity is an endeavor or interest often associated with a purpose but not necessarily linked to a fixed location
+            - It has been found in practice that a __better understanding__ of travel and trip generation models can be obtained if journeys by __different purposes are identified and modeled separately__
+                - travel to work
+                - travel to school
+                - shopping trips
+                - social and recreational __journeys__
+                - escort trips
+                - outher journeys
+            - Mandatory (compulsory) trips are work and schools trips, while discretionary (optional) trips are the other types
+            - Classification with __respect to time of day__ is also useful, there are distinct traits for the AM/PM/Offpeak periods
+            - Classification with __person type or household type__ such as income level, car ownership, household size, family structure is also important
+            - Trip production factors
+                - Income, car ownership, family size, household structure, value of land, residential density, and accessibility
+                - Accessibility have been studied for its affect on trip generation, but is rarely used in practice even though it can give valuable elasticity from changes in the transportation system
+            - Trip attraction factors
+                - roofed space for industrial, commercial, and other services, zonal employment, and accessibility
+            - For Tesla, modelling trip attraction with supercharging stations could be interesting. Also, trip production should have a robust model for non-tesla behavior, so one can study the shift of tesla users and see elasticity on the tesla trip generation
+            - Freight trip production and attraction factors
+                - number of employees, number of sales, roofed area of firm, and total area of firm
+            - Growth factor modelling is the simplest technique for trip generation
+                - Future Trips = Growth Factor x Current Trips
+                - Growth Factor = f(Future population, income, car ownership)/f(Current population, income, car ownership)
+                - Mainly used to predict future number of __external trips__ because this is a crude method and is prone to overestimate but requires little data
+        - ### 4.2 Regression Analysis
+            - Moving beyond growth factor modelling, one can use linear regression to find the relationship between the number of trips produced or attracted by zone and average socioeconomic characteristics of the households in each zone
+                - this can only be successful if the inter-zonal variations adequately reflect the real reasons behind trip variability. A major problem is that the main variations in person trip data occur at the intra-zonal level
+                - it is common to have a large intercept value from estimation, which means the equation may be rejected. One would expect the estimated regression line to pass through the origin
+                - null zones needs to be excluded from analysis
+                - zone totals vs zone means. The use of aggregate variables __implies that the magnitude of the error actually depend on zone size__, this heteroskedasticity has indeed been found in practice. Need to apply multipliers to reduce heteroskedasticity.
+            - In the early 1970s, it was believed that the __most appropriate analysis unit was the household__
+                - little practical success
+            - Linear regression model assumes that each independent variable exerts a linear influence on the dependent variable
+            - There are two methods to include non-linearity behavior
+                - transform the variables in order to linearise their effect (log, ln, exp)
+                - use dummy variables to discretize continuous variables into separate variables
+            - Because trip generation models are often estimated on better variables and uses better data, to ensure generation totals match production totals it is common to scale the generation side to match the production side
+        - ### 4.3 Cross-Classification or Category Analysis
+            - A popular method in the UK, estimating the response (e.g. the number of trip production per household for a given purpose) as a function of household attributes)
+            - The art of the method lies in choosing the categories such that the standard deviations of the frequency distributions are minimized
+            - The advantages are
+                - cross-classification groupings are independent of the zone system of the study area
+                - no prior assumptions about the shape of the relationship are required
+                - relationships can differ in form from class to class
+            - The disadvantages are
+                - model does not permit extrapolation beyond its calibration strata, although the lowest or highest class may be open ended
+                - no statistical goodness-of-fit measures for the model
+                - unduly large samples are required, accepted wisdom suggests that at least 50 observations per cell are required to estimate the mean reliably
+                - there is no effective way to choose among variables for classification
+                - if it is required to increase the number of stratifying variables, it might be necessary to increase the sample enormously
+            - Read more in detail to see improvements for this basic model to have some statistical attributes extracted
+            - The person-category approach is an alternative to the household-based model which offers some advantages
+                - Biggest limitation is the difficulty of introducing household interaction effects and household money costs and money budgets into a person-based model
+        - ### 4.4 Trip Generation and Accessibility
+            - Classic specification of the four-stage model does not include trip generation in the iterative procedure, this means that network changes does not affect the number of trips generated
+            - To solve this, modellers have attempted to incorporate a measure of accessbility into trip generation equations
+                - replace O=f(H) by O=f(H, A) where H is household characteristics and A is a measure of accessibility by person type
+                - accessibility measures take the general form A = sum(f(E, C)) where E is a measure of attraction of a zone, and C is the generalized cost of travel, a typical analytical form is: A = sum(E^alpha * exp(-beta * E))
+            - But this has been unsuccessful in practice, insignificant or the wrong sign
+        - ### 4.5 The Frequency Choice Logit Model
+            - Daly (1997) used the Logit form to predict the total number of trips by calculating the probability that each individual would choose to make a trip. Total travel volume can then be obtained by multiplying the number of individual of each type by their probabilities of making a trip
+            - The preferred form of accessibility at the destination (or mode) choice model is the logsum
+            - The stop-go trip generation model forms a hierarchical relationship for the individual to determine whether it will continue its tour at each stop or return home
+            - This may be a key formulation to use for tesla in order to test how the availability of supercharging stations will change a user's journey length 
+        - ### 4.6 Forecasting Variables in Trip Generation Analysis
+            - It has become a topic of interest for the modelling group to be able to capture social circumstances in which individuals live through behavioral sceince
+            - One way to achieve this is to develop a set of household types that effectively captures these distinctions and then add this measure to the equations predicting household behavior
+                - consistent with the idea that travel is a derived demand and that travel behavior is part of a larger allocation of time and money to activities in separate locations
+                - important stages in households for travel behavior might be
+                    - appearance of pre-school children
+                    - time when youngest child reaches school age
+                    - time when a youth leaves home
+                    - time when all the children left home but the couple has not yet retired
+                    - time when all members of a household have reached retirement age
+            - Old trend of aging population which may result in less travel might not hold in the future with the advent of autonomous vehicle
+            - Huge opportunity to study how autonomous vehicle technology change travel behavior, if this increases the number of discretionary trip making? 
+        - ### 4.7 Stability and Updating of Trip Generation Parameters
+            - A key and often implicit assumption of using cross-sectional data is that the model parameters will remain constant between the base and design years
+                - it is found in several studies that this cannot be rejected when trips by all modes are considered together
+                - other analyses have reported different results, which has the following implications
+                    - if there is non-zero elasticity of car trip rates to fuel prices, the usual assumption of constant trip rates in a period of rapidly increasing petrol prices could lead to serious over-provision of highway facilities
+            - trip rates of electric vehicle and gasoline vehicle is different depending on the external prices of electricity and oil 
+            - Then, it is clear that any variables with longitudinal effects on trip rates requires careful consideration as it has fundamental importance
+                - but this requires data where only cross-sectional data is available
+            - Geographical stability (transferrability) is another important attribute of a robust travel demand model
+                - it would suggest the existence of certain repeatable regularities in travel behavior which can be modeled
+                - it would indicate a higher probability that temporal stability also exists
+                - it may allow reducing substaintially the need for costly full-scale transportation surveys on different areas
+            - It is equally clear that __not all travel characteristics can be transferable (i.e. work trip duration)__, but trip rates should not be seen as unrealistic
+            - Bayesian techniques can be used to update the parameters of an estimated model from one area to be applied to another area
+                - requires a small sample of data in the application area
+                - considers a prior distribution (estimated area) and new information to create a posterior distribution corresponding to eh application area
+    - ## 5.0 Trip Distribution Modelling
+        - There are two ways of representing the pattern of travel
+            - a trip matrix which represents the origin and destination of the trips
+            - a PnA matrix which represents the production and attraction of the trips
+        - Trip distribution is often seen as an aggregate problem with an aggregate model for its solution, however, the choice of destination can also be treated as a discrete choice (disaggregate) problem and treated with models at the level of the individual
+        - Discrete choice model might be important for modelling existing Tesla users, since they may have strong considerations for proximity to charging station?
+            - A generalized cost is often computed between all the O-D pairs
+                - including travel time, wait time, walking time, fare, terminal cost, modal penalty
+                - linear combination of these and weights
+        - ### 5.2 Growth Factor Methods
+            - Uniform growth factor can be applied to forecast base year trip distribution into the future
+                - often unrealistic over longer periods
+            - Singly constrained growth factor
+                - where information about the origin or destination is known
+            - Doubly constrained growth factor
+                - Fratar or Furness methods is used to iteratively adjust two factors to "balance" the targets on both the origin side and destination side
+            - Advantage of these methods is that they are clear and simple - makes direct use of observed trip matrices
+            - Disadvantage of these methods is they are probably only useful in the short term and can't capture changes to the transportation system
+        - ### 5.3 Synthetic or Gravity Models
+            - First used by Casey (1955) to model shopping trips between towns in a region
+            - The popular version of this function is now a combined function of a negative exponential and power functions
+            - The generalized function of travel cost looks like this:
+                - $$f(c_{ij}) = c_{ij}^\alpha * \exp(-\beta * c_{ij})$$
+                - $$T_{ij} = A_i * O_i * B_j * D_j * f(c_{ij})$$
+            - A more general version accepts emperical values and depend only on the generalized cost of travel in the form of TLFD but instead of coming up with a single value for alpha and beta, there are as many parameters as there are bins
+            - Key assumption made by this method is that the same shape or TLFD will be maintained in the future
+        - ### 5.4 The Entropy-Maximizing Approach
+            - Given a system with a large number of distinct elements, to describe such a system one would need a complete specification of its micro states. However, it is practical to work in meso state, which can be arrived at many idfferent micro states. Then there is a even higher level of aggregation, macro state, which is where one makes reliable observations about the system
+            - The basis of this method is to accept that all micro states consistent with our information about macro states are equally likely to occur
+                - this is done by expressing our information as equality constraints in a mathematical program
+                - the most probable meso state is that one that can be generated the most often, so if we have a number of micro states W{T_ij} and macro state T_ij one can optimize the following
+                - $$W\{T_{ij}\} = \frac{T!}{sum(T_{ij}!)}$$
+                - Taking log, then approximating and taking the derivative one gets:
+                - $$log(W') = - \sum(T_{ij}log(T_{ij}) - T_{ij})$$
+            - Thus, by maximizing log(W') enables us to generate models to estimate the most likely meso states
+            - This formulation with the appropriate constraints can be used to derive the Furness model or gravity model
+        - ### 5.7 Other Synthetic Models
+            - An extension of the gravity model is to account for not just the deterrent effect of distance but also for the fact that the further away one is willing to travel the greater the number of opportunities to satisfy your needs
+                - Fang and Tsao (1995) suggested a model called self-deterrent gravitymodel with quadratic costs:
+                    - $$\exp(-\beta \times C_{ij} \times -\lambda \times T_{ij} \times C_{ij})$$
+            - Another model is the intervening opportunities model, which says trip making is not explicitly related to distance but to the relative accessibility of opportunities for satisfying the objective of the trip
+                - consider first a zone of origin $$i$$ and rank all possible destinations in order of increasing distance from $$i$$
+                - then look at one O-D pair where $$j$$ is the $$m^{th}$$ destination in order of distance, there are $$m^{-1}$$ alternative destinations actually closer to $$i$$
+                - a trip maker would certainly consider those destinations as possible locations to satisfy the need given rise to the journey, which are the __intervening opportunities influencing a destination choice__
+                - let $$\alpha$$ be the probability of a trip maker being satisied with a single opportunity, then the probabiliy of being attracted by a zone with $$D$$ opportunities is $$\alpha D$$
+                - consider probability $$q_i^m$$ of not being satisfied by any of the opportunities offered by the mth zones, which is not being satisfied with first, second, or $$m^{th}$$
+                    - $$q_i^m = q_i^{m-1} \times (1 - \alpha D_i^m)$$
+                    - $$q(x) = A_i \times \exp(-\alpha x)$$ where x is the cumulative attractions of the intervening opportunities
+                    - $$T_{ij}^m = O_i * (\exp(-\alpha x_{m-1}) * \exp(-\alpha x_m)) / (1 - \exp(-\alpha x_m))$$
+                - This formulation starts from a different first principles which is interesting
+                - Not often used in practice because the theory behind it is less well known, can be difficult to handle when implemented, the advantages over gravity is not overwhelming, no suitable software
+    - ## 6.0 Modal Split and Direct Demand Models
+        - ### 6.1 Introduction
+            - It can be treated as an aggregate problem similar to trip distribution, and we can observe how far we can get with similar tools
+            - Examine direct demand models - a method to estimate generation, distribution and modal split simultaneously 
+            - Examine the need for consistency between parameters and structure of distribution and mode choice models
+                - **Often disregarded by practitioners at their peril**
+            - The issue of mode choice is arguably the most important element in transport planning and policy making - **thus it is important to develop and use models which are sensitive to those attributes of travel that influence individual choices of mode**
+        - ### 6.2 Factors Influencing the Choice of Mode
+            - Characteristics of the trip maker
+                - Car availability and/or ownership
+                - Possession of a driving licence
+                - Household structure
+                - Income
+                - Decisions made elsewhere, take children to work
+                - Residential density
+            - Characteristics of the journey
+                - Trip purpose
+                - Time of day
+                - Whether the trip is alone or with others
+            - Characteristics of the transport facility
+                - Components of travel time
+                - Components of monetary cost
+                - Availability and cost of parking
+                - Reliability of travel times and regularity of service
+                - Comfort and convience
+                - Safety, protection, security
+                - The demand of the driving task
+                - Opportunities to undertake other activities during travel
+            - A good mode choice model would be based at least on simple tours and should include factors such as if one takes a car for the first leg then it is likely for one to use the car on the subsequent legs
+        - ### 6.3 Trip-end Modal Split Models
+            - This was used in the past, particularly in the USA
+            - Personal characteristics were thought tot be the most important determinants of mode choice
+            - So mode split was immediately done after trip generation when the different characteristics of the individuals could be preserved
+            - It was part of “predict and provide” approach to transport planning
+                - **Outdated and wrong in todays perspective**
+            - Mode choice was dependent only on income, residential density and car ownership
+            - This model can be accurate in the short term, but **is defeatist in the sense of being insensitive to policy decisions**
+        - ### 6.4 Trip Interchange Heuristics Modal-split Models
+            - Dominate method in Europe
+            - Integrates the trip characteristics because it is applied post-distribution but can be difficult to include user characteristics because the info may be lost in the trip matrix
+            - Initially, empirical relationships with in-vehicle travel time was used to estimate what proportion of travellers would be diverted to use a longer but faster bypass route
+                - S-curve
+            - Another approach is to use a version of Kirchhoff formulation in electricity
+                - The proportion of trip makers between $$i$$ and $$j$$ that chooses mode $$k$$ as function of the respective generalized cost $$C_{ij}$$ is given by: $$P_{ij}^k = \frac{(C_{ij}^k)^{-n}}{\sum(C_{ij}^k)^{-n}}$$
+                - Where $$n$$ is a parameter to be calibrated or transformed from another location or time
+                - This is not too dissimilar from the Logic equation
+        - ### 6.5 Synthetic Models
+            - Entropy-maximizing approach can be used to generate models of distribution and mode choice simultaneously - which leads to the Logit form
+            - Logit form
+                - $$P_{ij}^1 = \frac{\exp(-\beta C_{ij}^1)}{\sum \exp(-\beta C_{ij}^k)}$$
+                - The parameter $$\beta$$ plays two roles: it acts as the parameter controlling dispersion (**trip distribution**) and also in the choice between destinations at different distances (**mode choice**) from the origin
+            - So a more practical joint distribution/modal-split modal has the form (Wilson 1974) which splits out $$\beta$$ into two separate parameters
+                - $$T_{ij}^{kn} = A_i^n O_i^n B_j D_j \exp(-\beta_n K_{ij}^n) \frac{\exp(-\lambda_n C_{ij}^k)}{\sum(\exp(-\lambda_n C_{ij}^{k’}))}$$
+                - Where $$K_{ij}^n$$ is the __composite cost__ of travelling between $$i$$ and $$j$$ asp received by person type $$n$$
+                - Williams (1977) showed that the only correct specification of $$K$$ is
+                    - $$K_{ij}^n = \frac{-1}{\lambda_n} \log(\sum(\exp(-\lambda_n C_{ij}^k)))$$
+                    - $$\beta_n \leq \lambda_n$$
+                - The last equality is vital to ensure that the structure G/D/MS/A can be used, otherwise if $$\beta > \lambda$$ **then the structure G/MS/D/A could be the correct one**
+            - ==For many applications these aggregate models remain valid and in use. However, for a more refined handling of personal characteristics and preferences we now have disaggregate models which respond better to the key elements in mode choice==
+            - For a multi-modal scenario, the __N-way__ structure is popular in disaggregate modelling work
+                - **but it assumes all alternatives have equal weight which can lead to problems if alternatives are correlated**
+                    - [[blue-bus-red-bus]]
+            - Another structure is the __added-mode__ structure, which was popular in the late 1960s and early 1970s
+                - **But this has shown to give different results depending on which mode is taken as the added one**
+                - Also it has been shown that the form with good base year performance does not translate in forecasts
+            - The standard practice in the 1960s and early 1970s was the __nested structure__ where alternatives with common elements are grouped together
+                - **Shortcoming of this was the composite cost for the “public-transport” mode were normally taken as the minimum of costs of the bus and rail modes for each zone pair and that the secondary split was achieved through a minimum-cost “all-or-nothing” assignment**
+                - This implies an infinite value for the dispersion parameter of the sub-modal split function
+                - Applying this form to [[blue-bus-red-bus]]
+            - Calibrating a binary logit model with known proportions of choosing each mode and the cost of travel for all OD pairs across both modes is done with linear regression with the LHS of the following equation as dependent variable and the cost difference as the independent variable
+                - $$\log[\frac{P_1}{(1-P_1)}]=\lambda(C_2-C_1)+\lambda\delta$$
+                - Where $$\lambda$$ is the dispersion parameter and $$\delta$$ is the modal penalty (assumed associated with the second mode)
+            - Calibrating a hierarchical modal-split model involves recursion using maximum likelihood estimation (as opposed to least square estimates). Data is grouped into suitable cost-bins
+                - First calibrate the sub-modal split using the technique above
+                - Then, segment trips that have a choice in modes into bins
+                - Calculate the weighted cost of each bin
+                - The probability of choosing a mode for each bin can be represented as:
+                    - $$P_k = \frac{1}{[1+\exp(-Y_k)]}$$
+                    - $$Y_k$$ is the representative cost of the bin
+                - The logarithm of the likelihood function is:
+                    - $$L = constant + \sum[(n_k - r_k)\log(1-P_k)+r_k\log(P_k)]$$
+                    - $$n_k$$ is the observed number of trips in the cost-difference interval
+                    - $$r_k$$ is the observed number of trips by the first mode in the interval
+                - Then by taking the partial first and second derivatives w.r.t various parameters, a search algorithm can find the maximum
+        - ### 6.6 Direct Demand Model
+            - Alternative to sub-models, this approach is to create one single model that consolidates generation, distribution and mode choice
+                - Direct Demand Models use a single estimated equation to relate travel demand directly to mode, journey and person attributes
+                - Quasi-Direct Models employ a form of separation between mode split and total OD travel demand
+            - Direct Demand Models
+                - Earliest forms use multiplication, there are different versions with different mathematical forms
+                - SARC (Kraft 1968) model estimates demand as a multiplicative function of activity and socioeconomic variables for each zone pair and LOS attributes of the modes serving them
+                - Rewritten (Manheim 1979) to a clean form of:
+                    - $$T_{ijk}=\theta Y_{ik} Z_{jk} \prod_m(L_{ijm})$$
+                    - $$Y_{ik}$$ is a composite term for population and income at the origin
+                    - $$Z_{jk}$$ is a composite term for population and income at the destination
+                    - $$L_{ijm}$$ is a composite term for travel time and cost between OD and mode
+                - Very attractive in principle, **but the large number of parameters needed to estimate can be hard to capture correctly**
+                - ==Commonly used in intra-urban studies where the zones are large, or places where the ere are unique OD patterns that can be captured better with direct demand models rather than gravity models==
+            - Quasi-Direct Models
+                - A combined frequency-mode-destination choice model where the structure is of __Nested Logit form__
+                - The distribution-models split model is coupled with the choice of frequency (Trip Generation) **via a composite accessibility variable**
+    - ## 7.0 Discrete Choice Models
+        - Dealing with modelling when an individual have to select an option from a finite set of alternatives
+        - ### 7.1 General Considerations
+            - Discrete choice model postulate that: **the probability of individuals choosing a particular option is a function of their socioeconomic characteristics and the relative attractiveness of the option**
+            - **Utility** is used to represent __attractivness__
+                - Alternatives present utility to the user
+                - There are __observable utility__ and __random utility__
+                - Observable utility is often represented by linear combination of variables with coefficients representing their relative effects
+                - The intercept, or __alternative specific constant__ represents the net influence of all __unobserved utility__ such as comfort and convience
+            - To predict, the utility of an alternative is transformed into a probability value
+                - **Logit formulation**
+                - **Probit formulation**
+            - **These models can’t be calibrated using standard curve-fitting techniques** because their dependent variable is an un-observed probability and the observations are the individual choices
+        - ### 7.2 Theoretical Framework
+            - Random utility theory (Domencich and McFadden 1975)
+                - Individuals act rationally and possess perfect information
+                - There is a set of alternatives and a set of characteristics for these alternatives and the individuals
+                - Each alternative has associated a net utility for the individual. Since the modeller does not have perfect information, the net utility $$U_{jq}$$ is comprised of systematic utility $$V_{jq}$$ and random utility $$\epsilon_{jq}$$ 
+                - **The population is required to share the same set of alternatives and face the same constraints**
+                - The individual selects the __maximum-utility alternative__
+        - ### 7.3 The Multinomial Logit Model (MNL)
+            - Proposed by Domencich and McFadden in 1975, this is the simplest and most popular practical discrete choice model
+            - **The random residual is assumed to have a Extreme Value Type I distribution (Gumbel or Weibull)**
+            - The choice probability formulation is
+                - $$P_{iq}=\frac{\exp(\beta V_{iq})}{\sum(\exp(\beta V_{iq}))}$$
+            - There is an important issue called **theoretical identification** which is revisited in this chapter
+                - ==Discrete choice models require to set certain parameters to a given value in order to estimate the model uniquely==
+            - An important property of this model is the satisfaction of the axiom of **independence of irrelevant alternatives (IIA)**
+                - __Where any two alternatives have a non-zero probability of being chosen, the ratio of one probability over the other is unaffected by the presence or absence of any additional alternative in the choice set__
+                - This is advantages when using it for a new alternative problem
+                - Disadvantages when used with correlated alternatives 7.4 The Nested Logit Model (NL)
+            - If there are too many alternatives, it can be shown that unbiased parameters are obtained if the model is estimated with a random sample of the available choice set for each individual
+            - Direct and cross elasticities can be easily computed
+        - ### 7.4 The Nested Logit Model (NL)
+            - In more complex situations, the MNL might be inadequate
+                - When alternatives are not independent
+                - When the variances of the error terms are not equal
+                    - Heteroskedasticity between observations because some user have GPS to measure time more accurately or between alternatives because wait time is more accurate for rail compared to bus
+            - There are flexible models like the probit model, (see 7.5 The Multinomial Probit Model) anzd the mixed logit model (see 7.6 The Mixed Logit Model)
+                - These present other challenges such as difficult to solve
+            - Formally presented by Williams in 1977 and Daly and Zachary in 1978 independently from each other
+                - $$U(i, j) = U_j + U_{i/j}$$
+                - Where $$i$$ denotes alternatives at a lower level nest and $$j$$ the alternative at the upper level
+                - $$U(i, j) = V(i, j) + \epsilon(i, j)$$
+                - Where like before, $$V(i,j) = V(j) + V(i/j)$$ is the representative utility and $$\epsilon(i,j) = \epsilon(j) + \epsilon(i/j)$$ is the stochastic utility 
+                - Williams’ definition of the stochastic error terms may be synthesized as follows
+                    - The errors $$\epsilon(j), \epsilon(i/j)$$ are independent for all $$(i, j)$$
+                    - The errors $$\epsilon(i/j)$$ are identically and independently distributed (IID) EV1 8th scale parameter $$\lambda$$
+                    - The errors $$\epsilon(j)$$ are distributed with variance $$\sigma^2_j$$ and such that the sum of $$U_j$$ and the maximum of $$U_{i/j}$$ is distributed EV1 with scale parameter $$\beta$$
+                        - Such distribution may not exist
+                - The structural condition of this model is still $$\beta \leq \lambda$$
+            - McFadden in 1981 generated the NL model as one particular case of the **Generalized Extreme Value (GEV) discrete choice family** (see 7.7 Other Choice Models and Paradigms)
+            - **Limitations of NL**
+                - This is not a random coefficients model, which means it can’t cope with taste variations among individuals without explicit market segmentation
+                - It can’t treat heteroskedastic options, as the error variances of each alternative are assumed to be the same
+                - It can only handle as many interdependencies among options as nests have been specified
+                - If can’t handle cross-correlation effects between alternatives in different nests
+                - The search for the best NL structure requires __a priori__ knowledge
+        - ### 7.5 The Multinomial Probit Model
+            - **The stochastic utility errors are distributed multivariate Normal with mean zero and an arbitrary covariance matrix**
+            - ==This mean the model can’t be written in simple closed form like the MNL (except in a binary case)==
+                - To solve this, we need __simulations__
+            - Binary Probit Model
+                - $$U_1(\theta, Z) = V_1(\theta, Z) + \epsilon_1(\theta, Z)$$
+                - $$U_2(\theta, Z) = V_2(\theta, Z) + \epsilon_2(\theta, Z)$$
+                - $$P_1(\theta, Z) = \Phi[(V_1-V_2) / \sigma_{\epsilon}]$$
+                - Although $$\Phi[x]$$ is the cumulative standard Normal distribution which has tabulated values, the equation is not directly estimable
+                - There is also an __identifiability problem__ and one would need to normalize before obtaining an estimate of the model parameters
+            - An important problem of fixed-coefficient random utility models (MNL and NL) **is their inability to treat the problem of random taste variations among individuals without explicit market segmentation**
+                - MNP handles this problem with its error distribution form
+        - ### 7.6 The Mixed Logit Model
+            - This appears to be the model for the new millennium
+                - The current form originated from two research groups (Ben-Akiva and Bolduc; McFadden and Train) in the 90s
+                - The original formulation was made in the 70s by Carnell and Reddy
+            - The model is **defined on the basis of the functional form for its choice probabilities**
+                - $$P_{iq} = \int L_{iq}(\Theta)f(\Theta)d(\Theta)$$
+                - Where $$L_{iq}$$ is typically an MNL probability evaluated at a set of parameters $$\Theta$$ and their density function
+                - $$f(\Theta)$$ is known as __mixing distirbution__
+        - ### 7.7 Other Choice Models and Paradigms
+            - A restriction of NL model is for modes like Park & Ride, it is correlated to both drive and rail
+                - To tackle this, various types of GEV models have been formulated with __overlapping nests__
+                - Cross-Nested Logit model
+                - Cross-Correlated Logit model
+                - Paired Combination Logit model
+            - There have been criticism over linear-in-the-parameters form because **they are associated with a compensatory decision-making process, a change in one or more of the attributes may be compensated by changes in the other**
+                - Choice by elimination
+                - Satisficing behaviour
+    - ## 8.0 Specification and Estimation of Discrete Choice Models
+        - ### 8.1 Introduction
+            - How to fully specify a discrete or disaggregate model (DM)
+                - Selecting the structure of the model
+                - The explanatory variables to consider
+                - The form in which they enter the utility function
+                - Identification of the individual’s choice set
+            - How to estimate such a model once properly specified
+                - With readily available software?
+                - A common issue is although we may be able to successfully estimate the parameters of widely different models with a given data set, these (and their elasticities) will tend to be different and we often lack the means to discriminate between them
+                - Interpretation of results
+        - ### 8.2 Choice-Set Determination
+            - First thing for modeller to decide is - **which alternatives are available to each individual in the sample**
+            - Without asking the respondent what the available set of options are there, **there is no good way of limiting the number of options**
+                - Take into account only subsets of the options which are effectively chosen in the sample
+                - Brute force method of assuming everybody has all alternatives available
+            - The decision maker **may also only decide from a limited set of choices from the ones assumed by the modeller because of lack of knowledge** (i.e. didn’t know there is a bus)
+                - Use heuristic or deterministic choice-set generation rules which permit the exclusion of certain alternatives (i.e. bus is not available to someone if the nearest stop is x meters away)
+                - Collection of choice-set information directly from sample, asking the respondents about their perception of available options
+                - Use random choice sets from a two-stage process: first a choice-set generation process which a probability function picks from all possible choices, and secondly a conditional on the specific choice set, a probability of choice for each alternative is defined
+        - ### 8.3 Specification and Functional Form
+            - **The linear function is probably adequate in most context**
+                - Non-linear functions are deemed more appropriate
+                - But there is no guarantee of parameters converge to unique values
+                - No suitable softwares
+            - Three approaches proposed in literature on how to handle the functional form
+                - Stated preference suveys
+                - Statstical transformations, such as Box-Cox method, letting the data decide
+                - Constrcutive use of econometric theory to derive functional form 
+                    - **The most attractive proposition as the final functional form can be tied up to evaluation measures of user benefit**
+            - If there are no theoretical reasons to back up a given form, it appears interesting to let the data indicate which could be an appropriate form
+                - **Box-Cox transformation**
+                - **Box-Tukey transformation**
+        - ### 8.4 Statistical Estimation
+            - t-test for significance
+                - $$t = \theta_{k}/s_{kk}$$
+                - Sufficiently large values of t, typically greater than 1.96 for 95% confidence level, can reject the null hypothesis and accept that this attribute has a significant effect
+                - ==Current practice recommends including a relevant (i.e. Policy type) variable with a correct sign even it if fails any significance test== because the estimated coefficient is the best approximation available for its real value and the lack of significance can be justified by the lack of data
+                - A way to include socio-economic characteristic is to create interaction variables with the utility variables
+                    - essentially a partial segmentation procedure
+            - Overall test of fit
+                - Compare the model against a market share model
+            - The $$\rho^2$$ index
+                - Defined as $$1 - \frac{l^*(\Theta)}{l^*(0)}$$
+                - ==Values around 0.4 are usually considered excellent fits==
+                - There are two adjustments to this formulation to account for proportion of the choices and the number of parameters, known as __corrected__ $$\rho^2$$  and __adjusted__ $$\rho^2$$
+            - Estimating from **choice-based sample** is difficult
+                - Maximum likelihood estimators are impractical due to computational intractability
+                - However, **if the modeller knows the fraction of the decision-making population selecting each alternative, then a tractable method can be introduced**. Weight the contribution of each observation to the log-likelihood by the ratio of the friction of the population selecting the option over sample selecting the option
+        - ### 8.5 Estimating the Multinomial Probit Model
+            - MNP and ML (mixed logit) do not have a closed form, so their choice probabilities are characterized by a multiple integral that is not easy to solve efficiently
+            - Solved with **numerical integration** if one wants the most accurate mouthed
+            - Another approach is **simulated maximum likelihood**
+        - ### 8.6 Estimating the Mixed Logit Model
+            - There are two specifications for this model: error components (EC) model and random coefficients (RC) model
+                - Depends on the manner in which the modeller looks at the phenomenon under study
+            - There are two sets of parameters that can be estimated: population parameters and individual parameters
+            - The __classical approach__
+                - Using simulated maximum likelihood
+                - Softwares have been written to do this: __Biogeme, GAUSS packages, ALOGIT, LIMDEP__
+            - The __Bayesian approach__
+                - Got popular in the early 2000s, but lost appeal in recent years
+                - Ken Train has code to do this
+        - ### 8.7 Modelling with Stated-Preference Data
+            - There are two features of SP that will affect which analysis method to use
+                - Each respondent may contriubte with more than one observation
+                - Preference can be expressed in different forms
+            - The preferred SP response is **ranking** because it is simpler and more reliable
+            - There are four broad groups of techniques for analysis, __they all seek to establish the weights attached to each attribute in an utility function estimated for each alternative__, known as **preference weights**
+                - Naive or graphical methods
+                - Lease square fitting
+                - Non-metric scaling
+                - Logit and Probit analysis
+            - Naive approach calculates the mean average rank and compares it with each alternative
+                - __Seldomly used in practice__
+            - Least square fitting is basically estimating an equation based on the response to predict the rating for the alternative
+                - This can obtain a goodness of fit
+            - Non-metric scaling is used with rank data
+                - **Monotonic Analysis of Variance or MONOANOVA** has been used for this
+            - Logit and Probit analysis
+                - By converting the rank data into implicit choices
+    - ## 9.0 Model Aggregation and Transferability
+        - ### 9.1 Introduction
+            - ==Travel demand models are required to forecast transportation changes and examine their sensitivity with respect to changes in the values of key variables==
+            - Aggregate models have been overly used because of it offers a tool for the complete modelling process
+                - **Disaggregate models often lacks the data necessary to make aggregate forecasts**
+            - Econometric POV - **the aggregation over unobservable factors results in a probabilistic decision model and the aggregation over the distribution of observable results in the conventional aggregate or macro relations**
+            - Given a set of data pertaining to individuals
+                - One options to aggregate into groups and estimate macro-relations. Then using this macro-relation to produce aggregate forecasts
+                - The alternative is to estimate micro-models. Then use these models to on individuals which is then aggregated to produce aggregate forecasts
+                - **The question is exactly how to aggregation the micro-relations**
+            - Generally, it is context dependent. **It is clear for mode choice and short-term modelling that the use of highly disaggregate data is desirable**
+        - ### 9.2 Aggregation Bias and Forecasting
+            - The use of average zonal variables for estimating disaggregate demand models should be avoided whenever possible
+            - Similarly, the same bias occurs in forecasting
+        - ### 9.3 Confidence Intervals for Prediction
+            - [[bootstrap-algorithm]]
+            - The immense majority of discrete choice model applications have failed to produce confidence intervals for the estimated probabilities
+            - Despite having two methods of doing so: approximate the choice probabilities by a first order Taylor series expansion, solve a non-linear programming problem
+        - ### 9.4 Aggregation Methods
+            - While a disaggregate model allows us to estimate individual choice probabilities, **we are normally more interested in the prediction of aggregate travel behaviour**
+            - If the choice model was linear, then the aggregation process would be trivial - replace the average of the explanatory variables for the group in the model - **naive aggregation**
+                - If the choice model was non-linear then naive aggregation will produce a bias
+            - So another method is to use a sample population and calculate the predicted market share of alternative $$A$$ in population by multiplying the expansion factor by the predicted probability - **sample enumeration**
+                - The problem with sample enumeration is that it maintains the assumption of the base year’s conditions, so it falls apart in long-term prediction
+            - Another practical method called **classification approach** which approximates a finite number of relatively homogeneous classes
+                - The accuracy of this method depends on the number of classes and their selection criteria
+        - ### 9.5 Model Updating or Transference 
+            - Expectation and reality
+                - ==It is unrealistic to expect an operational model in the social sciences to be perfectly specified, thus it is not useful to look for __perfect model stability__==
+                - Model transference should be viewed as a practical approach to the problem of estimating a model for a study area with little resources or a small available sample
+                - A transferred model cannot be expected to be perfectly applicable in a new context, updating procedures to modify their parameters are needed so that they represent behaviour in the application context more accurately
+            - How to evaluate model transferability
+                - By comparing model parameters and their performance in two context
+                - **Test model parameter for equality** - if this holds then the null hypothesis that this difference is zero cannot be rejected at the 95% level
+                    - This method suffers from the scale problem
+                    - It can’t distinguish if the differences is real or a result of scaling
+                - **Disaggregate transferability measures** - based on the ability of a transferred model to describe individual observed choices and rely on measures of [[log-likelihood]]
+                    - Two indices can be calculated from the difference in log-likelihood
+                    - **Transferability test statistics** (TTS) is the twice the difference in log-likelihood
+                        - The test is not symmetric
+                    - Transfer index (TI) is the degree to which the log-likelihood of the transferred model exceeds a null model (market share model) relative to the improvement provided by the model developed in the new context
+                        - Bounded at 1, negative values imply the transferred model is worse than the local reference model
+            - How to update with disaggregate data?
+                - Scale and bias parameters are introduced to fit using aggregate data in application
+                - If viable, an alternative is to use purposely designed synthetic samples in an enumeration approach
+    - ## 10.0 Assignment
+        - ### 10.1 Basic Concepts
+            - The network system gives the model the supply side information in terms of frequency and capacity
+            - It only provides a cost-model, how transport cost will change with different levels of demand
+            - **It doesn’t specify the optimal supply given then future demand**
+            - For , the model should have the ability to say given these subset of people who wish to travel using EV, how many stations are needed and at what locations such that they can complete their trips
+            - **Network equilibrium** is reached when travellers from a fixed trip matrix all have optimized their route such there are no alternative routes that reduces their respective costs
+            - **System equilibrium** is a higher level state when trip matrix has reached a state of stabilization as a result of the congestion from the network
+                - ==Note: this is different from the idea of network optimal and system optimal network assignments==
+            - Speed-flow and cost-flow curves help define the relationship between the two variables
+                - There are various forms proposed for different link classifications that gives specification to the general form of $$C_a=C_a(V_a)$$
+                - Smock (1962) for Detroit proposed $$t=t_0\exp(\frac{V}{Q_s})$$ where $$t_0$$ is the travel time under free flow and $$Q_s$$ is the stead-state capacity of the link
+                - Overgaard (1967) generalized Smock’s equation to  $$t=t_0\alpha^{\beta(\frac{V}{Q})}$$ where $$Q$$ is the capacity of the link and $$\alpha, \beta$$ are parameters for calibration
+                - **Bureau of Public Roads (1964) proposed the most commonly used form of** $$t=t_0[1+\alpha(\frac{V}{Q})^\beta]$$
+                - Department of Transport in UK has a piece-wise function for urban, sub-urban and inter-urban roads
+                - Akcelik (1991) proposed a curve that focuses on the junction and penalizes over capacity flows more with $$t=t_0+(0.25T)[(x-1)+\sqrt{(x-1)^2+\frac{8J_A}{Q_jT}x}]$$ where $$T$$ is the flow modelling period (typically 1 hour), $$Q_j$$ is the capacity at the junction (there is a formula to find it), $$x$$ is the $$\frac{V}{Q_j}$$ ratio, $$J_A$$ is the delay parameter
+            - ==It is recommended to consider both time and distance with a generalized cost of $$C_a=\alpha(travel time)_a + \beta(link_distance)_a$$==
+        - ### 10.2 Traffic Assignment Methods
+            - Primary objectives
+                - Obtain good aggregate network measures (total flows on links, total revenue by bus service)
+                - Estimate zone-to-zone travel costs (times) for a given demand
+                - Obtain reasonable link level flows and identify heavily congested links
+            - Secondary objectives
+                - Estimate routes used between each OD pair
+                - Select link analysis
+                - Obtain turning movements for the design of future junction
+            - **Basic assumption of assignment is that of a rational traveller**
+                - One that will choose a route with the least perceived individual cost
+                - This perceived cost is a generalized cost between time, distance, monetary costs, congestion’s, queues, maneuvers, type of road, scenery, road works, etc
+                - __The most common approximation is to use time and monetary cost__
+            - There are factors that result in the trips in the same OD pair taking different routes
+                - Differences in individual perception of what constitutes at the “best route”
+                    - Multiple user classes
+                - Level of knowledge of alternative routes may vary
+                    - Stochastic effects
+                - Congestion affecting shorter routes first
+                    - Congested assignment and equilibrium
+        - ### 10.3 All-or-nothing Assignment
+            - The simplest assignment method
+            - Assumes no congestion effects, all drivers consider same attributes and weighs them the same
+            - Link costs are fixed due to the lack of congestion
+        - ### 10.4 Stochastic Methods
+            - Many of these methods use [[Monte Carlo simulation]] to represent the “randomness” in drivers’ perception
+            - Burrell (1968) developed a popular method
+                - For each link in a network, develop an objective cost and subjective cost. The subjective cost is a distribution with the objective cost as the mean
+                - Burrell assumed a normal distribution, others hypothesized Normal distribution
+                - The distribution of subjective costs are assumed to be independent
+                - Drivers are assumed to choose route that minimizes their __subjective cost__ over the entire route
+                - **A shortcoming of this is that the subjective costs are not independent, and lead to unrealistic switching between parallel routes connected by minor roads**
+            - Dial (1971) proposed a proportional stochastic approach that splits trips based on a logit formulation
+            - There is ongoing research on how to integrate stochastic assignment methods closer with developments in discrete choice
+        - ### 10.5 Congested Assignment
+            - Ignoring stochastic effects and just focus on congestion’s feedback on assignment, there is a different set of models
+            - Wardrop (1952) proposed the following
+                - **Wardrop’s first principle**
+                    - [[quotes]] "Under equilibrium conditions traffic arranges itself in congested networks in such a way that no individual trip maker can reduce their path costs by switching routes"
+                    - Also known as __user optimal__
+                - **Wardrop’s second principle**
+                    - [[quotes]] "Under social equilibrium conditions traffic should be arranged in congested networks in such a way that the average (or total) travel cost is minimized"
+                    - Also known as __system optimal__
+                - **Braess’s Paradox**
+                    - (not really a paradox)
+                    - Illustrates this two principles by demonstrating that under certain conditions adding capacity to a road network when drivers seek to minimize their own travel costs can actually increase the system cost
+            - To solve these equilibriums there have been various methods proposed (exact and heuristic)
+        - ### 10.6 Public Transport Assignment
+            - Skipped because it is irrelevant
+        - ### 10.7 Limitations of the Classic Methods
+            - Node-link model
+                - Macro-models usually only have an abstract version of the road network, not all roads are coded
+                - Lack of intersection detail
+                - Can’t consider intra-zonal trips
+            - Defining average perceived costs
+                - No evidence in how this changes with time, purpose, length, socio-economic status
+                - ==Hard to forecast components of the perceived cost==
+            - Not all trip makers perceive costs the same way
+                - It is possible to create different classes with different perception parameters
+            - Assumption of perfect knowldege
+                - ==This might be solved with GPS services like Google Maps and Waze==
+            - Day to day variations in demand
+                - It is common to model peak and off-peak demand
+                - Even then, the build-up of congestion produces immediate changes in travel time and ripples into trip planning of a decision maker
+                - **Route choice have strong time dependent elements which are not yet being modelled**
+            - Dynamic nature of traffic
+                - Most classic assignment methods __assume the trip matrix is valid over a modelling period__
+                - Traffic is then assigned to the network under assumption of steady state conditions over that period
+                - However, the network condition is not steady over a period as long as 1 hour
+                - It also assumes the demand will fully clear during the time interval is likely to underestimate delays
+            - Input errors
+                - Trip demand will contain errors from previous model components or even conversion from passenger to vehicle trips
+        - ### 10.8 Practical Considerations
+            - This component is often validated with traffic counts or cordon counts, but there is no standard procedure to calibrate this if it is not validated
+            - Goodness of fit
+                - Modelled vs observed volume over links of observations
+                - R-square value to show the fit
+                - GEH metric is useful consider the fit with the context of the link $$GEH=\sqrt{\frac{(O_i-E_i)^2}{0.5(O_i+E_i)}}$$
+                    - This indicator is not a-dimensional, so the recommendation is strictly with hourly flow
+                    - GEH of less than 5 is good
+                    - GEH between 5-10 is worth investigating
+                    - GEH of greater than 10 means there is a high probability of erroneous assignment
+    - ## 11.0 Equilibrium and Dynamic Assignment
+        - ### 11.1 Introduction
+            - The congested assignment techniques from 10.0 Assignment fail to achieve true Wardrop’s equilibrium
+            - 11.2 Equilibrium will present a programming framework to achieve true equilibrium
+        - ### 11.2 Equilibrium
+            - This presents the formal formulation of the assignment problem with mathematical programming
+            - Frank-Wolfe algorithm (link flow)
+                - A linear approximation method
+                - Solves a line arises sub-problem to get a good descent direction and finds a new solution using linear search
+                - Guarantees a reasonable convergence to Wardrop’s equilibrium
+            - Jayakrishman’s Gradient Projection algorithm (route or path based)
+            - Origin based assignment
+                - A family of solution methods that define the solution variables in an intermediate way between links and routes
+            - Stochastic equilibrium assignment combines the effects of stochasticity and user-optimal
+                - Each user chooses the route with the minimum “perceived” travel cost
+                -  **The difference between SUE and Wardrop’s user equilibrium is that each driver has a self-defined “travel cost” instead of a single global value for the class of drivers**
+                - The difficult part of implementing this __is that it might not converge__
+        - ### 11.3 Transport System Equilibrium
+            - Up until now, we have only been focus on a single mode - however we now there should be some interactions between all the modes
+            - **If we hold transit parameters, then the model can converge with iterations of auto assignments**
+            - Another layer of interaction is looking at the entire modelling system and notice that demand is also elastic to the network performance
+                - A naive strategy is to create a loop that uses travel time as a feedback system
+            - Formulating a combined modelled across distribution, mode choice and assignment
+                - The objective function is the sum of convex function and is solved with an algorithm proposed by Evans (1976) and generalized by Boyce (2007)
+        - ### 11.4 Traffic Dynamics
+            - 3 assumptions made in assignment models
+                - Perfect information assumption
+                    - Travellers has full knowledge on the generalized cost of travelling on every link and route in the network
+                - Separability assumption
+                    - Delays not eh links can be described using a function of flows on that link __alone__
+                - Steady state assumption
+                    - The demand and flows during a modelled period do not change over time
+            - None of these are true in real life
+                - Even with GPS, people don’t have perfect infromation
+                - Delays at a junction depends on upstream flow
+                - VDF allows flows to exceed demand even though in real life queues will form and links will come to a halt
+            - [[Dynamic traffic assignment (DTA)]]
+                - Basic requirements: positivity, conservation, FIFO, minimum travel time (flows don’t propagate instantaneously), finite clearing time, capacity, causality (upstream effects)
+                - Solved with dynamic traffic assignment methods
+                - Finding a dynamic user equilibrium (DUE) solution for the network is non-trivial
+                    - This lead to the advent of meso- and micro-models
+        - ### 11.5 Departure Time Choice and Assignment
+            - Peak spreading phenomenon happens when congestion rises and travellers shift their departure time to avoid it
+            - In a macro model, this can be modelled as a logit choice between travelling at different periods
+                - Each period will have their respective advantages and disadvantages
+                - However, overall there is not a lot of flexibility for mandatory trips to shift outside of the peak period
+            - In a micro model, there is a concept of preferred time of travel and any shift away from that creates __disutility__
+                - **Schedule disutility** can be added to travel time disutility to create a combined utility function
+                - Small (1982) presented some seminal work on this
+            - Combined logit choice and equilibrium assignment formulation are presented to address this
+                - However, they ignore interactions between time periods
+                - Also, it violates a logit model assumption that alternatives are independent because travel time on one time slice __depends on travel times on other time slices__
+            - These challenges are tackled by HCG et al (2000) with the heterogeneous Arrival and Departure times based on Equilibrium Scheduling Theory (HADES) model
+                - Produces a time dependent OD matrix
+            - ==Not a simple problem, and might require better passive travel data to truly develop a model to address this==
+    - ## 12.0 Simplified Transport Demand Models
+        - ### 12.1 Introduction
+            - While the focus of improving transport modelling have been over theoretical formulation  and better data-collection methods, a parallel of research have been focused on **making the use of readily available data and communicability of simpler model features and results**
+            - How the model treats __space (distance)__ is telling how complex or simple they might be
+        - ### 12.2 Sketch Planning Models
+            - These models are used to facilitate the analysis of broad transport and land-use strategies at a coarse level of resolution
+                - Do not require large amounts of data
+                - Rely on the transfer of parameters and relationships from one area or country to another
+                - Location dependent elements are network, population and income levels
+            - **Unified Mechanism of Travel (UMOT) model**
+                - Based on the assumption that these relationships were transferable over time and space
+                    - The average daily travel time per traveller (constant travel time budgets)
+                    - The average daily travel expenditure as a function of income and car ownership
+                    - The average number of travellers per household as a function of household size and car ownership
+                    - The unit cost of owning and running a car
+                    - The speed-flow relationship by road type
+                    - The threshold of daily travel distance that justifies owning a car
+                    - __These relationships were developed with data sources from all over the world__
+                - Requires the following location specific data
+                    - The number of households and their sizes in the study area
+                    - The income distribution of households
+                    - The unit cost of travel by mode
+                    - The length of the road network in the study area
+                - Produced the following outputs
+                    - Car ownership per household by income group
+                    - Aggregate modal choice for the whole city
+                    - Average travel times and speeds
+                    - Total expenditure and travel times
+            - ==Over reliance on the transfer of relationships and parameters from one context to another detracts from its validity==
+        - ### 12.3 Incremental Demand Models
+            - These models focus on **answer the impact of changes in farces, level of services, or other attributes of a particular mode**
+            - **Incremental elasticity analysis**
+                - Arc elasticities are estimated from time series data
+                - Point elasticities are estimated from demand models
+                - $$T-T_0=\frac{E_sT_0(S-S_0)}{S_0}$$
+                - This assumes that $$E_s$$ is known and is constant
+                - Todd Litman compiled an excellent [resource](https://www.vtpi.org/tdm/tdm11.htm) of how elasticities affect travel behaviour [[transportation]]
+                - Although point elasticities are symmetrical, it shouldn’t be the case in reality (see [[Loss Aversion Theory]])
+            - **Pivot point modelling**
+                - A way of modelling the changes to one variable and how that affects people choices of a mode
+            - **The main motivation of this approach is to circumvent the difficulties of calibration a distribution model well to observed data**
+                - It is common for places to collect rich OD matrix 
+                - Then instead of formulating any distribution or destination trip model (which will distort these OD matrices), __attempt to only model the changes in trip patterns as a function of cost and trip end future states__
+        - ### 12.4 Model Estimation from Traffic Counts
+            - This approach can be seen as combining a trip matrix and a route choice pattern
+            - If there are enough traffic counts ($$N^2$$), then the full trip matrix can be determined
+            - In practice, there are never enough traffic counts, so two methods are used to fill that gap
+                - Structured method - **imposing a particular structure which is usually provided by an existing travel demand model**
+                - Unstructured method- **relying on general principles of maximum likelihood or entropy maximization**
+            - Route choice and matrix estimation
+                - Proportional assignment methods make the proportion of drivers choosing each route independent from flow levels (i.e. all-or-nothing assignment)
+                - Non-proportional assignment methods takes into congestion effects thus the proportion of drivers choosing the routes depend on link flows (i.e. equilibrium and SUE assignment)
+                - The advantage of proportional assignment is that **they permit the separation of the route choice and matrix estimation problem** - thus assuming that proportional assignments as reasonable approximation to route choice we can estimate models
+            - Structured method
+                - Postulate a particular form of gravity model and observe what happens when we assign it to the network
+                - $$V_a=\sum_k(\alpha_k)\sum_{ij}(p_{ij}^aG_{ij}^k))$$
+                - Calibrate parameter $$\alpha$$ with least square techniques
+                - There are other formulation that is more realistic or generalized 
+            - Unstructured method
+                - Entropy-maximizing formalism provides a __naive, least-biased trip matrix which is consistent with the information available__
+                - Wilson (1978) presented the following model to estimate trip matrices from traffic counts
+                    - Maximize $$S(T_{ij})=-\sum_{ij}(T_{ij}\log(T_{ij})-T_{ij})$$
+                    - Subject to $$V_a-\sum_{ij}(T_{ij}p_{ij}^a)=0$$
+                    - Maximum entropy matrix estimation (((XZzxm74W3)))
+            - Independence and inconsistency of traffic counts
+                - Whenever a flow continuity equation of the type “flows into” a node equals “flow out of” the node can be written, **its counts will be linearly dependent**
+                - Often counts contain errors or inconsistencies because they are from different sources, allowing for a error term in the formulation can reduce this problem
+            - ME2
+                -  Is a simple and programmable model
+                - Widely implemented in the UK
+                - Limitations include the distortions it outputs when the traffic grows or declines drastically
+                - Another limitation is that it considers traffic counts as error free observations
+            - Improved matrix estimation models
+                - Bell (1983) formulated a model that preserve the structure of the prior matrix
+                - Maher (1983) proposed a model with a Bayesian approach
+                - Spiess (1987) proposed a model with maximum likelihood
+            - Extending ME2 for non-proportional assignment
+                - **If congestion is suspected to play an important role in route selection, the model needs to be extended**
+                - This requires an iterative approach, which is implemented by SATURN and others
+            - In order to use these group of techniques, several important considerations must be bear in mind
+                - Make sure the network is fully debugged, all turning movements are represented 
+                - Use an assignment method appropriate to the context (equilibrium assignment)
+                - Ensure that any prior matrix is resonable
+                - Set aside 10%-15% of the traffic counts for validation
+                - Ensure all traffic counts are adjusted using seasonal an daily factors to a common representative days
+                - Only relevant vehicle types are included
+                - It may be better to ignore counts affected by network bottlenecks
+                - **Never accept a post-matrix estimation trip table without through checks on its validation**
+        - ### 12.5 Marginal and Corridor Models
+            - Estimating trip matrix from traffic counts is weak in terms of modal choice, __an important element in infrastructure planning__
+            - A need to adopt an approach which would use simpler models to provide a planning background and would selective apply state-of-the-art models to the most relevant decision elements of the model
+            - Corridor studies
+                - It may be sufficient to model the linear corridor and consider only the points of entry and exit to it as origins and destinations
+                - Assignment problems will be minimal/non-existent in a corridor study
+                - Transfer the outputs of mode choice models and trip generation models
+                - The special care in corridor models is in the bottleneck effects
+            - Marginal demand models
+                - Focus on the part of transport demand most likely to be affected by the project or policy in question  
+        - ### 12.6 Gaming Simulation
+            - Mathematical formulation is not required to solve transport problems, it is useful to have an interpretable solution when making decisions
+            - Mental models can be just as good for policy makers if they provide the necessary information
+                - Gaming simulation is a popular method to improve mental models
+    - ## 13.0 Freight Demand Models
+        - ### 13.1 Importance
+            - Freight movement is an important source of congestion and other traffic problems
+                - Noise and nusance
+                - On street stops 
+            - Four layers of decision and activities produce freight movements
+                - Who produces what - decisions on productions, destinations, type of product, volume and trade relationships
+                - Logistics - decisions on the use and location of inventories and supply chain management
+                - Modes - decisions on how to deliver the goods
+                - Route - how is the multi-modal journey carried out
+            - Urban studies will mostly focus on the fourth layer
+            - Regional and international studies will tend to focus on the first three layers
+        - ### 13.2 Factors Affecting Goods Movements
+            - Location factors
+                - Derived demand and part of an industrial process
+                - Location of where the raw materials are sourced, or manufacturing plants will determine the levels of freight movement involvements
+            - Material dependence
+                - Given a certain product, there are relevant materials needed for its production
+            - Physical factors
+                - The value of the product
+                - The size of the product
+                - The need for refrigiration
+            - Operational factors
+                - The size of the firm
+                - Policy for distribution channels
+            - Geographical factors
+                - Density of surrounding population may influence the distribution of end products
+            - Dynamic factors
+                - Seasonal variations
+                - Consumer demands
+        - ### 13.3 Pricing Freight Services
+            - Because freight is a private business, it is hard to obtain accurate pricing informations
+            - Factors that we assume affects service are
+                - Lenght of the supply contracts
+                - Extent of volume discounts
+                - Importance of terminal facilities
+                - Use of own-account operations
+        - ### 13.4 Data Collection for Freight Studies
+            - Sender -> Freight forwarder -> Operator/carriers -> Drivers -> Reciever
+                - Collecting data at different stages will obtain information for each layer
+                - The sender (shipper, consignor) requires the deliver of its good
+                - The freight forwarder organizes the shipping process, usually a firm that subcontracts the carriers or has its own
+                - The carrier is responsible for the transportation of goods, provide the mode
+                - The driver operates the mode, may decide the route taken
+                - The receiver takes the good
+            - The main sources of data collections are
+                - Asking drivers on the road (road side survey)
+                - Interviewing specific carriers
+                - Mail back surveys
+        - ### 13.5 Aggregate Freight Demand Modelling
+            - Follows the four-stage model
+                - Estimate the generation and attraction of freight demand by zone
+                - Distribute the volumes to satisfy “trip-end” constraints
+                - Assign the flows on modes and routes
+            - Most common distribution model used is gravity model
+                - The cost function include: out-of-pocket charge, door-to-door travel time, variability of travel time, waiting time, delay time, probability of loss or damage
+            - The early formulation of assignment equilibrium considers the decisions of shippers before carriers (FNEM)
+                - Shippers follow Wardrop’s first principal
+                - Carriers follow Wardrop’s second principal
+        - ### 13.6 Disaggregate Approaches
+            - Each consignment in the freight transportation process is seen as an individual agent with unique traits
+                - Choices are made from various sets of choice-sets
+                - General utility are built on these types of choices and attributes of the goods, market and firm
+            - This kind of model is limited at the national level because of lack of data that gives us insight to this
+        - ### 13.7 Some Practical Issues
+            - Data collection is limiting the advancement of freight modelling
+                - Confidentiality and reliability
+                - Dispersion of firms
+                - Roadside interview opportunities are limited
+    - ## 14.0 Activity Based Models
+        - ### 14.1 Introduction
+            - The four-stage trip model is a simplified way of handling the link between travel (links) and activities (locations)
+            - However, the underlying structure should be travel and activities which retains the space, time and mode constraints of each person for realistic representation of a travel behavior 
+        - ### 14.2 Activities, Tours and Trips
+            - Activity - continuous interaction with the physical environment
+            - Stage - continuous movement using one mode of transport
+            - Trip - continuous sequence of stages between two activities
+            - Tour - sequence of trips starting and ending at the same location
+            - Purpose - most important activity undertaken at one of the ends of the trip
+            - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fforever-learning%2Fw4x5z11unE.png?alt=media&token=c812e825-de42-4c0a-a494-16974ba4486a)
+        - ### 14.3 Tours, Individuals and Representative Individuals
+            - The units of ABM are: households, individuals and representative individuals
+                - Representative individuals are defined by a set of characteristics: gender, income, type of work, type of family, car availability
+                - The individuals of the population will be synthesized from these representative individuals
+        - ### 14.4 The ABM System
+            - The system is disaggregated in the population sense in order to capture the intricacies of activity planning and travel so that a wider range of policies can be studied
+            - However, many other parts of ABM is still aggregated in the traditional sense
+            - The core of ABM consists of: long- and medium- term choice simulator, and person day simulator
+                - Long term choices deal with place of work, car ownership, and season ticket commitments
+                - Medium term choices deal with tasks that has to do with individuals
+                - Person day simulator searches for the most appropriate set of activities and tours required to satisfy the tasks and constraints
+                - Outputs a list of household and person day-tours (destination, time and mode choice)
+                - This goes into the trip aggregator where all the trips are consolidated (where we also add external trips, special generator trips, commercial trips, truck trips, noise trips like empty uber)
+        - ### 14.5 Population Synthesis
+            - Creates a synthetic population
+                - Synthetic population is done by expanding disaggregate sample data to mirror known aggregate distributions of household/person variables
+                - Then each person in the household is sampled with Monte Carlo procedure
+        - ### 14.6 Monte Carlo and Probabilistic Processes
+            - A process that sequentially samples various attributes of the person
+                - Binary distribution for gender
+                - Log-normal distribution for income
+                - Special distribution for age, family size, employment, etc
+                - Sample for tour length and characteristics
+                - Sample for time
+        - ### 14.7 Structuring Activities and Tours
+            - The person day activity model is commonly structured with a set of nested discrete choices where each lower tier model is conditioned on the higher tiers
+                - The logsum or expected utilities are passed down from each tier
+        - ### 14.8 Solving ABM
+            - Sample enumeration which follows an approach of multiplying conditional probabilities
+                - Retains the attributes of each person
+            - Monte Carlo microsimulation
+                - Instead of calculating probabilities for all combinations of alternatives down the tree, samples of activity list from survey data are taken and replace the information with choice data from the model
+        - ### 14.9 Refining Activity or Tour Based Models
+            - Long term decisions include work-home location choice, car ownership models
+            - Joint scheduling between household members
+        - ### 14.10 Extending Random Utility Approaches
+            - Random utility framework is not flexible enough for real activity scheduling between household members
+                - One area of research to improve this is in sample enumeration or microsimulation based on econometric methods (Computational Process Models)
+                - These models use heuristics of 'if-then' rules rather than utility maximizing criteria
+    - ## 15.0 Key Parameters, Planning Variables and Value Functions
+        - ### 15.1 Forecasting Planning Variables
+            - These are variables that change in forecast, can be provided as exogenous data or also modelled
+                - Official forecasts from government
+                    - Population, households, employment, employed residents
+                    - Car ownership
+                    - Private vehicle trip ends by journey purposes
+                - Trend extrapolation
+                    - Does not reflect actual decisions being made in the present or future
+                - Cohort survival
+                    - Considering the birth, death and immigration rate
+                - Transitional probabilities
+                    - Follows the family cycles of marriage, child birth, etc
+                - Economic base
+                    - Growing basic and non basic activities
+                - Input-output Analysis
+                    - Growth in areas outside of the study area influencing growth in imports and exports
+            - These are difficult to get correctly because of the nuanced interactions between multiple actors and influences
+            - How the growth of employment and population is related spatially with land development and vice versa is also another key mechanism in forecast modelling
+        - ### 15.2 Land-Use Transport Interaction Modelling
+            - There are four key design deicions to any land use models
+                - Behavioural or structure-explaning approach
+                - Bid-rent or discrete choice approach
+                - Aggregate or microsimulation approach
+                - Emphasis in equilibrium or change dynamics
+        - ### 15.3 Car-Ownership Forecasting
+            - Time-series extrapolation
+                - Use aggregate data at a national or regional level
+                - S-shaped curves are typically used to fit the trend of cars per person over time
+                - A logistic curve of the following form is often used $$\frac{dC}{dt}=\alpha C_t (S - C_t)$$
+                    - $$C$$ is the car-ownership rate of the year
+                    - $$g$$ is the rate of car-ownership rate which is $$\frac{1}{C} \frac{dC}{dt}$$
+                    - $$S$$ is the saturation level of car ownership
+                - Solving for C gives $$\frac{S}{1 + \beta exp(-\alpha St)}$$
+                    - $$\beta$$ is an integration constant
+                    - $$S$$ needs to be estimated from data
+            - Econometric methods
+                - Use disaggregate data at the household level to explain customer behaviour directly
+                - Quarmby and Bates (1970) uses income and residential density
+                - Regional Highway Transport Model (RHTM) method
+        - ### 15.4 The Value of Travel Time
+            - Some countries use the average hourly rate as an estimate, and other countries have different buckets for different time bins
+            - A comprehensive study in Britain between 1981 and 1986 showed:
+                - The value of working time is equal to the gross hourly wage of the traveller
+                - Trips for all other purposes increased their valuation from 27% to 43%
+                - Equity time can be used for the most part, except for studies involving children, pensioners or outliers for employed adults
+                - The value of waiting and walking time should be taken as twice the value of in-vehicle travel time
+                - Small time savings should be valued equally as more significant savings
+            - Willingness to pay for savings in travel time is studied by measuring the trade off between travel time and cost faced by a target audience
+            - Or using a SP appraoch
+        - ### 15.5 Valuing External Effects of Transport
+            - WTP methods have also been used to estimate effects like accidents, pollution, noise, visual intrusion and amenity loss
+    - ## 16.0 Pricing and Revenue
+        - ### 16.1 Pricing, Revenue and Forecasting
+            - There are crispy costs (tolls) and fuzzy costs (running costs per km)
+        - ### 16.2 Private Sector Projects
+            - Increased involvement of private sector means that price and revenue forecasting is more critical than before
+        - ### 16.3 Risk
+        - ### 16.4 Demand Modelling
+        - ### 16.5 Risk Analysis
+        - ### 16.6 Concluding Remarks
+            - Traffic and revenue projects are prone to over-estimation
+- 🙊 Great quotes
+- ✅ Actionable items

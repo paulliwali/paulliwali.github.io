@@ -1,0 +1,24 @@
+- Anomaly detection is important to any data analytics application
+    - Able to keep track of anomalies is crucial to ensure unintended positive or negative effects are removed
+    - **anomalies** are outliers in data point that does not follow the __collective common pattern__ of the majority of the data points and hence can be easily identified
+    - **time series anomaly** is a data point that doesn't follow the collective tread or seasonal or cyclic pattern of the entire data and is __significantly__ distinct
+- Ways to detect anomaly in time series
+    - 1. Predictive confidence level approach
+    - 2. Statistical profiling approach
+    - 3. Clustering based unsupervised approach
+- Predictive confidence level approach
+    - Build a model using historical data to estimate the overall trend, seasonal or cyclic pattern of the time series data
+    - Forecast future values and based on error rates, we can come up with confidence interval or confidence band for the predicted values and *any observed data points which is falling beyond this confidence band is an anomaly*
+    - Advantages of this approach is finding local outlier
+    - Disadvantages of this approach is it relies on the efficiency of the predictive model
+- Statistical profiling approach
+    - Fast and useful while producing a controlled and explainable outcome
+    - Calculating statistical values like mean or median moving average of the historical data and using a standard deviation to come up with a band of statistical values which can define the upper and lower bound
+    - **Good baseline model**
+    - __Disadvantage is detecting local outliers__
+- Clustering based unsupervised approach
+    - Does not require you to label the data, useful for when there are unknown outliers
+    - Disadvantage is that it requires lots of tinkering with the cluster sizes and hard to dynamically estimate the cluster number for each series
+        - Density based spatial clustering of applications with noise (DBSCAN)
+        - Easy to tune, and does not group all data points to a cluster
+        - Helps to map the new normal which most other approaches may fail

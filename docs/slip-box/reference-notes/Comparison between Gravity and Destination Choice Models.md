@@ -1,0 +1,25 @@
+- **Metadata**
+    - Source: http://www.ce.memphis.edu/smishra/PDFs/Conference/2013_TRB_DestinationChoice.pdf
+    - Author: Sabyasachee Mishra
+    - Tags: #transportation #modelling #academic
+- Using a regional model and real data from Maryland, researchers showed destination choice model to be better at predicting trip length and OD flows than gravity model with socioeconomic factors integrated
+- Introduction
+    - Using the Maryland Statewide Transportation Model to demonstrate that destination choice model is a better method for trip distribution
+    - Destination choice model is based on utility maximization
+        - better at replicating HBW trips length and OD patterns
+- Concept
+    - Trip distribution is the second step in the traditional 4-step model
+        - It attempts to produce the best possible predictions of traveller’s destination choices **on the basis of generation and attraction abilities of each zone and level of impedance between each OD pair**
+        - ==__Major__ weakness of the 4-step model because the interaction between origin and destination is complex and hard to capture==
+    - Gravity model is the most widely accepted and used trip distribution model
+        - Best suited at the aggregate level
+        - Assumes trips produced at an origin and attracted to a destination are __directly proportional__ to the total trip productions at the origin and total attractions at the destination
+    - Random utility theory based models **are often better suited at the disaggregate level but requires large amounts of data** and is not widely applied in regional sized models
+        - Incorporates travel time, socioeconomic variables
+        - Requires individuals' demographic and socioeconomic attributes at the TAZ level which are often unavailable
+    - Some researchers have incorporated or stratified the gravity model by socioeconomic factors
+        - Adjusted friction factor to simulate complex interactions (non-linear) between origin and destination
+    - There is a general lack of fitness comparison between the two models with real data and even less effort in comparing the two models within the context of a regional model
+- Results
+    - The __average trip length__ showed both models captured the general pattern, but it is an aggregate measure to determine which model is better
+    - ==The __OD trips__ showed a better match for the destination choice model==

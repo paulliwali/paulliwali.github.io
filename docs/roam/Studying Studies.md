@@ -1,0 +1,17 @@
+- 👆 Short Summary (1 takeaway)
+- 🧐 Why I am reading this book?
+    - Heard it on Tim Ferriss podcast about the importance of learning how to read a scientific study 
+    - https://peterattiamd.com/ns001/
+- 📖 Chapter reviews
+    - Part I - Relative Risk vs. Absolute Risk
+        - [[quotes]] "There are three kinds of lies: lies, damned lies and statistics" - Mark Twain
+        - Statistics can be both persuasive and misleading if we are not extremely careful
+        - [[quotes]] "The first principle is that you must not fool yourself - and you are the easiest person to fool. So you have to be very careful about that. After you've not fooled yourself, it's easy not to fool other scientists. You just have to be honest in a conventional way after that ... I'm talking about a specific, extra type of integrity that is not lying, but bending over backwards to show how you're maybe wrong, that you ought to do when acting as a scientist. And that is our responsibility as scientists, certainly to other scientists, and I think to laymen." - Richard Feynman
+        - Example - Cholesterol-fighting drugs lower risk of Alzheimer's disease
+            - Claimed that the incident of Alzheimer's disease was 15% lower among women and 12% lower among men who took statin
+                - ==However, this was relative risk and not absolute risk==
+                - The absolute risk reduction, without considering healthy-user bias, side-effects, unintended consequences, would be 2% to 1.5% reduction for a 75 year old by the time they are 80 years old
+            - But news worhy report are often on the relative risk reduction/increase because it is more **impactful**
+    - Part II
+- 🙊 Great quotes
+- ✅ Actionable items

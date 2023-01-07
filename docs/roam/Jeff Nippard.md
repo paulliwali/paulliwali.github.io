@@ -1,0 +1,44 @@
+- Hypertrophy split
+- Legs Day 1
+    - Squat: 3x4 @ 80%
+    - Romanian DL: 3x10
+    - Single Leg Press: 3x15
+    - Eccentric Leg Extension: 3x10-12
+    - Seated Leg Curls: 3x10-12
+    - Standing Calf Raise: 3x10-12
+    - Decline Crunches: 2x10-12
+    - Long Lever Planks: 2x30s
+- Push Day 2
+    - BP: 3x8 @ 72.5%
+    - Machine Shoulder Press: 3x12
+    - Dips: 3x12-15
+    - Eccentric Skull crushers: 3x8-10
+    - Egyptian Lateral Raises: 3x12 + MYO
+    - Cable Kickback: 3x20-30
+- Pull Day 3
+    - Weighted Pull-Ups: 3x6
+    - Seated Cable Row: 3x10-12
+    - Cable Pullover: 3x15-20
+    - Hammer Cheat Curl: 3x8-10
+    - Incline Dumbbell Curl: 2x12-15
+- Legs Day 4
+    - DL: 3x3 @ 85%
+    - Hack Squat: 3x10-12
+    - Single Leg Hip Thrust: 2x15
+    - Nordic Curl: 2x10-12
+    - Prisoner Back Extension: 2x10-12
+    - Single-Leg Calf Raises: 3x8-10
+    - Weighted L Sit Hold: 3 sets
+- Push Day 5
+    - OHP: 4x4 @ 80%
+    - Close Grip BP: 3x10
+    - Cable Crossover: 3x10-12 + Drop
+    - Overhead Tricep Extension: 3x10-12
+    - Lateral Raises: 21s
+    - Neck Flexion/Extension: 3x10-12
+- Pull Day 6
+    - Omni-grip Lat Pull Down: 3x10-12
+    - Chest Supported Row: 3x10-12
+    - Face pull: 3x15-20
+    - Reverse Pec Deck: 2x15
+    - Pronated/Supinated Curl: 3x10/10  

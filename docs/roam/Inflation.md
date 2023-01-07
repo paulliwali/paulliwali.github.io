@@ -1,0 +1,13 @@
+- Measures the increase of prices for goods and services in an economy over a period of time
+- Impact customers' purchasing power, less disposable income to maintain their lifestyle, reduce savings for retirement
+- Is tracked with consumer price index (CPI), producer price index (PPI), personal consumption expenditures price index (PCE), and the wholesale price index (WPI)
+- Deflation
+    - When prices decrease in an economy, which increase the purchasing power
+    - This impacts people who have loans because the money used to pay back might be worth more than the loan - leading to halt in spending
+- Demand pull inflation
+    - High consumer demand for a product __pulls__ the prices to rise
+- Cost pull inflation
+    - Raw material, labour increases the price of the product 
+- Built-in inflation
+    - Consumer expectations that inflation will continue in the future causes the price to increase
+- If it is managed, **it can be beneficial to the economy** but if left unmanaged it can be impossible to recover from

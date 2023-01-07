@@ -1,0 +1,2 @@
+- The belief that your abilities are not fixed in stone but can change over time
+- You can expand and change them if you just put in the effort

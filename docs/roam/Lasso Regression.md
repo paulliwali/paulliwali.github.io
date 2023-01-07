@@ -1,0 +1,3 @@
+- ==Reduces dimensionality==
+- Estimates sparse coefficients as it prefers solutions with fewer non-zero coefficients
+- The parameter $$\alpha$$ controls the degree of sparsity

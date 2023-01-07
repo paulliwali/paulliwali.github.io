@@ -1,0 +1,17 @@
+- ![JMT Map](https://www.pcta.org/wp-content/uploads/2012/10/JMTelevationprofile.jpg)
+- A famous 223 mile trail that takes the hiker through scenic vistas of the Sierra mountain range
+    - [[quotes]] "Climb the mountains and get their god tidings" - John Muir
+- Best time to hike the JMT is between July and September when the snow is melted
+- SOBO is more popular than NOBO, because the hardest sections is at the end of the trail when your pack is lighter
+- Have to obtain a wilderness permits and there are certain quotas per year
+    - Apply 168 days in advance, will need to research which trailhead to start from
+    - https://yosemite.org/jmt-rolling-lottery-application/
+    - https://yosemite.org/planning-your-wilderness-permit/
+    - Starting terminus
+        - https://www.shedreamsofalpine.com/blog/john-muir-trail-permits
+        - Park at the exit location and take public transit to the starting location
+- Resupply locations
+    - https://www.pcta.org/discover-the-trail/john-muir-trail/jmt-resupply/
+- Should plan for 10-15 days off work
+    - Probably around labour day in September which can avoid the mosquito seasons
+    - Also need to consider possible fire season

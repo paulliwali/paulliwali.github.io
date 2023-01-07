@@ -1,0 +1,4 @@
+- Preliminary thinking about living in a van after my current lease ends at [[Franklin 299]] around [[February 1st, 2022]]
+- [[February 1st, 2022]] Update
+    - Did not get a van because of the high upfront cost, even for a simple/unfurnished one
+    - Ended up renting a place in SF with a coworker to experience the city life instead

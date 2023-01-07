@@ -1,0 +1,32 @@
+- **Metadata**
+    - Author: Saeed Shakib
+    - Tags: #transportation #academic
+- Life Style <-> Long-term decision (location choice) <-> Mid-term decision (car ownership) <-> Short-term decision (daily travel)
+    - COVID created unprecedented short-term behavior
+- Designed a study to assess the different layers of decisions 
+    - What happens to those who already had plans to relocate
+    - What happens to those who had no issues with their residence
+    - Also, how are households behaving in the new emerging market
+- In a stable market, utility maximizing theory seems reasonable; in an unstable market, does utility maximizing still hold?
+    - **Secretary problem solvers** might be more applicable?
+        - Once you interview a person, you have to make the decision, once you wait the market will change
+- Stated Preference Design
+    - **Attributes**
+        - Dwelling type, region, price, area, tenure type, neighbourhood, access to public transit, access to highway, parking availability, walk access to school, office hours, telecommuting option
+    - **Conditions**
+        - Ask the scenario in 3 different conditions
+        - COVID is no longer considered a thread due to vaccine
+        - COVID is a new normal
+        - COVID creates a second wave and we go into shutdown
+    - **Scenario Design**
+        - See the independent affect of each attribute, but that requires a huge sample size
+        - Takes synthetic variance and covariance matrix and minimize it so it approaches independence for the attributes
+    - **Sample**
+        - From early July to late July
+        - 75% response rate
+        - Sample distribution is closely matching the population distribution
+- Findings
+    - Factors that affect long-term choice before the pandemic and after pandemic shifted such that proximity to services and stores is no longer importnat
+    - No trends in relocation was found
+- Conclusions
+    - Based on this study, COVID seems to be a sudden shock in the system and not a long term effect

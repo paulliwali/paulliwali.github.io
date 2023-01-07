@@ -1,0 +1,23 @@
+- **Metadata**
+    - Source: https://youtu.be/MckbD2_vkb4
+    - Tags: [[video]]
+- Federalists paper were written by Founding Fathers to defend the constitution, not the Bill of Rights
+    - Aside, Bill of Rights is a set of amendments to the constitution which the Founding Fathers were not in favor of
+- Articles of Confederations is the first constitution, but it is very weak
+    - Federal government didn't have much power from this
+    - Most power reside in States
+    - Resulted in Shades Rebellion
+    - Founders found this to be unworkable, and need to rewrite it
+- This system of checks and balances was designed to gridlock the government so it doesn't violate individual rights easily
+    - Founding Fathers were afraid of simple majority - __having just 51% would outvote the other 49%__
+    - Solve federalism by balancing Federal Government vs State Government
+    - Executive Branch vs Legislative Branch vs Judiciary
+- [[quotes]] "Ambition must be made to counteract ambition" - James Madison (51)
+- Federal government was not seen as the chief allegiance for the people to garner to
+    - Today, that couldn’t be more prevalent
+- Today, the executive branch is shifting to a legislative role while the legislative branch is moving to a vestigial organ
+- Anti-federalist papers came first, and then the federalist paper came after
+    - For the first 150 years of US, the federalist paper are right
+    - Now with the progressive movement, the anti-federalist paper are becoming true
+- ==Federalist paper hold up as a critique of the government system, but does not hold up in its prediction that it will hold up==
+- US government is not a simple-majority democracy, **it was designed to be a republic where federal government shouldn't have this much power**

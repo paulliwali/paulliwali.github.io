@@ -1,0 +1,8 @@
+- Collection of notes on whether to buy or rent
+- Pro Buy
+    - Real estate investment that diversifies my portfolio
+- Pro Rent
+    - Condo market has not increased that much 
+        - https://alfred.stlouisfed.org/series?seid=SFXRCNSA&utm_source=series_page&utm_medium=related_content&utm_term=related_resources&utm_campaign=alfred
+	- I won't be staying for more than 10+ years
+- https://smartasset.com/mortgage/rent-vs-buy#yL7T2MlK3C

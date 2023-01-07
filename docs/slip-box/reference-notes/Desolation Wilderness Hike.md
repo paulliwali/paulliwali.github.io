@@ -1,0 +1,6 @@
+- Tags:: #hiking
+- Permits are for the zone where we will spend the first night\
+    - https://www.recreation.gov/permits/233261
+- Day 1 hike from Echo Lake Trail Head and go directly via PCT to Zone 16/17 and camp around Velma Lake 
+- Day 2 hike back to Zone 33 via around the west side and camp at Lake Aloha
+- ![](http://www.discoverechosummit.com/maps/desolation_wilderness.png)

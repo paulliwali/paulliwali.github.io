@@ -1,0 +1,7 @@
+- 👆 Short Summary (1 takeaway)
+- 🧐 Why I am reading this book?
+    - Heard about it from a podcast with Liv Boeree
+    - Link https://equilibriabook.com/inadequacy-and-modesty/
+- 📖 Chapter reviews
+- 🙊 Great quotes
+- ✅ Actionable items

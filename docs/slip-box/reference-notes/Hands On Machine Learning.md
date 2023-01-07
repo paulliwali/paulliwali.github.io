@@ -1,0 +1,270 @@
+- Metadata
+    - Source: https://github.com/ageron/handson-ml
+    - [[learning]] 
+- # Preface
+    - The wave of machine learning is started in 2006 when [[Geoffrey Hinton]] published a paper on the practicality of training a deep neural network with "Deep Learning"
+    - Will learn to use [[Scikit-Learn]], [[TensorFlow]], [[Keras]]
+    - Roadmap of the book
+        - Part I - The Fundamentals of Machine Learning (focused on [[Scikit-Learn]])
+            - What ML is
+            - **Steps to a typical ML project**
+            - Cost function and how to optimize it
+            - Data wrangling
+            - Feature selection and engineering
+            - (Hyper)parameter tuning, model selection via cross-validation
+            - Challenges of ML
+            - Common/Traditional ML algorithms
+            - Reducing dimensionality
+            - Unsupervised ML algorithms
+        - Part II - Neural networks and deep learning (focused on [[TensorFlow]] and [[Keras]])
+            - What neural nets are
+            - Build and train NN with [[TensorFlow]] and [[Keras]]
+            - Important NN architectures 
+            - Techniques for training deep NN
+            - RL to build a bot
+            - Loading and preprocessing big data
+            - Training and deploying [[TensorFlow]] at scale
+- # Chapter 1. The Machine Learning Landscape
+    - Machine learning is to improve the ability of doing a certain task with experience, measured by a performance metric
+    - ![mls2 0104](https://learning.oreilly.com/library/view/hands-on-machine-learning/9781492032632/assets/mls2_0104.png)
+    - Main types of ML
+        - Whether they are trained under human supervision (supervised vs unsupervised)
+        - Whether they can learn incrementally on the fly (online vs batch learning)
+        - Whether they work by comparing data points or detecting patterns in the data (instance based or model based)
+    - The segmentation for human supervision are
+        - Supervised learning
+            - Training data includes labels, which are the ground truths
+            - These are good for classification problems (spam vs ham) or regression problems (price of house given a set of features)
+        - Unsupervised learning
+            - Training data __does not__ have labels
+            - These are good for detecting patterns like clustering problems (k means) or anomaly detection or dimensionality reduction or association rule learning problems
+            - Dimensionality reduction is an important technique in ML, that simplify the data without losing information - several features can merge into one because they are related (feature extraction)
+            - Association rule learning is to learn relationships between attributes from data
+                - Supermarket putting two items in the same isle to promote sales
+        - Semisupervised learning
+            - Labelling all the data is expensive, so you can combine labelled and unlabelled data together to partially labelled data
+        - Reinforcement learning
+            - An agent observes the environment and makes an action, which the system rewards or penalizes
+            - Using this feedback, the agent develops a strategy (policy) to maximize rewards over time
+    - Learning from training data can be done all at once or incrementally
+        - Batch learning
+            - Learn from all the data and use the model in application
+            - Good when data is not continuous
+        - Online learning
+            - Learn data as small batches
+            - Good when resources are limited and data is constantly streaming in
+            - Beware of learning from bad data, close monitoring is required. Also optimizing learning rate to carry inertia or react to new data requires thought
+            - ==out-of-core== learning is to artificially break large data sets into small batches and trained with this method
+    - How well the model generalize the training into application
+        - Instance-based learning
+            - Makes predictions by comparing them with examples in the data
+        - Model-based learning
+            - Makes predictions with a model
+    - Main Challenges of ML
+        - Bad data
+            - Michele Banko and Eric Brill (Microsoft) published a [paper](https://dl.acm.org/doi/10.3115/1073012.1073017) in 2001 that showed that if given enough data the simple models perform just as well as complex ones
+            - Small datasets have **sampling noise** and **sampling bias**
+                - An famous example of sampling bias was during the 1936 US election, Literary Digest conduct a very large survey on the voter's preference for Landon and Roosevelt
+                    - The sampling method was flawed because the sampling population was mostly wealthier who favoured Landon (Republican)
+                    - Less than 25% of the original population answered, introducing **nonresponse bias**
+            - Cleaning up training data by removing outliers and incomplete data may help with training
+            - Using irrelevant features 
+        - Bad algorithm
+            - Overfitting on training data and coming to a general conclusion that is not true about the population
+            - NN will be able to detect subtle relationships in data, but any noise or bias may cause it to capture these relationships incorrectly
+            - Under-fitting on training data will also lead to false conclusions about the population
+    - Testing and validation
+        - Using a test sample to evaluate the performance of the algorithm by looking at the generalized or out-of-sample error rate
+            - If training error is low but out-of-sample error is high, then the model has overfitted the data
+        - It is also common to tune hyperparameters to reduce this out-of-sample error but now you have just adapted the model to the testing data
+            - ==So it is common to have another hold-out set for validation==
+            - However, since there may not be enough data to do all three tasks - a technique called "cross-validation" is used to shuffle training/test/validation sets so the hyperparameters can be tuned and then the final set of hyperparameters is used on the training set and validated on the validation set
+        - [[til2021]] No Free Lunch Theorem
+            - David Wolpert in a famous paper (1996) showed that if you make no assumptions about the data, there is no reason to choose one model over another
+            - There is no way to know ahead of time that one model will work better than another
+            - Thus, to practically build models you have to make some assumptions
+- # Chapter 2: End to End Machine Learning Project
+    - Hands on project to go through the common steps of build a ML model
+    - To measure the performance of a model common metrics are RMSE and MAE, **which measures the distance between prediction and actual**
+        - Root mean squared error (RMSE)
+            - $$\sqrt{\frac{1}{m} \sum{\hat{y} - y}}$$
+            - Standard metric, but is prone to outliers
+        - Mean absolute error (MAE)
+            - $$\frac{1}{m}\sum{|\hat{y} - y|}$$
+    - Data preparation: Splitting training, test and validation set is critical to not overtrain the model
+        - Naively splitting doesn't work because every time you split you may end up with different splits and that doesn't give reproducible results and the algorithm will see the entire dataset if it is continuously trained
+        - Sampling bias might be introduced if the distribution of the respondents is not representative of the general population, so **stratified sampling** is used to overcome this
+    - Data exploration: correlation coefficients, matrix
+        - `corr()` simply calculates the __linear correlation__ between various features
+        - Ranges from -1 and 1 which denotes negative correlation and positive correlation
+        - A value close to 0 means no linear correlation, ==which doesn't rule out other correlations==
+        - ![pearson's correlation figure](https://en.wikipedia.org/wiki/File:Correlation_examples2.svg)
+        - **The goal here is to identify data quirks to remove/clean before feeding into the training**
+    - Feature engineering: cleaning, transforming, combining attributes
+        - Feature cleaning involves removing empty values from the dataset
+            - There are three options for missing features: remove the data entry, remove the feature, or set values to median, mean or zero
+            - **It is important to do this only for the training set**
+                - For mean/median calculation, they should be computed on the training set but also applied to the test set when testing the accuracy
+            - `sklearn.impute.SimpleImputer` takes care of imputing missing values
+        - Feature generation involves combining features into more useful ones such as normalizing certain features with another to give more context 
+        - Feature transformation involves changing features into different forms that is suitable for ML
+            - Convert text categories into numbers
+                - `sklearn.preprocessing.OrdinalEncoder` which turns text into ranked list, but ML will assume two close by values are similar
+                - `sklearn.preprocessing.OneHotEncoder` which turns text in to dummy attributes and doesn't imply close by values matter
+            - If one-hot encoding is resulting in a large number of input features and slowing down ML performance, ==you can replace categorical input with useful numerical features==
+                - i.e. Country code can be proxied with GDP or population
+                - i.e. Ocean proximity can actually be distance in meters
+                - ==Or you can replace each category with a learnable low dimensional vector called an embedding==
+        - Feature scaling shifts the values in a feature for ML
+            - **Usually, ML doesn't perform well on datasets with features in various scales**. 
+            - Min-max scaling (aka **normalization**) changes values such that it is between two values, most commonly 0 and 1
+            - Standardization scaling changes the values such that the mean is 0 and distribution has a unit variance
+    - [[Scikit-Learn]] - Core API design principles
+    - Select and Train a Model
+        - Linear regression model
+            - A good baseline model to compare others too
+            - Might underfitting the data
+            - Main ways to fix under-fitting is selecting a more powerful model, to feed the training algorithm with better features, or to reduce the constraints on the model.
+        - Decision Tree Regressor
+            - A powerful model that is capable of finding nonlinear relationships in data
+            - Easy to overfit, so use cross-validation to evaluate the models
+        - Random Forest Regressor
+            - Training many decision trees on random subsets of the feature, then averaging out their predictions
+            - A kind of **ensemble learning** which is building a model on top of many other models
+        - Others to try are Support Vector Machines or even Neural Networks
+        - At this stage, one should aim to shortlist a few high potential models 
+            - To save their hyperparameters and trained parameters we can use `pickle` or `joblib` from sklearn
+    - Fine Tune Your Model
+        - Once you have a shortlist of models, we need to fine tune each one though grid search, randomized search, ensemble methods
+        - Grid Search
+            - Programmatically search through all the hyperparameter combinations using `GridSerachCV`
+            - When you don't have a good sense of the grid to search with, a good approach is consecutive powers of 10
+            - Once the grid search is done, find the best combination of parameters by `grid_serach.best_params_` and see if they are the upper limit of the grid you setup
+                - Try searching again if they are the maximum values in the grid
+        - Randomized Search
+            - Grid search is a good option when the space is limited, but if the search space is large then we can use `RandomizedSearchCV` instead
+            - It can search for more combinations with less cost
+        - Ensemble Methods
+            - Combining models that perform the best since a group of model will often perform better than the best individual model
+            - Analyze the best model by inspecting their feature importance and dropping the ones that is less important
+    - Evaluate Final Model on Test Set
+        - Prepare the reserved test data set the same way and fit it through the estimator
+        - Be sure to only `transform()` and not `fit_transform()`
+        - Also generalize the error in production with a confidence interval to get a sense of the variations in the error
+        - Performance will usually be slightly worse on test set than on training set, but not always
+    - Launch, Monitor and Maintain Your Model/System
+        - Plugging the production input data into the system and writing tests
+        - Write monitoring code to check your system's live performance at regular intervals and trigger alerts when it drops
+            - Models tend to 'rot' as data evolves over time (or drift)
+        - Evaluating your system's performance will require sampling the system's prediction and evaluating them
+        - Evaluate the systems input data quality
+        - Retrain the model on a regular basis using fresh data
+- # Chapter 3: Classification
+    - MNIST dataset is the "Hello World" of ML, a dataset of handwritten digits
+    - Scikit-Learn provides this dataset as part of the library `fetch_openml('mnist_784', version=1)`
+        - Datasets from Scikit-Learn generally have a similar dictionary structure that includes `DESCR` key describing the dataset, `data` key containing an array with one row per instance and one column per feature, `target` key containing an array with the labels
+    - Binary Classifier
+        - ==Able to identify one thing by distinguishing between that thing and not-that-thing==
+        - Scikit's Stochastic Gradient Descent (SGD) classifier is a good place to start
+            - It can handle large datasets efficiently
+            - Also suited for online training because it deals with one instance at a time
+            - It relies on randomness and shuffled data so it is not suited for any time-series analysts
+    - Evaluating Classifiers
+        - A trickier subject compared to evaluating regressors
+        - Cross-validation
+            - Similar to how we evaluated the regression model 
+            - But can be problematic on __skewed datasets__
+        - Confusion matrix
+            - A better way to examine a classifier
+            - **Precision** is the measure of how many true positives were predicted out of all the predicted positives
+                - $$Precision = \frac{TP}{TP + FP}$$
+            - **Recall** is the measure of how many true positives were predicted out of all the actual positives
+                - $$Recall = \frac{TP}{TP + FN}$$
+            - **F1 Score** is the combined metric of precision and recall. This will favor model that balances both metrics however that may not always be true
+            - Precision/Recall Tradeoff
+                - When you increase precision, you will decrease recall
+                - This is because a classifier like SGDClassifier has a decision function that determines the threshold of where to assign the positive and negative instances
+                - To determine what the ideal threshold for the decision function, we can plot the **precision recall curve**
+            - ROC Curve
+                - The receiver operating characteristic curve is another way to tune the classifier
+                - It plots the `true-positive rate (recall)` against `false-positive rate`
+                    - False-positive rate is `1 - specificity (true-negative rate)`
+                - Thus, it plots sensitivity (recall) against 1 - specificity
+                - Usually it is plotted against a diagonal which represents a random classifier and **good classifiers will be as far away from the diagonal as possible**
+                - The area under the curve (AUC) is another metric to quantify the performance, a perfect classifier will have an AUC of 1.0 and random classifier will have an AUC of 0.5
+            - ==Use PR curve when positive class is rare and you care about false positives, and ROC curve when negative class is rare==
+        - Error analysis
+            - After going through the machine learning checklist you arrive at the fine tuned model, you want to understand what kind of error it is producing
+            - Use the confusion matrix
+    - Multiclass Classifier
+        - Distinguishes between many classes
+        - These can be native multiclass classifiers like RandomForestClassifier or naive Bayes classifier, or multiple binary classifiers can be combined to do this like Support Vector Machine classifier or Vector Classifier
+        - One-versus-all (OvA) strategy
+            - Train n binary classifiers for each of the n classes
+            - Pick the classifier that gives the highest score
+        - One-versus-one (OvO) strategy
+            - Train $$n \times \frac{n-1}{2}$$ binary classifiers for each pair of classes
+            - The benefit of this strategy is that you only need to train on data with the two classes
+            - The disadvantage is that it scales non-linearly as the number of classes increases
+        - OvO is preferred with classifiers that are more efficient on smaller datasets (SVM)while OvA is preferred most other binary classifiers
+            - Scikit-learn will automatically optimize the strategy for the classifier
+    - Multilabel Classifier
+        - Provide multiple outputs for an input
+        - Evaluating this classifier can be measuring F1 score for each individual label then compute the average score
+    - Multioutput Classifier
+        - Generalizes the multiclass classification where each label can be multiclass
+        - A example would be a system that removes noise from images which means it outputs multiple labels with various values for each label
+- # Chapter 4: Training Models
+    - Understanding how the models work under the hood
+    - [[Linear regression model]]
+        - There are two ways to train linreg models
+        - A closed-form [[normal equation]] to compute parameters that best fit the model to the training set and **iterative optimization approach [[gradient descent]] that gradually tweaks the parameters to minimize the cost function over the training set**
+    - [[Polynomial regression model]]
+        - More complex as it can fit non-linear dataset and since it has more parameters than linreg it is prone to __overfitting__ the training set
+        - To overcome this, we will detect this using [[learning curves]] and reduce the risk of overfitting with [[Regularization Techniques]] 
+    - Machine learning model's errors can be expressed as the sum of three different errors
+        - ==Bias==: from wrong assumptions
+        - ==Variance==: from excessive sensitivity to small variations in the data, likely from high degrees of freedom
+        - ==Irreducible errors==: from noise in the data itself, fixed by cleaning
+        - There is a tradeoff between these three error sources, increasing a model's complexity will increase variance and reduce bias and vice versa
+    - Logistic regression model
+        - To estimate probability that an instance belongs to a particular class
+        - Works by computing the weighted sum of the features (+ bias term) and apply the __logistic__  to the result
+            - A **sigmoid function** that produces a number between 0 and 1
+            - $$\sigma(t) = \frac{1}{1+exp(-t)}$$
+            - logit is the inverse of the logistic
+        - To train a logistic model we have to use gradient descent because there is no close form equation
+        - Can also be regularized to prevent overfitting
+    - Softmax regression model
+        - Also known as **multinomial logistic regression**, which supports multiple classes
+        - Applies a normalized exponential equation (softmax) to the score of each class
+            - The score is computed like a linear regression
+            - Softmax equation: $$\hat{p}=\frac{exp(s_k(x))}{\sum_{j=1}^{K}=exp(s_j(x))}$$
+                - Where $$K$$ is the number of classes, $$s(x)$$ is the vector of the scores for each class, $$\hat{p}$$ is the estimated probability that the instance x belongs to k 
+- # Chapter 5: Support Vector Machines
+    - SVM is capable of linear and nonlinear classification, regression and outlier detection
+        - One of the most popular ML models
+    - Linear SVM Classification
+        - Fitting the largest possible gap between two classes with a __straight line__
+        - The __support__ comes from the instances located on the edge of this gap
+            - Adding more instances outside will not affect the decision boudnary
+        - ==Very sensitive to scale, so always be sure to feature scale the dataset for linear SVM classification==
+    - Soft Margin Classification
+        - A more flexible model that allows for instances that end up in the boundary or on the wrong side
+    - Nonlinear SVM Classification
+        - When a dataset is not linearly separable on one feature, you can introduce more features to result in a linearly separable dataset
+        - There are a few ways to add more features
+            - Polynomial Kernel
+                - ==A way to add many polynomial features without actually adding them so the feature set does not explode==
+            - Adding Similarity Features
+                - Measures how much each instance resembles a particular **landmark**
+                - Similarity can be measured with the **Gaussian Radial Bias Function (RBF)**
+                - And when the features are transformed to the similarity values, the instances become linearly separable 
+    - SVM Regression
+        - Instead of fitting a gap __between__ the instances, you fit the __gap__ to cross the most instances
+- # Chapter 6: Decision Trees
+    - Can perform both classification and regression modelling
+    - Building blocks of Chapter 7: Random Forests 
+    - To make a prediction with decision tree you go through nodes and you move down the tree's nodes until you reach the final node that gives the prediction
+    - 
+- # Chapter 7: Random Forests

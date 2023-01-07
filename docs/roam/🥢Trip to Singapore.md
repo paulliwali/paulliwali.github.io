@@ -1,0 +1,23 @@
+Tags: #travel 
+- Flying [[November 24th, 2022]]
+- Returning [[December 6th, 2022]]
+- Flights
+- Hotels
+- Planning
+	- Chinatown
+		- Nylon Coffee Roasters
+	- Kallang
+		- Old Hen Coffee Bar
+		- Chye Seng Huat Hardware (Coffee)
+	- Tuas
+		- Tiger brewery tour
+	- Marina
+		- Red Dot Museum
+		- Night Bike
+	- Alexandria
+		- Tiong Hoe
+	- Toa Payoh
+		- Alchemist (Coffee)
+- Day 1 - [[November 24th, 2022]]
+- Day 2 - [[November 25th, 2022]]
+- Day 3 - [[November 26th, 2022]]

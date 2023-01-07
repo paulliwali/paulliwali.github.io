@@ -1,0 +1,15 @@
+- "If you can't explain something in simple terms, you don't understand it"  - Richard Feynman #quotes
+- Step 1: Study the subject
+    - A dynamic gathering of what you __already__ know about the subject 
+    - Rearranged in a way that makes sense
+    - This way it carves out the edges what we don't know
+- Step 2: Teach the subject
+    - Create an audience in your head and teach it to them
+    -  Have a story in the lesson
+- Step 3: Identify knowledge gaps
+    - Find the gaps and note it down
+- Step 4: Simplify further
+    - Once you have taught the subject, try to simplify even further
+- Additional Tips
+    - Limit the initial scope
+    - Know just a bit more than what you are teaching

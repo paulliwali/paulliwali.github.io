@@ -1,0 +1,31 @@
+- Metadata
+    - Source: https://michaelfeathers.silvrback.com/10-papers-every-developer-should-read-at-least-twice
+    - Author: Michael Feathers
+    - #programming
+- You should always imagine that you are writing to a particular person
+    - It makes it easy to frame the explanation to that person
+- Interesting turn in the software industry - value experiential learning much more, and we've regained a strong pragmatic focus
+- The original list that he wrote off the cuff
+    - [[On the criteria to be used in decomposing systems into modules]]
+        - Introduces a forerunner to the Single Responsibility Principle
+        - Use modularity to hide design decisions - things which could change
+    - [[A note on distributed computing]]
+        - Lays to rest what was once a pervasive myth - that we could design a distributed system and make distribution transparent
+    - [[The next 700 programming languages]]
+        - Makes an argument for an expression-oriented style of programming
+        - Lays the foundation for lazy evaluation
+    - [[Can programming be liberated from the von Neumann style?]]
+        - Make a plea for pure functional programming
+    - [[Reflections on trusting trust]]
+        - Unveiled a hard problem at the heart of computer security
+    - [[Lisp - good news, bad news, how to win big]]
+        - Worse is better philosophy is that implementation simplicity has highest priority
+    - [[An experimental evaluation of the assumption of independence in multiversion programming]]
+        - Redundancy doesn't really work in software
+        - Multi-version programming was the idea that you could decrease faults in critical systems by handling the spec to several teams, having them develop the software independently, and then having the systems run in parallel
+    - [[Arguments and results]]
+        - Works through variation of the set of arguments and result of functions that are rare
+    - [[A laboratory for teaching object-oriented thinking]]
+        - Direct paper on OO
+    - [[Programming as an experience: the inspiration for self]]
+        - Self project is something that push for minimalism and direct manipulation

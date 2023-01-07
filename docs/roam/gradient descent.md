@@ -1,0 +1,19 @@
+- A generic optimization algorithm that can be used to find optimal solutions to lots of problems by computing the cost function and find the local gradient (slope) to go in until it reaches minima where gradient is 0
+- An important parameter of the gradient descent is [[learning rate]] which determines the size of the step it takes
+    - Small steps may take a very long time and get stuck in local optima
+    - Large steps may be too erratic and never find the optima 
+- For linear regression models, the cost function is always a continous [[convex function]]
+    - So GD is guaranteed to approach optimal
+    - To implement it, you compute the gradient of the cost function which is the partial derivative of the cost function
+- **When using Gradient Descent, you should ensure all features have a similar scale or it will take much longer to converge**
+- Batch Gradient Descent
+    - Take the partial derivatives of all the features and compute a gradient vector to iterate over
+    - Uses the whole training set for each step, thus very slow for large training sets
+- Stochastic Gradient Descent
+    - Picks random instances of in the training set at every step
+    - This means it is faster but the more random nature means it could get close but not to the global optima 
+    - It also means it can jump out of local optima easier
+    - By using a [[learning schedule]], you can slowly reduce the learning rate and help the stochastic gradient descent to settle at the global optima
+- Mini-batch Gradient Descent
+    - Instead of computing the full data set (Batch) or single instance (Stochastic), mini-batch computes the gradient on a random set of instances
+    - This method does well with GPUs

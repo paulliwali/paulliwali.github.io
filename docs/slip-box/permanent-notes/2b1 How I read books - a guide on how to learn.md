@@ -1,0 +1,4 @@
+- This author talks about the importance of reading less but more actively each time with the **intention of creation actionable items that can improve the ROI**
+- Adding the additional step of trying to teach someone else a concept to reinforce learning is something I've always wanted to do
+- Setup a "Book Review Template" to help me with doing this as I read different things
+- [[2b2 expand the mental model toolbox]]

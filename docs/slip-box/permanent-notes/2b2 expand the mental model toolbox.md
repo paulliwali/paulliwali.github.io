@@ -1,0 +1,2 @@
+- Acquiring knowledge can help me to expand my toolbox of mental models which allows me to be flexible with the one I choose to use for a certain situation
+- Instead of conforming reality through the limited models I have in my possession, which will distort reality

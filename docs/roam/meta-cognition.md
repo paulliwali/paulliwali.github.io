@@ -1,0 +1,42 @@
+- What is meta-cognition?
+    - When you learn something new, cramming information non-stop is not effective
+    - You need strategies to learn
+    - ==Learn how to learn==
+    - Meta-cognition is being self-aware of your own thinking, thinking about thinking or knowing about knowing
+- Comprises of 3 components
+    - Knowledge
+    - Regulation
+    - Experiences
+- Knowledge
+    - What you know about yourself and others in terms of thinking and learning process
+    - Declarative knowledge
+        - What you know about yourself
+        - The type of learner that I am is action based
+        - The act of doing or writing down information helps me understand the topic
+        - I can't rely on listening or reading on their own to retain knowledge
+    - Procedural knowledge
+        - What you know about learning in general
+        - [[spaced-repetition]]
+        - [[mindmaps]]
+        - [ ] Research about learning techniques [[future]]
+    - Conditional
+        - Knowing when or why you should use Declarative knowledge and Procedural knowledge
+- Regulation
+    - The activities and strategies you use to control your learning in order to improve this learning ability
+    - Planning
+        - Prior to starting to learn a new topic, think about how to allocate energy and time into learning it
+        - What kind of strategies to deploy? (See Procedural knowledge)
+        - When to use them to maximize my performance
+    - Monitoring
+        - Stay aware of where I feel like I am struggling
+        - Instead of passively receiving all the information, actively question the process
+    - Evaluating
+        - After finishing a chunk, reconsider the strategy and my performance
+        - Make changes before moving on to the next chunk
+        - For example, I am currently reading a textbook on transportation modelling and I have been taking linear notes on each chapter. However, while experimenting with Roam, I might move it over to a more fluid and segmented note taking platform
+            - [x] Consider migrating Transport Modelling notes to Roam 
+- Experiences
+    - The thoughts and feelings you have while studying and learning something
+    - Awareness
+    - Thoughts
+    - Feelings

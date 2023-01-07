@@ -1,0 +1,27 @@
+- Metadata
+    - URL: https://vinvashishta.substack.com/p/zillow-just-gave-us-a-look-at-machine
+    - #data-science #industry
+- Summary:
+- Notes:
+    - Stock is down 30% and laid off 25% of their staff
+    - Their home value estimation models were not producing the results as expected
+        - They started using it for buying and flipping homes
+        - Zillow was going to buy homes and flip them for profit, but this relied on a very robust model that can accurately predict house prices in 6 months
+    - It also relied on a linear increase in house values which doesn't happen in short term
+    - **Stability** is a key assumption for statistical models, and that's not a given in complex systems like the housing market
+        - The training data's distributions have distributions
+        - Topology and Differential Geometry is important
+        - __Distribution of distributions can be modeled as deformations in the inference space__
+        - Why overfitting creates miraculous accuracy
+        - **Models needs to learn about deformations by having training data from disconnected sources to the outcome**
+    - To figure out the relationships between these features and the outcome requires experimentation and a chain of models
+        - [[Causal Inference]]
+        - Deep learning models
+            - Throw all the features at it and let it figure it out
+    - Large production model architectures are expensive and time consuming to set up
+        - Feature stores need to recommend features which could improve model accuracy
+        - Experiment management system need to be able to track different experiments
+        - Review is difficult
+    - Tips for Data Scientists
+        - When revenue starts getting booked against ML projects - **model reliability is critical**
+        - 

@@ -1,0 +1,17 @@
+- To understand this concept, first we need to explain maximum likelihood estimation
+- ==Maximum likelihood estimation is a method that determines values for the parameter of a model. The parameter values are found such that they maximize the likelihood that the process described by the model produced the data that was actually observed==
+- For a set of data generated independently, the total probability of observations all the data (joint probability distribution of all observed data) is just the multiplication of each point
+    - Assuming we guess/domain knowledge on the distribution, the probability of a single point can be known (i.e. Gaussian (normal) distribution has its own function)
+    - To maximize the joint probability distribution, one differentiates this function and set it to 0
+    - **To make the computation easier, it is common to take the natural logarithm of the function **
+- Likelihood vs probability
+    - Likelihood is asking what are the values of the parameters given we’ve observed some data
+    - Probability is asking what are the values of the data given the parameters
+- When is least square estimation the same as maximum likelihood estimation?
+    - When the distribution is Gaussian, then they are equivalent
+    - Because the maximum probability is found when data points get closer to the mean, and that’s equivalent to minimizing the distance between data points and the mean value
+    - **More accurately, they are equivalent under the following [assumptions](https://bookdown.org/egarpor/PM-UC3M/app-ext-mle.html) of the model** 
+        - Linearity
+        - Homoscedasticity
+        - Normality
+        - Independence of errors

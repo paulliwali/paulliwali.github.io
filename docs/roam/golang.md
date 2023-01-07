@@ -1,0 +1,18 @@
+- Setup
+    - `golang` is opinionated with where the code base should reside, by default `$GOPATH` is set to `~HOME/go/`
+- Syntax
+    - Go programs are written in a `main` package with a `main()` function defined
+    - Packages are ways to group similar functions together
+    - Functions are be declared within other functions as variables
+    - Test file is name `xxx_test.go`, test code must start with `Test`, should only take one argument `t *testing.T`
+        - The variable `t` of type `testing.T` give access to methods of the testing framework
+- Good practice
+    - Separate “domain” code from the outside world (side-effects)
+    - Go docs is well written and maintained, launch with `godoc -http :8000` and visit `http://locahost:8000/pkg/`
+    - Use `t.Helper()` for the test suite to return the appropriate line number when the test fails
+    - The typical TOD cycle is:
+        - Write a test
+        - Make the compiler pass
+        - Run the test, see if the test fails
+        - Write enough code for the test to pass
+        - Refactor

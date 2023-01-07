@@ -1,0 +1,13 @@
+- **Metadata:**
+		- #article #technology 
+		- Source: [Speed is the killer feature](https://bdickason.com/posts/speed-is-the-killer-feature/)
+- Before the iPhone, all the other smartphones had all very similar features to the iPhone but it felt slow and sluggish to use
+- iPhone erased that with their UI experience and dominated the phone market
+- Speed is the killer feature
+- Go through your products with an eye on speed and be honest with your assessment
+	- Checkout load
+	- VR framerate
+	- Design tools
+	- Core interaction of the product
+- Perceived speed is just as important as real speed
+	- Faking speed can often be good enough for the user to not realize

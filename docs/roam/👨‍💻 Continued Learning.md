@@ -1,0 +1,22 @@
+- Metadata
+    - #life #learning #personal #plan
+- Cheatsheets
+    - At a glance summary of everything I've learned
+    - [[Data Science Cheat Sheet]]
+    - [[Good Coding Practice]]
+    - [[Design Patterns]]
+	    - https://sourcemaking.com/design_patterns
+- Roadmaps
+    - [[Data Science Learning]]
+        - Be able to prototype DS solutions with high confidence at work
+    - [[Data Engineering Learning]]
+        - Be able to deploy and maintain production level solutions at work
+    - [[Python]]
+        - Comfortable with python concepts and algorithm to be able tackle problems with efficient and apt solutions
+    - [[Transportation]]
+        - Be able to anchor software solution within the field of transportation
+    - [[Economics]]
+	    - [QuantEcon](https://quantecon.org/)
+    - 
+
+    - [[Finance]]

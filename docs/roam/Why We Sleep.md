@@ -1,0 +1,12 @@
+- 👆 Short Summary (1 takeaway)
+    - If you could take a medicine that would prolong your life by many-folds through decreasing the chances of diseases and accidents - would you take it? 
+- 🧐 Why I am reading this book?
+    - Recommended as a book that will transform how you view sleep
+- 📖 Chapter reviews
+    - 
+- 🙊 Great quotes
+    - Sleep apnea is caused by the lack of oxygen being delivered to the brain and your body shocking itself awake 
+- ✅ Actionable items
+    - Ensure at least 8 hours of **sleep opportunity**
+    - Set ambient temperature to 18C or 65F
+    - Allow body to drop core temperature by taking a hot shower and expanding the capillaries 

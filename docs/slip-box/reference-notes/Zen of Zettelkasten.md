@@ -1,0 +1,15 @@
+- **Metadata**
+    - Source: https://zettelkasten.de/posts/overview/
+    - Tags: #productivity
+- I am always in search of ways to take notes better. I have tried bullet-journal, get-things-done, markdown, mindmaps, Notion, Evernote. But they either felt too clunky to use for day-to-day purposes or not rich enough to write readable notes. So when I read about zettelkasten method in this [blog](https://eugeneyan.com/2020/04/05/note-taking-zettelkasten/), I was intrigued to give it test drive.
+- Principle
+    - Notes should link together to form knowledge. This is similar to mindmaps, where the action of creating these contextual links between individual points transforms **information into knowledge**.
+    - To achieve this in zettelkasten, each concept/idea/session is stored on an index card. Then links are created between the index cards as a way to connect the thread between different ideas. 
+    - In addition, each index card contains custom tags to describe the topic or category the card belongs to, and an index __key__ card lists out the different cards under each tag. The benefit of using tag is you don't have to conjure the categories for the types of notes you plan to write before you actually write them, as it is impossible. 
+    - **Tags can allow for organic growth of ideas and not constrain it artificially**
+    - New notes should depend on whether you already have a note on that subject already. 
+    - If there aren't any, **create a new note**. If there are existing notes, **modify it** if the topic is completely covered by it, or create a new note with internal linking if the topic is slightly different
+    - Lastly, **compile notes** into another note if there are several different points from different notes you would like to combine together.
+- Implementation
+    - I am using [zetlr](https://www.zettlr.com/), a markdown editor which supports internal linking to implement this note taking structure. I have not settled on it being the final tool but so far it sounds promising. It is open-sourced and feature-rich
+    - Updated to use Roam Research instead [[October 2nd, 2020]] 

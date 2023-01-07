@@ -1,0 +1,6 @@
+- One of the major concerns the general public and policy makers have with the advancement of AI and technology is that it will displace a large working population as their jobs become automated
+- Sam Altman's article Moore's law for everything says that because every technology revolution up until now has lead to more jobs, that means the next one will present the same opportunity
+- CGP Grey's [video](https://www.youtube.com/watch?v=7Pq-S557XQU) presented a compelling argument that used 1990s horses having a conversation about how technology advancement will be beneficial to them. But to us, such a conversation would have been ridiculous - yet we think it is correct if we replaced the horses with humans
+    - The metaphor breaks down as it is comparing horses (tools) with humans (workers) in the technology revolution 
+- Are we actually in a Moore's law of progression? There are many examples of progress also slowing down. In computer software and hardware
+[[2c2 chatgpt replacing white collar jobs]]
