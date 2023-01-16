@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[52535],{45641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Things I TIL\'ed in 2022","permalink":"/blog/til2022"}]}')}}]);
