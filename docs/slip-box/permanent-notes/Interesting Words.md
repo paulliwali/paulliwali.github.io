@@ -1,0 +1,13 @@
+- **Metadata**
+    - Tags: #english #braindump #lists
+- Effloresce - to burst into blossom; blossom
+- Aphorism - a terse saying, expressing a general truth, principal or astute observation, and spoken or written in a laconic and memorable form
+- Laconic - (of a person, speech, or style of writing) using very few words
+- Poignant - evoking a keen sense of sadness or regret
+- Proselytize - to convert ones religion 
+- Panacea - a solution or remedy for all difficulties or diseases
+- Platitude - a trite, meaningless or prosaic statement, generally directed at quelling social, emotional or cognitive unease
+- Penultimate - second to last
+- Nadir - the lowest point in the fortunes of a person or organization
+- Kakorrhaphiophobia - fear of failure 
+- Tantamount - equivalent in seriousness

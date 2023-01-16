@@ -1,11 +1,11 @@
 - Large decisions
-    - Breed - Bernedoodle, a mix of bernese mountain dog and poodle
-    - F1 standard means it is a mix of bernese mountain dog and bernedoodle 
+    - Breed - Bernedoodle, a mix of Bernese mountain dog and poodle
+    - F1 standard means it is a mix of Bernese mountain dog and bernedoodle 
     - F1b means it is a mix of two bernedoodles
 - Expected pick up date - [[April 3rd, 2021]]
 - Breeder - [Trinity Alps Bernedoodle](https://trinityalpsbernedoodles.com/)
 - F1 standard female bernedoodle
-	- [[Nobo]]
+	- #nobo
 	- Birthday - [[February 4th, 2021]]
 	- Weight - 43 lbs
 	- Vaccines - Vaccinated as of [[May 23rd, 2021]]

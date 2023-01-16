@@ -1,5 +1,5 @@
 - **Metadata**
-    - Tags: [[video]] [[productivity]]
+    - Tags: #productivity
 - Motivation 
     - take control
 - Focus 

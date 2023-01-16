@@ -6,4 +6,10 @@
     - The story is gripping but it was written in a documentation style
     - It shows the power a captivating speaker and charismatic personality can have 
 - 🙊 Great quotes
+	- It might be theoretically possible, just like manned flights to Mars were theoretically possible. But the devil was in the details. In an attempt to make the patch concept more feasible, they pared it down to just the diagnostic part, but even that was incredibly challenging.
+	- It dawned on him that she was pitting his engineering team and the new team against each other in some corporate version of survival of the fittest.
+	- “When you strike at the king, you must kill him.” Todd Surdey and Michael Esquivel had struck at the king, or rather the queen. But she’d survived.
+	- At some point, she must have decided the deep voice was necessary to get people’s attention and be taken seriously.
+	- Ian nodded. “It’s a folie à deux,” he said. Tony didn’t know any French, so he left to go look up the expression in the dictionary. The definition he found struck him as apt: “The presence of the same or similar delusional ideas in two persons closely associated with one another.”
+	- Hyping your product to get funding while concealing your true progress and hoping that reality will eventually catch up to the hype continues to be tolerated in the tech industry. #quotes
 - ✅ Actionable items

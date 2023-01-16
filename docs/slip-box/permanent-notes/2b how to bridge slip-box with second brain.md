@@ -1,9 +1,9 @@
-- There are some similarities between the [[Luhmann’s slip-box]] and Tiago Forte’s [[Second Brain]]
+- There are some similarities between the Luhmann’s slip-box and Tiago Forte’s [[Second Brain]]
     - They are both focused on removing the tedious and ineffective recalls we force our brain to do. The system they are both proposing allows the brain to think and process and leave recalling details to the system.
 - Where the differ is that the process of refining notes to become usable
-    - [[Luhmann’s slip-box]] uses the framework of fleeting, literature and permanent notes to ensure the system contains usable chunks of writing for future projects
+    - Luhmann’s slip-box uses the framework of fleeting, literature and permanent notes to ensure the system contains usable chunks of writing for future projects
     - [[Second Brain]] uses the framework of progressive summary on the bite-sized notes to become more and more refined until it rises to the top of being usable
 - Which do I prefer?
-    - I am learning to implement [[Luhmann’s slip-box]] method because I find the progressive summary requires a certain amount of discipline to comb through existing notes until it becomes usable. Whereas the act of writing permanent notes gets forces me to get the notes into that stage immediately.
+    - I am learning to implement Luhmann’s slip-box method because I find the progressive summary requires a certain amount of discipline to comb through existing notes until it becomes usable. Whereas the act of writing permanent notes gets forces me to get the notes into that stage immediately.
 - [[2b1 How I read books - a guide on how to learn]]
 - [[2b2 Knowledge as a tree]]

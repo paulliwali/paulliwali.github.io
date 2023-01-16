@@ -1,0 +1,2 @@
+- $$\hat{\Theta}=(X^{T}X)^{-1}X^{T}Y$$
+- Where $\hat{\Theta}$ is the value of $\Theta$ that minimizes the cost function

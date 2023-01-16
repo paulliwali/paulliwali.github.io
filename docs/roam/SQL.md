@@ -1,2 +1,0 @@
-- Crash course from freeCodeCamp
-    - [[SQL Crash Course]]

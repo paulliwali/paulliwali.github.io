@@ -1,0 +1,76 @@
+- 👆 Short Summary (1 takeaway)
+    - Have a good time! Positive reinforce the behaviors you want
+- 🧐 Why I am reading this book?
+    - To get prepared for training #nobo
+- 📖 Chapter reviews
+- 🙊 Great quotes
+    - "Your pup also needs to experience a range of environments, from rides in the car, visits to neighbors, and walks in the country. This type of environmental stimulation can actually change the way your pup's brain is structured, and allows him to be more flexible about changes when he's grown up. Dogs who have had limited exposure to a variety of environments are more likely to be stressed when you move, go on vacation or add to the family, so it's important to take this aspect of raising your puppy seriously."
+        - But make sure she is not overwhelmed or stressed under the new environment
+        - Fearful characteristics are closed mouth and rounded eyes, or is flicking his tongue out, yawning, or turning away to avoid contact, ask others to stand still and let your pup come to them
+        - Positive reinforcement is whatever makes Nobo repeat a behavior. This could be treat, playing with a favorite toy, or petting
+    - "Timing is crucial: If you give your dog a treat for sitting at your feet after she's come when called, you've just reinforced sitting, not for coming when called. Give your dog a treat, immediately upon completion of the behavior you wanted."
+        - Teach new exercises in a quite place with few distractions
+    - "Pups haven't yet developed full bladder control until 20 or 30 weeks of age"
+    - "As a general rule dogs tend to be more metabolically active first thing in the morning and again in the late afternoon to evening"
+    - "Begin by yelping only on the hardest bites, ignoring the softer bites. As you progress, yelp at gradually softer and softer pressure from your pup until he eventually mouths you with no pressure at all"
+        - Make it so it is more fun to play with a toy than humans
+    - "Hand claps work especially well: In Patricia's research on acoustics and canine responses, it was found that hand claps were the most successful of ten different sounds"
+    - "Dogs like to chase, so when you call your dog to come, turn your body sideways, and move away from your dog as you call. Your movement away will draw your dog toward you, rather than blocking him from moving forward"
+        - When he catches up to you, have a party! Praise him to the skies and give him extra tasty treats. If he likes it, give him some great rubs on his chest or rump
+    - "Word to the wise: dogs aren't as fond of receiving head pats as we are of giving them"
+    - "You'll want to call him to come to you at least 20 or 30 times a day during early training. No kidding!"
+        - "Be sure to avoid calling your pup for something he's not going to enjoy, like getting a nail trim or going into his crate if he's still full of energy. In that case, simply go to him and snap on his leash, keeping a friendly and upbeat attitude, being sure to avoid linking the word "come" with something he doesn't like"
+    - "Don't worry if your pup regresses one day after doing brilliantly the day before; just take a step back and create a success, then try again to lure less and use the cue more"
+        - "If you intersperse food with other reinforcements she'll generalize from 'if I sit when asked I'll get a treat' to 'if I sit when asked I'll feel good.' For most dogs, it works best to use food when you are teaching something new or when your up is likely to be distracted, but start interspersing other reinforcements once you've gotten a behavior established"
+        - "Ask for a sit and down and then giggle and rub her belly. Call 'come', run away, pick up a favorite toy and throw it for her when she arrives at your feet. The more you generalize the reinforcements, the more likely she'll be to respond anytime and anywhere"
+    - "It is important however that you do not inadvertently reinforce that barking or whining by letting him out (or telling him 'it's okay') while he's making a fuss. Instead, ignore him until he quiets down on his own. If they're not reinforced for making a fuss, most pups will learn to settle down and be quite when left in their crate or sleeping room"
+        - "But don't should at him to 'BE QUIET!' If you do, you are basically barking back, and as anyone with multiple dogs knows, barking is contagious"
+        - "The one exception is if your pup is trying to tell you that he has to potty. If you think this might be the case, take him outside quietly, give him his 'go potty' cue, treat and praise when he does and then put him right back in the crate"
+        - "Always be ready to interrupt your pup from doing something inappropriate and to direct her toward something that is appropriate"
+    - "Practice 'come'...always! Continue to make it a fun game. Call your puppy to you often, then immediately release her to go do something else fun"
+        - "Call 'come' just before she starts to head your way. However, don't call her to come too many times in a row. Call her once or tice, and always make it worth her while, then quit. Do this several times a day, in different locations indoors and out, on leash and, when its safe, off leash"
+        - "Add 'collar touches' to your come game. About ten percent of the time that you call her to come, ask her to sit when she arrives. When she gets to you, reach out and hold her collar for one second, saying 'good girl, good girl'."
+        - **"Asking for a sit every time you call is perceived as punishment by some dogs"**
+    - "Puppies are like children - they don't seem to mind learning the rules if they enjoy the game - take it/drop it"
+    - "The first rule to fetch - don't let your dog teach YOU to fetch for him"
+        - "So here's the most important part of fetch training: your dog should always move towards you, while you rarely move towards your dog"
+        - "The most common mistake people make when trying to teach fetch is not throwing the ball the instant the dog releases it"
+    - "Teaching your pup to find a specific toy is a similar process to "Where's John?" except that the toy won't be able to call him!"
+        - "This is a wonderful, too little used game that can keep your pup busy when you are stuck inside, when you are cooking dinner or wanting to learn more about how your dog uses his nose to explore the world around him"
+    - "When she starts biting higher and higher up the object, or starts looking as if she can no longer control herself, stop pulling back and become still and quiet"
+    - "Dogs try desperately to get us to chase them; they love a good chase and they especially love it if they are the chasee. But if we chase our pups around (all all) they quickly learn to play "keep away."
+    - "Try to avoid reaching under the furniture to grab something away from your puppy"
+    - "Set a goal of calling your dog to come 20 times a day. That may seem like a lot, but it's really not."
+    - "The idea is to teach him to initiate staying with you on his own. This self-initiated learning is powerful stuff, and can have a profound effect on how pleasant it is to walk with him when he's grown up"
+    - "Fear can turn into aggression later on in life, and how you deal with it now can have a significant effect on your dog's behavior when he is mature"
+        - "Expose your pup to what scares him in a controlled, thoughtful way. If he's afraid of big guys, ask men to stop five feet away and toss treats or toys"
+    - "ideally, have a 'puppy party' in which lots of friends come over, enter the house one at a time, and give your pup a chance to sit on his own. Every time he does, he gets lots of treats, until he can't wait to do it again the next time the doorbell rings."
+    - "As she matures, ask her to drop an object in increasingly challenging situations - when you are farther away, when she has something she considers to be a treasure and when you don't have a toy or treat handy"
+    - "Professional trainers will tell you that most people use too few treats when teaching their dogs to walk politely on leash"
+    - "Somewhere between five to seven months, your previously docile puppy may become impossible one day and go back to being an angel the next"
+        - "It takes patience, because patience and a calm, quite attitude work wonders"
+    - "Only give cues when you are ready and able to carry though with them, otherwise he'll learn to ignore you"
+    - "Experts agree that there is a 'fear period' experienced by many dogs around early adolescence, usually around 6 to 9 months. That is often the age that you may first see a puppy back away from a visitor, perhaps remaining silent buy stiff, or begin to bark at strangers"
+        - "If your young dog shows even subtle signs of shyness around strangers, it's important to turn that around as soon as you can. Most dogs, including many that we have owned, can come out of this period as reliable, people-loving dogs"
+    - "Try to keep the leashes loose when you and your pup meet unfamiliar dogs. Tension on the leash can create tension in your dog"
+    - "NO BIG DEAL if you want your comings and goings to be accepted by your pup as part of daily life, then make your exits and entrances low key"
+    - "TRIPS TO NOWHERE help her to overcome her fears by associating the car with wonderful things."
+    - "A safe age to start repetitive exercise varies by breed, it can be anywhere from 1 to 2 years, or even later"
+    - "But by the time a dog is four or five months old he is much stronger, and needs a lot more exercise. This exercise requirement usually peaks around eight months to three years of age."
+    - "The most common motivation for barking is when something or someone out of the family enters the 'territory'"
+        - "Start by presenting a stimulus that elicits barking, then taking it away. As the noise stops, go all the way to your dog, say 'thank you,' and use a yummy treat to lure her away from the direction she is facing"
+        - "If she is barking at you, do your best to ignore her until she is quite"
+        - "As soon as she is quite, ask her to do something for you and give her the attention she wants"
+    - "Ask for a sit, and then, before you hand him his expected treat, add in the cues that you'll use to tell him to stay. Move your hand forward, palm toward your up like a traffic cop blocking traffic, and say 'stay' in a flat or descending tone"
+        - "Give him one or two more treats, and then release him by saying 'free' or 'okay'. Don't forget the release word"
+        - "Don't praise and make a fuss when he gets up. You want the 'staying in place' start to be the most fun, not the release"
+        - "Work on 1s stays, then 2s and 3s ones, but don't go too far too fast. It may take weeks or even months to build up to 15s in a quiet room with no distractions. That's fine, go at your puppy's pace"
+    - "interweave short sessions of heeling into long, casual walks with a harness or head collar"
+    - "Dogs aren't fully mature until they are 3 years old, and its neither fair nor realistic to expect them to behave like a grown up, fully-trained dog when they are still youngsters"
+- ✅ Actionable items
+    - Practice positive attitude and patience when it comes to training the dog
+    - Thoughtful in exposing Nobo to a variety of environments to ensure she is comfortable with changes
+    - Practice calling Nobo to me as much as possible, because when they hit adolescence (around 4 to 5 months of age) they will grow out of the hardwired attachment to you
+    - Keep reinforcing the good habits, it can take a very long time to get it into a habit
+    - Always stop the game before she loses interest, and play later, don't over do it
+    - When doing grooming and such, always end on a good note and associate those things with good things like treats and up-beat attitude

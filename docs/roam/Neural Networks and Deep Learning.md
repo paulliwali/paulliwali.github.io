@@ -1,3 +1,0 @@
-- Metadata
-    - Source: http://neuralnetworksanddeeplearning.com/about.html
-    - 

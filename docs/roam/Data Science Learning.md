@@ -48,6 +48,7 @@
         - Part I focus on machine learning techniques, Part II focus on neural networks with tensorflow 
         - 9/10
     - [[Neural Networks and Deep Learning]] #books
+	    - Source: http://neuralnetworksanddeeplearning.com/about.html
         - Focused on the concepts of neural networks
         - Not project oriented
         - 2/10
