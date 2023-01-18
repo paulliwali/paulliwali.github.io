@@ -16,6 +16,7 @@
         - 6/10
     - [[Machine Learning]] #course
         - Andrew Ng's introduction to ML class
+	    - Source: https://www.coursera.org/learn/machine-learning#syllabus
         - I have completed the first 8 weeks of this, I never did the large scaled projects at the end
         - 8/10
     - [[Deep Learning AI]] #course
@@ -36,7 +37,10 @@
         - https://courses.dibya.online/p/fastdeeprl
 - Books
     - [[Elements of Statistical Learning]] #books
-        - Dense but worth it
+        - Dense but worth it - Keep reading chapters 1-4 and 7-8 until you understand it
+	    - Source: https://web.stanford.edu/~hastie/ElemStatLearn//printings/ESLII_print10.pdf
+	    - https://www.reddit.com/r/MachineLearning/comments/5z8110/d_a_super_harsh_guide_to_machine_learning/
+
         - 7/10
     - [[Deep Learning]] #books
 	    - Source: https://www.deeplearningbook.org/front_matter.pdf
@@ -55,6 +59,8 @@
     - [[Introduction to Algorithms]] #books
         - Focused on algorithms
         - 8/10
+        - Source: https://www.amazon.com/gp/product/0262033844/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0262033844&linkCode=as2&tag=adilkhash-20&linkId=74742875db503b1a899ca35159749067
+    - 
 	- From Python to Numpy
 		- https://www.labri.fr/perso/nrougier/from-python-to-numpy/
 - Videos

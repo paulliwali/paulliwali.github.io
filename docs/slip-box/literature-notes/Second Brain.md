@@ -8,7 +8,7 @@
     - First step of the second brain is to capture the ideas and insights you think are worth saving
     - Most of the time, this capturing process is haphazard and fragmented
     - ==We need to be deliberate== - I have tried various systems to capture knowledge and still trying to find one that I can do consistently and find value from
-    - Think like a curator - instead of funnelling all the experience in, try to be objective, opinionated, and reflective
+    - Think like a curator - instead of funneling all the experience in, try to be objective, opinionated, and reflective
     - Organize your content by project - by grouping information with projects it gives them purpose
     - Keep only what resonates - training ourselves to notice what resonates in a deep level will improve our senses to discover opportunities 
 - Part 2: Connect

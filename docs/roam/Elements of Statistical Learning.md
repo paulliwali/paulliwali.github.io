@@ -1,4 +1,0 @@
-- Metadata
-    - Source: https://web.stanford.edu/~hastie/ElemStatLearn//printings/ESLII_print10.pdf
-    - https://www.reddit.com/r/MachineLearning/comments/5z8110/d_a_super_harsh_guide_to_machine_learning/
-- Keep reading chapters 1-4 and 7-8 until you understand it

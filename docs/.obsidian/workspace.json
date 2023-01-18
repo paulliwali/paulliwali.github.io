@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "daily-notes/2023/2023-01-17.md",
+                "file": "roam/🗺 Life Map.md",
                 "mode": "source",
                 "source": false
               }
@@ -32,15 +32,18 @@
             }
           },
           {
-            "id": "f067f98e3ed281e4",
+            "id": "0ba897c809e7ac5b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "roam/📚 Books to Read.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -70,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "[[future",
+                "query": "tag:#programming",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -122,6 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "roam/🗺 Life Map.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,6 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "roam/🗺 Life Map.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -159,7 +164,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "roam/🗺 Life Map.md"
+              }
             }
           }
         ]
@@ -180,17 +187,17 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f067f98e3ed281e4",
+  "active": "139643cc9c63cdb7",
   "lastOpenFiles": [
-    "roam/Neural Networks and Deep Learning.md",
-    "roam/Data Science Learning.md",
-    "roam/nba.md",
-    "roam/Movies to Watch.md",
-    "roam/modelling.md",
-    "roam/Monte Carlo simulation.md",
-    "roam/Machine Learning.md",
-    "roam/logging.md",
-    "roam/log-likelihood.md",
-    "roam/learning curves.md"
+    "roam/🍖 Powerlifting.md",
+    "roam/👨‍💻 Continued Learning.md",
+    "roam/📚 Books to Read.md",
+    "roam/🕸 Personal Website.md",
+    "roam/🥢Trip to Singapore.md",
+    "slip-box/literature-notes/Data Science Learning.md",
+    "slip-box/reference-notes/Roam Research.md",
+    "slip-box/reference-notes/Startup Law of Greatness.md",
+    "slip-box/reference-notes/Support Vector Machines.md",
+    "slip-box/reference-notes/Ridge Regression.md"
   ]
 }

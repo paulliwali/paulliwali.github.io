@@ -1,3 +1,0 @@
-- Metadata
-    - Author: Ken Thompson
-    - 

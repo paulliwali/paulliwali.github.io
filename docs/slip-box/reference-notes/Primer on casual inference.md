@@ -1,14 +1,15 @@
 - Metadata
     - Source: https://towardsdatascience.com/beyond-a-b-testing-primer-on-causal-inference-d8e462d90a0b
+    - Tags: #machine-learning #model 
 - Predictive models on their own can't answer the questions business usually want to answer -> will doing A cause B?
     - Prediction and inference are opposite goals
     - Correct inference often requires us to sacrifice predictive power
     - Maximum predictive power can lead to incorrect causal inference
 - Experiments
     - Simple A/B Test
-        - From a [[frequentist]] POV, you want to do a t-test to ensure there are a "large" difference between two populations
-        - Calculate power as a function of duration (holding $$\alpha$$ and effect size constant)
-        - Use arbitrary $$\alpha = 0.1$$ and $$\beta = 0.9$$ if you think a false negative is just as bad as a false positive
+        - From a frequentist POV, you want to do a t-test to ensure there are a "large" difference between two populations
+        - Calculate power as a function of duration (holding $\alpha$ and effect size constant)
+        - Use arbitrary $\alpha = 0.1$ and $\beta = 0.9$ if you think a false negative is just as bad as a false positive
         - Perform a one-sided test, usually care more about the sign than the magnitude
         - The outcomes
             - B is significantly better than A. Ship B
@@ -27,7 +28,7 @@
     - Google's [CausalImpact](https://towardsdatascience.com/beyond-a-b-testing-primer-on-causal-inference-d8e462d90a0b) package
         - Observe a time series X with some intervention
         - Build a [[counterfactual]]: what would the time series have been without the intervention
-        - Look for ingredients to put into a blener
+        - Look for ingredients to put into a blender
         - End result is a good counterfactual
         - The difference between observed and counterfactual is the [[terra-cotta]] ==causal effect estimate==
         - [[champagne]] ==Key Assumptions=='
@@ -39,5 +40,5 @@
         - Choose ingredients that have correlation with X
         - Choose the ingredients and X before the quasi-experiment is run
 - Observational Data
-    - When we cannot intervene due to real-life constraints and we can only obseve
+    - When we cannot intervene due to real-life constraints and we can only observe
     - Casual DAG

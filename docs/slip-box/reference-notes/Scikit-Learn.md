@@ -20,6 +20,8 @@
 - To make a custom transformer that still works with other Scikit-Learn functionalities, you need to create a class and implement `fit()`, `transform()` and `fit_transform()`
     - ```python
 # Small transfomer that creaters the combined features
+
+```python
 from sklearn.base import BaseEstimator, TransformerMixin
 
 room_ix, bedrooms_ix, population_ix, households_ix = 3, 4, 5, 6
@@ -46,8 +48,10 @@ housing_extra_attrsibs = attr_adder.transform(housing_df.values)```
 - Transformation pipelines in `scikit-learn` helps you to automate the transformers needed to be applied
     - ```python
 # Create a simple piepline to auotmate the transformers
+```python
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
+
 
 num_pipeline = Pipeline([
     ('imputer', SimpleImputer(strategy="median")),
@@ -55,7 +59,8 @@ num_pipeline = Pipeline([
     ('std_scaler', StandardScaler()),
 ])
 
-housing_num_tr = num_pipeline.fit_transform(housing_num)```
-    - All but the last estimator must be transformers (they must have `fit_transform()` method)
-    - When you call pipeline's `fit()` method, it will chain call the `fit_transform()` method of the transfomers
-    - in
+housing_num_tr = num_pipeline.fit_transform(housing_num)
+```
+- All but the last estimator must be transformers (they must have `fit_transform()` method)
+- When you call pipeline's `fit()` method, it will chain call the `fit_transform()` method of the transfomers
+

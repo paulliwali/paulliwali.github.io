@@ -1,3 +1,0 @@
-- Metadata
-    - Source: https://www.coursera.org/learn/machine-learning#syllabus
-- 

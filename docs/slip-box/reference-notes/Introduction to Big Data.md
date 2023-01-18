@@ -1,4 +1,5 @@
 - Source: https://www.coursera.org/learn/big-data-introduction/home/welcome
+- Tags: #course #data-science 
 - Part of Coursera's [[Big Data Specialization Degree]], might be the least useful, so work fast and see if its useful
 - **Goals**: intro to big data, run a program using Hadoop
     - Able to recast problems as data science questions

@@ -12,6 +12,8 @@ It is easy to learn new things and even easier to forget them. Without intention
 
 This documentation space contains all the things I found useful or larger concepts I spent time learning. So when I need it again, it can serve as a quick reference for myself.
 
+See [[Second Brain]] for more info
+
 ## Goals
 
 :medal: This document should be *accessible*, maintaining high velocity for me to find the exact thing I need is the **primary** goal.

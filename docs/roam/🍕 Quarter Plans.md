@@ -62,6 +62,7 @@
 			- [[Atomic Habits]]
 			- [[I want to die but I want to eat tteokbokki]]
 			- [[Inadequate Equilibrium]]
+			- [[Studying Studies]]
 		- 5 blog posts
 			- [[Movie poster characteristics and pie charts]]
 			- [[ChatGPT article on yield curve inversion]]

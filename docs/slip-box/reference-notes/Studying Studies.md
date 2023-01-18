@@ -11,7 +11,7 @@
             - Claimed that the incident of Alzheimer's disease was 15% lower among women and 12% lower among men who took statin
                 - ==However, this was relative risk and not absolute risk==
                 - The absolute risk reduction, without considering healthy-user bias, side-effects, unintended consequences, would be 2% to 1.5% reduction for a 75 year old by the time they are 80 years old
-            - But news worhy report are often on the relative risk reduction/increase because it is more **impactful**
+            - But news worthy report are often on the relative risk reduction/increase because it is more **impactful**
     - Part II
 - 🙊 Great quotes
 - ✅ Actionable items
