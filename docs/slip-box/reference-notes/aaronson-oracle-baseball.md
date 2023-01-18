@@ -13,3 +13,7 @@
     - look up the highest probable next keystroke, return that or default to one by chance if there are no stored values
     - update the dict with user inputs
     - calculate the rolling accuracy when making a prediction
+
+Use GPT to train this sequence
+
+Hard part will be getting this data in a good format

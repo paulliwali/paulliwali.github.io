@@ -7,12 +7,13 @@ tags:: #daily-notes #journal
 ↻ HABITS
 [Meditate::]
 [Exercise::]
+[Read::]
 [Personal Work::]
 
-# Invalid date
+# <% moment(tp.file.title,'YYYY-MM-DD').format("dddd, MMMM DD, YYYY") %>
 
-<< [[Invalid date|Yesterday]] | [[Invalid date|Tomorrow]] >>
-Retrospective:: [[Invalid date|Last Month]] | [[Invalid date|Last Year]]
+<< [[<%fileDate=moment(tp.file.title,'YYYY-MM-DD').subtract(1, 'd').format('YYYY-MM-DD')%>|Yesterday]] | [[<%fileDate=moment(tp.file.title,'YYYY-MM-DD').add(1,'d').format('YYYY-MM-DD')%>|Tomorrow]] >>
+Retrospective:: [[<%fileDate=moment(tp.file.title,'YYYY-MM-DD').subtract(1,'M').format('YYYY-MM-DD')%>|Last Month]] | [[<%fileDate=moment(tp.file.title,'YYYY-MM-DD').subtract(1,'Y').format('YYYY-MM-DD')%>|Last Year]]
 
 ### 📅 Daily Questions
 
@@ -40,7 +41,7 @@ Retrospective:: [[Invalid date|Last Month]] | [[Invalid date|Last Year]]
 
 ```dataview
 
-List FROM "" WHERE file.cday = date("2023-01-16") SORT file.ctime asc
+List FROM "" WHERE file.cday = date("<%tp.date.now("YYYY-MM-DD")%>") SORT file.ctime asc
 
 ```
 
@@ -48,7 +49,7 @@ List FROM "" WHERE file.cday = date("2023-01-16") SORT file.ctime asc
 
 ```dataview
 
-List FROM "" WHERE file.mday = date("2023-01-16") SORT file.mtime asc
+List FROM "" WHERE file.mday = date("<%tp.date.now("YYYY-MM-DD")%>") SORT file.mtime asc
 
 ```
 
