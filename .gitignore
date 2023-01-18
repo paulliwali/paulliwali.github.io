@@ -21,3 +21,6 @@ yarn-error.log*
 
 # Work notes
 /docs/work
+
+# Personal notes
+/docs/personal
