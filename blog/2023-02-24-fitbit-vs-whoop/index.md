@@ -37,28 +37,28 @@ And for sleep quality:
 Why was there a huge discrepancy in the second week?
 This leads to the issue I had with Whoop, the sensors are less forgiving if its not worn properly. Some examples of this are:
 
-<table>
- <tr>
-  <td> <img src="fitbit_20221223-095343.webp"  alt="1" width = 360px height = 640px ></td>
-  <td><img src="whoop_20221223-095331.webp" alt="2" width = 360px height = 640px></td>
-  <td><p>where we see huge differences!</p></td>
- </tr>
- <tr>
- <td> <img src="fitbit_20221220-174041.webp"  alt="1" width = 360px height = 640px ></td>
-  <td><img src="whoop_20221220-174026.webp" alt="2" width = 360px height = 640px></td>
-  <td><p>And cases where we see that even if the total hours is close.
-   <br> The allocation of the sleep stages is mismatched.
-  </p></td>
- </tr>
-</table>
+&lt;table&gt;
+ &lt;tr&gt;
+  &lt;td&gt;&lt;img src="fitbit_20221223-095343.webp"  alt="1" width ="360" height ="640"&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;img src="whoop_20221223-095331.webp" alt="2" width ="360" height ="640"&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;p&gt;where we see huge differences!&lt;/p&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;img src="fitbit_20221220-174041.webp"  alt="1" width ="360" height ="640"&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;img src="whoop_20221220-174026.webp" alt="2" width ="360" height ="640"&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;p&gt;And cases where we see that even if the total hours is close.
+   &lt;br&gt; The allocation of the sleep stages is mismatched.
+  &lt;/p&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+&lt;/table&gt;
 
-<table>
-   <tr>
-     <td> <img src="fitbit_20221214-061811.webp"  alt="1" width = 360px height = 640px ></td>
-     <td><img src="whoop_20221214-062857.webp" alt="2" width = 360px height = 640px></td>
-  <td><p>There are times where it matched up well.</p></td>
- </tr>
-</table>
+&lt;table&gt;
+   &lt;tr&gt;
+     &lt;td&gt;&lt;img src="fitbit_20221214-061811.webp"  alt="1" width ="360" height ="640"&gt;&lt;/td&gt;
+     &lt;td&gt;&lt;img src="whoop_20221214-062857.webp" alt="2" width ="360" height ="640"&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;p&gt;There are times where it matched up well.&lt;/p&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+&lt;/table&gt;
 
 But the problem is that it is very inconsistent.
 And beyond this, I don't fully feel correlated with the results tracked by either devices.
