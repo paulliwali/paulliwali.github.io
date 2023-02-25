@@ -1,4 +1,3 @@
 > “Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn’t really do it, they just saw something.” Steve Jobs #quotes
 - Making seemingly isolated things connect is creativity in its purest form, and having the slip-box as an external system to facilitate this action is a powerful reason to dedicate time to build this
 - Intuition to connect them in such a way comes from intensive premeditation of this particular subject, it doesn’t just appear out of thin air
-- [[1b good engineers are good at abstraction]]

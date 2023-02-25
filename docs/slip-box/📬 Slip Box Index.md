@@ -5,7 +5,7 @@ tags: [notetaking, productivity, guide]
 
 Here lies the index to my permanent notes:
 
-* [[1a connecting things]]
+* [[1a entry to creativity]]
 - [[2a entry to productivity]]
 	- [[2a1 can remote work be productive]]
 - [[3a thinking creatively]]

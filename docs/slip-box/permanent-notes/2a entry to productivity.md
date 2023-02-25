@@ -1,6 +1,3 @@
 - Being productive is to remove the distractions which hinders thinking, enabling one to enter the perfect state of flow.
 - The confluence pages (wiki pages) at work is a perfect illustration of this. Team members contribute to a growing list of permanent notes which are linked together to foster more interesting ideas.
 - Never starting from a blank page is the secret to enabling higher levels of productivity. To achieve this is through developing a workflow that ensures you always have enough material to only have to establish the connections between them and not be distracted with composing them in the first place.
-- [[2a1 can remote work be productive]]
-- [[2b how to bridge slip-box with second brain]]
-- [[2c productivity is not the end all and be all]]

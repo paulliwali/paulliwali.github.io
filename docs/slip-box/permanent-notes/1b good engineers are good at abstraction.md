@@ -2,4 +2,3 @@
 - The ability to find the core principle and root cause of a problem in engineering is one of most important skills for an engineer
 - Once the problem is abstracted, then creative and insightful solutions from the toolbox can be used to solve it
     - Both sides of the equation needs to be available to facilitate this harmonious process
-- [[1c good engineers are good at abstraction]]

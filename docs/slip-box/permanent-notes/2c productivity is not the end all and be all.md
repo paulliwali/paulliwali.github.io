@@ -1,4 +1,3 @@
 - We are human beings and not human doings, our endless journey of being productive can lead to an unhealthy obsession of transforming or removing all atelic activities such that they are productive or we don't do them
 - But doing everything on your plans only leads to realizing you need to do more things, and that can spiral into the symptoms of a midlife crisis
 - Making unnecessary telic transformations can be unhealthy and enjoy the atelic activities as they are
-- [[2c1 technology productivity leading to decrease in jobs]]
