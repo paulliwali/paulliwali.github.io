@@ -220,7 +220,7 @@
         - Nests ideas into the context of application and framework
             - ==Enhances mere facts into tools that can be useful in a toolbox==
             - Why I always valued my education experience because how the curriculum delivered such wide ranging concept and it forced you to not memorize everything but just create interesting connections between them as you are bombarded with them
-        - Creativity is the act of connecting of seemingly isolated things ([[1a connecting things]])
+        - Creativity is the act of connecting of seemingly isolated things ([[1a entry to creativity]])
         - To write insightful texts, one has to be able to play and tinker with ideas, which is only possible after the original nugget is abstracted from the existing context
             - Hence, permanent notes are not just copy-and-paste of the existing text. They are written in your own words
             - Abstraction is what allows us to appreciate things without being exactly in the shoes of the subject

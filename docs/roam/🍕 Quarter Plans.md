@@ -68,17 +68,22 @@
 			- [[ChatGPT article on yield curve inversion]]
 			- [[Til2022]]
 		- 2 physical goals
-			- Hike a 4+ day hike
+			- Hike some longer multi-day hikes
 				- [[West Coast Trial]]
+				- [[Blayney Meadow Trail]]
+				- [[Mt Whitney]]
+				- [[The Wave]]
 			- 180lbs
 	- Q1
 		- [x] Publish [[Til2022]]
 		- [x] Migrate to Docusuarus for [[🕸 Personal Website]]
+			- [ ] Point the github.io endpoint to the pauldeng.me domain
 		- [ ] Finish [[Black Swan]]
 		- [ ] Personal Finance
 			- [x] Adjust 401k contribution to get full employer match
-			- [ ] Transfer IRA to Robinhood, convert to ROTH
-			- [ ] Contribute annual max to ROTH
+			- [x] Transfer IRA to Robinhood, convert to ROTH
+				- Can't do in Robinhood outright just yet
 	- Q2
 	- Q3
+		- [ ] Contribute annual max to ROTH
 	- Q4

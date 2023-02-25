@@ -4,43 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "cd923092d3cac238",
+        "id": "1e8c556f5e7cfa7f",
         "type": "tabs",
         "children": [
           {
-            "id": "089450f8007c2bac",
+            "id": "435cb8fbb787ec93",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "code/py-data-science.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0ba897c809e7ac5b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "roam/📚 Books to Read.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "95898373350e0c4b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "templates/Daily Note Template.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -55,7 +27,7 @@
       {
         "id": "aa9862bc7e531ab1",
         "type": "tabs",
-        "dimension": 63.542857142857144,
+        "dimension": 60.57142857142858,
         "children": [
           {
             "id": "1e21491c71cbe9f3",
@@ -73,7 +45,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#programming",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -95,7 +67,7 @@
       {
         "id": "28e03a200caba194",
         "type": "tabs",
-        "dimension": 36.457142857142856,
+        "dimension": 39.42857142857143,
         "children": [
           {
             "id": "fd59e0ea5cd17e53",
@@ -109,7 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 252.5
+    "width": 350.5
   },
   "right": {
     "id": "bcee0f0f827065f9",
@@ -125,7 +97,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "code/py-data-science.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,7 +113,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "code/py-data-science.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -164,16 +134,15 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "code/py-data-science.md"
-              }
+              "state": {}
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,17 +156,17 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "089450f8007c2bac",
+  "active": "435cb8fbb787ec93",
   "lastOpenFiles": [
-    "code/py-basic.md",
-    "work/brain-dump.md",
-    "work/projects.md",
-    "work/energy-tool-secrets.md",
-    "work/workflow.md",
-    "daily-notes/2023/2023-01-18.md",
-    "templates/Daily Note Template.md",
-    "templates/Book Review Template.md",
-    "templates/Article Summary Template.md",
-    "daily-notes/2023/2023-01-17.md"
+    "slip-box/writing-bin/Fitbit vs Whoop.md",
+    "2012-12-11.md",
+    "daily-notes/2023/2023-02-24.md",
+    "slip-box/reference-notes/Atomic Habits.md",
+    "<%fileDate=moment(tp.file.title,'YYYY-MM-DD').add(1,'d').format('YYYY-MM-DD')%>.md",
+    "◶ Trackers.md",
+    "daily-notes/2023/2023-02-23.md",
+    "roam/📚 Books to Read.md",
+    "slip-box/reference-notes/Zettelkasten Method.md",
+    "slip-box/📬 Slip Box Index.md"
   ]
 }

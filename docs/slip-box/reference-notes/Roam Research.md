@@ -7,9 +7,9 @@
     - Every point in the notes is a block, which can be referenced individually
     - Blank notes/nodes can be created for later
         - For example, Roam's structure
-- To get started with Roam refer to [[💡 Get Started with Roam]]
+- To get started with Roam refer to [[Get Started with Roam]]
 - TODO
-    - [x] Finish [[💡 Get Started with Roam]]
+    - [x] Finish [[Get Started with Roam]]
     - [x] Finish [[plus-minus-template]] [[October 7th, 2020]]
     - [x] Finish [[meta-cognition]]
 - Self-Reflection

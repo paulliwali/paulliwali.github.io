@@ -11,3 +11,5 @@
 - Nadir - the lowest point in the fortunes of a person or organization
 - Kakorrhaphiophobia - fear of failure 
 - Tantamount - equivalent in seriousness
+- Apocryphal - doubtful in authenticity despite being widely circulated as true
+- Quiescent - in a state of dormancy

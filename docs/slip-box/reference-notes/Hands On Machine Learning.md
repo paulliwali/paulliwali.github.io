@@ -2,7 +2,7 @@
     - Source: https://github.com/ageron/handson-ml
     - [[learning]] 
 - # Preface
-    - The wave of machine learning is started in 2006 when [[Geoffrey Hinton]] published a paper on the practicality of training a deep neural network with "Deep Learning"
+    - The wave of machine learning is started in 2006 when Geoffrey Hinton published a paper on the practicality of training a deep neural network with "Deep Learning"
     - Will learn to use [[Scikit-Learn]], [[TensorFlow]], [[Keras]]
     - Roadmap of the book
         - Part I - The Fundamentals of Machine Learning (focused on [[Scikit-Learn]])
@@ -26,7 +26,6 @@
             - Training and deploying [[TensorFlow]] at scale
 - # Chapter 1. The Machine Learning Landscape
     - Machine learning is to improve the ability of doing a certain task with experience, measured by a performance metric
-    - ![mls2 0104](https://learning.oreilly.com/library/view/hands-on-machine-learning/9781492032632/assets/mls2_0104.png)
     - Main types of ML
         - Whether they are trained under human supervision (supervised vs unsupervised)
         - Whether they can learn incrementally on the fly (online vs batch learning)
@@ -266,5 +265,13 @@
     - Can perform both classification and regression modelling
     - Building blocks of Chapter 7: Random Forests 
     - To make a prediction with decision tree you go through nodes and you move down the tree's nodes until you reach the final node that gives the prediction
-    - 
+    - Classification and Regression Tree (CART) Algorithm
+	    - Splits the training set using a single feature `k` and threshold `t_k` by searching for the pair that produces the purest set
+	    - It recursively splits the subsets until it reaches the maximize depth
+	    - It is a greedy search 
+	- Decision trees are prone to over-fitting because it is *nonparametric*
+		- The number of parameters is not determined prior to training
+		- Needs to be regularized to avoid overfitting
+	- Instabilities with decision tree
+		- loves orthogonal decision boundaries, which creates overfitting
 - # Chapter 7: Random Forests

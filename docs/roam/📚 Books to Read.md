@@ -40,6 +40,7 @@
 - Reading
     - [[Black Swan]]
     - [[Inside of a Dog - What Dogs See, Smell, and Know]]
+    - [[Atomic Habits]]
 - 2020
 	- [[American Gods]]
 	- [[Daily Stoic]]
