@@ -2,11 +2,56 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://your-docusaurus-test-site.com/blog</id>
     <title>My Site Blog</title>
-    <updated>2023-01-01T00:00:00.000Z</updated>
+    <updated>2023-02-24T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://your-docusaurus-test-site.com/blog"/>
     <subtitle>My Site Blog</subtitle>
     <icon>https://your-docusaurus-test-site.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[FitBit vs Whoop]]></title>
+        <id>fitbit-vs-whoop</id>
+        <link href="https://your-docusaurus-test-site.com/blog/fitbit-vs-whoop"/>
+        <updated>2023-02-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Using FitBit and Whoop to monitor my sleep quality over two weeks from 2021-12-12 to 2021-12-23 and this is what I found]]></summary>
+        <content type="html"><![CDATA[<p>Using FitBit and Whoop to monitor my sleep quality over two weeks from 2021-12-12 to 2021-12-23 and this is what I found</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="context">Context<a class="hash-link" href="#context" title="Direct link to heading">​</a></h2><p>When I mention that I am looking into how to sleep better, my friends and family first instinct is always "oh are you having trouble sleeping?"
+It is not that I have trouble sleeping, it is just that I want to optimize sleep to the absolute maximum.
+The importance of good quality sleep is increasingly being understood as the <strong>single most important factor to health</strong>.
+Wouldn't I want this to be optimized better than my monster-hunter charge blade build?</p><p>The focus of this monitoring is to see which device correlate with my personal experience better so I can start to trust its outputs.</p><p>I will wear both devices on each of my wrists and flip halfway through after a week. And note how each night's sleep correlated with how I felt.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="components">Components<a class="hash-link" href="#components" title="Direct link to heading">​</a></h2><p>In terms of sleep length:</p><ul><li>FitBit tracked an average of 6.8 hours for both weeks</li><li>Whoop tracked that I slept for an average of 6.5 hours (with 8 hours in bed) in the first week and an average of 5.1 hours (6 hours in bed) for second week</li></ul><p>And for sleep quality:</p><ul><li>FitBit tracked a score of 70 for both weeks</li><li>Whoop tracked 71% and 52% performance</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="issues">Issues<a class="hash-link" href="#issues" title="Direct link to heading">​</a></h2><p>Why was there a huge discrepancy in the second week?
+This leads to the issue I had with Whoop, the sensors are less forgiving if its not worn properly. Some examples of this are:</p><p>&lt;<!-- -->table<!-- -->&gt;<!-- -->
+<!-- -->&lt;<!-- -->tr<!-- -->&gt;<!-- -->
+<!-- -->&lt;<!-- -->td<!-- -->&gt;<!-- -->&lt;<!-- -->img src="fitbit_20221223-095343.webp"  alt="1" width ="360" height ="640"<!-- -->&gt;<!-- -->&lt;<!-- -->/td<!-- -->&gt;<!-- -->
+<!-- -->&lt;<!-- -->td<!-- -->&gt;<!-- -->&lt;<!-- -->img src="whoop_20221223-095331.webp" alt="2" width ="360" height ="640"<!-- -->&gt;<!-- -->&lt;<!-- -->/td<!-- -->&gt;<!-- -->
+<!-- -->&lt;<!-- -->td<!-- -->&gt;<!-- -->&lt;<!-- -->p<!-- -->&gt;<!-- -->where we see huge differences!<!-- -->&lt;<!-- -->/p<!-- -->&gt;<!-- -->&lt;<!-- -->/td<!-- -->&gt;<!-- -->
+<!-- -->&lt;<!-- -->/tr<!-- -->&gt;<!-- -->
+<!-- -->&lt;<!-- -->tr<!-- -->&gt;<!-- -->
+<!-- -->&lt;<!-- -->td<!-- -->&gt;<!-- -->&lt;<!-- -->img src="fitbit_20221220-174041.webp"  alt="1" width ="360" height ="640"<!-- -->&gt;<!-- -->&lt;<!-- -->/td<!-- -->&gt;<!-- -->
+<!-- -->&lt;<!-- -->td<!-- -->&gt;<!-- -->&lt;<!-- -->img src="whoop_20221220-174026.webp" alt="2" width ="360" height ="640"<!-- -->&gt;<!-- -->&lt;<!-- -->/td<!-- -->&gt;<!-- -->
+<!-- -->&lt;<!-- -->td<!-- -->&gt;<!-- -->&lt;<!-- -->p<!-- -->&gt;<!-- -->And cases where we see that even if the total hours is close.
+<!-- -->&lt;<!-- -->br<!-- -->&gt;<!-- --> The allocation of the sleep stages is mismatched.
+<!-- -->&lt;<!-- -->/p<!-- -->&gt;<!-- -->&lt;<!-- -->/td<!-- -->&gt;<!-- -->
+<!-- -->&lt;<!-- -->/tr<!-- -->&gt;<!-- -->
+<!-- -->&lt;<!-- -->/table<!-- -->&gt;</p><p>&lt;<!-- -->table<!-- -->&gt;<!-- -->
+<!-- -->&lt;<!-- -->tr<!-- -->&gt;<!-- -->
+<!-- -->&lt;<!-- -->td<!-- -->&gt;<!-- -->&lt;<!-- -->img src="fitbit_20221214-061811.webp"  alt="1" width ="360" height ="640"<!-- -->&gt;<!-- -->&lt;<!-- -->/td<!-- -->&gt;<!-- -->
+<!-- -->&lt;<!-- -->td<!-- -->&gt;<!-- -->&lt;<!-- -->img src="whoop_20221214-062857.webp" alt="2" width ="360" height ="640"<!-- -->&gt;<!-- -->&lt;<!-- -->/td<!-- -->&gt;<!-- -->
+<!-- -->&lt;<!-- -->td<!-- -->&gt;<!-- -->&lt;<!-- -->p<!-- -->&gt;<!-- -->There are times where it matched up well.<!-- -->&lt;<!-- -->/p<!-- -->&gt;<!-- -->&lt;<!-- -->/td<!-- -->&gt;<!-- -->
+<!-- -->&lt;<!-- -->/tr<!-- -->&gt;<!-- -->
+<!-- -->&lt;<!-- -->/table<!-- -->&gt;</p><p>But the problem is that it is very inconsistent.
+And beyond this, I don't fully feel correlated with the results tracked by either devices.
+More often than not, I feel well rested and did not wake up in the middle of the night as opposed to what the results show me - that I slept very lightly and woke several times.
+Although FitBit is more consistent in measuring my sleep, it seems to under-estimate the hours and quality.</p><p>From what I have read and learned by speaking to friends in the wearable tech.
+The basic hardware technology is identical across the different wearables, and what makes the differences is the algorithm used to determine sleep based on the signals the hardware is sending.
+Depending on how the algorithm is tuned, the resulting analysis can vary from device to device.
+Maybe Google trained their algorithm on someone who has a lower heart rate or less movement...but it doesn't test well on me.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="outcome">Outcome<a class="hash-link" href="#outcome" title="Direct link to heading">​</a></h2><p>I will definitely not be switching to Whoop, since it is more expensive and less consistent in tracking sleep for me.
+A side note, the strain calculation is pretty spot on, but I never recover enough for it.
+Even though, FitBit underestimates my total sleep, I think it does a good job on being consistent in its analysis and I can just do manual adjustments from the baseline.</p>]]></content>
+        <author>
+            <name>Paul Deng</name>
+            <uri>https://github.com/paulliwali</uri>
+        </author>
+        <category label="health" term="health"/>
+        <category label="life" term="life"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Brew Logs 2023]]></title>
         <id>brew-logs-2023</id>
