@@ -1,7 +1,0 @@
-- Humans have extreme difficulty with grasping numbers that are too large (or too small), numbers like $1 \times 10^{10}$ and $1 \times 10^{-30}$ has almost no meaning to us
-- This is because we don't have references to ground these numbers into daily observable things. Which leads to error prone analysis in the field of engineering, because we don't have a quick sense-check of if the output is within the ballpark or not.
-- Another thing that is interesting is the difference in magnitude between $10^{10}$ and $10^{12}$ is so foreign to our feeble mind that we automatically relate that to the difference of 10 to 12
-- This leads to shocking conclusions such as Dream's cheating controversy where the odds of his runs are found to be $1 \text{ in } 2\times10^{22}$ but that doesn't really intuitively tell us anything until we compare it against the odds of an event happening once if 10 billion humans was doing that thing every second for a century is $1 \text{ in } 3\times10^{19}$
-	- Which makes Dream's runs 1000 times less likely that this absurd setup
-- This led to the ongoing discussions afterwards
-    - But if we were able to intuit that number in the first place we probably would have already realized how incredibly unlikely Dream's runs were and he must be cheating without having 2 lengthy math reports needed to be published just to convolute the entire conversation
