@@ -38,9 +38,7 @@
     - [[Stories of your life and others]]
     - [[Inadequate Equilibrium]]
 - Reading
-    - [[Black Swan]]
     - [[Inside of a Dog - What Dogs See, Smell, and Know]]
-    - [[Atomic Habits]]
 - 2020
 	- [[American Gods]]
 	- [[Daily Stoic]]
@@ -61,3 +59,5 @@
     - [[We Are Legion (We are Bob)]]
 * 2023
 	* [[I want to die but I want to eat tteokbokki]]
+	- [[Black Swan]]
+	- [[Atomic Habits]]

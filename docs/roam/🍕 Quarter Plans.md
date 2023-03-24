@@ -73,13 +73,16 @@
 				- [[Blayney Meadow Trail]]
 				- [[Mt Whitney]]
 				- [[The Wave]]
+				- [[Glacier]]
 			- 180lbs
+				- been roughly at 170lbs during [[2023-03-01]]
 	- Q1
 		- [x] Publish [[Til2022]]
 		- [x] Migrate to Docusuarus for [[🕸 Personal Website]]
-			- [ ] Point the github.io endpoint to the pauldeng.me domain
-		- [ ] Finish [[Black Swan]]
-		- [ ] Personal Finance
+			- [x] Point the github.io endpoint to the pauldeng.me domain
+			- [ ] Update front page for site
+		- [x] Finish [[Black Swan]]
+		- [x] Personal Finance
 			- [x] Adjust 401k contribution to get full employer match
 			- [x] Transfer IRA to Robinhood, convert to ROTH
 				- Can't do in Robinhood outright just yet

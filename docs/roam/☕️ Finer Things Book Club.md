@@ -1,4 +1,12 @@
-- [[August 21st, 2022]]
+- [[2023-03-11]]
+	* Book: [[Black Swan]]
+	* What's your overall impression
+		* A: Confusing, author hates the Gaussian curve. He presents a compelling argument for extremistan but he doesn't really give a method of forecasting for it
+	* Next book [[What's our problem]] and then [[Winning Fixes Everything]]
+		* 1. Winning Fixes Everything [Aaron voted!]
+		* 2. Anthropocene Reviewed
+		* Finish [[What's our problem]]
+* [[2022-08-21]]
     - Book: [[Bad Blood]]
     - What’s your overall impression
         - A: it was good, read it fast. Fun read. Crime like genre. Some fluff

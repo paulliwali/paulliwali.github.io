@@ -274,4 +274,50 @@
 		- Needs to be regularized to avoid overfitting
 	- Instabilities with decision tree
 		- loves orthogonal decision boundaries, which creates overfitting
-- # Chapter 7: Random Forests
+- # Chapter 7: Ensemble Learning and Random Forests
+	- Ensemble learning is equivalent to the "wisdom of the crowd" where you take a group of predictors and their aggregated answer
+	- An ensemble of decision trees is a random forest
+		- Each tree is trained on a subset of data and they are aggregated together to make the prediction
+	- ## Voting Classifiers
+		- The final prediction is made based on the most voted result from the predictors
+		- Surprisingly can make a strong learner from a group of weak learners
+	- Ensemble methods work best with diversity
+		- One way is to diversify the training algorithms, the more varied they are the better
+		- Another way is to use the same algorithm but train on different subset of data - this is called "bagging"
+	- ## Bagging and Pasting
+		- Short for "bootstrap aggregating"
+		- When it is done without replacement then its called pasting
+		- Out-of-bag instances are the ones sampled by bagging, however there are some instances that will never be sampled which can be used for evaluations
+	- ## Random Forests
+		- Ensemble of decision trees, usually trained via the bagging method
+		- Has ways to introduce randomness to create more tree diversity
+		- Feature importance is easily computed with random forests
+	- ## Boosting
+		- Any ensemble method that combines several weak learners to a strong learner
+		- General idea is to train predictors sequentially, each trying to correct its predecessor
+		- AdaBoost
+			- Focusing on the training instances that the predecessor under-fitted
+			- Resulting in new predictors more focused on harder cases
+		- Gradient Boosting
+			- Unlike AdaBoost, instead of adjusting the instance weights at every iteration, this method fits to the residual error made by the previous predictor
+		- Stacking
+			- Instead of using trivial functions (hard voting) to aggregate the predictions, why don't we train a model to perform this aggregation 
+			- There is a final predictor after the layer of predictors called blender (or meta learner) that takes it all to make the last prediction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
