@@ -77,6 +77,11 @@ Flatten multiindex and rename with underscore
 df.columns = ["_".join(a) for a in df.columns.to_flat_index()]
 ```
 
+Dates
+
+```python
+df.date_col.dt.to_period('M').dt.to_timestamp()
+```
 Subtotals
 
 ```python
@@ -108,6 +113,12 @@ Left anti-join
 df_left = df_left.merge(df_right, on=["keys"], how="outer", indicator=True)
 df_left = df_left.loc[df_left["_merge"] == "left_only"]
 df_left = df_left.drop(columns="_merge")
+```
+
+```python
+df2 = df.piovt()
+df2.columns = df.columns.to_series().str.join('_')
+df2.reset_index
 ```
 
 ## Plotting

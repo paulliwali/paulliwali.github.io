@@ -34,6 +34,7 @@ bad_tz_aware_datetime = datetime(2014, 1, 1, tzinfo=pdt)
 naive_datetime = datetime(2014, 1, 1)
 good_tz_aware_datetime = pdt.localize(naive_datetime)
 ```
+pd.to_datetime(observation_df['enter_epoch_ms'], unit='ms', utc=True).dt.tz_convert(observation_df["timezone"])
 
 ## Logging
 

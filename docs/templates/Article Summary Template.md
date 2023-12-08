@@ -1,8 +1,8 @@
-⌗ Metadata
-- Source: 
-- Author: 
-- Tags:
-
+---
+source: 
+author: 
+tags:
+---
 📰 Summary (use your own words)
 
 

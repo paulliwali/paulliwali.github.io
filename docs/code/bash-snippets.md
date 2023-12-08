@@ -1,4 +1,9 @@
-# Utilities
+change permission
+* -R recursive
+```bash
+# copy user permission to group permission
+chmod -R g=u <folder_name>
+```
 
 zip and unzip files
 - `-c` create an archive
@@ -9,9 +14,9 @@ zip and unzip files
 
 ```bash
 # zip
-tar -czvf name-of-archive.tar.gz /path/to/directory-or-file
+tar -czvf name-of-archive.tgz /path/to/directory-or-file
 # extract
-tar -zxf name-of-archive.tar.gz /path/to/directory-or-file
+tar -zxf name-of-archive.tgz /path/to/directory-or-file
 ```
 
 ```bash

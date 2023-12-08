@@ -1,6 +1,0 @@
-- [[⏳ Bucket List]]
-- [[📚 Books to Read]]
-- [[👨‍💻 Continued Learning]]
-- [[🕸 Personal Website]]
-- [[🍕 Quarter Plans]]
-- [[Raise a 🐶]]

@@ -3,7 +3,7 @@
 Clone single branch from repo
 
 ```bash
-git clone -b <branch name> --single-branch <repo-url> <folder name>`
+git clone -b <branch name> --single-branch <repo-url> <folder name>
 ```
 
 Fetch another remote branch after a single-branch clone

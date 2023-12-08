@@ -45,15 +45,18 @@ GROUP BY group_col_name
 ```SQL
 -- Convert datetime
 FROM_UNIXTIME(timestamp_epoch_ms / 1000, 'UTC') as utc_timestamp
+FROM_UNIXTIME(timestamp_epoch_ms / 1000, timezone_col) as local_timestamp
 
--- Note, that dBeaver might not print it with the timezone conversion, to show it you need to
-CAST(utc_timestamp as varchar)
+-- Not[[py-data-science]]e, that dBeaver might not print it with the timezone conversion, to show it you need to
+CAST(DATE(utc_timestamp) AS varchar) as utc_date,
 
 -- Convert to epoch ms
 CAST(to_unixtime(resampled_timestamp_s) AS bigint) as epoch_ms
 
 -- Get hour
 HOUR(CAST(datetime_str as timestamp))
+HOUR(utc_timestamp) as utc_hour
+HOUR(local_timestamp) as local_hour
 
 -- Truncate datetime to month
 DATE_TRUNC('month', CAST(event_dt as timestamp))

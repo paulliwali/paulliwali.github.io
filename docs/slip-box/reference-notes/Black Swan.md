@@ -6,7 +6,7 @@
 - The things that makes the biggest impact to our society are black swan events which most economists, statisticians and decision makers do not account for in their mediocristan view
 
 🧐 Why I am reading this book
-- Part of [[☕️ Finer Things Book Club]] with Aaron
+- Part of [[8. ☕️ Finer Things Book Club]] with Aaron
 
 🙊 Great quotes
 > It illustrates a severe limitation to our learning from observations or experience and the fragility of our knowledge. One single observation can invalidate a general statement derived from millennia of confirmatory sightings of millions of white swans. All you need is one single (and, I am told, quite ugly) black bird.

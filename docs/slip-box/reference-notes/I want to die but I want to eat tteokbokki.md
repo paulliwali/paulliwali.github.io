@@ -14,7 +14,7 @@
 > "The part of brain that wants to die is also the same part that wants to eat some tteokbokki"
 
 ✅ Actionable item
-- [ ] Talk to Aaron about it in the next meetup of [[☕️ Finer Things Book Club]] on [[2023-01-14]]
+- [ ] Talk to Aaron about it in the next meetup of [[8. ☕️ Finer Things Book Club]] on [[2023-01-14]]
 
 🗂 Detailed Summary
 - 

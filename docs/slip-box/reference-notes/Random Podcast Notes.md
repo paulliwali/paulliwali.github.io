@@ -28,13 +28,27 @@
 - From Tim Ferris with Yuval #personal #motivation
     - If you can't control your mind to focus on the simple task of breathing for 10 minutes, how can you focus long enough to understand complex topics like the global financial system?
 * Interview with Bilaji #bitcoin 
-        - Why he is bullish on BTC and ETC
-            - Internet increases the variance of everything
-                - 30 minute sitcoms become 30 episode season binges to 30 second TikToks
-                - 20 year old billionaires to 50 year old stay at home failures
-            - Geographical association doesn't guarantee ideological simile 
-                - Thus creating strains on system that relies on cohesion of a group
-            - BTC and ETC are critical to ensure validity in things once we reach a fragmented and decentralized state of reality
-        - Re-bundling and de-bundling of goods
-            - TV channels into subscriptions
-            - News articles into twitter streams
+	* He is very bullish on BTC and ETC
+	* Internet increases the variance of everything
+		* 30 minute sitcoms become 30 episode season binges to 30 second TikToks
+		- 20 year old billionaires to 50 year old stay at home failures
+	- Geographical association doesn't guarantee ideological simile 
+		- Thus creating strains on system that relies on cohesion of a group
+		- BTC and ETC are critical to ensure validity in things once we reach a fragmented and decentralized state of reality
+	- Re-bundling and de-bundling of goods
+		- TV channels into subscriptions
+		- News articles into twitter streams
+- Dopamine with Huberman
+	- Controls many important pathways in the brain
+	- Simple flow - a desire (for sushi) leads to an initial peak in dopamine and then it troughs which leads to the person to want to move and achieve that desire.
+		- **it is the trough that makes a person want to move to get something**
+	- Then by achieving that desire we get the reward which fulfills the trough and brings the levels back to baseline if the rewards meets expectation
+		- the reward prediction error in the brain can cause the dopamine to peak (if the reward is above expectation) and trough (if the reward is below expectation)
+		- ==related is the study with children that showed if you unexpectedly rewarded children for doing something they already love doing, their internal reward contingent learning will adapt to the higher levels of dopamine from the unexpected reward and anticipate that each time such that when the reward is removed - they no longer want to do the thing they originally loved doing==
+	- The holy grail of being internally motivated is to convince yourself the reward is the effort or friction of doing something
+		- growth mindset - that you can't do something *right now* but with work you can get better
+	- To overcome procrastination or feeling unmovtivated the key is to create a steeper dopamine trough so you can bounce back to baseline (or even higher baseline) to drive overall motivation
+		- This requires you to do something that is harder than the current task you are procrastinating 
+		- Creating a short list of things you can do at any time is helpful for this
+		- Cold shower
+		- Meditation when you don't want to

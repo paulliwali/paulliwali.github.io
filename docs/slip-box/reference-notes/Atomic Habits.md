@@ -19,7 +19,7 @@
 ✅ Actionable item
 - [x] Make reading an atomic habit
 	- [x] Put different books at common places
-	- [x] [[☕️ Finer Things Book Club]] to keep myself accountable
+	- [x] [[8. ☕️ Finer Things Book Club]] to keep myself accountable
 
 🗂 Detailed Summary
 - Good habit forming shouldn't be tied to the end results, for example, they shouldn't be workout more, or eat healthier - they should be stemming from an identity change

@@ -7,7 +7,7 @@
 	- Control the environment such that the dog can *only* do the wanted behavior
 
 🧐 Why I am reading this book
-- To prepare for [[Raise a 🐶]]
+- To prepare for [[7. Raise a 🐶]]
 
 🙊 Great quotes
 - Lack of exposure to a variety of people before 12 weeks of age can result in fear of unfamiliar humans, being raised as a single puppy can lead to impaired social skills, and being raised by an anxious or timid mother can result in puppies who are more withdrawn

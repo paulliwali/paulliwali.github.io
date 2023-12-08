@@ -6,5 +6,6 @@
     "theme"
   ],
   "cssTheme": "Minimal",
-  "translucency": true
+  "translucency": true,
+  "baseFontSize": 15
 }

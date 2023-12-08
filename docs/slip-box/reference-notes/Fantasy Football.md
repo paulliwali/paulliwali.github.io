@@ -1,0 +1,9 @@
+- Upside
+	- Anthony Richardson
+	- Jahan Dotson 
+	- Javonte Williams
+	- James Cook
+- Don't project the past
+	- Washington offense should spike
+	- Baltimore offense should spike
+	- 

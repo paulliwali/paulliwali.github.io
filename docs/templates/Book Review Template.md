@@ -1,7 +1,7 @@
-⌗ Metadata
-- Author: 
-- Tags:
-
+---
+author: 
+tags:
+---
 📖 Short Summary (1 takeaway)
 -
 

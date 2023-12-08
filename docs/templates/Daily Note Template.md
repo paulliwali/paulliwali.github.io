@@ -1,7 +1,3 @@
----
-tags:: #daily-notes #journal
----
-
 ⨑ MOOD::
 
 ↻ HABITS

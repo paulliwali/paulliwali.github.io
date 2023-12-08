@@ -1,4 +1,16 @@
-- Preliminary thinking about living in a van after my current lease ends at [[Franklin 299]] around [[February 1st, 2022]]
-- [[February 1st, 2022]] Update
+- Size
+	- Dodge Transit 148 base and LWB (10'4") might be good
+	- Mercedes Sprinter 144 base and RWB (10'3") also good
+- [[2022-02-01]] Update
     - Did not get a van because of the high upfront cost, even for a simple/unfurnished one
     - Ended up renting a place in SF with a coworker to experience the city life instead
+- [[2023-10-03]] Update
+	- Looking into Vanlife again
+	- References
+		- ![[Screenshot 2023-11-21 at 10.26.37 PM.png]]https://van-craft.com/
+
+	- The prices for vans I do want is around 90k and there are some financing options available 
+		- 200W solar panels
+		- 400-500 ah battery
+	- However, the logistics of the day to day with Nobo is a bit tricky as I think more deeply about it (especially considering security in urban areas alone)
+	- Also usually it is lacking a way to remotely control AC
