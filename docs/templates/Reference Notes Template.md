@@ -1,4 +1,4 @@
 ---
-tags: 
-"source:":
+tags: [foobar]
+source: [foobar]
 ---

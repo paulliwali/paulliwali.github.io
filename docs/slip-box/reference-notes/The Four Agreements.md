@@ -19,4 +19,4 @@
 - [ ] Work on doing the first and second agreement 
 
 🗂 Detailed Summary
--[]()
+- 

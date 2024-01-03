@@ -1,6 +1,6 @@
 ---
-author: 
-tags:
+author: [foobar]
+tags: [foobar]
 ---
 # 📖 Short Summary (1 takeaway)
 -
