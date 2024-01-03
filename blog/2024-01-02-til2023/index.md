@@ -1,0 +1,216 @@
+---
+slug: til2023
+title: Things I TIL'ed in 2023
+authors: pdeng
+tags: [til]
+---
+
+Found this is a great way to review the year and take notes of what I did in an indirect way.
+
+1. Scare quotes
+    * Quotation marks put around a term or sentence when it is not required in order to spread doubt
+    * Some examples are "global warming", "pandemic", "bug"
+1. Bit Rot
+    * When code is not actively maintained, also known as software rot
+    * A similar concept for data engineering exists where people forget what specific fields mean or data problems that are embedded in the tables
+    * This comes from embedding business logic into the data for the sake of easier queries but can quickly degrade the long term maintainability and usability
+1. Doumbek
+    * Egyptian drum that produces 3 main sounds
+        * "Doom" * the bass
+        * "Tak" * the higher pitched sound
+        * "Pa" or "Sak" * closed sound
+1. Chrono-urbanism
+    * A way of planning the city around *time* instead of *space*
+    * The northstar for chrono-urbanism city planning would be the "[15-minute city](https://www.15minutecity.com/blog/hello)" where accesses to essential needs of a person is met within 15 minutes
+        * A secondary goal would be to meet this not just physically but also financially
+    * Seattle won 25.7 million dollars in Federal grants to create a more accessible and mobile city with this principle
+1. [Russell's Paradox](https://en.wikipedia.org/wiki/Russell%27s_paradox)
+    * Bertrand Russell in 1901 showed that every set theory that contains an unrestricted comprehension principle leads to contradictions
+        * Discovered independently by Ernst Zermelo in 1899
+    * Unrestricted comprehension principle is that for any sufficiently well-defined property, there is the set of all and only the objects that have that property
+    * Explaining this paradox in layman's term * I have two examples
+        * Barber paradox: a barber is "one who shaves all those, and those only, who do not shave themselves" and the question is * does the barber shave themself?
+            * If the barber shaves themselves then by the definition above, he is no longer a barber
+            * But if barber doesn't shave themself then he belongs in the group of people that needs to be shaved by a barber which is themself
+        * The other is: all rules have exceptions
+            * If this is a rule, then there must be an exception where there are a set of rules without exceptions
+            * However, if that were to be true then the original statement is false
+1. Punch card machines predates computers
+    * I have always associated punch cards with the old computers that took up an entire floor and thinking about handing in computer assignments that were in binder full of punch cards and accidentally feeding them in the wrong order and having the program crash
+    * However, they were used in the late 18th and early 19th century for looms to weave different patterns on clothes and it was later used by IBM in the 1890s to program code
+1. [Shoshikantetsu](https://asnewman.github.io/shoshikantetsu)
+    * To carry out something as intended when you have low motivation
+    * Remember this for the later half of the year when most of the new year resolutions are going by the wayside!
+1. Stroad
+    * A portmanteau (an old TIL!) of street and road
+    * Coined by American civil engineer Charles Marohn to describe poorly designed infrastructure that fails to do the job of either a street or road and ends up doing both poorly
+    * A street is meant to be a destination in itself with shops and restaurants to promote pedestrian use and a road is meant to transport people from point A to B
+1. [Cunningham's Law](https://xkcd.com/386/)
+    * The obligatory xkcd reference
+    * It is said that the best way to get the right answer on the internet is not to ask the question; it's to post the wrong answer
+1. Ferrite bead
+    * On some usb wires there is a bulgy plastic before the plug
+    * It is meant to suppress high frequency electronic noise in the circuit which prevents electromagnetic interference from and to the device
+1. Da Hong Pao Mother Trees
+    * The origin of Da Hong Pao (big red robe) tea is from a story where a scholar was on his way to take the imperial exam, the Gaokao of olden days, but was exhausted from the journey. A monk brewed some tea and he was able to continue his journey and ended up with the top score. On the way home, he paid tribute to the tree where the tea was from by putting his red robe from attaining the top score around it
+    * There are 6 trees in the rocks of Jiu Long Ke in Wuyi, Fujian which have been around for 360 years
+    * According to folklore, the teas from these trees were sent as tribute to the Emperor
+        * In 1998, 20g of tea produced from these trees were auctioned for 20,000 USD
+        * It is no longer allowed to harvest from these trees as they are protected national heritage
+1. Hemingway Cats
+    * These are 6-toed cats (polydactyle) cats that live on Hemingway's property
+        * They all carry the gene but half exhibit the physical trait
+    * Ernest Hemingway was given a 6-toed cat by a ship's captain
+        * His residence on Key West is relatively isolated, so the descendents are kept relatively within the same gene pool
+1. Whale Falls
+    * The phenomenon where a large carcasses like a whale can fall onto the deep ocean floor intact
+    * Discovered in 1987, by the submersible vessels that was used in the Titanic Salvage
+    * These contain complex localized ecosystem for sea organisms for decades
+1. Duck Tape
+    * Originates from duck cloth (from the Dutch word doek) which was a heavy woven fabric that can be made waterproof by coating it with wax
+    * Strips of these duck cloth were used as tape, so the correct spelling for this term is indeed duck and not duct
+1. Nerfing
+    * Gaming term that means to tune down the ability or the mechanic of a character
+    * It is a reference to the Nerf guns being the soft version of the actual thing
+1. Bone Dry Martini
+    * Gin in a chilled glass, sometimes washed with vermouth just to be discarded before pouring in the gin
+1. Ergodicity
+    * Long one
+    * An ergodic system is when the average outcome of a cohort is the **same** as the average outcome of the individual over time
+        * For example, if there are 100 gamblers in a casino and they making bets with the odds that 1/100 gamblers will go bankrupt. But this means that, if gambler number 28 goes bust, it has no effect on gambler number 29. Using the standard cost-benefit analysis * this activity would have a good expected average return
+        * However, if this is applied to a single person across 100 days with the same odds. This person can go bust on day 28 and have no money for future days.
+        * This means that the ensemble probability can't be applied to the time probability of a single individual * not an ergodic system!
+    * Usually, financial decisions *assume* ergodic system when in reality it is *actually* non-ergodic
+        * For example, a commonly used financial planning tool for retirement assumes a constant rate of return in investment. However, if you layer in the actual sequence of rate of return that average out to the constant rate on top of actual expenses * you could potentially be in a situation where you run out of money sooner than expected
+    * Relating to the idea from Nassim Taleb's book [[Antifragile]], there is an idea that some things respond negatively to volatility while others respond positively.
+        * Things that respond positively are antifragile and also ergodic
+1. Abilene Paradox
+    * When the group makes a decision in contrary to all the individuals' preferences
+    * Stems from thinking that others in the group would prefer something even though they personally don't
+1. PF Chang, Haagen-Dazs
+    * Marketing tactic to give the audience an expectation for the product
+    * The PF in PF Chang stands for Paul Fleming one of the two co-founders, the other is Philip Chiang
+        * But when the initials are used as the restaurant name it gives a less obvious hint to the non asian roots
+    * Haagen-Dazs was invented by the creators to "sound Danish"
+        * A tribute to their good treatment of Jews during WWII
+1. [Chianti Rooster Legend](https://www.beginnerwineguide.com/what-is-the-story-behind-that-rooster-on-the-neck-of-the-wine-bottle/)
+    * Area between Florence and Siena in Italy that was under contention
+    * After decades of battles, they decided to settle it once and for all by having their knights race to the boundary at the sound of a rooster's crow
+    * They picked their own roosters and the Florentines picked a black rooster that they starved for days
+    * It croaked much earlier than sunrise, and their knight raced to only 20KM away from the Sienna walls
+1. Why is the glacier water blue
+    * Due to the minerals from the glacier * glacier flour * absorbing the short wavelengths and the water still absorbing the long wavelengths
+1. [Noctalgia](https://www.space.com/light-pollution-loss-dark-skies-noctalgia)
+    * Sky grief
+    * A new term to describe the loss of the dark sky due to light pollution
+1. When pigs fly
+    * An adynaton, which is an hyperbole that is so extreme to imply the impossible
+    * Other adynaton include:
+        * "I will sooner have a beard grow in the palm of my hand than he shall get one on his cheek"
+        * "Not before Hell freezes over"
+        * "When the Leafs win the Cup" ;)
+    * There seems to be a trend of animal references (when cows fly, when hens grow teeth, when cow coughs, when a owl's tail blooms, when donkeys fly, when fish climb poplar trees)
+1. Drunk bears in Montana
+    1. There is a railroad near Glacier National Park where the trains sometimes spill grain and it gets fermented. The bears in the area would come an get drunk off the fermented grain and either try to outrun the train on the track or would be wasted on the track causing many deaths
+    * No preventative action as been actively taken right now because the rail company believe that grizzly bears will be delisted
+        * Of the measures that were discussed the only one that seems reasonable is to not load the train in a way that would cause spillage
+        * Which seems obvious enough since the grain seems to be lost on the road anyways
+1. Footgun
+    * A programming joke for a feature that results in the user shooting themself in the foot
+1. Schrodinger's Cat
+    * The common usage of this reference today is that it is an explainer for quantum mechanics but in actuality it was a criticism of Copenhagen's interpretation which included the idea that quantum mechanics is intrinsically indeterministic
+    * Erwin Schrodinger came up with this paradoxical example to illustrate the *absurdity* of the Copenhagen's interpretation where the cat can be *simultaneously* alive and dead in the box that contains a radiation monitor which can release poison
+    * The collapse of the states happens when one looks into the box but when exactly did the quantum superposition end?
+1. Why is the Napa Valley is a great place to grow grapes for wine
+    * Diuaral temperature range
+        * The big temperature swing from day to night allows for the grapes to ripen for longer on the vine as the low temperature pauses the growth of the grapes
+        * This gives the grapes a "long hang time" to develop more flavour for wine
+        * The temperature swing comes from the cooling effect from the Pacific Ocean
+        * Winegrowers will use fans to move the hotter air above the ground down during very cold nights to prevent frost from forming
+    * Diversity of soil types
+        * As a result of geological activity 150 million years ago
+        * It is also well-drained and deep
+    * Policy
+        * It has become the first agricultural reserve in the US in 1968 which has stringent protections of the land for wine growing only
+1. Roses at the end of vineyard rows
+    * There are several explanations but could be urban legends
+    * Disease detection system
+        * Roses are more sensitive to disease or insect infestation and could serve as an early warning system for the health of the vineyard
+        * But winegrowers have also said if there are insects on the roses there is probably not enough time to protect the grapes
+    * Turn signal for the horses or oxen
+        * Back when farm animals were used, roses were used to ensure they don't cut across the rows and damage the grapes
+1. Madeira Wine
+    * Fortified wine made on the Portuguese Medeira Islands by oxidizing wine through heat and aging
+    * This produces wine that can be stored for a long long time, for decades and even centuries
+        * The oldest known vintage is a 1715 Terrantez
+    * Solera process is a way to age liquids by fractional blending of older products with younger ones to increase the average age
+        * It means "on the ground" in Spanish because the fractional blending transfers from between barrels from the top to bottom
+    * The Medeira wine produced in Napa uses this process with a very old vintage that was stored and forgotten when the family hid their alcohol during the prohibition and pivoted to another business
+1. Kona Coffee
+    *  Grown exclusively on Kona, Hawaii on the Big Island
+    * First planted by Don Francisco de Paula Marin in 1817 and popularized by Samuel Ruggles in 1828
+        * Started to switch the local sugar plantation owners over to growing coffee
+        * But destroyed by weather and pests in 1850s
+    * Hermann Widemann in 1892 planted a variety of Guatemalan bean, which is called Kona Typica today
+        * Then coffee prices crashed in 1899 which caused most of coffee growers to switch back to sugar again
+        * Brought back into popularity during WWII and created another boom in the industry on Kona
+    * Micheal Norton sold cheap coffee under the name "100% Kona Coffee" during 1993 and 1996
+        * The coffee farmers of Kona formed the Kona Coffee Council to protect the quality and reputation of Kona Coffee
+    * Quality and standard for Kona Coffee
+        * Must be hand-picked
+        * Grown on volcanic soil in the Kona region full of nitrates, phosphates, iron, and manganese
+        * Harvested late in season to ensure ripeness
+        * The western slopes of Big Island where Kona is located also provides the ideal environment for coffee growing as the plants get abundant sun but also protection from flooding and excess sun from the hills and clouds
+1. Pleonasm
+    * Redundancy in words
+        * Sometimes it is intentionally used to create emphasis but sometimes it is a result of incorporating foreign words either through trade, travel or colonialism
+    * Few we are all familiar with are "Chai tea", "Naan bread" or "Queso cheese"
+    * But there are a lot more examples
+        * Geography related
+            * The El Capitan -> The "the" Capitan
+            * Lake Tahoe -> Lake **Da ow** a ga -> Lake "edge of the lake"
+            * Lake Michigan -> Lake Michigama -> Lake "large lake"
+            * Mississippi River -> Misi-sipi River -> "Big river" River
+        * Sports related
+            * The Los Angeles Angles -> The "the" "angles" Angles
+        * Acronym related
+            * PIN number
+            * Please RSVP
+            * SI System
+            * RAM memory
+1. A* algorithm
+    * A weighted Dijkstra's algorithm that makes it much more efficient
+    * The weighting can be thought of as changing the height or potential of the nodes based on the distance to destination and results in changing the bidirectional edge's length
+1. Island Gigantism
+    * A phenomenon where animal species on isolated islands tend to grow larger than their mainland counterparts
+    * Potentially caused by the lack of predators which a smaller body is needed for survival
+    * Or potentially the larger body is needed to survive the  scarce resources on the island or the harsher environments
+1. Effective Altruism
+    * Started as movement in Oxford that aims to maximize the good as much as possible
+        * This could mean to take action that can lead to gaining the ability to enable someone/something to do more good than actually doing the good themselves because its ineffective
+        * The extreme example would be prioritize the actions that leads great amounts of wealth so that you can donate to organizations that are doing good instead of joining the organization to do good
+    * A poster boy of this was Sam Bankman-Fried
+        * As many organizations found out, aligning with him lead to more harm than good
+1. Six nines in pi
+    * A famous coincidence that at the 762nd decimal place of pi there are 6 nines
+    * Sometimes called "Feynman point" but it is not clear when this is referenced
+    * The position of first 9 repeated nines is at 564,665,206
+1. Diehard tests
+    * A battery of statistical tests for the randomness quality of a random number generator
+    * Side note: true randomness is unintuitive to us because we are sensitive to patterns
+        * We would see repeated numbers as patterns and assume true "randomness" should give us new and yet to be seen numbers
+        * But if we used common sense and imagine there is a fair six-sided dice, after a number has appeared the probability that the next roll will be a new one would not change, especially not increased
+        * A common user expectation for Spotify shuffle or random photo function is to not have repeated results but in reality the true random behavior would be for the results to be repeated more often as more of the results are discovered
+    * Developed by George Marsaglia in 1995 and extended to the dieharder tests
+    * Some interesting things
+        * Birthday spacings: the spacing between the points should be asymptotically exponentially distributed * based on the birthday paradox
+        * Monkey tests: treat sequence of some number of bits as "words", and the number of "words" that do not appear should follow a known distribution * based on the infinite monkey theorem
+1. Wiki
+    * Hawaiian word for "quick"
+    * The free shuttle bus at the Honolulu Airport is named Wiki Wiki Shuttle, which is an example of repeating a word for emphasis known as epizeuxis or palilogia
+    * The first wiki, user-editable website was named WikiWikiWeb as the creator Ward Cunningham originally intended to name it QuickWeb
+    * Wikipedia is a portmanteau of wiki and encyclopedia
+1. Gaslight
+    * A popular slang that means someone is psychologically manipulating you to cause you to question your own memories and perception of reality
+    * An example would be someone blatantly lying about a shared experience which contradict the memories of the victim to convince them that the victim is actually crazy or overreacting
+    * This colloquialism is derived from a 1944 film with the same title where the female protagonist's new husband is dimming gaslights in secret to drive her mad

@@ -13,14 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "code/bash-snippets.md",
+                "file": "work/code-snippet.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "21a5e33c60e837fe",
+            "id": "316759cd2a5fd475",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "slip-box/reference-notes/Practical SQL for Data Analysis.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6be95a0c55fe43a2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -32,19 +44,61 @@
             }
           },
           {
-            "id": "753da2c9821362ba",
+            "id": "70556bae0f74384d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "daily-notes/2023/2023-12-07.md",
+                "file": "IG account of super obvious charts.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4fa9023bfdbb60b7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "daily-notes/2024/2024-01-02.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d2285936d4ea96cd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "slip-box/reference-notes/Practical SQL for Data Analysis.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
+      },
+      {
+        "id": "44776f5630fdd511",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "feac82fa98e85864",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "slip-box/reference-notes/Til2023.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -74,7 +128,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#electric-vehicles",
+                "query": "tag:#til2023",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -110,8 +164,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 334.5,
-    "collapsed": true
+    "width": 334.5
   },
   "right": {
     "id": "bcee0f0f827065f9",
@@ -127,7 +180,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "work/brain-dump.md",
+                "file": "slip-box/reference-notes/Til2023.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,9 +197,9 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "work/brain-dump.md",
-                "linksCollapsed": true,
-                "unlinkedCollapsed": true
+                "file": "slip-box/reference-notes/Til2023.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -167,7 +220,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "work/brain-dump.md"
+                "file": "slip-box/reference-notes/Til2023.md"
               }
             }
           },
@@ -198,37 +251,39 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "21a5e33c60e837fe",
+  "active": "1e21491c71cbe9f3",
   "lastOpenFiles": [
-    "daily-notes/2023/2023-12-07.md",
-    "3 ways to regret ff.md",
-    "◶ Trackers.md",
-    "roam/5. 🍕 Plans.md",
-    "slip-box/reference-notes/Hands On Machine Learning.md",
-    "daily-notes/2023/2023-12-05.md",
-    "work/brain-dump.md",
-    "code/bash-snippets.md",
-    "daily-notes/2023/2023-12-04.md",
-    "code/git-basics.md",
-    "slip-box/reference-notes/Scikit-Learn.md",
+    "templates/Article Summary Template.md",
+    "Untitled.md",
+    "slip-box/reference-notes/Til2023.md",
+    "daily-notes/2023/2023-12-28.md",
+    "daily-notes/2023/2023-12-19.md",
+    "daily-notes/2023/2023-12-16.md",
     "daily-notes/2023/2023-12-01.md",
     "daily-notes/2023/2023-11-22.md",
-    "personal/h.md",
-    "personal/Right Now.md",
-    "slip-box/reference-notes/VanLife.md",
-    "Screenshot 2023-11-21 at 10.26.37 PM.png",
-    "daily-notes/2023/2023-11-21.md",
-    "work/code-snippet.md",
-    "daily-notes/2023/2023-11-16.md",
-    "2023-11-15.md",
-    "daily-notes/2023/2023-11-07.md",
     "daily-notes/2023/2023-11-06.md",
-    "intro.md",
-    "work/projects.md",
-    "templates/Daily Note Template.md",
-    "daily-notes/2023/2023-10-31.md",
-    "Untitled.canvas",
+    "daily-notes/2023/2023-10-30.md",
+    "daily-notes/2023/2023-09-27.md",
+    "daily-notes/2023/2023-09-25.md",
+    "daily-notes/2023/2023-08-15.md",
+    "daily-notes/2023/2023-08-08.md",
+    "daily-notes/2024/2024-01-02.md",
+    "daily-notes/2023/2023-08-03.md",
+    "daily-notes/2023/2023-07-28.md",
+    "daily-notes/2023/2023-07-13.md",
+    "daily-notes/2023/2023-06-22.md",
+    "daily-notes/2023/2023-06-07.md",
+    "daily-notes/2023/2023-05-24.md",
+    "daily-notes/2023/2023-05-18.md",
+    "daily-notes/2023/2023-03-27.md",
+    "daily-notes/2023/2023-03-20.md",
+    "daily-notes/2023/2023-03-16.md",
+    "daily-notes/2023/2023-02-26.md",
+    "daily-notes/2024",
+    "resources/Screenshot 2023-11-21 at 10.26.37 PM.png",
+    "Screenshot 2023-12-12 at 8.15.05 PM.png",
     "slip-box/slip-box-canvas.canvas",
+    "Untitled.canvas",
     "Pasted image 20230410134201.png",
     "Pasted image 20230410195817.png",
     "Pasted image 20230410195809.png",

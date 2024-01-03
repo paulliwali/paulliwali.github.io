@@ -1,6 +1,6 @@
 ⨑ MOOD::
 
-↻ HABITS
+↻ HABIT [[◶ Trackers]]
 [Meditate::]
 [Exercise::]
 [Read::]

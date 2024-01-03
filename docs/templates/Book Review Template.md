@@ -2,17 +2,17 @@
 author: 
 tags:
 ---
-📖 Short Summary (1 takeaway)
+# 📖 Short Summary (1 takeaway)
 -
 
-🧐 Why I am reading this book
+# 🧐 Why I am reading this book
 -
 
-🙊 Great quotes
+# 🙊 Great quotes
 >
 
-✅ Actionable item
+# ✅ Actionable item
 - [ ]
 
-🗂 Detailed Summary
+# 🗂 Detailed Summary
 -

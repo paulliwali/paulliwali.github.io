@@ -1,4 +1,5 @@
-- Redwood, CA
+- Redwood, California
+# 2020
 - My initial impressions
     - It is close to urban centre so everywhere should be walkable and billable
     - The roads are tighter which makes driving slightly less appealing
@@ -9,7 +10,7 @@
 - [x] Bed [[November 7th, 2020]]
     - Need to have storage
     - Simple, nothing crazy
-    - Got one off amazon
+    - Didn't get it
 - [x] Mattress [[November 7th, 2020]]
     - Trying puff mattress hybrid
     - Suppose to be cooler and have springs for bounce
@@ -25,3 +26,5 @@
     - [Fluance RT81](https://www.amazon.com/gp/product/B01F2EXIFM/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=vineye-20&creative=9325&linkCode=as2&creativeASIN=B01F2EXIFM&linkId=d510310e776c766b2a5a0b7bc3122ec6)
     - [Orbit Plus](https://www.amazon.com/gp/product/B01F9NE5IA/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=vineye-20&creative=9325&linkCode=as2&creativeASIN=B01F9NE5IA&linkId=beaeb04d9037653d048f1ea965713341)
     - Not buying it now because it is a “big” purchase and want to save some money
+# 2023
+- Thinking of moving back here again!

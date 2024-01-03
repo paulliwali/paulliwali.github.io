@@ -3,8 +3,8 @@ source:
 author: 
 tags:
 ---
-📰 Summary (use your own words)
+# 📰 Summary (use your own words)
 
 
-✍️ Notes
+# ✍️ Notes
 -
