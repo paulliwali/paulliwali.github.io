@@ -219,7 +219,7 @@ The best and most indirect way to journal and review the year
             * Lake Michigan -> Lake Michigama -> Lake "large lake"
             * Mississippi River -> Misi-sipi River -> "Big river" River
         * Sports related
-            * The Los Angeles Angles -> The "the" "angles" Angles
+            * The Los Angeles Angels -> The "the" "angels" Angels
         * Acronym related
             * PIN number
             * Please RSVP
