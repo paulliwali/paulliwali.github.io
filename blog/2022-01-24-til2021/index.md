@@ -36,7 +36,7 @@ This rabbit hole lead to a few more linguistic TILs.
 3. [Loanword](https://en.wikipedia.org/wiki/Loanword)
 A word that is left untranslated from another language and permanently adopted as is. Some great examples I found are: tofu (Chinese - duofu), cafe (French - café), kindergarten (German - kinder[child]garten[garden]), calque (French - calque), deja vu (French - déjà vu).
 
-There is a whole database - <https://wold.clld.org/vocabulary> of loaned words and English, which does not surprise me, is one of top languages with borrowed words but it is also the most loaned word language to other languages. While Mandarin has the least loaned words from other languages.
+There is a [whole database](https://wold.clld.org/vocabulary) of loaned words and English, which does not surprise me, is one of top languages with borrowed words but it is also the most loaned word language to other languages. While Mandarin has the least loaned words from other languages.
 
 4. [Calque](https://en.wikipedia.org/wiki/Calque)
 A word or phrase that is translated literally word-for-word from another language. For example, “skyscraper” is a calque in many other languages and “flea market” is a calque from French term marché aux puces (market of fleas).
