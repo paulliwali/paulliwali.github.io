@@ -84,3 +84,4 @@ WITH bernoulli_sample AS (
 )
 SELECT count(*) FROM bernoulli_sample
 ```
+

@@ -6,10 +6,10 @@
 [Read::]
 [Personal Work::]
 
-# <% moment(tp.file.title,'YYYY-MM-DD').format("dddd, MMMM DD, YYYY") %>
+# \<% moment(tp.file.title,'YYYY-MM-DD').format("dddd, MMMM DD, YYYY") %>
 
-<< [[<%fileDate=moment(tp.file.title,'YYYY-MM-DD').subtract(1, 'd').format('YYYY-MM-DD')%>|Yesterday]] | [[<%fileDate=moment(tp.file.title,'YYYY-MM-DD').add(1,'d').format('YYYY-MM-DD')%>|Tomorrow]] >>
-Retrospective:: [[<%fileDate=moment(tp.file.title,'YYYY-MM-DD').subtract(1,'M').format('YYYY-MM-DD')%>|Last Month]] | [[<%fileDate=moment(tp.file.title,'YYYY-MM-DD').subtract(1,'Y').format('YYYY-MM-DD')%>|Last Year]]
+\<\< [[\<%fileDate=moment(tp.file.title,'YYYY-MM-DD').subtract(1, 'd').format('YYYY-MM-DD')%>|Yesterday]] | [[\<%fileDate=moment(tp.file.title,'YYYY-MM-DD').add(1,'d').format('YYYY-MM-DD')%>|Tomorrow]] >>
+Retrospective:: [[\<%fileDate=moment(tp.file.title,'YYYY-MM-DD').subtract(1,'M').format('YYYY-MM-DD')%>|Last Month]] | [[\<%fileDate=moment(tp.file.title,'YYYY-MM-DD').subtract(1,'Y').format('YYYY-MM-DD')%>|Last Year]]
 
 ### 📅 Daily Questions
 
@@ -31,7 +31,7 @@ Retrospective:: [[<%fileDate=moment(tp.file.title,'YYYY-MM-DD').subtract(1,'M').
 
 ## 📝 Ephemeral Notes
 
-- <% tp.file.cursor() %>
+-
 
 ### Notes created today
 

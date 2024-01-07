@@ -228,7 +228,7 @@
             - Daly (1997) used the Logit form to predict the total number of trips by calculating the probability that each individual would choose to make a trip. Total travel volume can then be obtained by multiplying the number of individual of each type by their probabilities of making a trip
             - The preferred form of accessibility at the destination (or mode) choice model is the logsum
             - The stop-go trip generation model forms a hierarchical relationship for the individual to determine whether it will continue its tour at each stop or return home
-            - This may be a key formulation to use for tesla in order to test how the availability of supercharging stations will change a user's journey length 
+            - This may be a key formulation to use for tesla in order to test how the availability of supercharging stations will change a user's journey length
         - ### 4.6 Forecasting Variables in Trip Generation Analysis
             - It has become a topic of interest for the modelling group to be able to capture social circumstances in which individuals live through behavioral sceince
             - One way to achieve this is to develop a set of household types that effectively captures these distinctions and then add this measure to the equations predicting household behavior
@@ -240,13 +240,13 @@
                     - time when all the children left home but the couple has not yet retired
                     - time when all members of a household have reached retirement age
             - Old trend of aging population which may result in less travel might not hold in the future with the advent of autonomous vehicle
-            - Huge opportunity to study how autonomous vehicle technology change travel behavior, if this increases the number of discretionary trip making? 
+            - Huge opportunity to study how autonomous vehicle technology change travel behavior, if this increases the number of discretionary trip making?
         - ### 4.7 Stability and Updating of Trip Generation Parameters
             - A key and often implicit assumption of using cross-sectional data is that the model parameters will remain constant between the base and design years
                 - it is found in several studies that this cannot be rejected when trips by all modes are considered together
                 - other analyses have reported different results, which has the following implications
                     - if there is non-zero elasticity of car trip rates to fuel prices, the usual assumption of constant trip rates in a period of rapidly increasing petrol prices could lead to serious over-provision of highway facilities
-            - trip rates of electric vehicle and gasoline vehicle is different depending on the external prices of electricity and oil 
+            - trip rates of electric vehicle and gasoline vehicle is different depending on the external prices of electricity and oil
             - Then, it is clear that any variables with longitudinal effects on trip rates requires careful consideration as it has fundamental importance
                 - but this requires data where only cross-sectional data is available
             - Geographical stability (transferrability) is another important attribute of a robust travel demand model
@@ -287,7 +287,7 @@
             - Given a system with a large number of distinct elements, to describe such a system one would need a complete specification of its micro states. However, it is practical to work in meso-state, which can be arrived at many different micro states. Then there is a even higher level of aggregation, macro state, which is where one makes reliable observations about the system
             - The basis of this method is to accept that all micro states consistent with our information about macro states are equally likely to occur
                 - this is done by expressing our information as equality constraints in a mathematical program
-                - the most probable meso state is that one that can be generated the most often, so if we have a number of micro states W{T_ij} and macro state T_ij one can optimize the following
+                - the most probable meso state is that one that can be generated the most often, so if we have a number of micro states $$W{T_ij}$$ and macro state T_ij one can optimize the following
                 - $$W\{T_{ij}\} = \frac{T!}{sum(T_{ij}!)}$$
                 - Taking log, then approximating and taking the derivative one gets:
                 - $$log(W') = - \sum(T_{ij}log(T_{ij}) - T_{ij})$$
@@ -311,7 +311,7 @@
     - ## 6.0 Modal Split and Direct Demand Models
         - ### 6.1 Introduction
             - It can be treated as an aggregate problem similar to trip distribution, and we can observe how far we can get with similar tools
-            - Examine direct demand models - a method to estimate generation, distribution and modal split simultaneously 
+            - Examine direct demand models - a method to estimate generation, distribution and modal split simultaneously
             - Examine the need for consistency between parameters and structure of distribution and mode choice models
                 - **Often disregarded by practitioners at their peril**
             - The issue of mode choice is arguably the most important element in transport planning and policy making - **thus it is important to develop and use models which are sensitive to those attributes of travel that influence individual choices of mode**
@@ -426,7 +426,7 @@
             - Random utility theory (Domencich and McFadden 1975)
                 - Individuals act rationally and possess perfect information
                 - There is a set of alternatives and a set of characteristics for these alternatives and the individuals
-                - Each alternative has associated a net utility for the individual. Since the modeller does not have perfect information, the net utility $$U_{jq}$$ is comprised of systematic utility $$V_{jq}$$ and random utility $$\epsilon_{jq}$$ 
+                - Each alternative has associated a net utility for the individual. Since the modeller does not have perfect information, the net utility $$U_{jq}$$ is comprised of systematic utility $$V_{jq}$$ and random utility $$\epsilon_{jq}$$
                 - **The population is required to share the same set of alternatives and face the same constraints**
                 - The individual selects the __maximum-utility alternative__
         - ### 7.3 The Multinomial Logit Model (MNL)
@@ -453,7 +453,7 @@
                 - $$U(i, j) = U_j + U_{i/j}$$
                 - Where $$i$$ denotes alternatives at a lower level nest and $$j$$ the alternative at the upper level
                 - $$U(i, j) = V(i, j) + \epsilon(i, j)$$
-                - Where like before, $$V(i,j) = V(j) + V(i/j)$$ is the representative utility and $$\epsilon(i,j) = \epsilon(j) + \epsilon(i/j)$$ is the stochastic utility 
+                - Where like before, $$V(i,j) = V(j) + V(i/j)$$ is the representative utility and $$\epsilon(i,j) = \epsilon(j) + \epsilon(i/j)$$ is the stochastic utility
                 - Williams’ definition of the stochastic error terms may be synthesized as follows
                     - The errors $$\epsilon(j), \epsilon(i/j)$$ are independent for all $$(i, j)$$
                     - The errors $$\epsilon(i/j)$$ are identically and independently distributed (IID) EV1 8th scale parameter $$\lambda$$
@@ -524,7 +524,7 @@
             - Three approaches proposed in literature on how to handle the functional form
                 - Stated preference suveys
                 - Statstical transformations, such as Box-Cox method, letting the data decide
-                - Constrcutive use of econometric theory to derive functional form 
+                - Constrcutive use of econometric theory to derive functional form
                     - **The most attractive proposition as the final functional form can be tied up to evaluation measures of user benefit**
             - If there are no theoretical reasons to back up a given form, it appears interesting to let the data indicate which could be an appropriate form
                 - **Box-Cox transformation**
@@ -603,7 +603,7 @@
                 - The problem with sample enumeration is that it maintains the assumption of the base year’s conditions, so it falls apart in long-term prediction
             - Another practical method called **classification approach** which approximates a finite number of relatively homogeneous classes
                 - The accuracy of this method depends on the number of classes and their selection criteria
-        - ### 9.5 Model Updating or Transference 
+        - ### 9.5 Model Updating or Transference
             - Expectation and reality
                 - ==It is unrealistic to expect an operational model in the social sciences to be perfectly specified, thus it is not useful to look for __perfect model stability__==
                 - Model transference should be viewed as a practical approach to the problem of estimating a model for a study area with little resources or a small available sample
@@ -817,7 +817,7 @@
             - **Pivot point modelling**
                 - A way of modelling the changes to one variable and how that affects people choices of a mode
             - **The main motivation of this approach is to circumvent the difficulties of calibration a distribution model well to observed data**
-                - It is common for places to collect rich OD matrix 
+                - It is common for places to collect rich OD matrix
                 - Then instead of formulating any distribution or destination trip model (which will distort these OD matrices), __attempt to only model the changes in trip patterns as a function of cost and trip end future states__
         - ### 12.4 Model Estimation from Traffic Counts
             - This approach can be seen as combining a trip matrix and a route choice pattern
@@ -833,7 +833,7 @@
                 - Postulate a particular form of gravity model and observe what happens when we assign it to the network
                 - $$V_a=\sum_k(\alpha_k)\sum_{ij}(p_{ij}^aG_{ij}^k))$$
                 - Calibrate parameter $$\alpha$$ with least square techniques
-                - There are other formulation that is more realistic or generalized 
+                - There are other formulation that is more realistic or generalized
             - Unstructured method
                 - Entropy-maximizing formalism provides a __naive, least-biased trip matrix which is consistent with the information available__
                 - Wilson (1978) presented the following model to estimate trip matrices from traffic counts
@@ -856,7 +856,7 @@
                 - **If congestion is suspected to play an important role in route selection, the model needs to be extended**
                 - This requires an iterative approach, which is implemented by SATURN and others
             - In order to use these group of techniques, several important considerations must be bear in mind
-                - Make sure the network is fully debugged, all turning movements are represented 
+                - Make sure the network is fully debugged, all turning movements are represented
                 - Use an assignment method appropriate to the context (equilibrium assignment)
                 - Ensure that any prior matrix is resonable
                 - Set aside 10%-15% of the traffic counts for validation
@@ -873,7 +873,7 @@
                 - Transfer the outputs of mode choice models and trip generation models
                 - The special care in corridor models is in the bottleneck effects
             - Marginal demand models
-                - Focus on the part of transport demand most likely to be affected by the project or policy in question  
+                - Focus on the part of transport demand most likely to be affected by the project or policy in question
         - ### 12.6 Gaming Simulation
             - Mathematical formulation is not required to solve transport problems, it is useful to have an interpretable solution when making decisions
             - Mental models can be just as good for policy makers if they provide the necessary information
@@ -882,7 +882,7 @@
         - ### 13.1 Importance
             - Freight movement is an important source of congestion and other traffic problems
                 - Noise and nusance
-                - On street stops 
+                - On street stops
             - Four layers of decision and activities produce freight movements
                 - Who produces what - decisions on productions, destinations, type of product, volume and trade relationships
                 - Logistics - decisions on the use and location of inventories and supply chain management
@@ -950,7 +950,7 @@
     - ## 14.0 Activity Based Models
         - ### 14.1 Introduction
             - The four-stage trip model is a simplified way of handling the link between travel (links) and activities (locations)
-            - However, the underlying structure should be travel and activities which retains the space, time and mode constraints of each person for realistic representation of a travel behavior 
+            - However, the underlying structure should be travel and activities which retains the space, time and mode constraints of each person for realistic representation of a travel behavior
         - ### 14.2 Activities, Tours and Trips
             - Activity - continuous interaction with the physical environment
             - Stage - continuous movement using one mode of transport

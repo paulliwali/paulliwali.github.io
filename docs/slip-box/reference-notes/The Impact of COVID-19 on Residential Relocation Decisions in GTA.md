@@ -1,9 +1,9 @@
 - **Metadata**
     - Author: Saeed Shakib
     - Tags: #transportation #academic
-- Life Style <-> Long-term decision (location choice) <-> Mid-term decision (car ownership) <-> Short-term decision (daily travel)
+- Life Style `<->` Long-term decision (location choice) `<->` Mid-term decision (car ownership) `<->` Short-term decision (daily travel)
     - COVID created unprecedented short-term behavior
-- Designed a study to assess the different layers of decisions 
+- Designed a study to assess the different layers of decisions
     - What happens to those who already had plans to relocate
     - What happens to those who had no issues with their residence
     - Also, how are households behaving in the new emerging market
@@ -12,7 +12,7 @@
         - Once you interview a person, you have to make the decision, once you wait the market will change
 - Stated Preference Design
     - **Attributes**
-        - Dwelling type, region, price, area, tenure type, neighbourhood, access to public transit, access to highway, parking availability, walk access to school, office hours, telecommuting option
+        - Dwelling type, region, price, area, tenure type, neighborhood, access to public transit, access to highway, parking availability, walk access to school, office hours, telecommuting option
     - **Conditions**
         - Ask the scenario in 3 different conditions
         - COVID is no longer considered a thread due to vaccine
@@ -26,7 +26,7 @@
         - 75% response rate
         - Sample distribution is closely matching the population distribution
 - Findings
-    - Factors that affect long-term choice before the pandemic and after pandemic shifted such that proximity to services and stores is no longer importnat
+    - Factors that affect long-term choice before the pandemic and after pandemic shifted such that proximity to services and stores is no longer important
     - No trends in relocation was found
 - Conclusions
     - Based on this study, COVID seems to be a sudden shock in the system and not a long term effect

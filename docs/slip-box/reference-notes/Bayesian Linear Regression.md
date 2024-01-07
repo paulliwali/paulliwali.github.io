@@ -5,21 +5,21 @@ tags:
 ---
 - It can be an alternative approach to the frequentist approach
 - Frequentist approach to linear regression
-	- $y = \beta_0 + \beta_1 \times X_1 + ... + \epsilon$
-	- Minimize the error between modelled and observed $y$ to find the best coefficients
-		- If we are minimizing the residual sum of squares (RSS), there is a closed form solution to find the $\hat{\beta}$ and this method is the ordinary least squares
-		- Sidenote: MSE = mean(RSS) and RMSE = sqrt(mean(RSS))
+  - $y = \beta_0 + \beta_1 \times X_1 + ... + \epsilon$
+  - Minimize the error between modelled and observed $y$ to find the best coefficients
+    - If we are minimizing the residual sum of squares (RSS), there is a closed form solution to find the $\hat{\beta}$ and this method is the ordinary least squares
+    - Sidenote: MSE = mean(RSS) and RMSE = sqrt(mean(RSS))
 - Bayesian approach to linear regression
-	- $y \sim N(\beta^TX, \sigma^2I)$ for a normal distribution
-	- The response variable is not a single value but drawn from a probability distribution
-	- The distribution is described by its mean (which is the product of transposed weight matrix and the parameter matrix) and variance (which is the product of the square of standard deviation and the Identity matrix)
-	- The aim is to find the **posterior distribution for the model parameters** using Bayes Theorem
-		- Posterior = (Likelihood * Prior / Normalization)
-		- $P(\beta|y, X) = \frac{P(y|\beta,X) \times P(\beta|X)}{P(y|X)}$
-	- Advantages to frequentist approach
-		- Priors can contain domain knowledge beyond the observed data
-		- Posterior is a distribution which allows for uncertainty/confidence analysis
-	- Implementation
-		- Specify priors for the model parameters
-		- Create a model mapping of training inputs to training outputs
-		- Draw samples for the posterior in order to approximate the posterior distribution through MCMC methods 
+  - $y \sim N(\beta^TX, \sigma^2I)$ for a normal distribution
+  - The response variable is not a single value but drawn from a probability distribution
+  - The distribution is described by its mean (which is the product of transposed weight matrix and the parameter matrix) and variance (which is the product of the square of standard deviation and the Identity matrix)
+  - The aim is to find the **posterior distribution for the model parameters** using Bayes Theorem
+    - Posterior = (Likelihood * Prior / Normalization)
+    - $P(\beta|y, X) = \frac{P(y|\beta,X) \times P(\beta|X)}{P(y|X)}$
+  - Advantages to frequentist approach
+    - Priors can contain domain knowledge beyond the observed data
+    - Posterior is a distribution which allows for uncertainty/confidence analysis
+  - Implementation
+    - Specify priors for the model parameters
+    - Create a model mapping of training inputs to training outputs
+    - Draw samples for the posterior in order to approximate the posterior distribution through MCMC methods

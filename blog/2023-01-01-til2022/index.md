@@ -241,7 +241,7 @@ This is a tradition I started last year to help me recall all the interesting ti
 
     * A common belief was that this phrase stemmed from a law that a husband is allowed to beat his wife with a stick no wider than his thumb. However, this law was found to be true. the earliest use of this phrase was back in the 1600s and the origin is still unknown
     * The logo for the video game Fallout has a cartoon character (Vault Boy) with his thumb out and one eye open because he is measuring the stem of the mushroom cloud with his thumb to determine if he needs to start evacuating the area
-    * <https://core.ac.uk/download/pdf/267013666.pdf> presents a study of whether this "rule of thumb" is accurate
+    * [A paper](https://core.ac.uk/download/pdf/267013666.pdf) on whether this "rule of thumb" is accurate
     * It could stem from the fact that the thumb was a useful way to measure or baseline reference for things
 
 44. [The Ringelmann Effect](https://rnjn.in/articles/the-ringelmann-effect/)

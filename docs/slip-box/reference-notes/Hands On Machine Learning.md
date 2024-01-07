@@ -1,7 +1,7 @@
 
 - Metadata
     - Source: https://github.com/ageron/handson-ml
-    - #learning #machine-learning #data-science 
+    - #learning #machine-learning #data-science
 # Preface
 - The wave of machine learning is started in 2006 when Geoffrey Hinton published a paper on the practicality of training a deep neural network with "Deep Learning"
 - Will learn to use [[Scikit-Learn]], [[TensorFlow]], [[Keras]]
@@ -20,7 +20,7 @@
 	- Part II - Neural networks and deep learning (focused on [[TensorFlow]] and [[Keras]])
 		- What neural nets are
 		- Build and train NN with [[TensorFlow]] and [[Keras]]
-		- Important NN architectures 
+		- Important NN architectures
 		- Techniques for training deep NN
 		- RL to build a bot
 		- Loading and preprocessing big data
@@ -68,7 +68,7 @@
 				- The sampling method was flawed because the sampling population was mostly wealthier who favoured Landon (Republican)
 				- Less than 25% of the original population answered, introducing ==nonresponse bias==
 		- Cleaning up training data by removing outliers and incomplete data may help with training
-		- Using irrelevant features 
+		- Using irrelevant features
 	- Bad algorithm
 		- Overfitting on training data and coming to a general conclusion that is not true about the population
 		- NN will be able to detect subtle relationships in data, but any noise or bias may cause it to capture these relationships incorrectly
@@ -105,7 +105,7 @@
 		- **It is important to do this only for the training set**
 			- For mean/median calculation, they should be computed on the training set but also applied to the test set when testing the accuracy
 		- `sklearn.impute.SimpleImputer` takes care of imputing missing values
-	- Feature generation involves combining features into more useful ones such as normalizing certain features with another to give more context 
+	- Feature generation involves combining features into more useful ones such as normalizing certain features with another to give more context
 	- Feature transformation involves changing features into different forms that is suitable for ML
 		- Convert text categories into numbers
 			- `sklearn.preprocessing.OrdinalEncoder` which turns text into ranked list, but ML will assume two close by values are similar
@@ -115,7 +115,7 @@
 			- i.e. Ocean proximity can actually be distance in meters
 			- ==Or you can replace each category with a learnable low dimensional vector called an embedding==
 	- Feature scaling shifts the values in a feature for ML
-		- **Usually, ML doesn't perform well on datasets with features in various scales**. 
+		- **Usually, ML doesn't perform well on datasets with features in various scales**.
 		- Min-max scaling (aka **normalization**) changes values such that it is between two values, most commonly 0 and 1
 		- Standardization scaling changes the values such that the mean is 0 and distribution has a unit variance
 - [[Scikit-Learn]] - Core API design principles
@@ -131,7 +131,7 @@
 		- Training many decision trees on random subsets of the feature, then averaging out their predictions
 		- A kind of **ensemble learning** which is building a model on top of many other models
 	- Others to try are Support Vector Machines or even Neural Networks
-	- At this stage, one should aim to shortlist a few high potential models 
+	- At this stage, one should aim to shortlist a few high potential models
 		- To save their hyperparameters and trained parameters we can use `pickle` or `joblib` from sklearn
 - Fine Tune Your Model
 	- Once you have a shortlist of models, we need to fine tune each one though grid search, randomized search, ensemble methods
@@ -171,7 +171,7 @@
 - Evaluating Classifiers
 	- A trickier subject compared to evaluating regressors
 	- Cross-validation
-		- Similar to how we evaluated the regression model 
+		- Similar to how we evaluated the regression model
 		- But can be problematic on __skewed datasets__
 	- Confusion matrix
 		- A better way to examine a classifier
@@ -220,7 +220,7 @@
 	- A closed-form [[normal equation]] to compute parameters that best fit the model to the training set and **iterative optimization approach [[gradient descent]] that gradually tweaks the parameters to minimize the cost function over the training set**
 - [[Polynomial regression model]]
 	- More complex as it can fit non-linear dataset and since it has more parameters than linear regression it is prone to __overfitting__ the training set
-	- To overcome this, we will detect this using [[learning curves]] and reduce the risk of overfitting with [[Regularization Techniques]] 
+	- To overcome this, we will detect this using [[learning curves]] and reduce the risk of overfitting with [[Regularization Techniques]]
 - Machine learning model's errors can be expressed as the sum of three different errors
 	- ==Bias==: from wrong assumptions
 	- ==Variance==: from excessive sensitivity to small variations in the data, likely from high degrees of freedom
@@ -239,7 +239,7 @@
 	- Applies a normalized exponential equation (softmax) to the score of each class
 		- The score is computed like a linear regression
 		- Softmax equation: $$\hat{p}=\frac{exp(s_k(x))}{\sum_{j=1}^{K}=exp(s_j(x))}$$
-			- Where $K$ is the number of classes, $s(x)$ is the vector of the scores for each class, $\hat{p}$ is the estimated probability that the instance $x$ belongs to $k$ 
+			- Where $K$ is the number of classes, $s(x)$ is the vector of the scores for each class, $\hat{p}$ is the estimated probability that the instance $x$ belongs to $k$
 # Chapter 5: Support Vector Machines
 - SVM is capable of linear and nonlinear classification, regression and outlier detection
 	- One of the most popular ML models
@@ -258,17 +258,17 @@
 		- Adding Similarity Features
 			- Measures how much each instance resembles a particular **landmark**
 			- Similarity can be measured with the **Gaussian Radial Bias Function (RBF)**
-			- And when the features are transformed to the similarity values, the instances become linearly separable 
+			- And when the features are transformed to the similarity values, the instances become linearly separable
 - SVM Regression
 	- Instead of fitting a gap __between__ the instances, you fit the __gap__ to cross the most instances
 # Chapter 6: Decision Trees
 - Can perform both classification and regression modeling
-- Building blocks of Chapter 7: Random Forests 
+- Building blocks of Chapter 7: Random Forests
 - To make a prediction with decision tree you go through nodes and you move down the tree's nodes until you reach the final node that gives the prediction
 - Classification and Regression Tree (CART) Algorithm
 	- Splits the training set using a single feature `k` and threshold `t_k` by searching for the pair that produces the purest set
 	- It recursively splits the subsets until it reaches the maximize depth
-	- It is a greedy search 
+	- It is a greedy search
 - Decision trees are prone to over-fitting because it is *nonparametric*
 	- The number of parameters is not determined prior to training
 	- Needs to be regularized to avoid overfitting
@@ -301,7 +301,7 @@
 	- Gradient Boosting
 		- Unlike AdaBoost, instead of adjusting the instance weights at every iteration, this method fits to the residual error made by the previous predictor
 	- Stacking
-		- Instead of using trivial functions (hard voting) to aggregate the predictions, why don't we train a model to perform this aggregation 
+		- Instead of using trivial functions (hard voting) to aggregate the predictions, why don't we train a model to perform this aggregation
 		- There is a final predictor after the layer of predictors called blender (or meta learner) that takes it all to make the last prediction
 # Chapter 8: Dimensionality Reduction
 - Curse of dimensionality is when the problem has too many features
@@ -318,11 +318,11 @@
 	* Principal component analysis
 		* Identifies the hyperplane the data lies on and then projects onto it
 			* Does this by picking the axis that minimizes the mean squared distance between the original data and its projection
-			* And then picks the second axis which is orthogonal 
+			* And then picks the second axis which is orthogonal
 			* And so on
 		* Gives explained variance ratio of every principle component
-		* The number of dimension one decides to keep is usually determined by how much of the data variance you want to keep  
-# Chapter 9: Unsupervised Learning Techniques 
+		* The number of dimension one decides to keep is usually determined by how much of the data variance you want to keep
+# Chapter 9: Unsupervised Learning Techniques
 * A relatively less developed area of ML
 * Clustering
 	* K-Means
@@ -362,7 +362,7 @@
 	* This is trained with Hebb's rule - "cells that fire together, wire together"
 	* Very similar to stochastic gradient descent as the weights are trained based on the residuals of the outputs
 * Multiple-layer perceptron (MLP) was invented to tackle XOR problem
-	* There is one ore more layer of TLUs between the input and output layer which is called the **hidden layer** 
+	* There is one ore more layer of TLUs between the input and output layer which is called the **hidden layer**
 		* This advanced artificial neural networks to **deep neural networks**
 	* To train MLP, a groundbreaking paper in 1987 proposed the method **backpropagation training**
 	* It consists of a forward pass which saves the intermediate results of each layer (including the hidden ones)
@@ -385,19 +385,7 @@
 	- Long training times
 	- Risk of overfitting
 - Vanishing gradient problem
-	- Logistic activation function makes the gradient saturate as the values approach the two extremes 
-	- 
-
-
-
-
-
-
-
-
-
-
-
-
+	- Logistic activation function makes the gradient saturate as the values approach the two extremes
+	-
 
 
