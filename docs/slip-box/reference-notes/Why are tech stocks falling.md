@@ -1,5 +1,5 @@
 * **Metadata:**
-	* #email #finance #technology
+	* #finance #technology
 	- Srouce: From Robinhood snacks
 	- Tech stocks is moving into “correction” territory which means that it is falling between 10% to 20%
 		- If it falls below 20% then it is considered a bear market

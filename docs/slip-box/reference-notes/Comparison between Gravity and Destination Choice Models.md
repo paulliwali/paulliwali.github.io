@@ -1,7 +1,7 @@
 - **Metadata**
     - Source: http://www.ce.memphis.edu/smishra/PDFs/Conference/2013_TRB_DestinationChoice.pdf
     - Author: Sabyasachee Mishra
-    - Tags: #transportation #modelling #academic
+    - Tags: #transportation #model #academic
 - Using a regional model and real data from Maryland, researchers showed destination choice model to be better at predicting trip length and OD flows than gravity model with socioeconomic factors integrated
 - Introduction
     - Using the Maryland Statewide Transportation Model to demonstrate that destination choice model is a better method for trip distribution

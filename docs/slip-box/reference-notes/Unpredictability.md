@@ -1,7 +1,7 @@
 - **Metadata**
     - Source: https://journals.sagepub.com/doi/10.1177/2399808320934308
     - Author: Michael Batty
-    - Tags: #transportation #modelling
+    - Tags: #transportation #model
 - Cities and their planning seem to be unpredictable, when looking back in the past 40 years
 - Yet we feel like we can build models to make predictions about complex systems
 - In the past 75 years, science has moved from a stance where we believed in 'good' prediction to prediction is now 'difficult'

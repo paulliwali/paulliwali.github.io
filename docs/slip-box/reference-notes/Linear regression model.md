@@ -2,13 +2,18 @@
 - Makes prediction on the weighted sum of input features and bias term (intercept)
     - $$\hat{y} = \theta_0 + \theta_1 x_1 + ... + \theta_n x_n$$
     - Vectorized form: $$\hat{y}=h_{\Theta}(X)=\Theta \cdot X = \Theta^{T}X$$
-- [[normal equation]] is a closed-form solution to minimize the cost function of a linear regression model.
+- [[Normal Equation]] is a closed-form solution to minimize the cost function of a linear regression model.
 - Least squares solution
     - Assumes the target variable is a linear combination of feature variables
     - Assumes Y is distributed normally, X^T*X is invertible and the expected value of epsilon is zero with constant variance
 - Weighted least squares
     - To combat heteroscedasticity in the errors
     - Determine the weights requires work
+- Feature Normalization
+	- To change all the features to the same scale
+	- Critical for convergence and regularization to work
+	- [[Scaling Techniques]]
+	- 
 - Overfitting
     - [[Regularization Techniques]]
         - Adds a penalty term to the loss function that penalize the parameters of the model

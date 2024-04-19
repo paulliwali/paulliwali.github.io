@@ -1,4 +1,3 @@
-
 - Metadata
     - Source: https://github.com/ageron/handson-ml
     - #learning #machine-learning #data-science
@@ -217,7 +216,7 @@
 - Understanding how the models work under the hood
 - [[Linear regression model]]
 	- There are two ways to train linear regression models
-	- A closed-form [[normal equation]] to compute parameters that best fit the model to the training set and **iterative optimization approach [[gradient descent]] that gradually tweaks the parameters to minimize the cost function over the training set**
+	- A closed-form [[Normal Equation]] to compute parameters that best fit the model to the training set and **iterative optimization approach [[gradient descent]] that gradually tweaks the parameters to minimize the cost function over the training set**
 - [[Polynomial regression model]]
 	- More complex as it can fit non-linear dataset and since it has more parameters than linear regression it is prone to __overfitting__ the training set
 	- To overcome this, we will detect this using [[learning curves]] and reduce the risk of overfitting with [[Regularization Techniques]]

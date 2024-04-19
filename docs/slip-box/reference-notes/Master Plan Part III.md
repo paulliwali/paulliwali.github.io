@@ -1,7 +1,7 @@
 ⌗ Metadata
 - Source: https://www.tesla.com/ns_videos/Tesla-Master-Plan-Part-3.pdf
 - Author: Tesla
-- Tags: #sustainability
+- Tags: #tesla
 
 📰 Summary (use your own words)
 

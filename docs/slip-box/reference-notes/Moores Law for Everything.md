@@ -1,7 +1,17 @@
-**Metadata:**
-	- Source: (Moore's Law for Everything)[https://moores.samaltman.com/]
-	- Author: Sam Altman
-	- #article
+---
+source:
+  - https://moores.samaltman.com/
+author:
+  - Sam Altman
+tags:
+  - article
+  - technology
+  - "#economics"
+---
+# 📰 Summary (use your own words)
+
+
+# ✍️ Notes
 - The recursive loop of innovation
 	- Create phenomenal wealth, price of labor that the technology replaced will fall to 0
 	- World change so rapidly and drastically that an equally drastic change in policy will be needed to distribute wealth
@@ -29,3 +39,5 @@
 	> Also questionable conclusion, given that people in companies are somewhat incentivized by owning shares. However, how much day to day decisions are made with that in mind?
 - Shifting to the New System
 	- Good future envisioned here is __simple__. Technology to create more wealth, policy to fairly distribute it
+
+

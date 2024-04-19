@@ -1,7 +1,7 @@
 - **Metadata**
     - Source: https://www.ben-evans.com/benedictevans/2017/3/20/cars-and-second-order-consequences
     - Author: Benedict Evans
-    - Metadata: #finance #article #ideas 
+    - Metadata: #finance #article #mental-model
 - Global stock of cars in 2017 is around 1.1 billion, the two major shifts of [electric vehicle]([[electric-vehicle]]) and [autonomous driving]([[autonomous-cars]]) will eventually cycle into this stock
 - Direct impact of these two shifts will have profound effects on oil production and traffic accidents
 - **But what about second and third ordered effects?**

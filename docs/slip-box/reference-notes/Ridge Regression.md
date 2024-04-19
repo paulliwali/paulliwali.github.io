@@ -1,3 +1,5 @@
-- ==Penalizes large errors==
-- Address the problems of ordinary least squares by imposing a penalty on the size of the coefficients
-- The parameter $\alpha$ will control the shrinkage which makes the coefficients more robust to collinearity
+- Works by adding this term `alpha * abs(coefficients)^2` in the cost function so we are penalizing the size of the coefficients
+	- This will uniformly decrease the coefficients
+	- The parameter $\alpha$ will control the shrinkage which makes the coefficients more robust to collinearity
+- The alpha term can be found by using cross-validation techniques
+	- `sklearn.linear_Regression.RidgeCV` uses leave-one-out-cross-validation technique to find the alpha that minimizes the cross-validated mean squared error

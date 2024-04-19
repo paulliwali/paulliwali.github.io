@@ -4,9 +4,10 @@
 TABLE WITHOUT ID
 	mood AS "💆🏽‍♂️",
 	read AS "📖",
-	meditate AS "🧘",
+	sketching AS "✍️",
 	exercise AS "🏃‍♂️",
-	personal-work AS "✏️"
+	personal-work AS "✏️",
+	nutrients-and-water AS "💉"
 	FROM "daily-notes" 
 	SORT file.name DESC
 	LIMIT 30

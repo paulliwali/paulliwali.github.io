@@ -1,6 +1,6 @@
 - Metadata:
     - Source: https://github.com/thundergolfer/google-rules-of-machine-learning
-    - #machine-learning #data-science #google
+    - #machine-learning #data-science
 1. Don't be afraid to launch a product without machine learning
 	1. To create a useful ML tool it requires a large amount of data to outperform simpler heuristic algorithms
 	2. Don't shift to ML until you have data

@@ -1,6 +1,6 @@
 ⌗ Metadata
 - Author: Neil Gaiman
-- Tags: #sci-fi #books #review
+- Tags: #scifi #books #review
 
 📖 Short Summary (1 takeaway)
 -

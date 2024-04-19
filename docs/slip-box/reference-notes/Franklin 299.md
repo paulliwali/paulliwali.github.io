@@ -1,4 +1,4 @@
-- Redwood, California
+Redwood, California
 # 2020
 - My initial impressions
     - It is close to urban centre so everywhere should be walkable and billable
@@ -28,3 +28,14 @@
     - Not buying it now because it is a “big” purchase and want to save some money
 # 2023
 - Thinking of moving back here again!
+	- Moved in on [[2023-01-11]] 
+- Bed
+	- Floyd platform bed
+	- Bought it on [[2024-01-29]]
+- Sofa
+	- Cheaper amazon one
+	- Bought this one https://www.amazon.com/gp/product/B0C5HSTF6C/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1 on [[2024-01-29]]
+- Sitting chair
+	- Floyd sink down
+- Shoe cabinet
+	- Bought the Ikea Bissa short one on [[2024-01-27]]

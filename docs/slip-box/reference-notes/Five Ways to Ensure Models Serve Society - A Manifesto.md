@@ -1,7 +1,7 @@
 - **Metadata**
     - Source: https://www.nature.com/articles/d41586-020-01812-9
     - Author: Andrea Saltelli
-    - Tags: #transportation #modelling #article
+    - Tags: #transportation #model #article
 - ==Modelers much not be permitted to project more certainty than their models deserve; politicians must not be allowed to offload accountability to models of their choosing==
 - Mind the assumption
     - Models are often imported from other applications, where the assumptions made are no longer reasonable

@@ -1,0 +1,3 @@
+The group that made Atom and Tree-sitter (a syntax parsing framework) is building this new text editor. Trying to build the best editor with the following assumptions "mission critical tools should be hyper-responsive", "real time collaboration produces better software", "conversations should happen close to code", and "your editor should disappear".
+
+What caught my attention was the speed because in a company it is pretty hard to use collaboration tools not approved by IT. It also has very native support of GPT tools which can come in handy.

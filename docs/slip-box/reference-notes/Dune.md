@@ -1,6 +1,6 @@
 ⌗ Metadata
 - Author: Frank Herbert
-- Tags: #sci-fi #fiction
+- Tags: #scifi #fiction
 
 📖 Short Summary (1 takeaway)
 - In a new world where Paul has to learn the ways and adapt to the customs and traditions but fighting for a personal goal is not dissimilar to the situation when a young person starts to fight for their place in society. 

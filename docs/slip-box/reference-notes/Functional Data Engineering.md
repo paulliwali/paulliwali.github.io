@@ -1,5 +1,5 @@
 **Metadata:**
-	- #article #data-science #gospel
+	- #article #data-science 
 	- Source: [Functional Data Engineering](https://maximebeauchemin.medium.com/functional-data-engineering-a-modern-paradigm-for-batch-data-processing-2327ec32c42a)
 - Modern paradigm for batched data processing
 - ETL (extract, transform and load) is a time-consuming, brittle and often unrewarding process

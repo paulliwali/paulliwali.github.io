@@ -1,12 +1,16 @@
-⌗ Metadata
-- Source: https://www.experimental-history.com/p/science-is-a-strong-link-problem
-- Author: Adam Mastroianni
-- Tags: #science #opinion
-
-📰 Summary (use your own words)
+---
+source:
+  - https://www.experimental-history.com/p/science-is-a-strong-link-problem
+author:
+  - Adam Mastrianni
+tags:
+  - science
+  - mental-model
+---
+# 📰 Summary (use your own words)
 The author frames all problems into strong-linked or weak-linked and argues that we are treating science like a weak-linked problem when it shouldn't be. Because the best science drives progress and weak science doesn't matter in the end. So we shouldn't create barriers and make it hard for risky or cutting edge science to get funded.
 
-✍️ Notes
+# ✍️ Notes
 - Strong-link problems
 	- problems where the overall quality depend on how good the **best stuff is**
 	- music is a strong-link problem

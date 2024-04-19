@@ -4,28 +4,40 @@
     "type": "split",
     "children": [
       {
-        "id": "acb3ba57e94ee68f",
+        "id": "cd6fb9f12012df2b",
         "type": "tabs",
         "children": [
           {
-            "id": "58f9baff07a65ad6",
+            "id": "2b5b9c3882593333",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "templates/Daily Note Template.md",
+                "file": "slip-box/reference-notes/Misbelief.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "b3fdfdec17ec1da4",
+            "id": "220d76862dbf6bf3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "daily-notes/2022/2022-10-18.md",
+                "file": "daily-notes/2024/2024-04-18.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "afe95b81d2522c31",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "slip-box/reference-notes/Euro Trip 2024.md",
                 "mode": "source",
                 "source": false
               }
@@ -62,7 +74,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#philosophy",
+                "query": "very obvious",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -98,8 +110,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 334.5,
-    "collapsed": true
+    "width": 259.5
   },
   "right": {
     "id": "bcee0f0f827065f9",
@@ -115,9 +126,9 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "daily-notes/2022/2022-10-18.md",
+                "file": "daily-notes/2024/2024-04-18.md",
                 "collapseAll": true,
-                "extraContext": false,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -132,8 +143,8 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "daily-notes/2022/2022-10-18.md",
-                "linksCollapsed": false,
+                "file": "daily-notes/2024/2024-04-18.md",
+                "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
             }
@@ -144,7 +155,7 @@
             "state": {
               "type": "tag",
               "state": {
-                "sortOrder": "alphabetical",
+                "sortOrder": "frequency",
                 "useHierarchy": false
               }
             }
@@ -155,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "daily-notes/2022/2022-10-18.md"
+                "file": "daily-notes/2024/2024-04-18.md"
               }
             }
           },
@@ -166,9 +177,25 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
+          },
+          {
+            "id": "89373e3a1286f13d",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "5f972c1db6fa713a",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-chat-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -186,39 +213,39 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b3fdfdec17ec1da4",
+  "active": "220d76862dbf6bf3",
   "lastOpenFiles": [
-    "templates/Daily Note Template.md",
-    "daily-notes/2022/2022-10-18.md",
-    "daily-notes/2024/2024-01-06.md",
-    "daily-notes/2021/2021-05-31.md",
-    "2023-12-06.md",
-    "2023-01-06.md",
-    "2024-01-05.md",
+    "slip-box/reference-notes/Misbelief.md",
+    "slip-box/reference-notes/Euro Trip 2024.md",
     "Untitled.md",
-    "roam/5. 🍕 Plans.md",
-    "slip-box/reference-notes/Practical SQL for Data Analysis.md",
-    "work/code-snippet.md",
-    "2024 Physical Goal Progression.md",
-    "daily-notes/2024/2024-01-05.md",
-    "2024-01-12.md",
-    "2024-01-06.md",
-    "daily-notes/2024/2024-01-02.md",
-    "slip-box/reference-notes/The Four Agreements.md",
-    "slip-box/reference-notes/Til2023.md",
-    "work/career.md",
-    "work/brain-dump.md",
+    "daily-notes/2024/2024-04-18.md",
+    "◶ Trackers.md",
+    "slip-box/reference-notes/2024 Physical Goal Progression.md",
+    "daily-notes/2024/2024-04-09.md",
+    "daily-notes/2024/2024-04-08.md",
+    "daily-notes/2024/2024-03-28.md",
+    "daily-notes/2024/2024-04-04.md",
+    "daily-notes/2024/2024-03-27.md",
+    "3 ways to regret ff.md",
+    "slip-box/reference-notes/Chasing Statistical Ghosts.md",
+    "slip-box/reference-notes/Is Bayesian AB testing immune to peeking?.md",
+    "intro.md",
+    "slip-box/reference-notes/How not to run an AB test.md",
+    "slip-box/reference-notes/IG account of super obvious charts.md",
     "slip-box/reference-notes/Why t-test dont work with large samples.md",
-    "IG account of super obvious charts.md",
-    "slip-box/reference-notes/What is our problem.md",
+    "code/git-basics.md",
+    "Split training and testing.md",
+    "slip-box/reference-notes/GPT in SQL.md",
+    "slip-box/reference-notes/Mixture of Models.md",
+    "slip-box/reference-notes/Scaling Techniques.md",
+    "slip-box/reference-notes/What you can learn from how to ace a YC interview.md",
+    "tempate.md",
+    "Untitled.canvas",
     "roam/8. ☕️ Finer Things Book Club.md",
-    "templates/Article Summary Template.md",
-    "daily-notes/2023/2023-12-28.md",
+    "slip-box/slip-box-canvas.canvas",
     "daily-notes/2024",
     "resources/Screenshot 2023-11-21 at 10.26.37 PM.png",
     "Screenshot 2023-12-12 at 8.15.05 PM.png",
-    "slip-box/slip-box-canvas.canvas",
-    "Untitled.canvas",
     "Pasted image 20230410134201.png",
     "Pasted image 20230410195817.png",
     "Pasted image 20230410195809.png",

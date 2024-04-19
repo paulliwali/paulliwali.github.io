@@ -6,7 +6,7 @@ tags:
 - Usually, the goal of statistical tests is to show with high degree of confidence that an empirically estimated statistic is *similar* to a theoretically derived statistic
 	- The null hypothesis (the two statistics are similar) and alternative hypothesis (the two statistics are not) are presented to represent this where:
 	- $H_{null}: |\hat{\mu}-\mu| <=\Delta, H_{alt}: |\hat{\mu} - \mu| > \Delta$
-	- The $p_{value}$ from the test is what is the likelihood that we can observe an value larger than the test-statistic under the static distribution
+	- The $p_{value}$ from the test is what is the likelihood that we can observe an value larger than the test-statistic under the static distribution from chance
 		- It is used to reject the null hypothesis, if $p_{value} < \alpha$ 
 		- We establish a critical value $\alpha$ that is the threshold for which we can evaluate the $p_{value}$ with 
 		- ==The critical value should be established with the context of sample size==

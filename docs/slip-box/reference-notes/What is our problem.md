@@ -1,6 +1,6 @@
 ⌗ Metadata
 - Author: Tim Urban
-- Tags: #non-fiction #commentary
+- Tags: #non-fiction
 
 📖 Short Summary (1 takeaway)
 - Our problem is the group descent from high-rung thinking to low-rung thinking, destroying genie communities and replacing them with golem ones. This leads to a bad world to participate in.

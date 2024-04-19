@@ -1,6 +1,6 @@
 ⌗ Metadata
 - Author: Ryan Holiday and Stephen Hanselman
-- Tags: #stoicism #books
+- Tags: #books #philosophy 
 
 📖 Short Summary (1 takeaway)
 - A school of philosophy that has real-world applications for the modern life

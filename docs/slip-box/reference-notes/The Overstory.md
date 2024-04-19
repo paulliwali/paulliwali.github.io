@@ -1,13 +1,18 @@
-- Metadata
-    - #books #fiction
-- 👆 Short Summary (1 takeaway)
-    - Things that have evolved for thousands of years are worth spending time to study and learn as they provide wisdom beyond our understanding and the wealth of knowledge locked in their memories 
-- 🧐 Why I am reading this book?
-    - It was recommended on a podcast
-    - It was a fiction book in an area that I usually never explore, there are some drama and character development but how it was meshed together into the grand picture is very novel
-- 📖 Chapter reviews
-- 🙊 Great quotes
-    - But this is America, where men and trees take the most surprising outings.
+---
+author:
+  - Richard Powers
+tags:
+  - "#fiction"
+---
+# 📖 Short Summary (1 takeaway)
+- Things that have evolved for thousands of years are worth spending time to study and learn as they provide wisdom beyond our understanding and the wealth of knowledge locked in their memories 
+
+# 🧐 Why I am reading this book
+- It was recommended on a podcast
+- It was a fiction book in an area that I usually never explore, there are some drama and character development but how it was meshed together into the grand picture is very novel
+
+# 🙊 Great quotes
+>	- But this is America, where men and trees take the most surprising outings.
     - The tree of the tanning industry, of railroad ties, train cars, telegraph poles, fuel, fences, houses, barns, fine desks, tables, pianos, crates, paper pulp, and endless free shade and food - the most harvested tree in the country - is vanishing
     - You live between three trees. One is behind you. The Lote - the tree of life for your Persian ancestors. The tree at the boundary of the seventh heaven, that non may pass.
     - Another tree stands in front of you - Fusang. A magical mulberry tree far to the east, there they keep the elixir of life.
@@ -45,4 +50,9 @@
     - The Greeks had a word, xenia - guest friendship - a command to take care of traveling strangers, to open your door to whoever is out there, because anyone passing by, far from home, might be a God.
     - Baucis and Philemon. And their reward for opening their door to strangers was to live on after death as trees - an oak and a linden - huge and gracious and intertwined. 
     - ==In fact, he read once, back in Iowa, the night the woman came to trouble him into life, that the word tree and the word truth come from the same root.==
-- ✅ Actionable items
+
+# ✅ Actionable item
+- [ ]
+
+# 🗂 Detailed Summary
+- 
