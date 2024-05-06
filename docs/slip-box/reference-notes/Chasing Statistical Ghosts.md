@@ -36,4 +36,4 @@ Fourth ghost - Peeking
 - To avoid this
 	- peeking safely by not actioning
 	- Use sequential hypothesis testing which doesn't require a fixed sample size or predetermined run time
-	- Bayesian methods to not come to the wrong conclusion - refer to [[Is Bayesian AB testing immune to peeking?]]
+	- Bayesian methods to not come to the wrong conclusion - refer to [[Is Bayesian AB testing immune to peeking]]

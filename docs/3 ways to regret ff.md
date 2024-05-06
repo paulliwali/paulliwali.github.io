@@ -15,11 +15,11 @@ schedule
 
 roster
 
-| team_owner | week | roster               | roster_started |
-| ---------- | ---- | -------------------- | -------------- |
-| alice      | 1    | {player_a, player_b} | {player_a}     |
-| frank      | 1    |                      |                |
-| bob        | 1    |                      |                |
+| team_owner | week | roster                   | roster_started |
+| ---------- | ---- | ------------------------ | -------------- |
+| alice      | 1    | list(player_a, player_b) | list(player_a) |
+| frank      | 1    |                          |                |
+| bob        | 1    |                          |                |
 player_performance
 
 | player_name | week | points |

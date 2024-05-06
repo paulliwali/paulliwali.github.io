@@ -18,4 +18,4 @@ tags:
 	- Because might be tempted to take action *once we see significant results* and if that becomes insignificant later we wouldn't have known
 - So the key is to determine a sample size *before the experiement*
 	- One rule of thumb is $N=16*\frac{\sigma^2}{\delta^2}$ where $\delta$ is the minimum effect you want to observe
-- For Bayesian A/B testing, this is less of a problem compared to the frequentist approach. But not completely fool-proof -> [[Is Bayesian AB testing immune to peeking?]]
+- For Bayesian A/B testing, this is less of a problem compared to the frequentist approach. But not completely fool-proof -> [[Is Bayesian AB testing immune to peeking]]
