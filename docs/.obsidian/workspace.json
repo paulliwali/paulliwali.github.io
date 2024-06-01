@@ -13,13 +13,62 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 ways to regret ff.md",
+                "file": "slip-box/reference-notes/Data Science Cheat Sheet.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9b3019372ce8ee27",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "slip-box/reference-notes/Data Science Cheat Sheet.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4f08231a7f0e753c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "slip-box/reference-notes/Meta.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6a1080040694a9f3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "slip-box/reference-notes/Python Cheat Sheet.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fa4300423b27c571",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Job Hunt of 2024.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -49,7 +98,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "very obvious",
+                "query": "tag:cheatsheet",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +134,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 259.5
+    "width": 259.5,
+    "collapsed": true
   },
   "right": {
     "id": "bcee0f0f827065f9",
@@ -101,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 ways to regret ff.md",
+                "file": "Job Hunt of 2024.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -118,7 +168,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3 ways to regret ff.md",
+                "file": "Job Hunt of 2024.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -141,7 +191,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 ways to regret ff.md"
+                "file": "Job Hunt of 2024.md"
               }
             }
           },
@@ -169,11 +219,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 246.5
+    "width": 283.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,35 +239,38 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "afe95b81d2522c31",
+  "active": "fa4300423b27c571",
   "lastOpenFiles": [
-    "slip-box/reference-notes/Euro Trip 2024.md",
-    "Untitled.md",
-    "daily-notes/2024/2024-02-07.md",
-    "2024-10-01.md",
-    "daily-notes/2024/2024-10-01.md",
+    "2024-05-03.md",
     "Job Hunt of 2024.md",
-    "2024-04-01.md",
-    "slip-box/reference-notes/Is Bayesian AB testing immune to peeking.md",
-    "daily-notes/2024/2024-05-06.md",
-    "aaronson-oracle-baseball.md",
-    "roam/4. Personal 🕸.md",
-    "3 ways to regret ff.md",
-    "◶ Trackers.md",
+    "slip-box/reference-notes/Python Cheat Sheet.md",
+    "slip-box/reference-notes/Meta.md",
+    "slip-box/reference-notes/Data Science Cheat Sheet.md",
+    "slip-box/reference-notes/Data Science Practice Questions.md",
+    "slip-box/reference-notes/SQL Cheat Sheet.md",
+    "slip-box/reference-notes/Zipline.md",
+    "slip-box/reference-notes/StableAuto.md",
+    "Untitled.md",
+    "slip-box/reference-notes/Coding Principles.md",
+    "slip-box/reference-notes/Split training and testing.md",
+    "slip-box/reference-notes/Recommendation Systems.md",
+    "slip-box/reference-notes/KNN.md",
+    "slip-box/reference-notes/k-means.md",
     "intro.md",
-    "slip-box/📬 Slip Box Index.md",
+    "slip-box/reference-notes/Feature Engineering.md",
+    "slip-box/reference-notes/Error metrics.md",
+    "slip-box/reference-notes/Class balancing.md",
+    "slip-box/reference-notes/DBSCAN.md",
+    "slip-box/reference-notes/Bash Snippets.md",
+    "slip-box/reference-notes/Git Basics.md",
+    "slip-box/reference-notes/tmux-sinppets.md",
+    "code/kube.md",
+    "code/github.md",
+    "code/sql-snippets.md",
+    "A",
+    "resources/Pasted image 20240513115346.png",
+    "resources/Pasted image 20240513115340.png",
     "slip-box/slip-box-canvas.canvas",
-    "slip-box/literature-notes/Statistics in Model.md",
-    "slip-box/literature-notes/Second Brain.md",
-    "slip-box/literature-notes/San Francisco.md",
-    "slip-box/literature-notes/Niklas Luhmann.md",
-    "slip-box/literature-notes/Causal Inference.md",
-    "slip-box/literature-notes/Anomoly Detection.md",
-    "roam/8. ☕️ Finer Things Book Club.md",
-    "slip-box/reference-notes/Winning Fixes Everything.md",
-    "slip-box/reference-notes/The Anxious Generation.md",
-    "roam/5. 🍕 Plans.md",
-    "roam/6. Powerlifting 🍖.md",
     "Untitled.canvas",
     "daily-notes/2024",
     "resources/Screenshot 2023-11-21 at 10.26.37 PM.png",

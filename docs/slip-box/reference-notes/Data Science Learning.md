@@ -1,6 +1,5 @@
 ==The purpose of this page is to keep track of various learning resources, a learning plan and progress tracker==
 - [[Data Science Cheat Sheet]]
-
 ## Progress Tracker
 ### On-going
 - [[Machine Learning Specialization]]

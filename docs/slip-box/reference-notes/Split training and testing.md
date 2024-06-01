@@ -1,0 +1,3 @@
+[[k-fold cross validation]] improves on the standard 1-fold train test split which can result in lucky splits. This gives confidence in the model design and tuning of hyperparameters.
+
+Other ways of cross validation methods include stratified k fold which will split out each class with a constant percentage. Time series split which is useful for training time series data where we don't see the future.

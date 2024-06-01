@@ -12,6 +12,7 @@ schedule
 | 1    | emliy | frank |
 | 2    | alice | frank |
 | 2    | bob   | emily |
+|      |       |       |
 
 roster
 

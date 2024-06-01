@@ -2,6 +2,7 @@
 tags:
   - "#statistics"
   - machine-learning
+  - data-science
 "source:": https://machinelearningmastery.com/k-fold-cross-validation/
 ---
 - A way to evaluate model's design on limited data set
