@@ -32,7 +32,26 @@
 	- How to set up a hypothesis to lead to action
 	- Lay out the steps to go from data to action 
 # Full Loop Interview Guide
-
+- Technical skills
+	- Assess the performance of programming, communication, data analysis and determining goal & success metrics
+	- Identify metrics that reflect operational success and inform business decisions
+	- Use models and descriptive stats to answer exploratory or hypothesis based questions
+- Analytical Execution (case study oriented)
+	- Problem has to do more at the data level, there is some issue
+		- "You are on FB Groups, a old feature was to recommend groups based on HS, but when we started we found the field was open text and data is messy. How do you deal with this"
+	- Assess the ability to create hypothesis, quantitive analysis, determining goal & success metrics and demonstrating agility
+	- Use statistical code to carry out analysis ranging from correlation to multivariate analysis to measurement models
+	- From hypothesis from launching a new product, consider tradeoffs of a feature *in terms of metrics*, use statistical features, know common distributions, law of large numbers, central limit theorem, linear regression, conditional probability
+- Analytical reasoning (case study oriented)
+	- Problems has to do with business level
+		- "what is the goal..., how can we support this goal...to make this decision"
+	- Assess the ability in research design, analytical design, storytelling through data, setting goals & success metrics, data visualization
+	- Framing an open ended question into a framework that can be inferred through models
+	- Creating data sets
+	- How to make decision with the outcome
+- Behavioral
+	- Assess the candidate's agility, growing mentality, partnering, inclusion and communications
+	- Use S.T.A.R methods and pick out good examples
 
 # Meetings
 ## Recruiter call for a data science role
@@ -63,6 +82,23 @@
 	- Find the callers with more than 3 unique recipient in the last 7 days
 	- Find the percentage of DAU that made a call in France yesterday
 
+## Recruiter call for full-loop on [[2024-06-12]]
+- Common mistakes
+	- Analytical execution will require a "hard" calculation
+	- How to outline the approach, talk about tradeoffs, land on one and then how do you execute (relate to a research paper)
+	- No need to use the whiteboard if don't feel like it
+	- Try to lead the conversation for the analytical segments, because this is the style
+		- Ask follow ups
+		- Once you have a good grasp and brainstormed the approach
+		- **Take over and walk interviewer through like a brain storm session**
+		- Spend 10ish minute to explore and discussion of goals, areas of opportunity
+		- Land on a testable hypothesis and then from then on take it to design, method, data setup, what to look for and then given a certain outcome (how do I recommend), think about the product development cycle
+	- Behavioral
+		- cross functional examples
+		- issues
+	- Technical
+		- just longer but no more complicated
+- Q: Any helpful hints?
 ## Full-loop interview on [[2024-06-14]]
 
 #interview 

@@ -8,7 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7af253be87afc963",
+            "id": "0c5489b0a054dcae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "daily-notes/2024/2024-06-12.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "19eaf2ffbabe59b9",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,18 +32,31 @@
             }
           },
           {
-            "id": "0c5489b0a054dcae",
+            "id": "48cb8f5639f5e1c6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "slip-box/reference-notes/Desolation Wilderness.md",
+                "file": "slip-box/reference-notes/Distributions.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5be6169c01eba0e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Job Hunt of 2024.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -113,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "slip-box/reference-notes/Meta.md",
+                "file": "Job Hunt of 2024.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -130,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "slip-box/reference-notes/Meta.md",
+                "file": "Job Hunt of 2024.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -153,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "slip-box/reference-notes/Meta.md"
+                "file": "Job Hunt of 2024.md"
               }
             }
           },
@@ -201,16 +226,21 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7af253be87afc963",
+  "active": "5be6169c01eba0e4",
   "lastOpenFiles": [
-    "Job Hunt of 2024.md",
-    "slip-box/reference-notes/Desolation Wilderness.md",
     "slip-box/reference-notes/Meta.md",
+    "slip-box/reference-notes/Distributions.md",
+    "slip-box/reference-notes/Data Science Cheat Sheet.md",
+    "correlation.md",
+    "daily-notes/2024/2024-06-12.md",
+    "Untitled.md",
+    "slip-box/reference-notes/Desolation Wilderness.md",
+    "daily-notes/2024/2024-06-11.md",
+    "Job Hunt of 2024.md",
     "Untitled.canvas",
     "slip-box/reference-notes/StableAuto.md",
     "slip-box/reference-notes/Python Cheat Sheet.md",
     "slip-box/reference-notes/Data Science Practice Questions.md",
-    "slip-box/reference-notes/Data Science Cheat Sheet.md",
     "daily-notes/2024/2024-06-10.md",
     "slip-box/reference-notes/Error metrics.md",
     "slip-box/reference-notes/Quantile Regression.md",
@@ -224,12 +254,7 @@
     "slip-box/reference-notes/Tesla.md",
     "2024-05-03.md",
     "slip-box/reference-notes/Linear regression model.md",
-    "slip-box/reference-notes/Distributions.md",
     "daily-notes/2024/2024-06-03.md",
-    "slip-box/reference-notes/Gaussian Mixture Models.md",
-    "slip-box/reference-notes/Data Science Learning.md",
-    "slip-box/reference-notes/Feature Scaling Techniques.md",
-    "slip-box/reference-notes/AB Testing.md",
     "A",
     "resources/Pasted image 20240513115346.png",
     "resources/Pasted image 20240513115340.png",

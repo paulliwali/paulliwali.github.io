@@ -7,3 +7,10 @@ Sigma - A normal distribution has 68% of the data within 1 standard deviation
 
 Normal Distribution
 
+Binomial Distributions
+
+Law of large numbers
+- The LLN is used to ensure that empirical averages computed from large samples are good estimates of the population mean
+
+Central limit theorem
+- enables the assumption of normally distributed data from a large sample even if the population is not normally distributed 
