@@ -2,7 +2,7 @@
 To quantify the impact from a change
 # How:
 1. Choose the metrics to evaluate. Also can select *invariant metrics* to sanity check 
-2. Power test - choose significance level, statistical power to find the appropriate sample size -> how long to run the experiment
+2. Power analysis - define the minimum detectable effect, significance threshold (alpha), statistical power (1-beta) to find the appropriate sample size -> how long to run the experiment
 3. Create the control and treatment groups ensuring there are no cofounding factors that could also affect the metrics
 4. (Optional) Run an A/A test to ensure the control and treatments are properly selected and there are no interference (See section below of other ways of detecting interference)
 5. Run the experiment
@@ -12,6 +12,7 @@ To quantify the impact from a change
 - Watch out for interference and unintended effects
 - Watch out of user resisting change
 - What out for multiple metrics because they can be significant by chance and you should correct for it
+- Don't peak
 - Use one OEC (overall evaluation criterion) to balance short term and long term goals
 # How do you detect interference?
 References

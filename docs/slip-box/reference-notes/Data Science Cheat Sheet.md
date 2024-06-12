@@ -10,12 +10,13 @@ MLOps flow: DESIGN + MODEL DEVELOPMENT + OPERATIONS
 - Model development: data engineering, model engineering, testing and validation
 - Operations: model deployment, CI/CD pipelines, monitoring and alerting
 
+Model Design
 1. Exploratory Data Analysis
 	- [[Distributions]]
-	- Boxplots
+	- Boxplots - gives descriptions of the data with respect to outliers and median
 		- Gives the p25 to p75 range which is the IQR
 		- Also gives the min and max which is defined as Q1 - 1.5 * IQR or Q3 + 1.5 * IQR 
-	- Correlations
+	- [[Correlations]]
 1. Data Preparation
 	1. Feature Preprocessing 
 	    - Fill missing values or remove the column entirely if too many values are missing
@@ -32,6 +33,7 @@ MLOps flow: DESIGN + MODEL DEVELOPMENT + OPERATIONS
 	- [[Supervised Learning]]
 		- Regression
 			- [[Linear regression model]]
+			- Polynomial regression model
 			- [[Quantile Regression]]
 			- [[Tree Regressors]]
 		- Classification
@@ -48,7 +50,6 @@ MLOps flow: DESIGN + MODEL DEVELOPMENT + OPERATIONS
 		- [[DBSCAN]]
 	- Semi-supervised Learning
 	- Reinforcement Learning
-	- [[AB Testing]]
 	- [[Recommendation Systems]]
 1. Model Fit
 	- Loss Functions
@@ -60,16 +61,40 @@ MLOps flow: DESIGN + MODEL DEVELOPMENT + OPERATIONS
 		- Random Search
 		- Bayesian Optimization
 1. Model Evaluation
-	- Commonly used to evaluate regression type models
-        - [[Error metrics]]
+	- Commonly used [[Error metrics]] to evaluate regression type models
     - Bias-variance tradeoff
 	    - The best predictive model is one that has good generalization ability which is able to predict accurately to new and previously unseen data
-	    - high bias can lead to okay performance but too general -> underfit
+	    - high bias can lead to okay performance but too general -> under-fit
 	    - high variance can lead to low errors with existing data but not necessarily with new data -> overfit
 	- [[Regularization Techniques]]
 		- L1 regularization (LASSO) which reduces the coefficient values
 		- L2 regularization (RIDGE) which penalizes higher powers
+	- Model fit vs complexity
+		- AIC
+		- BIC
 1. Model Score
 	- Score on unseen data as the true evaluation of the model
-1. Serialization
+2. Serialization
 	- Pickling of the entire process of fitted data preparation and fitted model parameters 
+
+Statical hypothesis testing
+- null hypothesis
+- alpha
+- beta
+- p_value
+- Criticism - should rely less on p-value and more on confidence intervals for effect sizes for importance, prediction intervals for confidence, replication and extension for robustness
+
+Bayesian Approach
+- Credible interval
+	- Bayesian approach is that given the observed data about a parameter, we can assume a prior distribution for it and as we observe more data fit a posteri distribution where it is 95% of the prior
+
+Frequentist Approach
+- Confidence interval 
+	- There is a single value for the parameter and we are getting observed data about the parameter which gives us variance. We can provide the mean estimate of the parameter and a range in which if we repeat this experiment many times we are confident that 95% of the time the value falls within this interval 
+- Prediction interval 
+	- Associated with the variance of future values and gives the range which the forecasted value can fall 
+
+Causal Inference
+- [[AB Testing]]
+- Difference in difference
+	- Fit a regression to the two groups to the observed metric and the coefficient estimated is the difference

@@ -9,7 +9,7 @@ Regression
 - R squared: percentage of variability of dataset that can be explained
 	- 1 - (SSR / SST)
 	- SSR: sum of squared residual
-	- SST: standard deviation squared
+	- SST: sum of squared (observation-mean), similar to standard deviation
 - Mean squared error: often used by the model as the cost function and gives weight to larger errors
 - Root mean squared error: a more intuitive version of mean squared error because of the units 
 - Mean absolute error: very intuitive to understand 

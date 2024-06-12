@@ -40,9 +40,12 @@ pdt = pytz.timezone('America/Los_Angeles')
 bad_tz_aware_datetime = datetime(2014, 1, 1, tzinfo=pdt)
 naive_datetime = datetime(2014, 1, 1)
 good_tz_aware_datetime = pdt.localize(naive_datetime)
-```
-pd.to_datetime(observation_df['enter_epoch_ms'], unit='ms', utc=True).dt.tz_convert(observation_df["timezone"])
 
+pd.to_datetime(observation_df['enter_epoch_ms'], unit='ms', utc=True).dt.tz_convert(observation_df["timezone"])
+```
+
+
+```bash
 ## Logging
 
 ```python
@@ -194,6 +197,7 @@ class Foo:
 
 
 # Pandas
+- Remember `transform` and `filter`
 
 ![[Pasted image 20240513115340.png]]
 
@@ -208,6 +212,7 @@ len(df) # Length of the dataframe
 df.columns # Column names
 df.dtypes # Get the dtype of the columns
 df.describe() # Get descriptive statistics of the columns
+df.value_counts() # Get number of count per value
 ```
 
 Format conversion
@@ -231,7 +236,19 @@ df.columns = ["_".join(a) for a in df.columns.to_flat_index()]
 Dates
 
 ```python
-df.date_col.dt.to_period('M').dt.to_timestamp()
+df.date_col.dt.to_period('M').dt.to_timestamp() # Convert to the month
+```
+
+Resample
+
+```python
+df = pd.DataFrame(index=pd.date_rage('1/1/2000', periods=10, freq='min'), data=range(10))
+
+# Downsample 
+df.resample('2min').sum()
+
+# Upsample
+df.resample('30s').ffill()
 ```
 
 Subtotals
@@ -267,11 +284,18 @@ df_left = df_left.loc[df_left["_merge"] == "left_only"]
 df_left = df_left.drop(columns="_merge")
 ```
 
+lambda
+
 ```python
-df2 = df.piovt()
-df2.columns = df.columns.to_series().str.join('_')
-df2.reset_index
+# Apply to all columns
+df = df.assign(NewCol=lambda x: x['colA'] * x['colB'])
+
+# Apply to all rows
+df = df.apply(lambda x: func(x), axis=1)
+# Apply to somme rows
+df = df.apply(lambda x: func(x) if x.name in ['a', 'b'] else x, axis=1)
 ```
+
 
 
 # Python Data Science
