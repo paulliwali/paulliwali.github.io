@@ -1,4 +1,13 @@
 # About
+
+==Giving people the power to build community and bring the world closer together==
+
+- Product currently empower 3 billion people
+- Give people a voice
+- Build connection and community
+- Serve everyone, making the service accessible to everyone
+- Keep people safe and protect privacy
+- Promote economic opportunity
 ## Notes from founder letter 2021
 - Internet was giving people the power to connect and that was true when Facebook was founded
 - As we move from text to sound to video, the next platform of connecting people will be more immersive -> *metaverse*
@@ -8,7 +17,7 @@
 - Challenges from each chapter of development is unique - privacy and safety are at the forefront of this chapter
 	- Also needs to conform to rules and regulations while remaining accessible to people
 	- Apps are free, ads model give business the best price, commerce tools are at cost or modest fees
-- To build beyond Facebook
+- Meta means to go beyond - to build beyond Facebook for the next chapter of the company
 ## Why work at Meta?
 - Be part of a team that focus on building services to connect people instead of building products for people to connect to
 - Be part of a team that can impacts billions of people, work on connecting people from far and wide, the power of the "internet"
@@ -41,7 +50,7 @@
 		- "You are on FB Groups, a old feature was to recommend groups based on HS, but when we started we found the field was open text and data is messy. How do you deal with this"
 	- Assess the ability to create hypothesis, quantitive analysis, determining goal & success metrics and demonstrating agility
 	- Use statistical code to carry out analysis ranging from correlation to multivariate analysis to measurement models
-	- From hypothesis from launching a new product, consider tradeoffs of a feature *in terms of metrics*, use statistical features, know common distributions, law of large numbers, central limit theorem, linear regression, conditional probability
+	- Form hypothesis from launching a new product, consider tradeoffs of a feature *in terms of metrics*, use statistical features, know common distributions, law of large numbers, central limit theorem, linear regression, conditional probability
 - Analytical reasoning (case study oriented)
 	- Problems has to do with business level
 		- "what is the goal..., how can we support this goal...to make this decision"
@@ -51,7 +60,10 @@
 	- How to make decision with the outcome
 - Behavioral
 	- Assess the candidate's agility, growing mentality, partnering, inclusion and communications
-	- Use S.T.A.R methods and pick out good examples
+	- Use S.T.A.R methods and pick out good examples from [[Tesla]]
+	- Conflict resolution
+	- Autonomous, passionate, detail vs wordy, explain proud contribution
+	- Make or break 
 
 # Meetings
 ## Recruiter call for a data science role
@@ -87,18 +99,47 @@
 	- Analytical execution will require a "hard" calculation
 	- How to outline the approach, talk about tradeoffs, land on one and then how do you execute (relate to a research paper)
 	- No need to use the whiteboard if don't feel like it
-	- Try to lead the conversation for the analytical segments, because this is the style
-		- Ask follow ups
-		- Once you have a good grasp and brainstormed the approach
-		- **Take over and walk interviewer through like a brain storm session**
-		- Spend 10ish minute to explore and discussion of goals, areas of opportunity
-		- Land on a testable hypothesis and then from then on take it to design, method, data setup, what to look for and then given a certain outcome (how do I recommend), think about the product development cycle
-	- Behavioral
-		- cross functional examples
-		- issues
-	- Technical
-		- just longer but no more complicated
-- Q: Any helpful hints?
+- Try to lead the conversation for the analytical segments, because this is the style
+	- Ask follow ups
+	- Once you have a good grasp and brainstormed the approach
+	- **Take over and walk interviewer through like a brain storm session**
+	- Spend 10ish minute to explore and discussion of goals, areas of opportunity
+	- Land on a testable hypothesis and then from then on take it to design, method, data setup (justify the dim, volume, attribute, sample size), common mistakes of AB testing, what to look for and then given a certain outcome (how do I recommend), think about the product development cycle
+- Behavioral
+	- cross functional examples
+	- issues that arose and how you dealt with it
+- Technical
+	- just longer but no more complicated than the screening 
 ## Full-loop interview on [[2024-06-14]]
+- Behavioral
+	- What is a time where you had to convince someone of something
+    > Used the capacity planning process
+	
+	- What is a time where you had high pressure deliverable
+    > Used the resilient planning experience
+	
+	- What is a time where you had to make your voice heard or help someone else's voice to be heard
+    > Used my intern experience
+- Technical
+	- Ads series data with different currencies
+    > This felt easy and straightforward, with filter, groupby and merging. However there were some follow up questions at the end that asked for the downsides of absolute numbers - I felt like the interviewer does not fully understand the question and was slightly confused by my answers
+- Analytical reasoning
+	- An engineer proposed to make a restaurant recommendations widgets, how would I go about evaluating
+	- Asked how do we determine this is worthwhile?
+	- Asked about how to build the recommendation model
+		- Wanted me to build a logistical model
+	- Asked about how to reconcile KPIs in ads dropping, what might cause this and how to address this
+	- Asked about how to create a dashboard for this
+	> It was less open ended as I was expecting, the interviewer probed with many follow up questions to guide the direction of the answers. I think I was a bit caught up with the need to provide a technical methodology that involved logistic regression to predict recommendations for restaurants. I was caught up in providing a heuristic algorithm based on activities and location. 
+- Analytical execution
+	- Draw the distribution of comments per user on a news feed app that is used by 2 billion users, and what would be the mean, median and 95th percentile?
+		> Stumbled on the median and accidentally went to the middle, fixed it upon hint
+	
+	- Draw the distribution of means from samples of 10,000 users, what are the mean, median and 95th percentile?
+		> I wasn't totally sure how to calculate the 95th percentile on a normal distribution using z-score, I mentioned it but didn't give a clean answer
+
+	- If the average comment per user jumped what could be the cause?
+	- If bots post at a much higher rate, how do we back calculate the % of bots if we know the average comment per bot, per user and total?
+	- Using an absolute value to classify the two types of user groups, is that a good idea?
 
 #interview 

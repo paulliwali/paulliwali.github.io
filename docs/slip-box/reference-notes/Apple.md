@@ -1,0 +1,69 @@
+> We believe that we’re on the face of the Earth to make great products, and that’s not changing. We’re constantly focusing on innovating. We believe in the simple, not the complex. We believe that we need to own and control the primary technologies behind the products we make, and participate only in markets where we can make a significant contribution. - Tim Cook
+
+# Hiring Manager Screen [[2024-06-24]]
+- Product Data Science team, which is a part of Apple Media Products. Our team works across multiple services performing advanced analysis and building features, powered by machine learning, for AppStore, Apple Music, Apple Podcasts, iTunes Store and related products.
+- Specifically the supply side, so working with the artists and developers
+- The team’s charter is to apply advanced analytics to improve our portfolio of applications by understanding our customer’s behaviour and anticipating their needs
+- Looking for a "full stack" DS that can bring prototype code into production
+	- Product agnostic
+	- Language agnostic
+- The team is pivoting from one that creates bespoke prototype solution to a team that really *owns* the algorithm
+	- AaaS to more fundamentally decouple the algorithm from LOB
+- Asked me to explain a ML concept or algorithm to a data scientist, non technical person and 5 year old
+	- I talked about downsampling
+	- He hinted that an analogy to make with the 5 year old could be something about sunny/rainy days 
+- Asked me how does this opportunity at Apple helps my career and advance where I want to be
+	- I said doing more deep DS work and not bounded by timeline/external ad hoc asks is where I want to develop
+- Asked a business question - "estimate the daily unit sold for a new phone company that is selling only to UK through website"
+	- First talked about the approach to the question, where we think through different ways of estimating this. One is to find comparable products, the second is to find a total addressable market, the third which I couldn't think of is through survey
+	- Then he gave me some starting numbers and I worked through some other big discount factors: adoption rate (S curve), replacement rate (4 or 5 years of use before replacement), brand loyalty (power law) of how willing they will switch
+	- Then applying the starting number he gave for 40 million people in UK -> we got to around 100 units sold per day
+# Technical Interview 
+- Said to review fundamental statistical concepts, common probabilities, and linear algebra
+- Do some LeetCode easy questions, it won't be dynamic programming or anything
+- Q1: General model tradeoffs
+	- **Can you describe bias vs variance, and how they relate to under- or over-fitting?**
+		- Bias is a systematic error of over- or under- predicting and caused by *simple models that doesn't fit the underlying data well*
+		- Variance is sensitivity from small fluctuations and caused by *overly complex model that is capturing the noise as it was real signal and a sign of overfitting*
+		- The goal of ML is finding this tradeoff and minimize the total error which is the sum of bias, variance and irreducible error
+	- **Can you categorize OLS regression, 10 degree polynomial regression, random forest, 20 layer NN in a 2x2 matrix**
+		- Low bias, low variance: random forest is an ensemble model that averages multiple decision trees
+		- Low bias, high variance: deep neural networks can capture complex relationships but can suffer from over fitting without regularization or large amounts of training data
+		- High bias, low variance: OLS regression is a simple model and might not capture the training data but it is stable 
+		- High bias, high variance: 10 degree polynomial can capture the complex relationship but because it may not generalize well - it might have high bias
+	- **If the random forest shows overfitting, what strategies can we use?**
+		- increase the number of trees, reduce the tree depth, increase the number of samples per split, use bootstrapping, increase the number of features per split, post pruning, cross validation
+- Q2: Maximum Likelihood Estimation (MLE)
+	- **Can you describe what it is?**
+		- A way to find the value of parameters of an assumed distribution such that you match the observed data's distribution
+		- Likelihood function $L(\theta|X)$ gives how likely it is to observe $X$ given $\theta$
+		- In practice, it is common to natural log transform the function into log-likelihood function $\ell(\theta|X)$ to turn product of probabilities in to sums. **This is because that each data in the sample is independent observation so you want to multiple the probabilities together to find the total probability of all of the points happening**
+	- **Can you describe what the poisson distribution is?**
+		- A discrete probability of how many events will occur within a period
+	- **Describe how to use MLE to estimate the coefficient**
+		- Differentiate the log-likelihood function with respect to one of the parameters $\theta$ and set it to 0 to find the critical points
+		- Solve the equation for $\theta$
+		- Ensure that it is the max by taking the second derivative
+	- **Use it to find the lambda coefficient of the poisson distribution**
+		- PMF of poisson distribution is $P(X|\lambda)=\frac{\lambda^ke^{-\lambda}}{k!}$
+		- The likelihood function is the total probability of observing all the sample which is the product of the PMFs $L(\lambda|X)=\prod{\frac{\lambda^x_ie^{-\lambda}}{x_i!}}$
+		- Take the natural to get $\ell(\lambda|X)=\sum{\ln{\frac{\lambda^x_ie^{-\lambda}}{x_i!}}}$ and simplifies to $\ell(\lambda|X)=\sum{x_i\ln{\lambda}-\lambda-\ln{x_i!}}$ 
+		- Take the derivative with respect to $\lambda$ and set to 0 to get $\sum{\frac{x_i}{\lambda}-1}=0$ and simplifying to get $\sum{\frac{x_i}{\lambda}}-n=0$
+		- Solve for $\lambda$ to get $\frac{1}{n}\sum{x_i}$ which makes intuitive sense as that is the average of the sample
+- Q3: Dimension reduction
+	- **What is the purpose of dimension reduction?**
+		- To reduce the number of features in order to simplify the model, mitigate the curse of dimensionality, reduce overfitting
+		- Common techniques include principle component analysis, linear discriminant analysis, autoencoders, manual feature selection
+	- **Is PCA supervised or unsupervised**
+		- Unsupervised method that retains the minimum number of features that can explain the majority of the data's variance
+	- **What is the feature pre-process of numerical and categorical features**
+		- Standardize the numerical features
+		- One hot encode the categorical features
+		- Create a standardized data space $Z$
+	- **How to apply PCA**
+		- Computes covariance matrix for all the features to understand their correlation
+		- Computes the eigenvectors and eigenvalues of the covariance matrix
+			- This gives the principle components
+		- Rank the eigenvalues in descending order which gives the importance of explaining the variance
+		- Select the top k eigenvectors (features) that captures the desired total amount of variance $W_k$
+		- Transform the dataset by projecting the standardized data to the new k-dimensional subspace $Y=ZW_k$

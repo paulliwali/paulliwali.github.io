@@ -1,11 +1,15 @@
 ==The purpose of this page is to keep track of various learning resources, a learning plan and progress tracker==
 - [[Data Science Cheat Sheet]]
+
+## Personal Projects
+- [[aaronson-oracle-baseball]]
 ## Progress Tracker
 ### On-going
-- [[Machine Learning Specialization]]
+- [[Coursera - Machine Learning Specialization]]
 
 ### Planned
 - [[fast-ai]]
+- [[Coursera - Deep Learning Specialization]]
 
 ### Finished
 - [[Hands On Machine Learning]]
@@ -16,20 +20,20 @@
 - https://awesomedataengineering.com/
 - https://a16z.com/2020/10/15/the-emerging-architectures-for-modern-data-infrastructure/
 - https://www.dynamicyield.com/lesson/introduction-to-ab-testing/
-- 
+
 ### Courses
-- [[fast-ai]] #course
+- [[fast-ai]]
 	- A top down approach to teaching you advanced ML, should be done in conjunction with Andrew's [[Deep Learning Specialization]] course
 	- 7/10
-- [[Big Data Specialization Degree]] #course
+- [[Big Data Specialization Degree]]
 	- 4 full courses, will require a lot of commitment
 	- 6/10
-- [[Machine Learning Specialization]] #course
+- [[Coursera - Machine Learning Specialization]]
 	- Andrew Ng's introduction to ML course
 	- Source: https://www.coursera.org/learn/machine-learning#syllabus
 	- I have completed the first 8 weeks of this, I never did the large scaled projects at the end
 	- 8/10
-- [[Deep Learning Specialization]] #course
+- [[Coursera - Deep Learning Specialization]]
 	- Advanced Andrew Ng's course on neural networks, picks up after his intro ML class [[Machine Learning]]
 	- How does this differ from [[fast-ai]]?
 		- fast-ai works from top-down while this course goes from bottom-up
@@ -60,7 +64,7 @@
 	- Source: https://www.deeplearningbook.org/front_matter.pdf
 	- Heralded as the bible of machine learning, but it might be too rigorous to be useful for me at this moment
 	- 3/10
-- [[Hands On Machine Learning]] #books 
+- [[Hands On Machine Learning]] 
 	- O'reilly book with notebooks on Github, pretty good reviews
 	- Good for hands on machine learning techniques, it has lots of project based teaching
 	- Part I focus on machine learning techniques, Part II focus on neural networks with [[TensorFlow]] 

@@ -1,6 +1,6 @@
 - Metadata
     - Source: https://github.com/ageron/handson-ml
-    - #learning #machine-learning #data-science
+    - #learning #machine-learning #data-science #books
 # Preface
 - The wave of machine learning is started in 2006 when Geoffrey Hinton published a paper on the practicality of training a deep neural network with "Deep Learning"
 - Will learn to use [[Scikit-Learn]], [[TensorFlow]], [[Keras]]
@@ -214,9 +214,9 @@
 	- A example would be a system that removes noise from images which means it outputs multiple labels with various values for each label
 # Chapter 4: Training Models
 - Understanding how the models work under the hood
-- [[Linear regression model]]
+- [[Linear Regression Model]]
 	- There are two ways to train linear regression models
-	- A closed-form [[Normal Equation]] to compute parameters that best fit the model to the training set and **iterative optimization approach [[gradient descent]] that gradually tweaks the parameters to minimize the cost function over the training set**
+	- A closed-form [[Normal Equation]] to compute parameters that best fit the model to the training set and **iterative optimization approach [[Gradient Descent]] that gradually tweaks the parameters to minimize the cost function over the training set**
 - [[Polynomial regression model]]
 	- More complex as it can fit non-linear dataset and since it has more parameters than linear regression it is prone to __overfitting__ the training set
 	- To overcome this, we will detect this using [[learning curves]] and reduce the risk of overfitting with [[Regularization Techniques]]
@@ -385,6 +385,3 @@
 	- Risk of overfitting
 - Vanishing gradient problem
 	- Logistic activation function makes the gradient saturate as the values approach the two extremes
-	-
-
-

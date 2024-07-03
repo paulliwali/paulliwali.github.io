@@ -1,5 +1,7 @@
 - Metadata
     - Source: https://github.com/elsehow/aaronson-oracle
+    - Repo: https://github.com/paulliwali/aaronson-oracle-baseball
+
 - Adapting Aaronson's Oracle to predict baseball pitches for a complete game
 - Aaronson's Oracle
     - Algorithm that predicts the next keystroke by analyzing the past 5 keystrokes and the 32 possible combinations they can create
@@ -17,3 +19,5 @@
 Use GPT to train this sequence
 
 Hard part will be getting this data in a good format
+
+#data-science #projects

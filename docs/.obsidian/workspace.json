@@ -1,65 +1,39 @@
 {
   "main": {
-    "id": "b0a1faf2406bf192",
+    "id": "8f0c4fc7cbf90892",
     "type": "split",
     "children": [
       {
-        "id": "93eedaef694ca14a",
+        "id": "99660b6c7aeaee95",
         "type": "tabs",
         "children": [
           {
-            "id": "54119113fd176570",
+            "id": "8dd3d14fedbbdd9f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "slip-box/reference-notes/2024 Physical Goal Progression.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f933973dd0848e9f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "daily-notes/2024/2024-07-01.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5adfc930b07c1f6c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "daily-notes/2024/2024-07-01.md",
+                "file": "slip-box/reference-notes/Frequentist Inference Testing.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "7b7235ab9e4912db",
+    "id": "50f6c4a9618bf69d",
     "type": "split",
     "children": [
       {
-        "id": "aa9862bc7e531ab1",
+        "id": "f7aafd5ce6f8226f",
         "type": "tabs",
-        "dimension": 60.57142857142858,
         "children": [
           {
-            "id": "1e21491c71cbe9f3",
+            "id": "9d62e5eaf4b6c176",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -69,12 +43,12 @@
             }
           },
           {
-            "id": "8c6297fbd1e9bcc6",
+            "id": "85aad69f2c72a38e",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "very obvious",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,7 +58,7 @@
             }
           },
           {
-            "id": "8551d654ebaf7fde",
+            "id": "4d35fa9a4996b5c3",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -92,43 +66,36 @@
             }
           }
         ]
-      },
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "406391ad1fff7c9f",
+    "type": "split",
+    "children": [
       {
-        "id": "28e03a200caba194",
+        "id": "07acfdac54edf9c7",
         "type": "tabs",
-        "dimension": 39.42857142857143,
         "children": [
           {
-            "id": "fd59e0ea5cd17e53",
+            "id": "071a9c87391e4637",
             "type": "leaf",
             "state": {
               "type": "calendar",
               "state": {}
             }
-          }
-        ]
-      }
-    ],
-    "direction": "horizontal",
-    "width": 259.5
-  },
-  "right": {
-    "id": "bcee0f0f827065f9",
-    "type": "split",
-    "children": [
-      {
-        "id": "b14fbd28e6ee1087",
-        "type": "tabs",
-        "children": [
+          },
           {
-            "id": "bafcd51905316a86",
+            "id": "23d526c9b7c83aa7",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "daily-notes/2024/2024-07-01.md",
-                "collapseAll": true,
-                "extraContext": true,
+                "file": "slip-box/reference-notes/Frequentist Inference Testing.md",
+                "collapseAll": false,
+                "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -138,121 +105,65 @@
             }
           },
           {
-            "id": "b3220d0bca57ee57",
+            "id": "3d9f09aca0f57115",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "daily-notes/2024/2024-07-01.md",
-                "linksCollapsed": true,
-                "unlinkedCollapsed": false
+                "file": "slip-box/reference-notes/Frequentist Inference Testing.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "5091fb8e39cee56e",
+            "id": "46f74ba55da6416e",
             "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": false
+                "useHierarchy": true
               }
             }
           },
           {
-            "id": "d236d1994beda16b",
+            "id": "8142e7d96fad212e",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "daily-notes/2024/2024-07-01.md"
+                "file": "slip-box/reference-notes/Frequentist Inference Testing.md"
               }
             }
-          },
-          {
-            "id": "63d3a62ffc3fb8ba",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
-            }
-          },
-          {
-            "id": "89373e3a1286f13d",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "5f972c1db6fa713a",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-chat-view",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "templater-obsidian:Templater": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "templater-obsidian:Templater": false
+      "command-palette:Open command palette": false
     }
   },
-  "active": "5adfc930b07c1f6c",
+  "active": "8dd3d14fedbbdd9f",
   "lastOpenFiles": [
-    "slip-box/reference-notes/tmux-sinppets.md",
-    "slip-box/reference-notes/k-means.md",
-    "slip-box/reference-notes/Zipline.md",
-    "slip-box/reference-notes/The Anxious Generation.md",
-    "slip-box/reference-notes/Tesla.md",
-    "slip-box/reference-notes/Tesla Interview Prep.md",
-    "slip-box/reference-notes/Ten Rules for Negotiating a Job Offer.md",
-    "slip-box/reference-notes/StableAuto.md",
-    "slip-box/reference-notes/Split training and testing.md",
-    "slip-box/reference-notes/SQL Cheat Sheet.md",
-    "slip-box/reference-notes/Recommendation Systems.md",
-    "slip-box/reference-notes/Quantile Regression.md",
-    "slip-box/reference-notes/Python Cheat Sheet.md",
-    "slip-box/reference-notes/Meta.md",
-    "slip-box/reference-notes/KNN.md",
-    "slip-box/reference-notes/Is Bayesian AB testing immune to peeking.md",
-    "slip-box/reference-notes/Git Basics.md",
-    "slip-box/reference-notes/Feature Scaling Techniques.md",
-    "slip-box/reference-notes/Feature Engineering.md",
-    "slip-box/reference-notes/Error metrics.md",
-    "slip-box/reference-notes/Distributions.md",
-    "slip-box/reference-notes/Desolation Wilderness.md",
-    "slip-box/reference-notes/Data Science Practice Questions.md",
-    "slip-box/reference-notes/DBSCAN.md",
-    "slip-box/reference-notes/Correlations.md",
-    "slip-box/reference-notes/Coding Principles.md",
-    "resources/Pasted image 20240513115346.png",
-    "resources/Pasted image 20240513115340.png",
-    "resources/Backcountry-Map-Web-2018.pdf",
-    "resources/Screenshot 2023-11-21 at 10.26.37 PM.png",
-    "resources/index-method.webp",
-    "Untitled.canvas",
-    "slip-box/slip-box-canvas.canvas",
-    "daily-notes/2024",
-    "Screenshot 2023-12-12 at 8.15.05 PM.png",
-    "Pasted image 20230410134201.png",
-    "Pasted image 20230410195817.png",
-    "Pasted image 20230410195809.png",
-    "Pasted image 20230410135640.png"
+    "3 ways to regret ff.md",
+    "intro.md",
+    "aaronson-oracle-baseball.md",
+    "slip-box/reference-notes/Bayesian Inference Testing.md",
+    "slip-box/reference-notes/Euler's number.md",
+    "daily-notes/2024/2024-07-03.md",
+    "random forest.md"
   ]
 }

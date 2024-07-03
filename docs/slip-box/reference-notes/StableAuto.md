@@ -44,3 +44,7 @@ Technical Call with Courtney [[2024-06-10]]
 	- Made a cross join of the stations and then implemented a euclidean distance function to calculate the distance between all stations
 	- Removed itself
 	- Outputted the head of each groupby
+
+Result on [[2024-06-17]]
+- Decided not to move forward with me
+- I asked for feedback

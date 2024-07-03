@@ -1,2 +1,0 @@
-- Stanford through Coursera
-- 

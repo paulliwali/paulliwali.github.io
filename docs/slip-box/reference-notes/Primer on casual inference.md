@@ -1,6 +1,7 @@
 - Metadata
     - Source: https://towardsdatascience.com/beyond-a-b-testing-primer-on-causal-inference-d8e462d90a0b
     - Tags: #machine-learning #model 
+    - Related: [[Causal Inference]]
 - Predictive models on their own can't answer the questions business usually want to answer -> will doing A cause B?
     - Prediction and inference are opposite goals
     - Correct inference often requires us to sacrifice predictive power

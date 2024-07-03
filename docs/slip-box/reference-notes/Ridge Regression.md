@@ -1,4 +1,5 @@
-- Works by adding this term `alpha * abs(coefficients)^2` in the cost function so we are penalizing the size of the coefficients
+- L2 regularization (MSE)
+- Works by adding this term $\alpha * |coefficients^2|$ in the cost function so we are penalizing the size of the coefficients
 	- This will uniformly decrease the coefficients
 	- The parameter $\alpha$ will control the shrinkage which makes the coefficients more robust to collinearity
 - The alpha term can be found by using cross-validation techniques

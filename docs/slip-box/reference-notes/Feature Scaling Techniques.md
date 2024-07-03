@@ -5,7 +5,7 @@ Standard scaler
 - Removing the mean and dividing by the standard deviation
 - This changes the feature to be centered around 0 and has unit variance
 - Many ML models assumes this to be true for the features
-Min Max Scale
+Min Max Scale (Normalization)
 - Removing the minimum and dividing by the range
 - This changes the feature to be between 0 and 1
 Normalizer
