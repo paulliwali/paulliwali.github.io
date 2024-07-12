@@ -1,8 +1,8 @@
 ## What Happened
 - I was laid off from Tesla as part of a mass layoff on [[2023-04-29]]
-- It was both shocking and surprising because the whole Supercharging organization was laid off and with seemingly no logical reason. There are some explanations like high capital expenditure spend or pivoting the company into an "AI" first company, but to me these explanations are just retrospectively connecting the dots. Since it is a profitable business and also solving the number one reason for EV adoption, I don't see this as a tertiary business to Tesla. 
-- However, if we are admitting that Tesla is pivoting from a "sustainable energy" company and fully into an "autonomous driving/robotics" company, then okay - I can buy this argument. 
-- Though it still does not explain the speed and rashness of the decision. Which leads to my opinion that there was a disagreement at the highest level and signs of defiance with the executive mandate set forth by Elon himself, which resulted in a public display of punishment and warning for all others. 
+- It was both shocking and surprising because the whole Supercharging organization was laid off and with seemingly no logical reason. There are some explanations like high capital expenditure spend or pivoting the company into an "AI" first company, but to me these explanations are just retrospectively connecting the dots. Since it is a profitable business and also solving the number one reason for EV adoption, I don't see this as a tertiary business to Tesla.
+- However, if we are admitting that Tesla is pivoting from a "sustainable energy" company and fully into an "autonomous driving/robotics" company, then okay - I can buy this argument.
+- Though it still does not explain the speed and rashness of the decision. Which leads to my opinion that there was a disagreement at the highest level and signs of defiance with the executive mandate set forth by Elon himself, which resulted in a public display of punishment and warning for all others.
 # Key Timelines
 
 | Date           | Event                                                                                                                                                 |
@@ -16,7 +16,7 @@
 - H1b database: https://h1bdata.info/index.php
 - [[Ten Rules for Negotiating a Job Offer]]
 # Learning and projects
-- [[Advanced Data Structures]] 
+- [[Advanced Data Structures]]
 - [[aaronson-oracle-baseball]]
 - [[Data Science Practice Questions]]
 - [[Data Science Cheat Sheet]]

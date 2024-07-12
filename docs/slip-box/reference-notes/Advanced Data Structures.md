@@ -23,4 +23,3 @@ Covers: time travel, geometry, dynamic optimality, memory hierarchy, hashing, in
 		- full persistence
 			- you can update *any* version
 			- versions are *tree structured*
-			- 

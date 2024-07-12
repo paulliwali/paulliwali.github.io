@@ -1,7 +1,7 @@
 - **Metadata**
     - Source: https://www.loggly.com/blog/exceptional-logging-of-exceptions-in-python/
     - Author: Aaron Maxwell
-    - Tags: [[python]] [[programming]] [[logging]]
+    - Tags: [[Python Learning]] [[programming]] [[logging]]
 - Big Tarp Pattern
     - ```python
 try: 
