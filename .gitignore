@@ -24,3 +24,6 @@ yarn-error.log*
 
 # Personal notes
 /docs/personal
+
+# obsidian dot files
+.obsidian
