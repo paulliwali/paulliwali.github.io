@@ -424,4 +424,3 @@ export SPARK_LOCAL_IP=127.0.0.1
 hive partition -> individual files
 
 Spark has optimal file sizes and depending on how writing is done, multiple files representing 1 partition can be written by multiple executors, or 1 single file representing 1 partition can be written
-

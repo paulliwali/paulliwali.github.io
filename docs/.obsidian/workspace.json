@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "slip-box/reference-notes/Frequentist Inference Testing.md",
+                "file": "slip-box/reference-notes/Python Cheat Sheet.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "95e0d1ef2dfe0c1d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "daily-notes/2024/2024-07-15.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "slip-box/reference-notes/Frequentist Inference Testing.md",
+                "file": "daily-notes/2024/2024-07-15.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "slip-box/reference-notes/Frequentist Inference Testing.md",
+                "file": "daily-notes/2024/2024-07-15.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "slip-box/reference-notes/Frequentist Inference Testing.md"
+                "file": "daily-notes/2024/2024-07-15.md"
               }
             }
           }
@@ -156,8 +169,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8dd3d14fedbbdd9f",
+  "active": "95e0d1ef2dfe0c1d",
   "lastOpenFiles": [
+    "daily-notes/2024/2024-07-07.md",
+    "daily-notes/2024/2024-07-15.md",
+    "roam/7. Raise a 🐶.md",
+    "slip-box/reference-notes/Frequentist Inference Testing.md",
     "3 ways to regret ff.md",
     "intro.md",
     "aaronson-oracle-baseball.md",
