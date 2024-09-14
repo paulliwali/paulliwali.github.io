@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "99660b6c7aeaee95",
+        "id": "fafbd65081261879",
         "type": "tabs",
         "children": [
           {
-            "id": "8dd3d14fedbbdd9f",
+            "id": "46dec1035210e5d0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "slip-box/reference-notes/Python Cheat Sheet.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "95e0d1ef2dfe0c1d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "daily-notes/2024/2024-07-15.md",
+                "file": "roam/5. 🍕 Plans.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 252.5,
+    "collapsed": true
   },
   "right": {
     "id": "406391ad1fff7c9f",
@@ -106,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "daily-notes/2024/2024-07-15.md",
+                "file": "roam/5. 🍕 Plans.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "daily-notes/2024/2024-07-15.md",
+                "file": "roam/5. 🍕 Plans.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,16 +134,24 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "daily-notes/2024/2024-07-15.md"
+                "file": "roam/5. 🍕 Plans.md"
               }
             }
+          },
+          {
+            "id": "d5dd7249cd18bdce",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -169,18 +165,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "95e0d1ef2dfe0c1d",
+  "active": "46dec1035210e5d0",
   "lastOpenFiles": [
-    "daily-notes/2024/2024-07-07.md",
-    "daily-notes/2024/2024-07-15.md",
-    "roam/7. Raise a 🐶.md",
-    "slip-box/reference-notes/Frequentist Inference Testing.md",
-    "3 ways to regret ff.md",
-    "intro.md",
-    "aaronson-oracle-baseball.md",
-    "slip-box/reference-notes/Bayesian Inference Testing.md",
-    "slip-box/reference-notes/Euler's number.md",
-    "daily-notes/2024/2024-07-03.md",
-    "random forest.md"
+    "slip-box/reference-notes/2024 Physical Goal Progression.md",
+    "roam/5. 🍕 Plans.md",
+    "Hikes Bucket List.md",
+    "slip-box/reference-notes/China-Korea Trip 2024.md",
+    "daily-notes/2024/2024-09-10.md",
+    "daily-notes/2024/2024-09-14.md",
+    "slip-box/reference-notes/Blayney Meadow Trail.md",
+    "slip-box/reference-notes/SF Marathon 2024.md",
+    "slip-box/reference-notes/Desolation Wilderness.md",
+    "slip-box/reference-notes/Euro Trip 2024.md",
+    "slip-box/reference-notes/Coursera - Machine Learning Specialization.md",
+    "Machine learning specialization.md",
+    "daily-notes/2024/2024-08-12.md",
+    "◶ Trackers.md",
+    "Reactive Microsystems.md",
+    "Untitled.md",
+    "roam/2. 📚 Books to Read.md",
+    "slip-box/reference-notes/Crying in H Mart.md",
+    "daily-notes/2024/2024-08-08.md",
+    "slip-box/reference-notes/ETL Principles.md",
+    "daily-notes/2024/2024-08-07.md",
+    "roam/8. ☕️ Finer Things Book Club.md",
+    "slip-box/reference-notes/The Anxious Generation.md",
+    "roam/1. 🪣 List.md",
+    "daily-notes/2024/2024-08-06.md",
+    "daily-notes/2024/2024-08-01.md",
+    "resources/sf_marathon.pdf"
   ]
 }

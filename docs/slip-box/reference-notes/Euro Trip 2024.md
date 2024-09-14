@@ -1,10 +1,8 @@
-
 # Resources
 
 [Wanderlog](https://wanderlog.com/plan/xscupmqpmkszuncj/trip-to-europe)
 [Google Map](https://maps.app.goo.gl/5ZqFz8xSByTcHKN98)
-
-
+Cost
 # Interesting Things from Podcasts
 
 ## Florence 
@@ -30,6 +28,8 @@ David
 # Retrospective
 - Athens was a surprise hit for me
 - I dislike cities that are solely dependent on tourism, i.e. Santorini and Istanbul. When the effort is clear that they are putting money ahead of culture - it ruins the traveling experience for me 
+
+It has been a two months since our trip to Italy and Greece with a super short stop in Istanbul. The highlights that I still remember are the lively city life in Rome, Florence and Milan. Each with a memorable style of living but all very enjoyable. We learned to embrace 
 
 
 #travel 
