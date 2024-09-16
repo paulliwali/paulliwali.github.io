@@ -24,8 +24,18 @@
 	- Can be minimized with [[gradient descent]] to find the optimal parameters
 
 # Week 2: Regression with multiple input variables
-
-
+## Multiple Linear Regression
+- Using multiple features to estimate one response variable
+	- Different from multivariate regression which estimates multiple response variable
+- Vectorization with `numpy` is used to speed up the algorithm of the dot product between weights and features
+	- This is done by doing the operation *in parallel*
+- Gradient descent works similarly but instead of taking the derivative of the cost function with respect to one feature's weight and updating one weight -> you update all the weights by taking partial derivatives of the cost function with each weight 
+- Just a note that an alternative solution to the linear regression is the [[normal equation]] 
+	- It only works for linear regression because it is a closed form solution to this
+	- So it is not generalized solution (unlike gradient descent) and it could be slower if the features are much higher
+## Gradient descent in practice
+- To make gradient descent more efficient, one should feature scale with some [[Feature Scaling Techniques]]
+	- This will make the cost function contour to be evenly spaced and not be susceptible to jumping 
 # Week 3 
 
 #machine-learning #course

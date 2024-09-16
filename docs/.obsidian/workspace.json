@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "roam/5. 🍕 Plans.md",
+                "file": "daily-notes/2024/2024-09-08.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 252.5,
+    "width": 300,
     "collapsed": true
   },
   "right": {
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "roam/5. 🍕 Plans.md",
+                "file": "daily-notes/2024/2024-09-08.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "roam/5. 🍕 Plans.md",
+                "file": "daily-notes/2024/2024-09-08.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "roam/5. 🍕 Plans.md"
+                "file": "daily-notes/2024/2024-09-08.md"
               }
             }
           },
@@ -165,34 +165,33 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "46dec1035210e5d0",
+  "active": "8dd3d14fedbbdd9f",
   "lastOpenFiles": [
-    "slip-box/reference-notes/2024 Physical Goal Progression.md",
-    "roam/5. 🍕 Plans.md",
-    "Hikes Bucket List.md",
-    "slip-box/reference-notes/China-Korea Trip 2024.md",
-    "daily-notes/2024/2024-09-10.md",
-    "daily-notes/2024/2024-09-14.md",
-    "slip-box/reference-notes/Blayney Meadow Trail.md",
-    "slip-box/reference-notes/SF Marathon 2024.md",
-    "slip-box/reference-notes/Desolation Wilderness.md",
-    "slip-box/reference-notes/Euro Trip 2024.md",
+    "slip-box/literature-notes/Causal Inference.md",
+    "daily-notes/2024/2024-09-08.md",
+    "slip-box/reference-notes/Supervised Machine Learning - Regression and Classification.md",
+    "slip-box/reference-notes/Bayes Theorem.md",
+    "daily-notes/2024/2024-07-31.md",
+    "slip-box/reference-notes/Data Science Cheat Sheet.md",
+    "data-science.md",
+    "Logistic Regression.md",
+    "Untitled.md",
+    "daily-notes/2024/2024-07-20.md",
+    "slip-box/reference-notes/Feature Scaling Techniques.md",
+    "daily-notes/2024/2024-07-15.md",
+    "slip-box/reference-notes/normal equation.md",
+    "slip-box/reference-notes/gradient descent.md",
+    "slip-box/reference-notes/Linear regression model.md",
     "slip-box/reference-notes/Coursera - Machine Learning Specialization.md",
     "Machine learning specialization.md",
-    "daily-notes/2024/2024-08-12.md",
-    "◶ Trackers.md",
-    "Reactive Microsystems.md",
-    "Untitled.md",
-    "roam/2. 📚 Books to Read.md",
-    "slip-box/reference-notes/Crying in H Mart.md",
-    "daily-notes/2024/2024-08-08.md",
-    "slip-box/reference-notes/ETL Principles.md",
-    "daily-notes/2024/2024-08-07.md",
-    "roam/8. ☕️ Finer Things Book Club.md",
-    "slip-box/reference-notes/The Anxious Generation.md",
-    "roam/1. 🪣 List.md",
-    "daily-notes/2024/2024-08-06.md",
-    "daily-notes/2024/2024-08-01.md",
-    "resources/sf_marathon.pdf"
+    "daily-notes/2024/2024-07-16.md",
+    "slip-box/reference-notes/Job Hunt of 2024.md",
+    "slip-box/reference-notes/Python Cheat Sheet.md",
+    "daily-notes/2024/2024-07-07.md",
+    "roam/7. Raise a 🐶.md",
+    "slip-box/reference-notes/Frequentist Inference Testing.md",
+    "3 ways to regret ff.md",
+    "intro.md",
+    "aaronson-oracle-baseball.md"
   ]
 }

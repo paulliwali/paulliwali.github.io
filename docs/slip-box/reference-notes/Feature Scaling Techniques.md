@@ -1,5 +1,4 @@
-#data-science #machine-learning 
-Important to note that we should not be leaking the testing data into scaling. We won't know the test data in practice so they shouldn't be used to inform us.
+==Important to note that we should not be leaking the testing data into scaling. We won't know the test data in practice so they shouldn't be used to inform us.==
 
 Standard scaler
 - Removing the mean and dividing by the standard deviation
@@ -11,3 +10,4 @@ Min Max Scale (Normalization)
 Normalizer
 - Scales each data point such that the feature vector has a Euclidean distance of 1
 - Used when the direction of the data matters but not the length of the vector
+#data-science #machine-learning 
