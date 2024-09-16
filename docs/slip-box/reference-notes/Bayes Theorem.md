@@ -10,3 +10,4 @@ An example. If the probability of testing for a disease is 99% accurate, meaning
 Find $P(disease|positive)$, so applying Bayes' theorem $\frac{P(positive|disease)P(disease)}{P(positive)}$ and the $P(positive)$ is the probability of getting a positive test result when you either have a TP or FP which is $P(positive|disease)P(disease)+P(positive|no disease)P(no disease) = 0.99*0.01+0.01*0.99=0.0198$.
 Thus $P(disease|positive)=0.99*0.01/0.0198=0.5$ So there is a 50% chance of having the disease if tested positive.
 
+[[Bayes Theorem, the geometry of changing beliefs]]
