@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "fafbd65081261879",
+        "id": "e7fa3f90523f455a",
         "type": "tabs",
         "children": [
           {
-            "id": "46dec1035210e5d0",
+            "id": "3eeea9a451066739",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "daily-notes/2024/2024-09-08.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -39,7 +37,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -54,7 +54,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -62,7 +64,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -85,7 +89,9 @@
             "type": "leaf",
             "state": {
               "type": "calendar",
-              "state": {}
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           },
           {
@@ -94,7 +100,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "daily-notes/2024/2024-09-08.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +107,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
             }
           },
           {
@@ -111,10 +118,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "daily-notes/2024/2024-09-08.md",
+                "file": "daily-notes/2024/2024-11-30.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 2024-11-30"
             }
           },
           {
@@ -125,7 +134,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -133,9 +144,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "daily-notes/2024/2024-09-08.md"
-              }
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Outline"
             }
           },
           {
@@ -143,11 +154,13 @@
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
-              "state": {}
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -165,33 +178,33 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8dd3d14fedbbdd9f",
+  "active": "3eeea9a451066739",
   "lastOpenFiles": [
-    "slip-box/literature-notes/Causal Inference.md",
-    "daily-notes/2024/2024-09-08.md",
-    "slip-box/reference-notes/Supervised Machine Learning - Regression and Classification.md",
-    "slip-box/reference-notes/Bayes Theorem.md",
-    "daily-notes/2024/2024-07-31.md",
-    "slip-box/reference-notes/Data Science Cheat Sheet.md",
-    "data-science.md",
-    "Logistic Regression.md",
-    "Untitled.md",
-    "daily-notes/2024/2024-07-20.md",
-    "slip-box/reference-notes/Feature Scaling Techniques.md",
-    "daily-notes/2024/2024-07-15.md",
-    "slip-box/reference-notes/normal equation.md",
-    "slip-box/reference-notes/gradient descent.md",
-    "slip-box/reference-notes/Linear regression model.md",
-    "slip-box/reference-notes/Coursera - Machine Learning Specialization.md",
-    "Machine learning specialization.md",
-    "daily-notes/2024/2024-07-16.md",
-    "slip-box/reference-notes/Job Hunt of 2024.md",
-    "slip-box/reference-notes/Python Cheat Sheet.md",
-    "daily-notes/2024/2024-07-07.md",
     "roam/7. Raise a 🐶.md",
-    "slip-box/reference-notes/Frequentist Inference Testing.md",
-    "3 ways to regret ff.md",
+    "slip-box/reference-notes/Hikes Bucket List.md",
+    "🦴 Raising Nobo.md",
+    "roam/5. 🍕 Plans.md",
+    "slip-box/reference-notes/Alta Via 1 of the Dolomites.md",
+    "slip-box/reference-notes/Havasupai Falls.md",
+    "slip-box/reference-notes/Trans Catalina Trail.md",
+    "slip-box/reference-notes/Blayney Meadow Trail.md",
+    "slip-box/reference-notes/Many Glaciers Backcountry Hike.md",
+    "slip-box/reference-notes/Thousand Island Lake.md",
+    "roam/4. Personal 🕸.md",
+    "slip-box/reference-notes/Supervised Machine Learning - Regression and Classification.md",
+    "roam/3. Continued 👨‍💻.md",
+    "roam/2. 📚 Books to Read.md",
     "intro.md",
-    "aaronson-oracle-baseball.md"
+    "aaronson-oracle-baseball.md",
+    "3 ways to regret ff.md",
+    "slip-box/reference-notes/The Ocean at the End of the Lane.md",
+    "slip-box/reference-notes/A Psalm for the Wild-Built.md",
+    "slip-box/reference-notes/A Prayer for the Crown-Shy.md",
+    "Untitled.md",
+    "◶ Trackers.md",
+    "slip-box/reference-notes/Reactive Microsystems.md",
+    "slip-box/reference-notes/Logistic Regression.md",
+    "slip-box/reference-notes/Machine learning specialization.md",
+    "slip-box/reference-notes/Data Science Cheat Sheet.md"
   ]
 }
