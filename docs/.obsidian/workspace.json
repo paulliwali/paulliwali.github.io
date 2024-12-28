@@ -11,10 +11,14 @@
             "id": "3eeea9a451066739",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "slip-box/reference-notes/Hikes Bucket List.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Hikes Bucket List"
             }
           }
         ]
@@ -100,6 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "slip-box/reference-notes/Hikes Bucket List.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Hikes Bucket List"
             }
           },
           {
@@ -144,9 +149,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "slip-box/reference-notes/Hikes Bucket List.md"
+              },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Hikes Bucket List"
             }
           },
           {
@@ -180,8 +187,9 @@
   },
   "active": "3eeea9a451066739",
   "lastOpenFiles": [
-    "roam/7. Raise a 🐶.md",
+    "slip-box/reference-notes/The Wave.md",
     "slip-box/reference-notes/Hikes Bucket List.md",
+    "roam/7. Raise a 🐶.md",
     "🦴 Raising Nobo.md",
     "roam/5. 🍕 Plans.md",
     "slip-box/reference-notes/Alta Via 1 of the Dolomites.md",
@@ -204,7 +212,6 @@
     "◶ Trackers.md",
     "slip-box/reference-notes/Reactive Microsystems.md",
     "slip-box/reference-notes/Logistic Regression.md",
-    "slip-box/reference-notes/Machine learning specialization.md",
-    "slip-box/reference-notes/Data Science Cheat Sheet.md"
+    "slip-box/reference-notes/Machine learning specialization.md"
   ]
 }

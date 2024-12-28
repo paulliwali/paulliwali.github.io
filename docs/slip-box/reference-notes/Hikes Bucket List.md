@@ -8,6 +8,6 @@ A bucket list of single-day to multi-day hikes. Cross country hikes have their o
 | Arizona, US    | [[Havasupai Falls]]                |        |        |          |      |
 |                | [[Alta Via 1 of the Dolomites]]    |        |        |          |      |
 | California, US | [[Desolation Wilderness]]          |        |        |          |      |
-|                | <br>  [[Mt Whitney]]               |        |        |          |      |
-|                | <br> [[The Wave]]                  |        |        |          |      |
-| California, US | <br> [[Thousand Island Lake]]      |        |        |          |      |
+|                | [[Mt Whitney]]                     |        |        |          |      |
+|                | [[The Wave]]                       |        |        |          |      |
+| California, US | [[Thousand Island Lake]]           |        |        |          |      |
