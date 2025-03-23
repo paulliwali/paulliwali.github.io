@@ -8,8 +8,8 @@ import rehypeKatex from 'rehype-katex';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: "Paul Deng's Personal Site",
+  tagline: 'Second Brain',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'warn',
@@ -37,6 +37,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          exclude: ['**/templates/**'], // Excludes the entire templates directory
           sidebarPath: require.resolve('./sidebars.js'),
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
