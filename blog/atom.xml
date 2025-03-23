@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://your-docusaurus-test-site.com/blog</id>
-    <title>My Site Blog</title>
+    <id>https://pauldeng.me/blog</id>
+    <title>Paul Deng Second Brain Blog</title>
     <updated>2024-01-02T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://your-docusaurus-test-site.com/blog"/>
-    <subtitle>My Site Blog</subtitle>
-    <icon>https://your-docusaurus-test-site.com/img/favicon.ico</icon>
+    <link rel="alternate" href="https://pauldeng.me/blog"/>
+    <subtitle>Paul Deng Second Brain Blog</subtitle>
+    <icon>https://pauldeng.me/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Things I TIL'ed in 2023]]></title>
-        <id>https://your-docusaurus-test-site.com/blog/til2023</id>
-        <link href="https://your-docusaurus-test-site.com/blog/til2023"/>
+        <id>https://pauldeng.me/blog/til2023</id>
+        <link href="https://pauldeng.me/blog/til2023"/>
         <updated>2024-01-02T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[The best and most indirect way to journal and review the year]]></summary>
         <content type="html"><![CDATA[<p>The best and most indirect way to journal and review the year</p>
@@ -42,7 +42,7 @@
 <li>
 <p>Doumbek</p>
 <ul>
-<li><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Goblet_drum_01.jpg" alt="" class="img_ev3q"></li>
+<li><img decoding="async" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Goblet_drum_01.jpg" alt="" class="img_ev3q"></li>
 <li>Egyptian drum, a mesmerizing percussion instrument producing "Doom," "Tak," and "Pa" sounds</li>
 </ul>
 </li>
@@ -61,15 +61,12 @@
 <li>
 <p><a href="https://en.wikipedia.org/wiki/Russell%27s_paradox" target="_blank" rel="noopener noreferrer">Russell's Paradox</a></p>
 <ul>
-<li>
-<p>Bertrand Russell in 1901 showed that every set theory that contains an unrestricted comprehension principle leads to contradictions</p>
+<li>Bertrand Russell in 1901 showed that every set theory that contains an unrestricted comprehension principle leads to contradictions<!-- -->
 <ul>
 <li>Discovered independently by Ernst Zermelo in 1899</li>
 </ul>
 </li>
-<li>
-<p>Unrestricted comprehension principle is that for any sufficiently well-defined property, there is the set of all and only the objects that have that property</p>
-</li>
+<li>Unrestricted comprehension principle is that for any sufficiently well-defined property, there is the set of all and only the objects that have that property</li>
 </ul>
 <blockquote>
 <p>So that was probably very confusing, tbh that was a lot of copying and pasting, so trying to explain this paradox in layman's terms, I have two examples</p>
@@ -131,14 +128,14 @@
 <li>
 <p>Ferrite bead</p>
 <ul>
-<li>Remember those bulgy plastic before the plug that looks like this <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Cable_end.JPG/220px-Cable_end.JPG" alt="" class="img_ev3q"></li>
+<li>Remember those bulgy plastic before the plug that looks like this <img decoding="async" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Cable_end.JPG/220px-Cable_end.JPG" alt="" class="img_ev3q"></li>
 <li>It is meant to suppress high-frequency electronic noise in the circuit which prevents electromagnetic interference from and to the device</li>
 </ul>
 </li>
 <li>
 <p>Da Hong Pao Mother Trees</p>
 <ul>
-<li><img loading="lazy" src="https://static.wixstatic.com/media/bd777d_51bff6f886f341c08b2f1ca325c72ebd~mv2.jpg" alt="" class="img_ev3q"></li>
+<li><img decoding="async" loading="lazy" src="https://static.wixstatic.com/media/bd777d_51bff6f886f341c08b2f1ca325c72ebd~mv2.jpg" alt="" class="img_ev3q"></li>
 <li>The origin of Da Hong Pao (big red robe) tea is from a story where a scholar was on his way to take the imperial exam, the Gaokao of olden days, but was exhausted from the journey. A monk brewed some tea and he was able to continue his journey and ended up with the top score. On the way home, he paid tribute to the tree where the tea was from by putting his red robe from attaining the top score around it</li>
 <li>There are 6 trees in the rocks of Jiu Long Ke in Wuyi, Fujian which have been around for 360 years</li>
 <li>According to folklore, the teas from these trees were sent as tribute to the Emperor<!-- -->
@@ -376,9 +373,7 @@
 </li>
 <li>The Solera process is a way to age liquids by fractional blending of older products with younger ones to increase the average age<!-- -->
 <ul>
-<li>
-<p>It means "on the ground" in Spanish because the fractional blending transfers from between barrels from the top to bottom</p>
-</li>
+<li>It means "on the ground" in Spanish because the fractional blending transfers from between barrels from the top to bottom</li>
 </ul>
 </li>
 </ul>
@@ -422,9 +417,7 @@
 <ul>
 <li>Redundancy in words<!-- -->
 <ul>
-<li>
-<p>Sometimes it is intentionally used to create emphasis but sometimes it is a result of incorporating foreign words either through trade, travel, or colonialism</p>
-</li>
+<li>Sometimes it is intentionally used to create emphasis but sometimes it is a result of incorporating foreign words either through trade, travel, or colonialism</li>
 </ul>
 </li>
 </ul>
@@ -480,9 +473,7 @@
 <li>Started as a movement in Oxford that aims to maximize the good as much as possible</li>
 <li>This could mean taking actions that can lead to gaining the ability to enable someone/something to do more good than doing the good themselves because it's ineffective<!-- -->
 <ul>
-<li>
-<p>An extreme example would be prioritizing the actions that lead to great amounts of wealth so that you can donate to organizations that are doing good instead of joining the organization to do good</p>
-</li>
+<li>An extreme example would be prioritizing the actions that lead to great amounts of wealth so that you can donate to organizations that are doing good instead of joining the organization to do good</li>
 </ul>
 </li>
 </ul>
@@ -544,19 +535,19 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[FitBit vs Whoop]]></title>
-        <id>https://your-docusaurus-test-site.com/blog/fitbit-vs-whoop</id>
-        <link href="https://your-docusaurus-test-site.com/blog/fitbit-vs-whoop"/>
+        <id>https://pauldeng.me/blog/fitbit-vs-whoop</id>
+        <link href="https://pauldeng.me/blog/fitbit-vs-whoop"/>
         <updated>2023-02-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Using FitBit and Whoop to monitor my sleep quality over two weeks from 2021-12-12 to 2021-12-23 and this is what I found]]></summary>
         <content type="html"><![CDATA[<p>Using FitBit and Whoop to monitor my sleep quality over two weeks from 2021-12-12 to 2021-12-23 and this is what I found</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="context">Context<a href="https://your-docusaurus-test-site.com/blog/fitbit-vs-whoop#context" class="hash-link" aria-label="Direct link to Context" title="Direct link to Context">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="context">Context<a href="https://pauldeng.me/blog/fitbit-vs-whoop#context" class="hash-link" aria-label="Direct link to Context" title="Direct link to Context">​</a></h2>
 <p>When I mention that I am looking into how to sleep better, my friends and family first instinct is always "oh are you having trouble sleeping?"
 It is not that I have trouble sleeping, it is just that I want to optimize sleep to the absolute maximum.
 The importance of good quality sleep is increasingly being understood as the <strong>single most important factor to health</strong>.
 Wouldn't I want this to be optimized better than my monster-hunter charge blade build?</p>
 <p>The focus of this monitoring is to see which device correlate with my personal experience better so I can start to trust its outputs.</p>
 <p>I will wear both devices on each of my wrists and flip halfway through after a week. And note how each night's sleep correlated with how I felt.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="components">Components<a href="https://your-docusaurus-test-site.com/blog/fitbit-vs-whoop#components" class="hash-link" aria-label="Direct link to Components" title="Direct link to Components">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="components">Components<a href="https://pauldeng.me/blog/fitbit-vs-whoop#components" class="hash-link" aria-label="Direct link to Components" title="Direct link to Components">​</a></h2>
 <p>In terms of sleep length:</p>
 <ul>
 <li>FitBit tracked an average of 6.8 hours for both weeks</li>
@@ -567,7 +558,7 @@ Wouldn't I want this to be optimized better than my monster-hunter charge blade 
 <li>FitBit tracked a score of 70 for both weeks</li>
 <li>Whoop tracked 71% and 52% performance</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="issues">Issues<a href="https://your-docusaurus-test-site.com/blog/fitbit-vs-whoop#issues" class="hash-link" aria-label="Direct link to Issues" title="Direct link to Issues">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="issues">Issues<a href="https://pauldeng.me/blog/fitbit-vs-whoop#issues" class="hash-link" aria-label="Direct link to Issues" title="Direct link to Issues">​</a></h2>
 <p>Why was there a huge discrepancy in the second week?
 This leads to the issue I had with Whoop, the sensors are less forgiving if its not worn properly. Some examples of this are:</p>
 <p>&lt;table&gt;
@@ -599,7 +590,7 @@ Although FitBit is more consistent in measuring my sleep, it seems to under-esti
 The basic hardware technology is identical across the different wearables, and what makes the differences is the algorithm used to determine sleep based on the signals the hardware is sending.
 Depending on how the algorithm is tuned, the resulting analysis can vary from device to device.
 Maybe Google trained their algorithm on someone who has a lower heart rate or less movement...but it doesn't test well on me.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="outcome">Outcome<a href="https://your-docusaurus-test-site.com/blog/fitbit-vs-whoop#outcome" class="hash-link" aria-label="Direct link to Outcome" title="Direct link to Outcome">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="outcome">Outcome<a href="https://pauldeng.me/blog/fitbit-vs-whoop#outcome" class="hash-link" aria-label="Direct link to Outcome" title="Direct link to Outcome">​</a></h2>
 <p>I will definitely not be switching to Whoop, since it is more expensive and less consistent in tracking sleep for me.
 A side note, the strain calculation is pretty spot on, but I never recover enough for it.
 Even though, FitBit underestimates my total sleep, I think it does a good job on being consistent in its analysis and I can just do manual adjustments from the baseline.</p>]]></content>
@@ -612,11 +603,11 @@ Even though, FitBit underestimates my total sleep, I think it does a good job on
     </entry>
     <entry>
         <title type="html"><![CDATA[Brew Logs 2023]]></title>
-        <id>https://your-docusaurus-test-site.com/blog/brew-logs-2023</id>
-        <link href="https://your-docusaurus-test-site.com/blog/brew-logs-2023"/>
+        <id>https://pauldeng.me/blog/brew-logs-2023</id>
+        <link href="https://pauldeng.me/blog/brew-logs-2023"/>
         <updated>2023-01-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Equipment]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="equipment">Equipment<a href="https://your-docusaurus-test-site.com/blog/brew-logs-2023#equipment" class="hash-link" aria-label="Direct link to Equipment" title="Direct link to Equipment">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="equipment">Equipment<a href="https://pauldeng.me/blog/brew-logs-2023#equipment" class="hash-link" aria-label="Direct link to Equipment" title="Direct link to Equipment">​</a></h2>
 <ul>
 <li><a href="https://www.chemexcoffeemaker.com/six-cup-classic-series-coffeemaker.html" target="_blank" rel="noopener noreferrer">6-cup Chemex</a></li>
 <li><a href="https://1zpresso.coffee/" target="_blank" rel="noopener noreferrer">1zpresso grinder</a></li>
@@ -632,8 +623,8 @@ Even though, FitBit underestimates my total sleep, I think it does a good job on
     </entry>
     <entry>
         <title type="html"><![CDATA[Things I TIL'ed in 2022]]></title>
-        <id>https://your-docusaurus-test-site.com/blog/til2022</id>
-        <link href="https://your-docusaurus-test-site.com/blog/til2022"/>
+        <id>https://pauldeng.me/blog/til2022</id>
+        <link href="https://pauldeng.me/blog/til2022"/>
         <updated>2023-01-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Another year, another TIL. This time I got 55 things.]]></summary>
         <content type="html"><![CDATA[<p>Another year, another TIL. This time I got 55 things.</p>
@@ -656,7 +647,7 @@ Even though, FitBit underestimates my total sleep, I think it does a good job on
 </li>
 <li>
 <p>[Barista FIRE vs Coast FIRE</p>
-<p><img loading="lazy" alt="wealth spectrum" src="https://your-docusaurus-test-site.com/assets/images/wealth-spectrum-05aaea9560b5adb3b34912e9d4ed5ae0.webp" width="1200" height="450" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="wealth spectrum" src="https://pauldeng.me/assets/images/wealth-spectrum-05aaea9560b5adb3b34912e9d4ed5ae0.webp" width="1200" height="450" class="img_ev3q"></p>
 <ul>
 <li>Two interesting FIRE types that essentially mean you need to have a "barista" (or equivalent) job or "coast" at your job to support the somewhat financially independent lifestyle. So it is in a grey area before completely financially free</li>
 </ul>
@@ -734,7 +725,7 @@ Even though, FitBit underestimates my total sleep, I think it does a good job on
 </li>
 <li>
 <p><a href="https://oceanservice.noaa.gov/facts/nemo.html" target="_blank" rel="noopener noreferrer">Point Nemo</a></p>
-<p><img loading="lazy" alt="Point Nemo" src="https://your-docusaurus-test-site.com/assets/images/point-nemo-d955f7e1d690d668e09b0c12a93ebf82.webp" width="900" height="477" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Point Nemo" src="https://pauldeng.me/assets/images/point-nemo-d955f7e1d690d668e09b0c12a93ebf82.webp" width="900" height="477" class="img_ev3q"></p>
 <ul>
 <li>The furthest point on Earth from all civilization, in the middle of the Pacific Ocean</li>
 <li>It is further from humans than the ISS, and it is where programs crash their satellite</li>
@@ -774,7 +765,7 @@ Even though, FitBit underestimates my total sleep, I think it does a good job on
 <p>Hofstadter's Law</p>
 <blockquote>
 <p>"It always takes longer than you expect, even when you take into account Hofstadter's Law" - Douglas Hofstadter
-<img loading="lazy" alt="Hofstadter&amp;#39;s Law bar chart" src="https://your-docusaurus-test-site.com/assets/images/hofstadters-law-89e9e7f3ae6ae25c75312b6acf50b975.webp" width="1000" height="460" class="img_ev3q"></p>
+<img decoding="async" loading="lazy" alt="Hofstadter&amp;#39;s Law bar chart" src="https://pauldeng.me/assets/images/hofstadters-law-89e9e7f3ae6ae25c75312b6acf50b975.webp" width="1000" height="460" class="img_ev3q"></p>
 </blockquote>
 <ul>
 <li>Just like how our brain is not suited for compounding effects or exponential effects, we are just not equipped to make time estimates</li>
@@ -783,7 +774,7 @@ Even though, FitBit underestimates my total sleep, I think it does a good job on
 </li>
 <li>
 <p>Cesca</p>
-<p><img loading="lazy" alt="Cesca chair" src="https://your-docusaurus-test-site.com/assets/images/cesca-9436a75862f75d4f392f421ba375bd14.webp" width="413" height="480" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Cesca chair" src="https://pauldeng.me/assets/images/cesca-9436a75862f75d4f392f421ba375bd14.webp" width="413" height="480" class="img_ev3q"></p>
 <ul>
 <li>A classic icon first designed at the Bauhaus (founded by Walter Gropius) who had the intention of creating utilitarian designs but created wildly expensive handmade crafts.</li>
 <li>Cesca or B32 was created and embodied the Bauhaus movement and ideal, it didn't require braces and gives it bounce, created by one continuous steel</li>
@@ -798,7 +789,7 @@ Even though, FitBit underestimates my total sleep, I think it does a good job on
 </li>
 <li>
 <p>Sahara Desert Circles</p>
-<p><img loading="lazy" alt="Sahara Desert" src="https://your-docusaurus-test-site.com/assets/images/sahara-desert-rings-70cff016ba8b5cbbf145a1b56be111a6.webp" width="1400" height="1046" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Sahara Desert" src="https://pauldeng.me/assets/images/sahara-desert-rings-70cff016ba8b5cbbf145a1b56be111a6.webp" width="1400" height="1046" class="img_ev3q"></p>
 <ul>
 <li>Circle markings in the Sahara Desert in Algeria. This could be a result of seismic surveys used for natural gas extraction</li>
 </ul>
@@ -1035,12 +1026,12 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 </li>
 <li>
 <p>T and O Map</p>
-<p><img loading="lazy" alt="T-O Original Map" src="https://your-docusaurus-test-site.com/assets/images/t-o-map-original-5f8829f0ae39f667cfbb6c6194572c49.webp" width="440" height="440" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="T-O Original Map" src="https://pauldeng.me/assets/images/t-o-map-original-5f8829f0ae39f667cfbb6c6194572c49.webp" width="440" height="440" class="img_ev3q"></p>
 <ul>
 <li>Also known as <em>orbis terrarum</em> or Isidorian map</li>
 <li>Described the known habitable continents at the time by the 7th-century Spanish scholar</li>
 </ul>
-<p><img loading="lazy" alt="T-O Reconstructed Map" src="https://your-docusaurus-test-site.com/assets/images/t-o-map-reconstruction-11185a6121fd3dd03fb1c885ae717fe0.webp" width="355" height="357" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="T-O Reconstructed Map" src="https://pauldeng.me/assets/images/t-o-map-reconstruction-11185a6121fd3dd03fb1c885ae717fe0.webp" width="355" height="357" class="img_ev3q"></p>
 <ul>
 <li>The T divides the three continents (Europe, Asia, and Africa) by water</li>
 <li>The T is oriented side-ways with Asia to the right of the Nile and Don</li>
@@ -1077,8 +1068,8 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
     </entry>
     <entry>
         <title type="html"><![CDATA[Counter Gatekeeping]]></title>
-        <id>https://your-docusaurus-test-site.com/blog/counter-gatekeeping</id>
-        <link href="https://your-docusaurus-test-site.com/blog/counter-gatekeeping"/>
+        <id>https://pauldeng.me/blog/counter-gatekeeping</id>
+        <link href="https://pauldeng.me/blog/counter-gatekeeping"/>
         <updated>2022-12-14T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Gatekeeping is childish and it's a sign that people are insecure about their interests.]]></summary>
         <content type="html"><![CDATA[<p>Gatekeeping is childish and it's a sign that people are insecure about their interests.</p>
@@ -1113,12 +1104,12 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
     </entry>
     <entry>
         <title type="html"><![CDATA[Why I switched to obsidian]]></title>
-        <id>https://your-docusaurus-test-site.com/blog/why-switch-to-obsidian</id>
-        <link href="https://your-docusaurus-test-site.com/blog/why-switch-to-obsidian"/>
+        <id>https://pauldeng.me/blog/why-switch-to-obsidian</id>
+        <link href="https://pauldeng.me/blog/why-switch-to-obsidian"/>
         <updated>2022-12-14T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[First of all, what is a second brain?]]></summary>
         <content type="html"><![CDATA[<p>First of all, what is a second brain?</p>
-<p><img loading="lazy" alt="brain-box" src="https://your-docusaurus-test-site.com/assets/images/pexels-shvets-production-7203692-f24c06c7cb80bda70dedfdf97f50c766.webp" width="750" height="500" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="brain-box" src="https://pauldeng.me/assets/images/pexels-shvets-production-7203692-f24c06c7cb80bda70dedfdf97f50c766.webp" width="750" height="500" class="img_ev3q"></p>
 <p>It is a place to store facts and ideas that you learned but may not need on a day-to-day basis. The reason to have a second brain is to keep your primary brain's cognitive activity free of clutter and not be bogged down with remembering numbers, names, and details. It can be focused on the process of understanding and reasoning knowledge.</p>
 <p>Being an avid podcast listener, I was also aware that a lot of information just goes in one ear and out the other. The stories, quotes, and ideas from the podcasts were very engaging in the moment and I felt that I was <em>never</em> going to forget it. But time and time again, I failed to recall all the details when I want to bring up the story in a conversation.</p>
 <p>I needed a way to store and access facts, so I can keep my brain free of clutter to focus on cognitive thinking.</p>
@@ -1126,16 +1117,16 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 <p>This method is also known as the Zettelkasten Method which is German for "slip-box", and the original implementation uses index cards. Even though I love nothing more than an analog system, it is probably way too much of a hassle to maintain and update. And, the pain of searching for something is probably not worth the novelty.</p>
 <p>So I turned to software.</p>
 <p>I initially started with <a href="https://www.zettlr.com/" target="_blank" rel="noopener noreferrer">Zettlr</a>. A decent program that is a markdown editor with bi-directional references and tagging. But I didn't get that "joy" factor when using it, it felt like a tool designed and intended for academic use.</p>
-<p><img loading="lazy" alt="zettlr" src="https://your-docusaurus-test-site.com/assets/images/zettlr-cb224450ecc9fadd911b81c702eb7ca1.webp" width="750" height="454" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="zettlr" src="https://pauldeng.me/assets/images/zettlr-cb224450ecc9fadd911b81c702eb7ca1.webp" width="750" height="454" class="img_ev3q"></p>
 <p>Then I discovered <a href="https://roamresearch.com/" target="_blank" rel="noopener noreferrer">Roam Research</a> which is an online app that had a strong community behind it. This web app made creating and linking notes extremely easy and the interface was clean to start using without much friction but provided lots of depth for customization. I got into customizing the look and feel of it and had several templates to make daily note entries, book reviews, article summaries, and TIL entries. But I started to feel that the system is doing a good job collecting everything I attempt to write down but doesn't give me a good way to re-organize. I started to feel like it was a messy drawer where I can easily dump notes but was difficult to see how many notes I had and find the right notes at the right time. The web of notes kept growing outwards and they were not strengthening in connection with each other - the promise of generating new ideas was not fulfilled.</p>
-<p><img loading="lazy" alt="roam-research" src="https://your-docusaurus-test-site.com/assets/images/roam-7d3dcdc0c6b825519dcffefc14468e23.webp" width="750" height="522" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="roam-research" src="https://pauldeng.me/assets/images/roam-7d3dcdc0c6b825519dcffefc14468e23.webp" width="750" height="522" class="img_ev3q"></p>
 <p>In search of this filling of control, I decided to try <a href="https://obsidian.md/" target="_blank" rel="noopener noreferrer">Obsidian</a>. A full-fledged desktop app that looks like a glorified markdown editor, but has lots of small features that make untangling this mess of a web inside my second brain considerably easier.</p>
-<p><img loading="lazy" alt="obsidian" src="https://your-docusaurus-test-site.com/assets/images/obsidian-promo-2185b5921c82d8abcb0b1f753ea0771a.webp" width="750" height="443" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="obsidian" src="https://pauldeng.me/assets/images/obsidian-promo-2185b5921c82d8abcb0b1f753ea0771a.webp" width="750" height="443" class="img_ev3q"></p>
 <p>The first thing I did was export and import all my notes from Roam, and Obsidian has a very helpful markdown importer tool to automatically reformat the syntax from Roam to Obsidian. Then, I reorganize all my existing notes into the <code>slip-box</code> folder which is divided like so:</p>
 <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">slip-box/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├─ reference-notes/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│  ├─ highlights-from-article.md</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│  ├─ highlights-from-blog.md</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├─ literature-notes/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│  ├─ idea-1-explained-in-my-own-words.md</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│  ├─ idea-2-explained-in-my-own-words.md</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├─ permanent-notes/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│  ├─ 2a-different-idea-explained.md</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│  ├─ 1a-explanation-of-idea.md</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│  ├─ 1a1-tangent-from-1a.md</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <p>Most of the notes I had got dumped into <code>reference-notes</code>. There was also a small tree of permanent notes growing that I had forgotten about! It was lost in the woods of Roam and I re-read those and moved them into [permanent-notes]. Then I installed some community plugins to automate my daily notes routine. I used [calendar], [dataview], and [templater] in conjunction with [daily notes] to automagically create a daily note with a habit tracker, journal section, ephemeral notes for brain dumping, and dynamic links to notes I created or touched during the day.</p>
 <p>With all this in place, I am starting to feel at home in my second brain.</p>
-<p><img loading="lazy" alt="obsidian-personal" src="https://your-docusaurus-test-site.com/assets/images/obsidian-ed43757418191741a4bb32584e5365b4.webp" width="750" height="830" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="obsidian-personal" src="https://pauldeng.me/assets/images/obsidian-ed43757418191741a4bb32584e5365b4.webp" width="750" height="830" class="img_ev3q"></p>
 <blockquote>
 <p>Note: Obsidian v1.0.3 on Mac M1 has this long loading time when coming out of hibernation after not using the app for a while. It is a slight annoyance in a world where everything is instantaneous.</p>
 </blockquote>]]></content>
@@ -1148,13 +1139,13 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
     </entry>
     <entry>
         <title type="html"><![CDATA[How many things do I own?]]></title>
-        <id>https://your-docusaurus-test-site.com/blog/how-many-things</id>
-        <link href="https://your-docusaurus-test-site.com/blog/how-many-things"/>
+        <id>https://pauldeng.me/blog/how-many-things</id>
+        <link href="https://pauldeng.me/blog/how-many-things"/>
         <updated>2022-02-21T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Not to bury the lead and beat around the bush - I own 572 (roughly) things right now.]]></summary>
         <content type="html"><![CDATA[<p>Not to bury the lead and beat around the bush - I own <strong>572</strong> (roughly) things right now.</p>
 <p>So let’s rewind and go back to why did I do this. I was planning a move to San Francisco and right before I was starting to pack I came across this <a href="https://www.youtube.com/watch?v=BB8o8-EdZY0" target="_blank" rel="noopener noreferrer">video</a> where Matt D’avella (kind of a modern-influencer minimalist) counted everything he owned. While I am by no means a minimalist, I do spend a lot of time debating whether I should purchase something or try my best to make things I already own to be as multifunctional as possible. For example, my longboard doubles up as my shoe-rack or just coffee mugs instead of different sizes and shapes for holding different types of liquids.</p>
-<p><img loading="lazy" alt="dogs-playing" src="https://your-docusaurus-test-site.com/assets/images/dogs-playing-e521abd9c4c92ef5471efd354f514a0a.webp" width="1000" height="1334" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="dogs-playing" src="https://pauldeng.me/assets/images/dogs-playing-e521abd9c4c92ef5471efd354f514a0a.webp" width="1000" height="1334" class="img_ev3q"></p>
 <p>my dog playing with her friend, the only shot of my longboard shoe-rack</p>
 <p>On top of multi-purposing, whenever I want to purchase anything new, I usually write it down on one of several shopping lists I have on my phone and evaluate the need for it by how frequently I try to re-add this item when an instance where I felt like my life would be much easier if I could use that item. Since I have kind of this reduction approach to buying material things, I thought it could also mean I don’t own too many things - so it shouldn’t be too hard to count everything up while I packed. Right?</p>
 <p>Ground rules:</p>
@@ -1166,7 +1157,7 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 <li>consumables - food or products - didn’t count.</li>
 </ul>
 <p>Here is the breakdown.</p>
-<p><img loading="lazy" alt="count-of-things" src="https://your-docusaurus-test-site.com/assets/images/count-of-things-9a14d1a689407eb2e06e92f05142e7eb.webp" width="750" height="463" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="count-of-things" src="https://pauldeng.me/assets/images/count-of-things-9a14d1a689407eb2e06e92f05142e7eb.webp" width="750" height="463" class="img_ev3q"></p>
 <p>Surprisingly, “clothing” was the largest category at nearly 30% with 153 items. I wasn’t expecting this because I thought I kept quite a lean closet with just basic items that I wear everyday. Also add in the fact that it is sunny all-year around in California I trimmed out most of my wet/cold/hailing/snowing/depressing clothing from Canada.</p>
 <p>I was expecting kitchen to be in number one spot because I own a few too many coffee mugs and thought that there is just a minimum number of essential kitchen equipments you need if you are cooking at home regularly.</p>
 <p>However, these two categories are probably the least notable to someone who is trying to guesstimate how many things they might own. Because they are often organized away in shelves and take up little space compared to furniture, electronics and decor. While these items do take up more space, I only own a combined 81 items in these three categories. Don’t fall into the trap of underestimating because those are the obvious large items you can easily count.</p>
@@ -1179,8 +1170,8 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
     </entry>
     <entry>
         <title type="html"><![CDATA[Things I TIL'ed in 2021]]></title>
-        <id>https://your-docusaurus-test-site.com/blog/til2021</id>
-        <link href="https://your-docusaurus-test-site.com/blog/til2021"/>
+        <id>https://pauldeng.me/blog/til2021</id>
+        <link href="https://pauldeng.me/blog/til2021"/>
         <updated>2022-01-24T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[I always lament the fact that I forgot all the random things I learned over the year, so in 2021 I made an effort to note down the things I learned just to make this post at the end of the year to look back and remember it again.]]></summary>
         <content type="html"><![CDATA[<p>I always lament the fact that I forgot all the random things I learned over the year, so in 2021 I made an effort to note down the things I learned just to make this post at the end of the year to look back and remember it again.</p>
@@ -1517,11 +1508,11 @@ A blend of words in which parts from individual words are formed to make the new
     </entry>
     <entry>
         <title type="html"><![CDATA[Brew Logs 2018]]></title>
-        <id>https://your-docusaurus-test-site.com/blog/brew-logs-2018</id>
-        <link href="https://your-docusaurus-test-site.com/blog/brew-logs-2018"/>
+        <id>https://pauldeng.me/blog/brew-logs-2018</id>
+        <link href="https://pauldeng.me/blog/brew-logs-2018"/>
         <updated>2021-05-23T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[March 2018]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="march-2018">March 2018<a href="https://your-docusaurus-test-site.com/blog/brew-logs-2018#march-2018" class="hash-link" aria-label="Direct link to March 2018" title="Direct link to March 2018">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="march-2018">March 2018<a href="https://pauldeng.me/blog/brew-logs-2018#march-2018" class="hash-link" aria-label="Direct link to March 2018" title="Direct link to March 2018">​</a></h2>
 <ul>
 <li>Beans: Coffee Island Microfarm (Ethiopia Yirgacheffe Kochere)</li>
 <li>Grind Size: 21</li>
@@ -1532,10 +1523,10 @@ A blend of words in which parts from individual words are formed to make the new
 <li>Rate: 10/10</li>
 </ul>
 <p>Note: Did a side-by-side taste test between the Perger and 40/60 method. The subtle honey and black leaf aromas were more prominent in the Perger method, whereas the acidity dominated the taste profile in the 40/60 method. Because of the interesting aromas with this particular bean, the Perger method is preferred.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="may-2018">May 2018<a href="https://your-docusaurus-test-site.com/blog/brew-logs-2018#may-2018" class="hash-link" aria-label="Direct link to May 2018" title="Direct link to May 2018">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="may-2018">May 2018<a href="https://pauldeng.me/blog/brew-logs-2018#may-2018" class="hash-link" aria-label="Direct link to May 2018" title="Direct link to May 2018">​</a></h2>
 <p>After almost two weeks without proper coffee, I bought some beans from Sumatra, Indonesia to try. It was brewed in the Chemex with the usual ratio of 1:16.7, and the resulting brew had a slightly juicy body that gets sour the more sips you take. The first notes were definitely earthy and herbal - the card indicated tobacco as one of the notes - but obviously I can’t start to tell the difference tobacco, cedar and wood. Then the subsequent notes are sharp, dry and acidic.</p>
 <p>Not sure if I enjoyed this one, it is not a combination I particularly enjoy. Which means I probably should write a mental note here - <strong>DON’T BUY SUMATRA INDONESIAN BEANS AGAIN!</strong></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="august-2018-pour-over-cold-brew">August 2018 (Pour over cold brew)<a href="https://your-docusaurus-test-site.com/blog/brew-logs-2018#august-2018-pour-over-cold-brew" class="hash-link" aria-label="Direct link to August 2018 (Pour over cold brew)" title="Direct link to August 2018 (Pour over cold brew)">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="august-2018-pour-over-cold-brew">August 2018 (Pour over cold brew)<a href="https://pauldeng.me/blog/brew-logs-2018#august-2018-pour-over-cold-brew" class="hash-link" aria-label="Direct link to August 2018 (Pour over cold brew)" title="Direct link to August 2018 (Pour over cold brew)">​</a></h2>
 <ul>
 <li>Beans: Kicking horse 454 horsepower</li>
 <li>Grind Size: 10</li>
@@ -1549,24 +1540,24 @@ A blend of words in which parts from individual words are formed to make the new
 <p>During the summertime, I prefer to cold brew my coffee. This year I learned about Japanese cold pour over - which is much faster to prepare compared to the traditional cold brew. Instead of brewing overnight, Japanese cold pour over uses ice to instantly cool the hot coffee to a refreshing temperature.</p>
 <p>To make this, you start by heating the vessel and wet the filter paper with boiling water. Then you add about ~150g of ice into the vessel before making any coffee. Then you slowly pour about 200ml of water over finely grind coffee beans with the usual bloom and pour steps. As the final drips of water is filtered through, you add about ~100g of ice into the coffee to finish.</p>
 <p>At the end you have a cup of nicely chilled coffee to start the summer day.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="v60-pour-methods">v60 Pour Methods<a href="https://your-docusaurus-test-site.com/blog/brew-logs-2018#v60-pour-methods" class="hash-link" aria-label="Direct link to v60 Pour Methods" title="Direct link to v60 Pour Methods">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="v60-pour-methods">v60 Pour Methods<a href="https://pauldeng.me/blog/brew-logs-2018#v60-pour-methods" class="hash-link" aria-label="Direct link to v60 Pour Methods" title="Direct link to v60 Pour Methods">​</a></h2>
 <p>About 6 months ago, I got a Hario v60 dripper for my morning brews. Since I am the only coffee drinker in the house, making a single cup with the 6-cup Chemex seems awfully wasteful. With the smaller dripper, it allowed me to explore different pour methods and test their differences in my daily cup of coffee.</p>
 <p>I use the Baratza Encore on setting 21 to grind the beans for all of the pour methods.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="the-perger-method">The Perger Method<a href="https://your-docusaurus-test-site.com/blog/brew-logs-2018#the-perger-method" class="hash-link" aria-label="Direct link to The Perger Method" title="Direct link to The Perger Method">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="the-perger-method">The Perger Method<a href="https://pauldeng.me/blog/brew-logs-2018#the-perger-method" class="hash-link" aria-label="Direct link to The Perger Method" title="Direct link to The Perger Method">​</a></h3>
 <ul>
 <li>Coffee - 12g</li>
 <li>Water - 200ml</li>
 <li>Pour - 50ml bloom, 50ml @ 30s, 100ml @60s</li>
 </ul>
 <p>Matt Perger's technique is very simple and easy to replicate. It produces a softer cup with less accentuation to the sweetness and acidity of the beans. I usually make a cup with 27g of coffee while keeping the same coffee<!-- -->:water<!-- --> ratio. This method scales well with different amounts of coffee because dividing the water into three distinct pours allow control without being too finicky.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-6-method">4-6 Method<a href="https://your-docusaurus-test-site.com/blog/brew-logs-2018#4-6-method" class="hash-link" aria-label="Direct link to 4-6 Method" title="Direct link to 4-6 Method">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-6-method">4-6 Method<a href="https://pauldeng.me/blog/brew-logs-2018#4-6-method" class="hash-link" aria-label="Direct link to 4-6 Method" title="Direct link to 4-6 Method">​</a></h3>
 <ul>
 <li>Coffee - 20g</li>
 <li>Water - 300ml</li>
 <li>Pour - 40% of water in two pours, 60% of water in as many pours as you want</li>
 </ul>
 <p>This award winning technique by Tetsu Kasuya is nuanced and more difficult to perform. However, I love the precision this pour gives to the flavor of the final cup. The idea of this method is the 40% component determines the balance between acidity and sweetness. The more water one uses in the first pour of this component, the more acidic the final cup will be, and vice versa. The 60% component determines the strength of the coffee. If one divides the 60% of water with more number of pours, the stronger the coffee will be. Since this method also calls for a slightly higher coffee<!-- -->:water<!-- --> ratio, the resulting cup is more flavorful. I always chose to use this method with a fresh batch of beans to experience the palette for the first time.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="continuous-pour">Continuous Pour<a href="https://your-docusaurus-test-site.com/blog/brew-logs-2018#continuous-pour" class="hash-link" aria-label="Direct link to Continuous Pour" title="Direct link to Continuous Pour">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="continuous-pour">Continuous Pour<a href="https://pauldeng.me/blog/brew-logs-2018#continuous-pour" class="hash-link" aria-label="Direct link to Continuous Pour" title="Direct link to Continuous Pour">​</a></h3>
 <ul>
 <li>Coffee - 27g</li>
 <li>Water - 450ml</li>
@@ -1582,11 +1573,11 @@ A blend of words in which parts from individual words are formed to make the new
     </entry>
     <entry>
         <title type="html"><![CDATA[Brew Logs 2019]]></title>
-        <id>https://your-docusaurus-test-site.com/blog/brew-logs-2019</id>
-        <link href="https://your-docusaurus-test-site.com/blog/brew-logs-2019"/>
+        <id>https://pauldeng.me/blog/brew-logs-2019</id>
+        <link href="https://pauldeng.me/blog/brew-logs-2019"/>
         <updated>2021-05-23T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[February 2019]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="february-2019">February 2019<a href="https://your-docusaurus-test-site.com/blog/brew-logs-2019#february-2019" class="hash-link" aria-label="Direct link to February 2019" title="Direct link to February 2019">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="february-2019">February 2019<a href="https://pauldeng.me/blog/brew-logs-2019#february-2019" class="hash-link" aria-label="Direct link to February 2019" title="Direct link to February 2019">​</a></h2>
 <p>It has been a while since I’ve had the time to try new beans. Today I brewed two cups of Ethiopia Limu beans with the intent of testing two different grind settings. Usually, I grind at 21 on the Baratza Encore for pour-over because it was a number I found online and I never thought too much of it.</p>
 <p>I figured the internet is never wrong, why bother checking it.</p>
 <p>But that’s half the fun of brewing at home, you get to tinker with the little levers and dial into your favorite setup. So I brewed two cups with the ratio of 200 ml of water to 12.5 g of coffee, and the same pour method of 4 pours with a 60 ml bloom, 120 ml, 180 ml and 20 ml Rao Spin to finish. The Rao Spin gives you an even bed of grounds to end the extraction process.</p>]]></content>
@@ -1599,11 +1590,11 @@ A blend of words in which parts from individual words are formed to make the new
     </entry>
     <entry>
         <title type="html"><![CDATA[Brew Logs 2017]]></title>
-        <id>https://your-docusaurus-test-site.com/blog/brew-logs-2017</id>
-        <link href="https://your-docusaurus-test-site.com/blog/brew-logs-2017"/>
+        <id>https://pauldeng.me/blog/brew-logs-2017</id>
+        <link href="https://pauldeng.me/blog/brew-logs-2017"/>
         <updated>2017-05-23T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[July 2017]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="july-2017">July 2017<a href="https://your-docusaurus-test-site.com/blog/brew-logs-2017#july-2017" class="hash-link" aria-label="Direct link to July 2017" title="Direct link to July 2017">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="july-2017">July 2017<a href="https://pauldeng.me/blog/brew-logs-2017#july-2017" class="hash-link" aria-label="Direct link to July 2017" title="Direct link to July 2017">​</a></h2>
 <ul>
 <li>Beans: Coffee Island Microfarm (Brazil Santa * Feliciana)</li>
 <li>Grind Size: 21</li>
@@ -1615,7 +1606,7 @@ A blend of words in which parts from individual words are formed to make the new
 <li>Rate: 9.5/10</li>
 </ul>
 <p>Note: New coffee specialty shop opened on Bay and Wellesley, they do all kinds of brews from Turkish to Siphon. I tried two kinds of beans, the one from Brazil is the clear favourite with a more balanced and rich body over the one from El Salvador which is fruitier and sharper. Also trying a new brewing method from Tetsu Kasuya - 40/60 method which is a way to manually control the sweet and sour balance and strength level independently.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="january-2017">January 2017<a href="https://your-docusaurus-test-site.com/blog/brew-logs-2017#january-2017" class="hash-link" aria-label="Direct link to January 2017" title="Direct link to January 2017">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="january-2017">January 2017<a href="https://pauldeng.me/blog/brew-logs-2017#january-2017" class="hash-link" aria-label="Direct link to January 2017" title="Direct link to January 2017">​</a></h2>
 <ul>
 <li>Beans: Kicking horse beans</li>
 <li>Grind Size: 21</li>
@@ -1627,7 +1618,7 @@ A blend of words in which parts from individual words are formed to make the new
 <li>Rate: 7/10</li>
 </ul>
 <p>Note: Upgraded the dinky hand grinder with the Baratza electrical burr grinder. The consistency with the grounds this electrical grinder produces is so much more superior to the hand grinder. It is well worth the $120 investment. The coffee beans are not my favourite, I bought it mostly because it came in a nice anniversary tin. So I can use it to store coffee in the future.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="equipment">Equipment<a href="https://your-docusaurus-test-site.com/blog/brew-logs-2017#equipment" class="hash-link" aria-label="Direct link to Equipment" title="Direct link to Equipment">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="equipment">Equipment<a href="https://pauldeng.me/blog/brew-logs-2017#equipment" class="hash-link" aria-label="Direct link to Equipment" title="Direct link to Equipment">​</a></h2>
 <ul>
 <li><a href="https://www.chemexcoffeemaker.com/six-cup-classic-series-coffeemaker.html" target="_blank" rel="noopener noreferrer">6-cup Chemex</a></li>
 <li><a href="https://www.amazon.ca/gp/product/B001804CLY/ref=pd_lpo_sbs_dp_ss_1?pf_rd_p=1977604522&amp;pf_rd_s=lpo-top-stripe-1&amp;pf_rd_t=201&amp;pf_rd_i=B001802PIQ&amp;pf_rd_m=A3DWYIK6Y9EEQB&amp;pf_rd_r=0X5JGCF1THWWVC6CSM8B" target="_blank" rel="noopener noreferrer">Hario Hand Grinder (depreciated)</a></li>
@@ -1643,11 +1634,11 @@ A blend of words in which parts from individual words are formed to make the new
     </entry>
     <entry>
         <title type="html"><![CDATA[Brew Logs 2015]]></title>
-        <id>https://your-docusaurus-test-site.com/blog/brew-logs-2015</id>
-        <link href="https://your-docusaurus-test-site.com/blog/brew-logs-2015"/>
+        <id>https://pauldeng.me/blog/brew-logs-2015</id>
+        <link href="https://pauldeng.me/blog/brew-logs-2015"/>
         <updated>2015-12-11T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[November 2015]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="november-2015">November 2015<a href="https://your-docusaurus-test-site.com/blog/brew-logs-2015#november-2015" class="hash-link" aria-label="Direct link to November 2015" title="Direct link to November 2015">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="november-2015">November 2015<a href="https://pauldeng.me/blog/brew-logs-2015#november-2015" class="hash-link" aria-label="Direct link to November 2015" title="Direct link to November 2015">​</a></h2>
 <ul>
 <li>Beans: Honduras Medium Roast</li>
 <li>Grind Size: 2.5 notches visible - Coarse * Grind</li>
@@ -1659,7 +1650,7 @@ A blend of words in which parts from individual words are formed to make the new
 <li>Rate: 9.5/10</li>
 </ul>
 <p>Note: Walked by a coffee shop I used to go on Baldwin and decided to pick up their roastry's beans on a whim. Great decision. I was first skeptical of the lemon/lime aftertaste, weary of it might overpower the beans, but it was just subtle enough that you only notice the taste as the coffee is swallowed. It leaves your palette clean and it is a wonderful ending note for this roast. Afterwards, I realized I left the grind setting from the coldbrew sessions, that left me confused as to which grind size I prefer for this bean.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="september-2015-coldbrew">September 2015 (COLDBREW)<a href="https://your-docusaurus-test-site.com/blog/brew-logs-2015#september-2015-coldbrew" class="hash-link" aria-label="Direct link to September 2015 (COLDBREW)" title="Direct link to September 2015 (COLDBREW)">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="september-2015-coldbrew">September 2015 (COLDBREW)<a href="https://pauldeng.me/blog/brew-logs-2015#september-2015-coldbrew" class="hash-link" aria-label="Direct link to September 2015 (COLDBREW)" title="Direct link to September 2015 (COLDBREW)">​</a></h2>
 <ul>
 <li>Beans: Zavida Hazelnut Vanilla Bean</li>
 <li>Grind Size: 2.5 notches visible - Coarse * Grind</li>
@@ -1671,7 +1662,7 @@ A blend of words in which parts from individual words are formed to make the new
 <li>Rate: 7/10</li>
 </ul>
 <p>Note: First time trying cold brew, a little late with the seasons but whatever. It wasn't too bad, a bit strong compared to Starbucks ones. That is, until I realized that at Starbucks they dilute the coffee with water before they serve it. So I tried that to temper the taste. Finally found a good use for the terrible vanilla beans I bought from Costco, it makes terrible pour overs and now it will be only used for cold brews.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="july-2015">July 2015<a href="https://your-docusaurus-test-site.com/blog/brew-logs-2015#july-2015" class="hash-link" aria-label="Direct link to July 2015" title="Direct link to July 2015">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="july-2015">July 2015<a href="https://pauldeng.me/blog/brew-logs-2015#july-2015" class="hash-link" aria-label="Direct link to July 2015" title="Direct link to July 2015">​</a></h2>
 <ul>
 <li>Beans: Ethiopian Yirgacheffe Bean</li>
 <li>Grind Size: 3.5 notches visible - Medium * Coarse Grind</li>
@@ -1683,7 +1674,7 @@ A blend of words in which parts from individual words are formed to make the new
 <li>Rate: 10/10</li>
 </ul>
 <p>Note: Favorite beans so far, the beans were purchased at a local roaster in St.Lawrence Market near Front Street at Downtown Toronto.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="april-2015">April 2015<a href="https://your-docusaurus-test-site.com/blog/brew-logs-2015#april-2015" class="hash-link" aria-label="Direct link to April 2015" title="Direct link to April 2015">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="april-2015">April 2015<a href="https://pauldeng.me/blog/brew-logs-2015#april-2015" class="hash-link" aria-label="Direct link to April 2015" title="Direct link to April 2015">​</a></h2>
 <ul>
 <li>Beans: Continental Dark Roast</li>
 <li>Grind Size: 3.5 notches visible - Medium * Coarse Grind</li>
@@ -1695,7 +1686,7 @@ A blend of words in which parts from individual words are formed to make the new
 <li>Rate: 5/10</li>
 </ul>
 <p>Note: Fresh beans was notably different during brew, as more oxygen was released. The ground bloomed much more intensely compared to stale beans.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="march-2015">March 2015<a href="https://your-docusaurus-test-site.com/blog/brew-logs-2015#march-2015" class="hash-link" aria-label="Direct link to March 2015" title="Direct link to March 2015">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="march-2015">March 2015<a href="https://pauldeng.me/blog/brew-logs-2015#march-2015" class="hash-link" aria-label="Direct link to March 2015" title="Direct link to March 2015">​</a></h2>
 <ul>
 <li>Beans: Zavida Hazelnut Vanilla Bean</li>
 <li>Grind Size: 3.5 notches visible - Medium * Coarse Grind</li>
@@ -1716,11 +1707,11 @@ A blend of words in which parts from individual words are formed to make the new
     </entry>
     <entry>
         <title type="html"><![CDATA[Brew Logs 2014]]></title>
-        <id>https://your-docusaurus-test-site.com/blog/brew-logs-2014</id>
-        <link href="https://your-docusaurus-test-site.com/blog/brew-logs-2014"/>
+        <id>https://pauldeng.me/blog/brew-logs-2014</id>
+        <link href="https://pauldeng.me/blog/brew-logs-2014"/>
         <updated>2014-12-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[December 2014]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="december-2014">December 2014<a href="https://your-docusaurus-test-site.com/blog/brew-logs-2014#december-2014" class="hash-link" aria-label="Direct link to December 2014" title="Direct link to December 2014">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="december-2014">December 2014<a href="https://pauldeng.me/blog/brew-logs-2014#december-2014" class="hash-link" aria-label="Direct link to December 2014" title="Direct link to December 2014">​</a></h2>
 <ul>
 <li>Beans: Sumatra Mandheling</li>
 <li>Grind Size: 3.5 notches visible - Medium * Coarse Grind</li>
@@ -1730,7 +1721,7 @@ A blend of words in which parts from individual words are formed to make the new
 <li>Taste: Sharp at the nose but mild in * flavor</li>
 <li>Rate: 7.5/10</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="october-2014">October 2014<a href="https://your-docusaurus-test-site.com/blog/brew-logs-2014#october-2014" class="hash-link" aria-label="Direct link to October 2014" title="Direct link to October 2014">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="october-2014">October 2014<a href="https://pauldeng.me/blog/brew-logs-2014#october-2014" class="hash-link" aria-label="Direct link to October 2014" title="Direct link to October 2014">​</a></h2>
 <ul>
 <li>Beans: Sumatra Mandheling</li>
 <li>Grind Size: 3 notches visible - Medium * Coarse Grind</li>
@@ -1741,7 +1732,7 @@ A blend of words in which parts from individual words are formed to make the new
 <li>Taste: Soft bland, mellow</li>
 <li>Rate: 6.5/10</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="february-2014">February 2014<a href="https://your-docusaurus-test-site.com/blog/brew-logs-2014#february-2014" class="hash-link" aria-label="Direct link to February 2014" title="Direct link to February 2014">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="february-2014">February 2014<a href="https://pauldeng.me/blog/brew-logs-2014#february-2014" class="hash-link" aria-label="Direct link to February 2014" title="Direct link to February 2014">​</a></h2>
 <ul>
 <li>Beans: Sumatra Mandheling</li>
 <li>Grind Size: 4 notches visible - Medium Coarse Grind</li>
@@ -1752,7 +1743,7 @@ A blend of words in which parts from individual words are formed to make the new
 <li>Taste: Overall the beans tasted smooth with a full-bodied complexion</li>
 <li>Rate: 7/10</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="september-2014">September 2014<a href="https://your-docusaurus-test-site.com/blog/brew-logs-2014#september-2014" class="hash-link" aria-label="Direct link to September 2014" title="Direct link to September 2014">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="september-2014">September 2014<a href="https://pauldeng.me/blog/brew-logs-2014#september-2014" class="hash-link" aria-label="Direct link to September 2014" title="Direct link to September 2014">​</a></h2>
 <ul>
 <li>Beans: Van Houtte's French Roast</li>
 <li>Grind Size: 4 notches visible - Medium * Coarse Grind</li>

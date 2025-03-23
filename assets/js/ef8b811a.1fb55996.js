@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[38947],{56600:e=>{e.exports=JSON.parse('{"authors":[{"name":"Paul Deng","title":"Magpie","url":"https://github.com/paulliwali","imageURL":"https://github.com/paulliwali.png","key":"pdeng","page":null,"count":13}]}')}}]);
