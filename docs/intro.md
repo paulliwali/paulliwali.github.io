@@ -2,10 +2,6 @@
 sidebar_position: 1
 ---
 
-# Second Brain Intro
-
-> My second brain for unforgetting the things I have learned
-
 ## Motivation
 
 It is easy to learn new things and even easier to forget them. Without intentional repetition, it is difficult to recall code practices, useful snippets, tricky concepts when you need it. Without a system, it is impossible to perform this repetition.
