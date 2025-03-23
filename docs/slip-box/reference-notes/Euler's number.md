@@ -1,4 +1,4 @@
 - e
 - 2.71828...
--  $\Sigma(\frac{1}{N!})$
+- $\Sigma(\frac{1}{N!})$
 - Euler's identity $e^{i\pi}+1=0$

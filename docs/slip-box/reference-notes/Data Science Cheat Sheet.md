@@ -72,8 +72,8 @@ tags:
 	    - high bias can lead to okay performance but too general -> under-fit
 	    - high variance can lead to low errors with existing data but not necessarily with new data -> overfit
 	- [[Regularization Techniques]]
-		- L1 regularization (LASSO) which reduces the coefficient values
-		- L2 regularization (RIDGE) which penalizes higher powers
+		- L1 regularization ([[Lasso Regression]]) which reduces the coefficient values
+		- L2 regularization ([[Ridge Regression]]) which penalizes higher powers
 	- Model fit vs complexity
 		- AIC
 		- BIC

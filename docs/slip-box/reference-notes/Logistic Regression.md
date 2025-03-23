@@ -1,0 +1,2 @@
+Models the log-odds (see [[Probabilities]]) of an event as a linear combination of independent variables. 
+Logarithm function is a perfect loss for fitting a logistic regression curve against binary events - Log loss

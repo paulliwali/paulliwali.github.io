@@ -1,4 +1,4 @@
-# \<% moment(tp.file.title,'YYYY-MM-DD').format("dddd, MMMM DD, YYYY") %>
+# <% moment(tp.file.title,'YYYY-MM-DD').format("dddd, MMMM DD, YYYY") %>
 
 ## 📝 Ephemeral Notes
 

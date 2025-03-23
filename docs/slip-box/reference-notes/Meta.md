@@ -142,4 +142,23 @@
 	- If bots post at a much higher rate, how do we back calculate the % of bots if we know the average comment per bot, per user and total?
 	- Using an absolute value to classify the two types of user groups, is that a good idea?
 
+> How to know if one type of ad is better than another? What if its better?
+
+- some companies might only advertise through one method
+- use the metric to compare
+
+> How to determine if a new ad rank algorithm is better?
+
+- objective is revenue
+
+> How to make trade offs for increasing engagement but decreasing time
+
+- come to the same dollar value
+- find dollar per engagement
+
+> How to build a ML system for improving ad ranking
+
+- Classification problem
+
+
 #interview 
