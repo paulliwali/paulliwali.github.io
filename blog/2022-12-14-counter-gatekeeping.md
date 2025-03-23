@@ -9,6 +9,8 @@ Gatekeeping is childish and it's a sign that people are insecure about their int
 
 What is this counter-gatekeeping about then?
 
+<!--truncate-->
+
 It's that kid in high-school skipping through the grades and graduating early. Like what is the rush?
 
 Still not clear? Yeah, my bad - let’s give an example.

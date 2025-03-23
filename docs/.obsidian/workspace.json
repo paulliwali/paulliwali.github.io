@@ -11,10 +11,14 @@
             "id": "46fddcadce2d2c24",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "daily-notes/2025/2025-03-22.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2025-03-22"
             }
           }
         ]
@@ -36,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -69,13 +74,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "406391ad1fff7c9f",
@@ -187,21 +190,25 @@
   },
   "active": "46fddcadce2d2c24",
   "lastOpenFiles": [
+    "Untitled.md",
+    "daily-notes/2025/2025-03-22.md",
+    "templates/Daily Note Template.md",
+    "slip-box/reference-notes/Probabilities.md",
+    "Supervised Learning.md",
+    "slip-box/reference-notes/AI Agent.md",
+    "Machine Learning.md",
+    "slip-box/reference-notes/Delphina AI.md",
     "slip-box/reference-notes/Meta.md",
     "daily-notes/2025/2025-03-16.md",
     "slip-box/reference-notes/Data Science Cheat Sheet.md",
-    "AI Agent.md",
-    "Delphina AI.md",
     "slip-box/reference-notes/Error metrics.md",
     "slip-box/reference-notes/Lasso Regression.md",
     "slip-box/reference-notes/Ridge Regression.md",
     "slip-box/reference-notes/Logistic Regression.md",
-    "Probabilities.md",
     "slip-box/reference-notes/Chasing Statistical Ghosts.md",
     "slip-box/reference-notes/Quantile Regression.md",
     "slip-box/reference-notes/Linear regression model.md",
     "slip-box/reference-notes/Data Science Practice Questions.md",
-    "Supervised Learning.md",
     "slip-box/reference-notes/Class balancing.md",
     "slip-box/reference-notes/Feature Engineering.md",
     "slip-box/reference-notes/Feature Scaling Techniques.md",
@@ -209,10 +216,6 @@
     "slip-box/reference-notes/Correlations.md",
     "slip-box/reference-notes/Distributions.md",
     "slip-box/reference-notes/Euler's number.md",
-    "slip-box/reference-notes/Descriptive Statistics.md",
-    "slip-box/reference-notes/Job Hunt of 2024.md",
-    "Machine Learning.md",
-    "daily-notes/2025/2025-02-17.md",
     "daily-notes/2025"
   ]
 }
