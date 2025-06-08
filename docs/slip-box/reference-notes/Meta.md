@@ -113,7 +113,7 @@
 ## Full-loop interview on [[2024-06-14]]
 - Behavioral
 	- What is a time where you had to convince someone of something
-    > Used the capacity planning process
+    > Used the capacity planning experience
 	
 	- What is a time where you had high pressure deliverable
     > Used the resilient planning experience
@@ -142,23 +142,41 @@
 	- If bots post at a much higher rate, how do we back calculate the % of bots if we know the average comment per bot, per user and total?
 	- Using an absolute value to classify the two types of user groups, is that a good idea?
 
-> How to know if one type of ad is better than another? What if its better?
+## Technical Screening Interview on [[2025-04-01]]
+- How to know if one type of ad is better than another? What if its better?
 
-- some companies might only advertise through one method
-- use the metric to compare
+- How to determine if a new ad rank algorithm is better?
+> objective is revenue
 
-> How to determine if a new ad rank algorithm is better?
+- How to make trade offs for increasing engagement but decreasing time
+> come to the same dollar value, find dollar per engagement
 
-- objective is revenue
+- How to build a ML system for improving ad ranking
+> Classification problem
 
-> How to make trade offs for increasing engagement but decreasing time
+# Technical on [[2025-05-16]]
+- Use SQL to answer a few questions about VR session and app data
+- Was a bit verbose in some of the SQL wrangling, had some extra code 
+- Doin't remember how to do relative date selection
+- Understand 
+# Analytical Reasoning on [[2025-05-16]]
+## Preparation for analytical reasoning
 
-- come to the same dollar value
-- find dollar per engagement
+[[Analytical reasoning with chatgpt]]
+[[Analytical reasoning with grok]]
+[[Analytical reasoning with gemini]]
+[[Analytical execution with gemini]]
 
-> How to build a ML system for improving ad ranking
-
-- Classification problem
-
-
+# Behavioral on [[2025-05-22]]
+- A time where you had to pivot
+- A time where you had to develop inclusion
+- A time where you worked well with others
+- A time where you had to convince someone above you
+# Analytical Execution on [[2025-05-22]]
+- How to determine if spam bots are an issue
+	- Size the problem
+- How to identify spam bots
+	- Missing IP address, age of account
+- Probability questions related to bots account percentage and number of requests sent compared to regular users
+- Bayesian question regarding a model that predicts the number of spam accounts
 #interview 

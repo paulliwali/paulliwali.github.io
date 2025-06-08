@@ -3,17 +3,22 @@ Making an inference about a population based on a sample of data drawn from that
 - Using sample data to evaluate a hypothesis about a **population parameter**
 - Steps
 	1. Formulate a null ($H_0$) and alternative ($H_1$) hypothesis where the null hypothesis says there is no difference or no effect
-	1. Select a significance level ($\alpha$) which is the risk we are willing to reject null hypothesis when it might be true. In other words if we selected 5% we are saying that we accept a 5% chance that we are saying there *is an effect when there isn't* -> **type I error or false positive** 
-	1. Calculate the test statistic from the appropriate test which gives the standardized value
+	2. Select a significance level ($\alpha$) which is the risk we are willing to reject null hypothesis when it might be true. In other words if we selected 5% we are saying that we accept a 5% chance that we are saying there *is an effect when there isn't* -> **type I error or false positive** 
+		1. This gives a standardized statistic value to compare the test statistic against
+	3. Calculate the test statistic from the appropriate test which gives the standardized value
 		- t-test for mean difference of smaller samples ($n<30$)
 			- one-sample t-test, independent two-sample t-test, paired sample t-test
+			- one sample - $$\frac{x-\mu}{s/\sqrt{n}}$$
+			- two sample - $$\frac{x_1-x_2}{\sqrt{s_p^2/n_1 + s_p^2/n_2}}$$
 		- z-test for larger samples ($n>=30$)
+			- $$\frac{x-\mu}{\sigma/\sqrt{n}}$$
 		- ANOVA for difference in mean of multiple groups
 		- Chi-squared test of independence for association between two categorical variables
+			- $$X^2=\Sigma{(O-E)^2/E}$$
 		- Chi-squared goodness of fit test for checking if observed frequency match expected frequency for a categorical variable
 		- many more...
-	1. Determine the p-value from the test result which is the *probability of obtaining the same test result at least as extreme as the observed result, assuming null hypothesis is true*
-	1. Reject or accept the null hypothesis
+	4. Determine the p-value from the test result which is the *probability of obtaining the same test result at least as extreme as the observed result, assuming null hypothesis is true*
+	5. Reject or accept the null hypothesis
 		- If p-value is less than our accepted significance level, then it means we have strong evidence to reject the null hypothesis
 # Confidence Interval
 In this frequentist approach, we can derive a range of values from the sample data that we believe to contain the true population statistic with some level of confidence. 
