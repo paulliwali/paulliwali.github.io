@@ -6,25 +6,130 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #4fb0c0; /* Adjusted base color for better readability */
-  --ifm-color-primary-dark: #3f909a; /* Darker shade */
-  --ifm-color-primary-darker: #2f7075; /* Even darker shade */
-  --ifm-color-primary-darkest: #205055; /* Darkest shade */
-  --ifm-color-primary-light: #60c0d0; /* Lighter shade */
-  --ifm-color-primary-lighter: #70d0e0; /* Even lighter shade */
-  --ifm-color-primary-lightest: #80e0f0; /* Lightest shade */
+  /* Retro Theme Variables */
+  --ifm-color-primary: #005A9C; /* Classic Blue */
+  --ifm-color-primary-dark: #004070; /* Darker shade */
+  --ifm-color-primary-darker: #003359; /* Even darker shade */
+  --ifm-color-primary-darkest: #002642; /* Darkest shade */
+  --ifm-color-primary-light: #0074C8; /* Lighter shade */
+  --ifm-color-primary-lighter: #0088E0; /* Even lighter shade */
+  --ifm-color-primary-lightest: #209FFF; /* Lightest shade - adjusted for more pop if needed */
+
+  --ifm-background-color: #F0F0F0; /* Light warm gray page background */
+  --ifm-font-color-base: #333333; /* Dark gray text */
+  --ifm-link-color: var(--ifm-color-primary);
+  --ifm-border-color: #C0C0C0; /* Silver/light gray borders */
+
+  /* Retro Font Stack */
+  --ifm-font-family-base: Verdana, Arial, sans-serif;
+  --ifm-font-family-monospace: 'Courier New', Courier, monospace; /* Optional: more retro monospace */
+
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.05); /* Softer highlight for light theme */
+
+  /* Custom Retro Variables */
+  --retro-mindmap-node-bg: #FFFFFF;
+  --retro-mindmap-node-border: var(--ifm-color-primary);
+  --retro-mindmap-node-text: var(--ifm-font-color-base);
+  --retro-mindmap-edge-color: #A0A0A0;
+  --retro-reactflow-bg: #E0E0E0;
+}
+
+/* Apply the background color to the body */
+body {
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
+/* We'll keep the dark mode somewhat consistent with the new retro feel, but lighter. */
 [data-theme='dark'] {
-  --ifm-color-primary: #4aa9b8; /* Adjusted for dark mode */
-  --ifm-color-primary-dark: #3a8a98; /* Darker shade */
-  --ifm-color-primary-darker: #2a6b78; /* Even darker shade */
-  --ifm-color-primary-darkest: #1a4c58; /* Darkest shade */
-  --ifm-color-primary-light: #5bc8d8; /* Lighter shade */
-  --ifm-color-primary-lighter: #6cd7e7; /* Even lighter shade */
-  --ifm-color-primary-lightest: #7ce3f0; /* Lightest shade */
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #58A6FF; /* Brighter blue for dark mode */
+  --ifm-color-primary-dark: #3E8EFF;
+  --ifm-color-primary-darker: #247CFF;
+  --ifm-color-primary-darkest: #0A6BFF;
+  --ifm-color-primary-light: #72B2FF;
+  --ifm-color-primary-lighter: #8BC0FF;
+  --ifm-color-primary-lightest: #A4CDFF;
+
+  --ifm-background-color: #1A1A1A; /* Darker background for higher contrast */
+  --ifm-font-color-base: #F0F0F0; /* Lighter text for higher contrast */
+  --ifm-link-color: var(--ifm-color-primary);
+  --ifm-border-color: #666666; /* Lighter border for dark mode */
+
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.15); /* Slightly more visible highlight */
+
+  /* Custom Retro Variables for Dark Mode - High Contrast */
+  --retro-mindmap-node-bg: #2C2C2C; /* Slightly lighter than page bg, but still dark */
+  --retro-mindmap-node-border: var(--ifm-color-primary);
+  --retro-mindmap-node-text: var(--ifm-font-color-base);
+  --retro-mindmap-edge-color: #999999; /* Lighter edges for dark mode */
+  --retro-reactflow-bg: #202020; /* Darker canvas bg */
+}
+
+/* React Flow Customizations */
+.react-flow__node-default {
+  background: var(--retro-mindmap-node-bg);
+  border: 1px solid var(--retro-mindmap-node-border);
+  padding: 10px;
+  border-radius: 3px; /* Slightly sharper corners for retro feel */
+  font-size: 12px;
+  color: var(--retro-mindmap-node-text);
+  box-shadow: 2px 2px 0px 0px var(--ifm-border-color); /* Subtle "button" like shadow */
+}
+
+.react-flow__edge-path {
+  stroke: var(--retro-mindmap-edge-color);
+  stroke-width: 1.5px;
+}
+
+.react-flow__handle {
+  width: 7px; /* Slightly smaller */
+  height: 7px;
+  background: var(--retro-mindmap-node-border); /* Match node border */
+  border-radius: 1px; /* Sharper */
+}
+
+/* Style for the React Flow background itself is controlled by the <Background> component prop in index.js */
+
+/* Docusaurus Component Overrides for Retro Theme */
+
+/* Navbar Styling */
+.navbar {
+  background-color: var(--ifm-background-color);
+  border-bottom: 1px solid var(--ifm-border-color);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); /* Subtle shadow, typical of older UIs */
+}
+
+.navbar__title,
+.navbar__link {
+  color: var(--ifm-font-color-base);
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--ifm-color-primary);
+}
+
+/* Footer Styling */
+.footer {
+  background-color: var(--ifm-background-color);
+  border-top: 1px solid var(--ifm-border-color);
+  color: var(--ifm-font-color-base);
+}
+
+.footer__link-item {
+  color: var(--ifm-font-color-base);
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-color-primary);
+}
+
+.footer__title {
+  color: var(--ifm-font-color-base);
+}
+
+.footer__copyright {
+  color: var(--ifm-font-color-base);
 }
