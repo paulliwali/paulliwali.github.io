@@ -66,11 +66,12 @@
 	- Make or break 
 
 # Meetings
-## Recruiter call for a data science role
+## 2024
+### Recruiter call for a data science role
 - Responsibility usually involves a lot of AB tests
 - Will setup a screening interview to see fit
 
-## Technical Screening Interview on [[2024-06-03]]
+### [[2024-06-03]]: Technical Screening Interview
 - Case study style questions where we imagined that I was on the notification team  
 - How do we measure that we are sending "good quality notifications"
 	- Discussed different types of notifications - time sensitive, non time sensitive, security
@@ -89,12 +90,12 @@
 	- I said to first check if this is an anomaly historically or it is a seasonal pattern
 	- Then I said to explore both on the customer side (are there different user groups with different CTR and are they changing between June/July) and then on the notification side (increase in low CTR notification types like security? Or a new product was introduced and added a lot of notifications and users don't click or don't need to click them like IG?)
 
-## Coding Screening Interview on [[2024-06-07]]
+### [[2024-06-07]]: Coding Screening Interview 
 - Simple data wrangling of "calls" data and daily user data with active flag and country metadata
 	- Find the callers with more than 3 unique recipient in the last 7 days
 	- Find the percentage of DAU that made a call in France yesterday
 
-## Recruiter call for full-loop on [[2024-06-12]]
+### [[2024-06-12]]: Recruiter call to introduce full-loop process
 - Common mistakes
 	- Analytical execution will require a "hard" calculation
 	- How to outline the approach, talk about tradeoffs, land on one and then how do you execute (relate to a research paper)
@@ -110,41 +111,48 @@
 	- issues that arose and how you dealt with it
 - Technical
 	- just longer but no more complicated than the screening 
-## Full-loop interview on [[2024-06-14]]
-- Behavioral
-	- What is a time where you had to convince someone of something
-    > Used the capacity planning experience
-	
-	- What is a time where you had high pressure deliverable
-    > Used the resilient planning experience
-	
-	- What is a time where you had to make your voice heard or help someone else's voice to be heard
-    > Used my intern experience
-- Technical
-	- Ads series data with different currencies
-    > This felt easy and straightforward, with filter, groupby and merging. However there were some follow up questions at the end that asked for the downsides of absolute numbers - I felt like the interviewer does not fully understand the question and was slightly confused by my answers
-- Analytical reasoning
-	- An engineer proposed to make a restaurant recommendations widgets, how would I go about evaluating
-	- Asked how do we determine this is worthwhile?
-	- Asked about how to build the recommendation model
-		- Wanted me to build a logistical model
-	- Asked about how to reconcile KPIs in ads dropping, what might cause this and how to address this
-	- Asked about how to create a dashboard for this
-	> It was less open ended as I was expecting, the interviewer probed with many follow up questions to guide the direction of the answers. I think I was a bit caught up with the need to provide a technical methodology that involved logistic regression to predict recommendations for restaurants. I was caught up in providing a heuristic algorithm based on activities and location. 
-- Analytical execution
-	- Draw the distribution of comments per user on a news feed app that is used by 2 billion users, and what would be the mean, median and 95th percentile?
-		> Stumbled on the median and accidentally went to the middle, fixed it upon hint
-	
-	- Draw the distribution of means from samples of 10,000 users, what are the mean, median and 95th percentile?
-		> I wasn't totally sure how to calculate the 95th percentile on a normal distribution using z-score, I mentioned it but didn't give a clean answer
+### [[2024-06-14]]: Full-loop interview
+#### Behavioral
+- Q: What is a time where you had to convince someone of something
+- A: Used the capacity planning experience
 
-	- If the average comment per user jumped what could be the cause?
-	- If bots post at a much higher rate, how do we back calculate the % of bots if we know the average comment per bot, per user and total?
-	- Using an absolute value to classify the two types of user groups, is that a good idea?
+- Q: What is a time where you had high pressure deliverable
+- A: Used the resilient planning experience
 
-## Technical Screening Interview on [[2025-04-01]]
+- Q: What is a time where you had to make your voice heard or help someone else's voice to be heard
+- A: Used my intern experience
+
+#### Technical
+- Ads series data with different currencies
+> This felt easy and straightforward, with filter, groupby and merging. However there were some follow up questions at the end that asked for the downsides of absolute numbers - I felt like the interviewer does not fully understand the question and was slightly confused by my answers
+
+#### Analytical reasoning
+- An engineer proposed to make a restaurant recommendations widgets, how would I go about evaluating
+- Asked how do we determine this is worthwhile?
+- Asked about how to build the recommendation model
+	- Wanted me to build a logistical model
+- Asked about how to reconcile KPIs in ads dropping, what might cause this and how to address this
+- Asked about how to create a dashboard for this
+> It was less open ended as I was expecting, the interviewer probed with many follow up questions to guide the direction of the answers. I think I was a bit caught up with the need to provide a technical methodology that involved logistic regression to predict recommendations for restaurants. I was caught up in providing a heuristic algorithm based on activities and location. 
+
+#### Analytical execution
+- Draw the distribution of comments per user on a news feed app that is used by 2 billion users, and what would be the mean, median and 95th percentile?
+> Stumbled on the median and accidentally went to the middle, fixed it upon hint
+
+- Draw the distribution of means from samples of 10,000 users, what are the mean, median and 95th percentile?
+> I wasn't totally sure how to calculate the 95th percentile on a normal distribution using z-score, I mentioned it but didn't give a clean answer
+
+- If the average comment per user jumped what could be the cause?
+- If bots post at a much higher rate, how do we back calculate the % of bots if we know the average comment per bot, per user and total?
+- Using an absolute value to classify the two types of user groups, is that a good idea?
+### 2024-07-01: Decision
+- Did not move forward
+
+## 2025
+### [[2025-01-08]] Recruiter call
+- Recruiter reached out again to see if I was still interested, probably because last full loop was very close
+### [[2025-04-01]]: Technical Screening Interview on 
 - How to know if one type of ad is better than another? What if its better?
-
 - How to determine if a new ad rank algorithm is better?
 > objective is revenue
 
@@ -154,29 +162,72 @@
 - How to build a ML system for improving ad ranking
 > Classification problem
 
-# Technical on [[2025-05-16]]
+### [[2025-05-16]]: Full Loop Day 1/2
+#### Technical
 - Use SQL to answer a few questions about VR session and app data
 - Was a bit verbose in some of the SQL wrangling, had some extra code 
 - Doin't remember how to do relative date selection
 - Understand 
-# Analytical Reasoning on [[2025-05-16]]
-## Preparation for analytical reasoning
+#### Analytical Reasoning 
+- Preparation done with LLMs
+	- [[Analytical reasoning with chatgpt]]
+	- [[Analytical reasoning with grok]]
+	- [[Analytical reasoning with gemini]]
+	- [[Analytical execution with gemini]]
 
-[[Analytical reasoning with chatgpt]]
-[[Analytical reasoning with grok]]
-[[Analytical reasoning with gemini]]
-[[Analytical execution with gemini]]
-
-# Behavioral on [[2025-05-22]]
+### [[2025-05-22]]: Full Loop Day 2/2
+#### Behavioral
 - A time where you had to pivot
 - A time where you had to develop inclusion
 - A time where you worked well with others
 - A time where you had to convince someone above you
-# Analytical Execution on [[2025-05-22]]
+#### Analytical Execution
 - How to determine if spam bots are an issue
 	- Size the problem
 - How to identify spam bots
 	- Missing IP address, age of account
 - Probability questions related to bots account percentage and number of requests sent compared to regular users
 - Bayesian question regarding a model that predicts the number of spam accounts
+
+### [[2025-06-13]]: Technical Follow-up
+- The recruiter said after the full loop, the panel felt that my technical skills did not seem to meet the basic day-to-day requirement
+- Which I was baffled but not super surprised because I didn't feel like I did the SQL section very smoothly
+- The follow up was using Pandas and was done easily
+
+### [[2025-06-18]]: Decision
+- Moving forward with team match process
+- Got two teams: shop ads and business messaging
+
+### [[2025-06-24]]: Manager Debrief 
+- In conjunction with debrief (hiring + leveling decision is for IC5) they identify the managers with opening and interests
+- Opportunity chats with managers
+	- Day to day
+	- Ins and outs
+	- Growth opportunity
+	- Closest teams
+- Shop Ads
+	- Sieuwerd Gaastra
+- Business Messaging
+	- Sandeep Tiwari
+
+### [[2025-06-27]]: Recruiter
+- I declined both opportunities citing job description and role doesn't fit with my career and the compensation is comparable to my current role
+- Recruiter said they are willing to explore more options in the family of apps pillar and possibly also in the AR/VR pillar. There should be some negotiation room as well
+
+### [[2025-07]]: Manager
+- Connected with Eliane who is a head of a large DS team and offered a role related to friend integrity
+- Said that the role is people oriented because you have to deal with models built by a UK team and they go through many re-orgs
+
+### [[2025-08-08]]: Recruiter
+- Called recruiter to align with the decision of proceeding with one of two openings on the table 
+- Also aligned with what the recruiter needed on my side in terms of compensation, will need to send an email answering her questions for short term and long term walkaways
+
+### [[2025-08-11]]: Recruiter
+- I gave the recruiter a breakdown of what I am earning now and she came back with a max band offer for L5 position which comes to around ~400k TC
+- But explained the role that I am interested in is not building models either and more so monitoring
+
+### [[2025-08-15]]: Recruiter
+- I decliend the final offer citing responsibility was not aligned with caereer goals
+- She understood and said keep in touch 
+
 #interview 
