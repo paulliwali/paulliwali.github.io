@@ -27,12 +27,13 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.05); /* Softer highlight for light theme */
 
-  /* Custom Retro Variables */
-  --retro-mindmap-node-bg: #FFFFFF;
-  --retro-mindmap-node-border: var(--ifm-color-primary);
-  --retro-mindmap-node-text: var(--ifm-font-color-base);
-  --retro-mindmap-edge-color: #A0A0A0;
-  --retro-reactflow-bg: #E0E0E0;
+  /* 3D Mind Map Color Variables */
+  --mindmap-bg: #0a0a0a;
+  --mindmap-node-daily: #58A6FF;
+  --mindmap-node-slipbox: #3FB950;
+  --mindmap-node-blog: #D29922;
+  --mindmap-node-roam: #A371F7;
+  --mindmap-node-default: #F0F0F0;
 }
 
 /* Apply the background color to the body */
@@ -59,38 +60,26 @@ body {
 
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.15); /* Slightly more visible highlight */
 
-  /* Custom Retro Variables for Dark Mode - High Contrast */
-  --retro-mindmap-node-bg: #2C2C2C; /* Slightly lighter than page bg, but still dark */
-  --retro-mindmap-node-border: var(--ifm-color-primary);
-  --retro-mindmap-node-text: var(--ifm-font-color-base);
-  --retro-mindmap-edge-color: #999999; /* Lighter edges for dark mode */
-  --retro-reactflow-bg: #202020; /* Darker canvas bg */
+  /* 3D Mind Map Colors for Dark Mode */
+  --mindmap-bg: #0a0a0a;
+  --mindmap-node-daily: #58A6FF;
+  --mindmap-node-slipbox: #3FB950;
+  --mindmap-node-blog: #D29922;
+  --mindmap-node-roam: #A371F7;
+  --mindmap-node-default: #F0F0F0;
 }
 
-/* React Flow Customizations */
-.react-flow__node-default {
-  background: var(--retro-mindmap-node-bg);
-  border: 1px solid var(--retro-mindmap-node-border);
-  padding: 10px;
-  border-radius: 3px; /* Slightly sharper corners for retro feel */
-  font-size: 12px;
-  color: var(--retro-mindmap-node-text);
-  box-shadow: 2px 2px 0px 0px var(--ifm-border-color); /* Subtle "button" like shadow */
+/* 3D Mind Map Container */
+.mindmap-3d-container {
+  width: 100%;
+  height: calc(100vh - 60px);
+  background: var(--mindmap-bg);
+  position: relative;
 }
 
-.react-flow__edge-path {
-  stroke: var(--retro-mindmap-edge-color);
-  stroke-width: 1.5px;
+.mindmap-3d-container canvas {
+  outline: none;
 }
-
-.react-flow__handle {
-  width: 7px; /* Slightly smaller */
-  height: 7px;
-  background: var(--retro-mindmap-node-border); /* Match node border */
-  border-radius: 1px; /* Sharper */
-}
-
-/* Style for the React Flow background itself is controlled by the <Background> component prop in index.js */
 
 /* Docusaurus Component Overrides for Retro Theme */
 

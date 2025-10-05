@@ -23,6 +23,15 @@ function getNoteLabel(noteId) {
     .replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
+function getNoteCategory(noteId) {
+  // Determine category based on file path
+  if (noteId.startsWith('daily-notes/')) return 'daily';
+  if (noteId.startsWith('slip-box/')) return 'slipbox';
+  if (noteId.startsWith('blog/')) return 'blog';
+  if (noteId.startsWith('roam/')) return 'roam';
+  return 'default';
+}
+
 function findMarkdownFiles(dir, basePath) {
   let files = [];
   const items = fs.readdirSync(dir, { withFileTypes: true });
@@ -85,13 +94,31 @@ function generateMindMapData() {
   for (const file of markdownFiles) {
     const noteId = getNoteId(file, docsPath);
     const noteLabel = getNoteLabel(noteId);
-    
-    nodes.push({ id: noteId, data: { label: noteLabel }, type: 'default' }); // Added type for react-flow
+    const category = getNoteCategory(noteId);
 
     const content = fs.readFileSync(file, 'utf-8');
     const fileLinks = parseMarkdownLinks(content, noteId, allNoteIds);
     edges.push(...fileLinks);
+
+    nodes.push({
+      id: noteId,
+      label: noteLabel,
+      category: category,
+      connections: 0 // Will be calculated after all edges are collected
+    });
   }
+
+  // Calculate connection counts
+  const connectionCounts = {};
+  edges.forEach(edge => {
+    connectionCounts[edge.source] = (connectionCounts[edge.source] || 0) + 1;
+    connectionCounts[edge.target] = (connectionCounts[edge.target] || 0) + 1;
+  });
+
+  // Update nodes with connection counts
+  nodes.forEach(node => {
+    node.connections = connectionCounts[node.id] || 0;
+  });
 
   if (!fs.existsSync(outputPath)) {
     fs.mkdirSync(outputPath, { recursive: true });
