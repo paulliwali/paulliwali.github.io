@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About - Paul's Second Brain" description="About Paul and this digital garden">
+  <div class="about">
+    <h1>About</h1>
+
+    <section class="about-section">
+      <h2>This Digital Garden</h2>
+      <p>
+        This is my second brain—a place to externalize thoughts, ideas, and learnings.
+        It's built on the Zettelkasten method, a note-taking system that emphasizes
+        connections between ideas rather than hierarchical organization.
+      </p>
+      <p>
+        The content here is a living, breathing collection. Notes evolve, connections
+        form, and ideas mature over time. Some notes are polished essays, others are
+        raw explorations. That's the nature of a digital garden.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <h2>The System</h2>
+      <p>
+        I organize my notes into three main categories:
+      </p>
+      <ul>
+        <li>
+          <strong>Reference Notes:</strong> Highlights and excerpts from articles, books,
+          and other sources I've consumed.
+        </li>
+        <li>
+          <strong>Literature Notes:</strong> Ideas from references explained in my own words,
+          showing I've processed and understood the concepts.
+        </li>
+        <li>
+          <strong>Permanent Notes:</strong> Original thoughts and connections between ideas,
+          the synthesis that emerges from engaging with the material.
+        </li>
+      </ul>
+    </section>
+
+    <section class="about-section">
+      <h2>The Stack</h2>
+      <p>
+        This site is built with Astro, a modern static site generator that ships
+        zero JavaScript by default. The content lives in markdown files that I edit
+        with Obsidian, my note-taking tool of choice.
+      </p>
+      <p>
+        The design emphasizes readability with a muted color palette, generous
+        whitespace, and typography optimized for long-form reading.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <h2>Get in Touch</h2>
+      <p>
+        If you'd like to connect, discuss ideas, or share feedback about this site,
+        feel free to reach out.
+      </p>
+      <div class="links">
+        <a href="https://github.com/paulliwali" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .about {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .about h1 {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .about-section {
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .about-section:last-child {
+    border-bottom: none;
+  }
+
+  .about-section h2 {
+    color: var(--color-accent-sage);
+    margin-top: 0;
+  }
+
+  .about-section p {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .about-section ul {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .about-section li {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .links {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+  }
+
+  .links a {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    transition: all 0.2s ease;
+  }
+
+  .links a:hover {
+    background-color: var(--color-accent-sage);
+    color: white;
+    border-color: var(--color-accent-sage);
+  }
+</style>

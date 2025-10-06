@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// You can add your projects here as data
+// Later you could move this to a separate JSON file or markdown files
+const projects = [
+  {
+    title: '3D Mind Map',
+    description: 'Interactive 3D visualization of my knowledge graph using Three.js and React Three Fiber.',
+    type: 'Web',
+    link: '/explore',
+    tags: ['Three.js', 'React', 'Data Visualization'],
+  },
+  // Add more projects here as you build them
+];
+---
+
+<BaseLayout title="Projects - Paul's Second Brain" description="Web applications, iOS apps, and other things I've built">
+  <div class="projects">
+    <div class="projects-header">
+      <h1>Projects</h1>
+      <p class="intro">
+        A collection of web applications, iOS apps, and experiments I've built.
+        Each project is an opportunity to learn, explore new technologies, and
+        solve interesting problems.
+      </p>
+    </div>
+
+    {projects.length > 0 ? (
+      <div class="projects-grid">
+        {projects.map((project) => (
+          <article class="project-card">
+            <div class="project-type">{project.type}</div>
+            <h2 class="project-title">
+              {project.link ? (
+                <a href={project.link}>{project.title}</a>
+              ) : (
+                project.title
+              )}
+            </h2>
+            <p class="project-description">{project.description}</p>
+            {project.tags && project.tags.length > 0 && (
+              <div class="project-tags">
+                {project.tags.map(tag => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
+            )}
+          </article>
+        ))}
+      </div>
+    ) : (
+      <div class="empty-state">
+        <p>Projects coming soon! Check back later to see what I'm building.</p>
+      </div>
+    )}
+
+    <section class="project-ideas">
+      <h2>In Progress & Ideas</h2>
+      <p>
+        This section will grow as I build more projects. If you have ideas or want
+        to collaborate, feel free to reach out!
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .projects {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .projects-header {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .projects-header h1 {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .intro {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .project-card {
+    padding: var(--spacing-lg);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    transition: all 0.2s ease;
+  }
+
+  .project-card:hover {
+    border-color: var(--color-accent-sage);
+    box-shadow: 0 4px 12px rgba(123, 158, 137, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .project-type {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-accent-terracotta);
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .project-title {
+    margin: 0 0 var(--spacing-md) 0;
+    font-size: 1.75rem;
+  }
+
+  .project-title a {
+    color: var(--color-text-primary);
+    border: none;
+  }
+
+  .project-title a:hover {
+    color: var(--color-link-hover);
+  }
+
+  .project-description {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .project-tags {
+    display: flex;
+    gap: var(--spacing-xs);
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    padding: 0.3em 0.6em;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    border: 1px dashed var(--color-border);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .empty-state p {
+    color: var(--color-text-secondary);
+    font-style: italic;
+    margin: 0;
+  }
+
+  .project-ideas {
+    padding: var(--spacing-lg);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--color-accent-lavender);
+  }
+
+  .project-ideas h2 {
+    margin-top: 0;
+    color: var(--color-accent-lavender);
+    font-size: 1.3rem;
+  }
+
+  .project-ideas p {
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+</style>
