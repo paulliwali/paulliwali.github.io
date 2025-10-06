@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const blogPosts = await getCollection('blog');
+  return blogPosts.map((post) => ({
+    params: { slug: post.data.slug || post.id.split('/')[0] },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const date = post.id.match(/(\d{4}-\d{2}-\d{2})/)?.[0] || '';
+---
+
+<BaseLayout title={`${post.data.title} - Paul's Second Brain`} description={post.data.title}>
+  <article class="blog-post">
+    <header class="post-header">
+      <h1>{post.data.title}</h1>
+      <div class="post-meta">
+        {date && <time datetime={date}>{date}</time>}
+        {post.data.authors && <span class="author">by {post.data.authors}</span>}
+      </div>
+      {post.data.tags.length > 0 && (
+        <div class="post-tags">
+          {post.data.tags.map(tag => (
+            <a href={`/garden?tag=${tag}`} class="tag">{tag}</a>
+          ))}
+        </div>
+      )}
+    </header>
+
+    <div class="post-content">
+      <Content />
+    </div>
+
+    <footer class="post-footer">
+      <a href="/garden" class="back-link">← Back to Garden</a>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .blog-post {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .post-header {
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .post-header h1 {
+    margin-bottom: var(--spacing-md);
+    font-size: 2.5rem;
+  }
+
+  .post-meta {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .post-meta time {
+    font-family: var(--font-mono);
+  }
+
+  .post-meta .author::before {
+    content: '•';
+    margin-right: var(--spacing-md);
+  }
+
+  .post-tags {
+    display: flex;
+    gap: var(--spacing-xs);
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    padding: 0.3em 0.7em;
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+  }
+
+  .tag:hover {
+    background-color: var(--color-accent-sage);
+    color: white;
+    border-color: var(--color-accent-sage);
+  }
+
+  .post-content {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  /* Enhanced content styles for blog posts */
+  .post-content :global(h2) {
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .post-content :global(h3) {
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .post-content :global(p) {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .post-content :global(ul),
+  .post-content :global(ol) {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .post-content :global(li) {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .post-content :global(blockquote) {
+    margin: var(--spacing-lg) 0;
+    padding-left: var(--spacing-md);
+    border-left: 3px solid var(--color-accent-sage);
+    color: var(--color-text-secondary);
+    font-style: italic;
+  }
+
+  .post-content :global(img) {
+    margin: var(--spacing-lg) 0;
+    border-radius: var(--border-radius);
+  }
+
+  .post-content :global(pre) {
+    margin: var(--spacing-lg) 0;
+  }
+
+  .post-content :global(hr) {
+    margin: var(--spacing-xl) 0;
+  }
+
+  .post-footer {
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .back-link {
+    font-family: var(--font-heading);
+    font-weight: 600;
+  }
+
+  @media (max-width: 640px) {
+    .post-header h1 {
+      font-size: 2rem;
+    }
+
+    .post-meta {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--spacing-xs);
+    }
+
+    .post-meta .author::before {
+      content: '';
+      margin-right: 0;
+    }
+  }
+</style>

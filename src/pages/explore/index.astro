@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import MindMap3D from '../../components/MindMap3D';
+---
+
+<BaseLayout title="Explore - Paul's Second Brain" description="Interactive 3D visualization of my knowledge graph">
+  <div class="explore">
+    <div class="explore-header">
+      <h1>Explore the Knowledge Graph</h1>
+      <p class="intro">
+        This is a 3D visualization of how my notes and ideas connect. Each sphere
+        represents a note, and the lines show connections between related concepts.
+        Click and drag to rotate, scroll to zoom, and click on nodes to see more details.
+      </p>
+    </div>
+
+    <div class="controls-info">
+      <div class="control-item">
+        <strong>Rotate:</strong> Click and drag
+      </div>
+      <div class="control-item">
+        <strong>Zoom:</strong> Scroll or pinch
+      </div>
+      <div class="control-item">
+        <strong>Pan:</strong> Right-click and drag
+      </div>
+    </div>
+
+    <div class="mindmap-container">
+      <MindMap3D client:load />
+    </div>
+
+    <div class="explore-footer">
+      <p>
+        This visualization is generated from the connections between notes in my slip-box.
+        As I add more notes and make more connections, this graph will continue to grow and evolve.
+      </p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .explore {
+    max-width: 100%;
+  }
+
+  .explore-header {
+    max-width: 680px;
+    margin: 0 auto var(--spacing-xl);
+  }
+
+  .explore-header h1 {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .intro {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+
+  .controls-info {
+    max-width: 680px;
+    margin: 0 auto var(--spacing-lg);
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    padding: var(--spacing-md);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+  }
+
+  .control-item {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+  }
+
+  .control-item strong {
+    color: var(--color-accent-sage);
+  }
+
+  .mindmap-container {
+    margin: 0 auto var(--spacing-xl);
+    max-width: 1200px;
+  }
+
+  .explore-footer {
+    max-width: 680px;
+    margin: 0 auto;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .explore-footer p {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  @media (max-width: 640px) {
+    .controls-info {
+      flex-direction: column;
+    }
+  }
+</style>

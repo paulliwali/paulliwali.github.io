@@ -1,0 +1,198 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+// Get all notes and organize by folder
+const allNotes = await getCollection('notes');
+
+// Group notes by their folder structure
+const notesByFolder = allNotes.reduce((acc, note) => {
+  const parts = note.id.split('/');
+  const folder = parts.length > 1 ? parts[0] : 'root';
+
+  if (!acc[folder]) {
+    acc[folder] = [];
+  }
+  acc[folder].push(note);
+  return acc;
+}, {} as Record<string, typeof allNotes>);
+
+// Sort notes within each folder alphabetically
+Object.keys(notesByFolder).forEach(folder => {
+  notesByFolder[folder].sort((a, b) => {
+    const titleA = a.data.title || a.id;
+    const titleB = b.data.title || b.id;
+    return titleA.localeCompare(titleB);
+  });
+});
+
+const folderNames = {
+  'reference-notes': 'Reference Notes',
+  'literature-notes': 'Literature Notes',
+  'permanent-notes': 'Permanent Notes',
+  'writing-bin': 'Writing Bin',
+  'root': 'Other Notes',
+};
+---
+
+<BaseLayout title="Notes - Paul's Second Brain" description="My slip-box: a collection of reference notes, literature notes, and permanent notes.">
+  <div class="notes-header">
+    <h1>Notes</h1>
+    <p class="intro">
+      This is my slip-box—a Zettelkasten system for organizing thoughts and ideas.
+      Notes are categorized into reference notes (highlights from sources), literature notes
+      (ideas explained in my own words), and permanent notes (original thoughts and connections).
+    </p>
+  </div>
+
+  <div class="notes-sections">
+    {Object.entries(notesByFolder).map(([folder, notes]) => (
+      <section class="notes-folder">
+        <h2 class="folder-title">{folderNames[folder] || folder}</h2>
+        <p class="folder-count">{notes.length} {notes.length === 1 ? 'note' : 'notes'}</p>
+
+        <ul class="notes-list">
+          {notes.map((note) => {
+            const slug = note.id;
+            const title = note.data.title || note.id.split('/').pop()?.replace('.md', '') || 'Untitled';
+
+            return (
+              <li class="note-item">
+                <a href={`/notes/${encodeURIComponent(slug)}`} class="note-link">
+                  <span class="note-title">{title}</span>
+                  {note.data.tags.length > 0 && (
+                    <div class="note-tags">
+                      {note.data.tags.slice(0, 3).map(tag => (
+                        <span class="tag">{tag}</span>
+                      ))}
+                      {note.data.tags.length > 3 && (
+                        <span class="tag-more">+{note.data.tags.length - 3}</span>
+                      )}
+                    </div>
+                  )}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    ))}
+  </div>
+
+  {Object.keys(notesByFolder).length === 0 && (
+    <p class="empty-state">No notes found. Start taking notes to build your slip-box!</p>
+  )}
+</BaseLayout>
+
+<style>
+  .notes-header {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .notes-header h1 {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .intro {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    max-width: 600px;
+  }
+
+  .notes-sections {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
+
+  .notes-folder {
+    padding: var(--spacing-lg);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+  }
+
+  .folder-title {
+    margin: 0 0 var(--spacing-xs) 0;
+    font-size: 1.5rem;
+    color: var(--color-accent-sage);
+  }
+
+  .folder-count {
+    margin: 0 0 var(--spacing-md) 0;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+  }
+
+  .notes-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-sm);
+  }
+
+  .note-item {
+    margin: 0;
+  }
+
+  .note-link {
+    display: block;
+    padding: var(--spacing-sm);
+    background-color: var(--color-bg-primary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    transition: all 0.2s ease;
+  }
+
+  .note-link:hover {
+    border-color: var(--color-accent-sage);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(123, 158, 137, 0.1);
+  }
+
+  .note-title {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .note-tags {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    padding: 0.2em 0.4em;
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-secondary);
+    border-radius: 2px;
+  }
+
+  .tag-more {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    color: var(--color-text-secondary);
+  }
+
+  .empty-state {
+    text-align: center;
+    color: var(--color-text-secondary);
+    font-style: italic;
+    margin: var(--spacing-xl) 0;
+  }
+
+  @media (max-width: 640px) {
+    .notes-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
