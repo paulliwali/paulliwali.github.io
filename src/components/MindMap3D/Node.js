@@ -14,11 +14,11 @@ export default function Node({ node, onClick, onHover }) {
   const meshRef = useRef();
   const [hovered, setHovered] = useState(false);
 
-  // Calculate node size based on connections (min 0.3, max 1.5)
+  // Calculate node size based on connections (min 0.8, max 3.0)
   const size = useMemo(() => {
-    const baseSize = 0.3;
-    const scaleFactor = 0.05;
-    return Math.min(baseSize + node.connections * scaleFactor, 1.5);
+    const baseSize = 0.8;
+    const scaleFactor = 0.08;
+    return Math.min(baseSize + node.connections * scaleFactor, 3.0);
   }, [node.connections]);
 
   const color = CATEGORY_COLORS[node.category] || CATEGORY_COLORS.default;
@@ -64,16 +64,20 @@ export default function Node({ node, onClick, onHover }) {
 
       {/* Label (only show on hover) */}
       {hovered && (
-        <Html distanceFactor={10} position={[0, size + 0.5, 0]}>
+        <Html distanceFactor={0.5} position={[0, size + 1.5, 0]}>
           <div
             style={{
-              background: 'rgba(0, 0, 0, 0.8)',
-              color: 'white',
-              padding: '4px 8px',
-              borderRadius: '4px',
-              fontSize: '12px',
+              background: color,
+              color: '#000000',
+              padding: '24px 48px',
+              borderRadius: '16px',
+              fontSize: '96px',
+              fontWeight: '800',
               whiteSpace: 'nowrap',
               pointerEvents: 'none',
+              border: `6px solid white`,
+              boxShadow: '0 12px 32px rgba(255, 255, 255, 0.5)',
+              letterSpacing: '2px',
             }}
           >
             {node.label}
