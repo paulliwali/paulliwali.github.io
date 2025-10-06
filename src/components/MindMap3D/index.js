@@ -36,7 +36,7 @@ function Scene({ nodes, edges, onNodeClick, hoveredNode, setHoveredNode }) {
       <pointLight position={[-10, -10, -10]} intensity={0.5} />
 
       {/* Stars for space effect */}
-      <Stars radius={300} depth={50} count={5000} factor={4} saturation={0} fade />
+      <Stars radius={300} depth={50} count={2000} factor={2} saturation={0} fade speed={0.5} />
 
       {/* Edges */}
       {edges.map((edge, idx) => {
