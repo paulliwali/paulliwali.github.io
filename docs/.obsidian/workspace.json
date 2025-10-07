@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "277c331831631563",
+        "id": "9ebf7e8211937d18",
         "type": "tabs",
         "children": [
           {
-            "id": "045f3c59944f1a0e",
+            "id": "822caf81a18b8ce1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "daily-notes/2025/2025-10-05.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "2025-10-05"
+              "title": "New tab"
             }
           }
         ]
@@ -193,7 +189,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "045f3c59944f1a0e",
+  "active": "822caf81a18b8ce1",
   "lastOpenFiles": [
     "daily-notes/2025/2025-10-05.md",
     "slip-box/reference-notes/Trans Catalina Trail.md",

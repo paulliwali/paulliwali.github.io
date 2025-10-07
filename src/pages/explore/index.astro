@@ -10,8 +10,11 @@ import MindMap3D from '../../components/MindMap3D';
       <p class="intro">
         This is a 3D visualization of how my notes and ideas connect. Each sphere
         represents a note, and the lines show connections between related concepts.
-        Click and drag to rotate, scroll to zoom, and click on nodes to see more details.
       </p>
+    </div>
+
+    <div class="mindmap-container">
+      <MindMap3D client:load />
     </div>
 
     <div class="controls-info">
@@ -24,10 +27,6 @@ import MindMap3D from '../../components/MindMap3D';
       <div class="control-item">
         <strong>Pan:</strong> Right-click and drag
       </div>
-    </div>
-
-    <div class="mindmap-container">
-      <MindMap3D client:load />
     </div>
 
     <div class="explore-footer">
@@ -61,7 +60,7 @@ import MindMap3D from '../../components/MindMap3D';
 
   .controls-info {
     max-width: 680px;
-    margin: 0 auto var(--spacing-lg);
+    margin: var(--spacing-lg) auto 0;
     display: flex;
     gap: var(--spacing-md);
     flex-wrap: wrap;

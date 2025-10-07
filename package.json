@@ -3,8 +3,9 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
+    "generate:mindmap": "node scripts/generate-mindmap.js",
+    "dev": "npm run generate:mindmap && astro dev",
+    "build": "npm run generate:mindmap && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -15,7 +16,9 @@
     "astro": "^5.14.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "three": "^0.180.0"
+    "remark-wiki-link": "^2.0.1",
+    "three": "^0.180.0",
+    "unist-util-visit": "^5.0.0"
   },
   "engines": {
     "node": ">=18.0"

@@ -1,17 +1,23 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// You can add your projects here as data
-// Later you could move this to a separate JSON file or markdown files
 const projects = [
   {
-    title: '3D Mind Map',
-    description: 'Interactive 3D visualization of my knowledge graph using Three.js and React Three Fiber.',
-    type: 'Web',
-    link: '/explore',
-    tags: ['Three.js', 'React', 'Data Visualization'],
+    title: 'Aaronson Oracle Baseball',
+    description: 'An interactive game testing human randomness using the Aaronson Oracle algorithm. Try to outsmart the AI as it predicts your "random" choices.',
+    type: 'Web App',
+    link: 'https://aaronson-oracle-baseball-production.up.railway.app/',
+    github: 'https://github.com/paulliwali/aaronson-oracle-baseball',
+    tags: ['Machine Learning', 'Game', 'Psychology'],
   },
-  // Add more projects here as you build them
+  {
+    title: 'Number Voting',
+    description: 'A collaborative voting platform for numeric predictions and consensus building. See how groups converge on numerical estimates.',
+    type: 'Web App',
+    link: 'https://number-voting-production.up.railway.app/',
+    github: 'https://github.com/paulliwali/number-voting',
+    tags: ['Collaboration', 'Voting', 'Statistics'],
+  },
 ];
 ---
 
@@ -33,12 +39,24 @@ const projects = [
             <div class="project-type">{project.type}</div>
             <h2 class="project-title">
               {project.link ? (
-                <a href={project.link}>{project.title}</a>
+                <a href={project.link} target="_blank" rel="noopener noreferrer">{project.title}</a>
               ) : (
                 project.title
               )}
             </h2>
             <p class="project-description">{project.description}</p>
+            <div class="project-links">
+              {project.link && (
+                <a href={project.link} class="project-link" target="_blank" rel="noopener noreferrer">
+                  View Project →
+                </a>
+              )}
+              {project.github && (
+                <a href={project.github} class="project-link github-link" target="_blank" rel="noopener noreferrer">
+                  GitHub →
+                </a>
+              )}
+            </div>
             {project.tags && project.tags.length > 0 && (
               <div class="project-tags">
                 {project.tags.map(tag => (
@@ -133,6 +151,43 @@ const projects = [
   .project-description {
     color: var(--color-text-secondary);
     margin-bottom: var(--spacing-md);
+  }
+
+  .project-links {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .project-link {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: var(--spacing-xs) var(--spacing-md);
+    background-color: var(--color-accent-sage);
+    color: white;
+    border-radius: var(--border-radius);
+    border: none;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+
+  .project-link:hover {
+    background-color: var(--color-link-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(123, 158, 137, 0.3);
+  }
+
+  .github-link {
+    background-color: transparent;
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+  }
+
+  .github-link:hover {
+    background-color: var(--color-bg-primary);
+    border-color: var(--color-text-primary);
+    box-shadow: none;
   }
 
   .project-tags {

@@ -2,55 +2,69 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
-// Get all blog posts and sort by date
+// Get all blog posts
 const allBlogPosts = await getCollection('blog');
-const sortedPosts = allBlogPosts.sort((a, b) => {
-  const dateA = a.id.match(/(\d{4}-\d{2}-\d{2})/)?.[0] || '';
-  const dateB = b.id.match(/(\d{4}-\d{2}-\d{2})/)?.[0] || '';
-  return dateB.localeCompare(dateA);
-});
 
-// Get unique tags
-const allTags = [...new Set(sortedPosts.flatMap(post => post.data.tags))].sort();
+// Get all daily notes
+const allDailyNotes = await getCollection('daily-notes');
+
+// Process blog posts
+const blogEntries = allBlogPosts.map(post => ({
+  ...post,
+  type: 'blog',
+  date: post.id.match(/(\d{4}-\d{2}-\d{2})/)?.[0] || '',
+}));
+
+// Get the selected tag from URL query parameter
+const url = new URL(Astro.request.url);
+const selectedTag = url.searchParams.get('tag');
+
+// Filter by tag if one is selected
+const filteredEntries = selectedTag
+  ? blogEntries.filter(entry => entry.data.tags.includes(selectedTag))
+  : blogEntries;
+
+const sortedBlogEntries = filteredEntries.sort((a, b) => b.date.localeCompare(a.date));
+
+// Get unique tags from all blog posts (not just filtered)
+const allTags = [...new Set(blogEntries.flatMap(entry => entry.data.tags))].sort();
 ---
 
 <BaseLayout title="Garden - Paul's Second Brain" description="A chronological collection of my writings, learnings, and thoughts.">
   <div class="garden-header">
     <h1>The Garden</h1>
     <p class="intro">
-      A chronological collection of writings, learnings, and thoughts.
-      Each post is a seed planted in this digital garden, growing and
-      connecting with others over time.
+      A collection of digital seeds in the form of posts, essays and short-form writings.
     </p>
   </div>
 
   {allTags.length > 0 && (
     <div class="tags-filter">
-      <span class="filter-label">Filter by tag:</span>
-      <div class="tags">
-        <a href="/garden" class="tag">All</a>
-        {allTags.map(tag => (
-          <a href={`/garden?tag=${tag}`} class="tag">{tag}</a>
-        ))}
-      </div>
+      <span class="filter-label">Filter:</span>
+      <a href="/garden" class={`filter-tag ${!selectedTag ? 'active' : ''}`}>All</a>
+      {allTags.map(tag => (
+        <a href={`/garden?tag=${tag}`} class={`filter-tag ${selectedTag === tag ? 'active' : ''}`}>{tag}</a>
+      ))}
     </div>
   )}
 
   <div class="posts-list">
-    {sortedPosts.map((post) => {
-      const date = post.id.match(/(\d{4}-\d{2}-\d{2})/)?.[0] || '';
-      const slug = post.data.slug || post.id.split('/')[0];
+    {sortedBlogEntries.map((entry) => {
+      const slug = entry.data.slug || entry.id.split('/')[0];
+      const title = entry.data.title || entry.id.split('/').pop()?.replace('.md', '') || 'Untitled';
 
       return (
         <article class="post-card">
           <a href={`/garden/${slug}`} class="post-link">
             <div class="post-header">
-              <h2 class="post-title">{post.data.title}</h2>
-              <time class="post-date" datetime={date}>{date}</time>
+              <h2 class="post-title">{title}</h2>
+              <div class="post-meta">
+                <time class="post-date" datetime={entry.date}>{entry.date}</time>
+              </div>
             </div>
-            {post.data.tags.length > 0 && (
+            {entry.data.tags.length > 0 && (
               <div class="post-tags">
-                {post.data.tags.map(tag => (
+                {entry.data.tags.map(tag => (
                   <span class="tag">{tag}</span>
                 ))}
               </div>
@@ -61,9 +75,17 @@ const allTags = [...new Set(sortedPosts.flatMap(post => post.data.tags))].sort()
     })}
   </div>
 
-  {sortedPosts.length === 0 && (
-    <p class="empty-state">No posts found. Start writing to grow your garden!</p>
+  {sortedBlogEntries.length === 0 && (
+    <p class="empty-state">No blog posts found. Start writing to grow your garden!</p>
   )}
+
+  <div class="daily-notes-section">
+    <div class="daily-notes-card">
+      <h2>Daily Notes</h2>
+      <p>A collection of {allDailyNotes.length} daily notes and journal entries.</p>
+      <a href="/garden/daily-notes" class="daily-notes-link">Browse Daily Notes →</a>
+    </div>
+  </div>
 </BaseLayout>
 
 <style>
@@ -83,43 +105,38 @@ const allTags = [...new Set(sortedPosts.flatMap(post => post.data.tags))].sort()
   }
 
   .tags-filter {
-    margin-bottom: var(--spacing-xl);
-    padding: var(--spacing-md);
-    background-color: var(--color-bg-secondary);
-    border-radius: var(--border-radius);
-    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-lg);
   }
 
   .filter-label {
     font-family: var(--font-heading);
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 0.85rem;
     color: var(--color-text-secondary);
-    display: block;
-    margin-bottom: var(--spacing-sm);
   }
 
-  .tags {
-    display: flex;
-    gap: var(--spacing-xs);
-    flex-wrap: wrap;
-  }
-
-  .tag {
+  .filter-tag {
     font-family: var(--font-heading);
     font-size: 0.85rem;
-    padding: 0.3em 0.7em;
-    background-color: var(--color-bg-primary);
+    padding: 0.25em 0.6em;
     color: var(--color-text-secondary);
-    border-radius: var(--border-radius);
-    border: 1px solid var(--color-border);
+    border: none;
+    border-bottom: 2px solid transparent;
     transition: all 0.2s ease;
   }
 
-  .tag:hover {
-    background-color: var(--color-accent-sage);
-    color: white;
-    border-color: var(--color-accent-sage);
+  .filter-tag:hover {
+    color: var(--color-accent-sage);
+    border-bottom-color: var(--color-accent-sage);
+  }
+
+  .filter-tag.active {
+    color: var(--color-accent-sage);
+    border-bottom-color: var(--color-accent-sage);
+    font-weight: 600;
   }
 
   .posts-list {
@@ -167,11 +184,29 @@ const allTags = [...new Set(sortedPosts.flatMap(post => post.data.tags))].sort()
     color: var(--color-link-hover);
   }
 
+  .post-meta {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: center;
+    white-space: nowrap;
+  }
+
   .post-date {
     font-family: var(--font-mono);
     font-size: 0.9rem;
     color: var(--color-text-secondary);
-    white-space: nowrap;
+  }
+
+  .post-type {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    padding: 0.2em 0.5em;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    text-transform: uppercase;
+    font-weight: 600;
   }
 
   .post-tags {
@@ -190,6 +225,51 @@ const allTags = [...new Set(sortedPosts.flatMap(post => post.data.tags))].sort()
     color: var(--color-text-secondary);
     font-style: italic;
     margin: var(--spacing-xl) 0;
+  }
+
+  .daily-notes-section {
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-xl);
+    border-top: 2px solid var(--color-border);
+  }
+
+  .daily-notes-card {
+    padding: var(--spacing-xl);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    text-align: center;
+  }
+
+  .daily-notes-card h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-primary);
+  }
+
+  .daily-notes-card p {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+    font-size: 1rem;
+  }
+
+  .daily-notes-link {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: var(--color-accent-sage);
+    color: white;
+    border-radius: var(--border-radius);
+    border: none;
+    transition: all 0.2s ease;
+  }
+
+  .daily-notes-link:hover {
+    background-color: var(--color-link-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(123, 158, 137, 0.3);
   }
 
   @media (max-width: 640px) {

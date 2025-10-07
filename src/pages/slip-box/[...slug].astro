@@ -29,11 +29,11 @@ const backlinks = allNotes.filter(otherNote => {
 });
 ---
 
-<BaseLayout title={`${title} - Notes`} description={title}>
+<BaseLayout title={`${title} - Slip-Box`} description={title}>
   <article class="note">
     <header class="note-header">
       <nav class="breadcrumb">
-        <a href="/notes">Notes</a>
+        <a href="/slip-box">Slip-Box</a>
         {note.id.includes('/') && (
           <>
             <span class="separator">/</span>
@@ -65,7 +65,7 @@ const backlinks = allNotes.filter(otherNote => {
             const backlinkTitle = backlink.data.title || backlink.id.split('/').pop()?.replace('.md', '') || 'Untitled';
             return (
               <li>
-                <a href={`/notes/${encodeURIComponent(backlink.id)}`}>
+                <a href={`/slip-box/${backlink.id}`}>
                   {backlinkTitle}
                 </a>
               </li>
@@ -76,7 +76,7 @@ const backlinks = allNotes.filter(otherNote => {
     )}
 
     <footer class="note-footer">
-      <a href="/notes" class="back-link">← Back to Notes</a>
+      <a href="/slip-box" class="back-link">← Back to Slip-Box</a>
     </footer>
   </article>
 </BaseLayout>

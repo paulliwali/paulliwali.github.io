@@ -27,17 +27,20 @@ Object.keys(notesByFolder).forEach(folder => {
 });
 
 const folderNames = {
-  'reference-notes': 'Reference Notes',
-  'literature-notes': 'Literature Notes',
   'permanent-notes': 'Permanent Notes',
+  'literature-notes': 'Literature Notes',
+  'reference-notes': 'Reference Notes',
   'writing-bin': 'Writing Bin',
-  'root': 'Other Notes',
 };
+
+// Define the order of folders
+const folderOrder = ['permanent-notes', 'literature-notes', 'reference-notes', 'writing-bin'];
+const orderedFolders = folderOrder.filter(folder => notesByFolder[folder]);
 ---
 
-<BaseLayout title="Notes - Paul's Second Brain" description="My slip-box: a collection of reference notes, literature notes, and permanent notes.">
+<BaseLayout title="Slip-Box - Paul's Second Brain" description="My slip-box: a collection of reference notes, literature notes, and permanent notes.">
   <div class="notes-header">
-    <h1>Notes</h1>
+    <h1>Slip-Box</h1>
     <p class="intro">
       This is my slip-box—a Zettelkasten system for organizing thoughts and ideas.
       Notes are categorized into reference notes (highlights from sources), literature notes
@@ -45,11 +48,40 @@ const folderNames = {
     </p>
   </div>
 
+  <div class="index-section">
+    <h2>Entrance to Permanent Notes</h2>
+    <div class="index-content">
+      <p>Here lies the index to my permanent notes:</p>
+      <ul class="index-list">
+        <li><a href="/slip-box/permanent-notes/1a entry to creativity">1a entry to creativity</a></li>
+        <li><a href="/slip-box/permanent-notes/2a entry to productivity">2a entry to productivity</a>
+          <ul>
+            <li><a href="/slip-box/permanent-notes/2a1 can remote work be productive">2a1 can remote work be productive</a></li>
+          </ul>
+        </li>
+        <li><a href="/slip-box/permanent-notes/3a thinking creatively">3a thinking creatively</a></li>
+      </ul>
+      <p class="index-reference">Reference: <a href="/slip-box/reference-notes/Zettelkasten Method">Zettelkasten Method</a></p>
+      <div class="index-questions">
+        <p><strong>Try to answer the following questions in order to convert fleeting notes into permanent notes:</strong></p>
+        <ul>
+          <li>How does this fact fit into my idea of a framework or topic?</li>
+          <li>How can this phenomenon be explained by that framework or theory?</li>
+          <li>Are these two ideas contradictory or they compliment each other?</li>
+          <li>Have I heard of this before? Link it to that</li>
+          <li><strong>What does x mean for y</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
   <div class="notes-sections">
-    {Object.entries(notesByFolder).map(([folder, notes]) => (
-      <section class="notes-folder">
-        <h2 class="folder-title">{folderNames[folder] || folder}</h2>
-        <p class="folder-count">{notes.length} {notes.length === 1 ? 'note' : 'notes'}</p>
+    {orderedFolders.map((folder) => {
+      const notes = notesByFolder[folder];
+      return (
+        <section class="notes-folder">
+          <h2 class="folder-title">{folderNames[folder]}</h2>
+          <p class="folder-count">{notes.length} {notes.length === 1 ? 'note' : 'notes'}</p>
 
         <ul class="notes-list">
           {notes.map((note) => {
@@ -58,7 +90,7 @@ const folderNames = {
 
             return (
               <li class="note-item">
-                <a href={`/notes/${encodeURIComponent(slug)}`} class="note-link">
+                <a href={`/slip-box/${slug}`} class="note-link">
                   <span class="note-title">{title}</span>
                   {note.data.tags.length > 0 && (
                     <div class="note-tags">
@@ -76,7 +108,8 @@ const folderNames = {
           })}
         </ul>
       </section>
-    ))}
+      );
+    })}
   </div>
 
   {Object.keys(notesByFolder).length === 0 && (
@@ -98,6 +131,71 @@ const folderNames = {
     color: var(--color-text-secondary);
     line-height: 1.6;
     max-width: 600px;
+  }
+
+  .index-section {
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--color-accent-sage);
+  }
+
+  .index-section h2 {
+    margin-top: 0;
+    color: var(--color-accent-sage);
+    font-size: 1.5rem;
+  }
+
+  .index-content p {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .index-list {
+    padding-left: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .index-list li {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .index-list a {
+    font-family: var(--font-heading);
+    font-weight: 500;
+  }
+
+  .index-list ul {
+    margin-top: var(--spacing-xs);
+    padding-left: var(--spacing-lg);
+  }
+
+  .index-reference {
+    font-style: italic;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .index-questions {
+    padding: var(--spacing-md);
+    background-color: var(--color-bg-primary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+  }
+
+  .index-questions p {
+    margin-top: 0;
+  }
+
+  .index-questions ul {
+    margin-bottom: 0;
+    padding-left: var(--spacing-lg);
+  }
+
+  .index-questions li {
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text-secondary);
   }
 
   .notes-sections {
