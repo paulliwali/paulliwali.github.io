@@ -1,0 +1,202 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+// Get latest blog posts
+const allBlogPosts = await getCollection('blog');
+const sortedPosts = allBlogPosts
+  .sort((a, b) => {
+    // Extract date from slug (format: YYYY-MM-DD-slug)
+    const dateA = a.id.match(/(\d{4}-\d{2}-\d{2})/)?.[0] || '';
+    const dateB = b.id.match(/(\d{4}-\d{2}-\d{2})/)?.[0] || '';
+    return dateB.localeCompare(dateA);
+  })
+  .slice(0, 5);
+---
+
+<BaseLayout title="Paul's Second Brain - Home">
+  <div class="intro">
+    <h1>Welcome to my second brain</h1>
+    <p class="tagline">
+      A digital garden where I cultivate thoughts, ideas, and learnings.
+      This is my personal knowledge base—a collection of notes, writings,
+      and projects that help me think better.
+    </p>
+  </div>
+
+  <section class="recent-posts">
+    <h2>Recent from the Garden</h2>
+    <ul class="post-list">
+      {sortedPosts.map((post) => {
+        const date = post.id.match(/(\d{4}-\d{2}-\d{2})/)?.[0] || '';
+        const slug = post.data.slug || post.id.split('/')[0];
+        return (
+          <li>
+            <a href={`/garden/${slug}`} class="post-link">
+              <span class="post-title">{post.data.title}</span>
+              <span class="post-date">{date}</span>
+            </a>
+            {post.data.tags.length > 0 && (
+              <div class="post-tags">
+                {post.data.tags.map(tag => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+    <a href="/garden" class="view-all">View all posts →</a>
+  </section>
+
+  <section class="quick-links">
+    <div class="link-card">
+      <h3>📝 Notes</h3>
+      <p>Reference notes, literature highlights, and permanent notes from my slip-box system.</p>
+      <a href="/notes">Browse notes →</a>
+    </div>
+    <div class="link-card">
+      <h3>🗺️ Explore</h3>
+      <p>Interactive 3D visualization of my knowledge graph and how ideas connect.</p>
+      <a href="/explore">Explore the map →</a>
+    </div>
+    <div class="link-card">
+      <h3>🛠️ Projects</h3>
+      <p>Web applications, iOS apps, and other things I've built along the way.</p>
+      <a href="/projects">See projects →</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .intro {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .intro h1 {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+
+  .recent-posts {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .recent-posts h2 {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .post-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .post-list li {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .post-list li:last-child {
+    border-bottom: none;
+  }
+
+  .post-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--spacing-md);
+    border: none;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .post-link:hover .post-title {
+    color: var(--color-link-hover);
+  }
+
+  .post-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    flex: 1;
+  }
+
+  .post-date {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    white-space: nowrap;
+  }
+
+  .post-tags {
+    display: flex;
+    gap: var(--spacing-xs);
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    padding: 0.2em 0.6em;
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-secondary);
+    border-radius: var(--border-radius);
+  }
+
+  .view-all {
+    display: inline-block;
+    margin-top: var(--spacing-md);
+    font-family: var(--font-heading);
+    font-weight: 600;
+  }
+
+  .quick-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+  }
+
+  .link-card {
+    padding: var(--spacing-md);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+  }
+
+  .link-card h3 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.2rem;
+  }
+
+  .link-card p {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .link-card a {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  @media (max-width: 640px) {
+    .post-link {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .quick-links {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

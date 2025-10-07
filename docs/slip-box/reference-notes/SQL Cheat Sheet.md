@@ -99,7 +99,7 @@
 
 Composite table elements for better sub-queries
 
-```SQL
+```sql
 WITH sub_table_name AS (
  SELECT *
  FROM db.table
@@ -118,7 +118,7 @@ ON sub_table_name.col_name = sub_table_name_2.col_name
 
 Anti Join
 
-```SQL
+```sql
 SELECT *
 FROM table_left
 LEFT JOIN table_right
@@ -128,7 +128,7 @@ WHERE table_right.val_col IS NULL
 
 Pivot from long to wide
 
-```SQL
+```sql
 SELECT
  group_col_name,
  MAX(CASE WHEN metric_name = 'val_name_a' THEN metric_value END) AS val_name_a,
@@ -139,7 +139,7 @@ GROUP BY group_col_name
 
 ## Time related
 
-```SQL
+```sql
 -- Convert datetime
 FROM_UNIXTIME(timestamp_epoch_ms / 1000, 'UTC') as utc_timestamp
 FROM_UNIXTIME(timestamp_epoch_ms / 1000, timezone_col) as local_timestamp
@@ -161,7 +161,7 @@ DATE_TRUNC('month', CAST(event_dt as timestamp))
 
 ## Partitions
 
-```SQL
+```sql
 -- rank
 SELECT orderkey, clerk, totalprice,
  rank() OVER (PARTITION BY clerk

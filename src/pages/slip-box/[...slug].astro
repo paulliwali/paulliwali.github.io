@@ -1,0 +1,217 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const notes = await getCollection('notes');
+  return notes.map((note) => ({
+    params: { slug: note.id },
+    props: { note },
+  }));
+}
+
+const { note } = Astro.props;
+const { Content } = await render(note);
+
+// Get title from frontmatter or filename
+const title = note.data.title || note.id.split('/').pop()?.replace('.md', '') || 'Untitled';
+
+// Find backlinks - notes that link to this note
+const allNotes = await getCollection('notes');
+const noteFileName = note.id.split('/').pop()?.replace('.md', '');
+
+// Simple backlink detection - check if the current note's filename appears in other notes
+// This is a basic implementation; you can enhance it to parse actual wiki-links [[note]]
+const backlinks = allNotes.filter(otherNote => {
+  if (otherNote.id === note.id) return false;
+  // This is a simplified check - in a real implementation you'd parse the markdown
+  return otherNote.body?.includes(noteFileName || '');
+});
+---
+
+<BaseLayout title={`${title} - Slip-Box`} description={title}>
+  <article class="note">
+    <header class="note-header">
+      <nav class="breadcrumb">
+        <a href="/slip-box">Slip-Box</a>
+        {note.id.includes('/') && (
+          <>
+            <span class="separator">/</span>
+            <span class="folder">{note.id.split('/')[0]}</span>
+          </>
+        )}
+      </nav>
+
+      <h1>{title}</h1>
+
+      {note.data.tags.length > 0 && (
+        <div class="note-tags">
+          {note.data.tags.map(tag => (
+            <span class="tag">{tag}</span>
+          ))}
+        </div>
+      )}
+    </header>
+
+    <div class="note-content">
+      <Content />
+    </div>
+
+    {backlinks.length > 0 && (
+      <aside class="backlinks">
+        <h3>Linked from</h3>
+        <ul class="backlinks-list">
+          {backlinks.map(backlink => {
+            const backlinkTitle = backlink.data.title || backlink.id.split('/').pop()?.replace('.md', '') || 'Untitled';
+            return (
+              <li>
+                <a href={`/slip-box/${backlink.id}`}>
+                  {backlinkTitle}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </aside>
+    )}
+
+    <footer class="note-footer">
+      <a href="/slip-box" class="back-link">← Back to Slip-Box</a>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .note {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .note-header {
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .breadcrumb {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .breadcrumb a {
+    color: var(--color-link);
+  }
+
+  .separator {
+    margin: 0 var(--spacing-xs);
+  }
+
+  .folder {
+    color: var(--color-accent-sage);
+    text-transform: capitalize;
+  }
+
+  .note-header h1 {
+    margin-bottom: var(--spacing-md);
+    font-size: 2.5rem;
+  }
+
+  .note-tags {
+    display: flex;
+    gap: var(--spacing-xs);
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    padding: 0.3em 0.7em;
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+  }
+
+  .note-content {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  /* Enhanced content styles for notes */
+  .note-content :global(h2) {
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .note-content :global(h3) {
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .note-content :global(p) {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .note-content :global(ul),
+  .note-content :global(ol) {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .note-content :global(blockquote) {
+    margin: var(--spacing-lg) 0;
+    padding-left: var(--spacing-md);
+    border-left: 3px solid var(--color-accent-lavender);
+    color: var(--color-text-secondary);
+  }
+
+  .note-content :global(code) {
+    background-color: var(--color-bg-secondary);
+  }
+
+  .backlinks {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-md);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--color-accent-terracotta);
+  }
+
+  .backlinks h3 {
+    margin: 0 0 var(--spacing-md) 0;
+    font-size: 1.1rem;
+    color: var(--color-accent-terracotta);
+  }
+
+  .backlinks-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .backlinks-list li {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .backlinks-list a {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+  }
+
+  .note-footer {
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--spacing-xl);
+  }
+
+  .back-link {
+    font-family: var(--font-heading);
+    font-weight: 600;
+  }
+
+  @media (max-width: 640px) {
+    .note-header h1 {
+      font-size: 2rem;
+    }
+  }
+</style>

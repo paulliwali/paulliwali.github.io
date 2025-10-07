@@ -1,0 +1,187 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+// Get all daily notes
+const allDailyNotes = await getCollection('daily-notes');
+
+// Process and sort daily notes
+const dailyEntries = allDailyNotes.map(note => ({
+  ...note,
+  date: note.id.match(/(\d{4}-\d{2}-\d{2})/)?.[0] || '',
+}));
+
+const sortedDailyNotes = dailyEntries.sort((a, b) => b.date.localeCompare(a.date));
+
+// Group by year
+const notesByYear = sortedDailyNotes.reduce((acc, note) => {
+  const year = note.date.split('-')[0];
+  if (!acc[year]) {
+    acc[year] = [];
+  }
+  acc[year].push(note);
+  return acc;
+}, {} as Record<string, typeof dailyEntries>);
+
+const years = Object.keys(notesByYear).sort((a, b) => b.localeCompare(a));
+---
+
+<BaseLayout title="Daily Notes - Paul's Second Brain" description="A chronological collection of daily notes and journal entries.">
+  <div class="daily-header">
+    <h1>Daily Notes</h1>
+    <p class="intro">
+      A chronological journal of thoughts, learnings, and daily reflections.
+      {sortedDailyNotes.length} entries spanning {years.length} {years.length === 1 ? 'year' : 'years'}.
+    </p>
+    <a href="/garden" class="back-link">← Back to Garden</a>
+  </div>
+
+  {years.map(year => (
+    <div class="year-section">
+      <h2 class="year-heading">{year}</h2>
+      <div class="notes-grid">
+        {notesByYear[year].map(note => {
+          const title = note.data.title || note.id.split('/').pop()?.replace('.md', '') || 'Untitled';
+
+          return (
+            <article class="note-card">
+              <a href={`/garden/${note.id}`} class="note-link">
+                <time class="note-date" datetime={note.date}>{note.date}</time>
+                <h3 class="note-title">{title}</h3>
+                {note.data.tags && note.data.tags.length > 0 && (
+                  <div class="note-tags">
+                    {note.data.tags.slice(0, 3).map(tag => (
+                      <span class="tag">{tag}</span>
+                    ))}
+                  </div>
+                )}
+              </a>
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  ))}
+
+  {sortedDailyNotes.length === 0 && (
+    <p class="empty-state">No daily notes found.</p>
+  )}
+</BaseLayout>
+
+<style>
+  .daily-header {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .daily-header h1 {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .intro {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .back-link {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--color-link);
+    margin-top: var(--spacing-md);
+  }
+
+  .back-link:hover {
+    color: var(--color-link-hover);
+  }
+
+  .year-section {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .year-heading {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: var(--color-accent-sage);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  .notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .note-card {
+    padding: var(--spacing-md);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    transition: all 0.2s ease;
+  }
+
+  .note-card:hover {
+    border-color: var(--color-accent-sage);
+    box-shadow: 0 2px 8px rgba(123, 158, 137, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .note-link {
+    border: none;
+    display: block;
+  }
+
+  .note-date {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    display: block;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .note-title {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0 0 var(--spacing-xs) 0;
+  }
+
+  .note-link:hover .note-title {
+    color: var(--color-link-hover);
+  }
+
+  .note-tags {
+    display: flex;
+    gap: var(--spacing-xs);
+    flex-wrap: wrap;
+    margin-top: var(--spacing-xs);
+  }
+
+  .tag {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    padding: 0.2em 0.5em;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+  }
+
+  .empty-state {
+    text-align: center;
+    color: var(--color-text-secondary);
+    font-style: italic;
+    margin: var(--spacing-xl) 0;
+  }
+
+  @media (max-width: 640px) {
+    .notes-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
