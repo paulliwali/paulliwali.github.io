@@ -1,0 +1,241 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const projects = [
+  {
+    title: 'Aaronson Oracle Baseball',
+    description: 'An interactive game testing human randomness using the Aaronson Oracle algorithm. Try to outsmart the AI as it predicts your "random" choices.',
+    type: 'Web App',
+    link: 'https://aaronson-oracle-baseball-production.up.railway.app/',
+    github: 'https://github.com/paulliwali/aaronson-oracle-baseball',
+    tags: ['Machine Learning', 'Game', 'Psychology'],
+  },
+  {
+    title: 'Number Voting',
+    description: 'A collaborative voting platform for numeric predictions and consensus building. See how groups converge on numerical estimates.',
+    type: 'Web App',
+    link: 'https://number-voting-production.up.railway.app/',
+    github: 'https://github.com/paulliwali/number-voting',
+    tags: ['Collaboration', 'Voting', 'Statistics'],
+  },
+];
+---
+
+<BaseLayout title="Projects - Paul's Second Brain" description="Web applications, iOS apps, and other things I've built">
+  <div class="projects">
+    <div class="projects-header">
+      <h1>Projects</h1>
+      <p class="intro">
+        A collection of web applications, iOS apps, and experiments I've built.
+        Each project is an opportunity to learn, explore new technologies, and
+        solve interesting problems.
+      </p>
+    </div>
+
+    {projects.length > 0 ? (
+      <div class="projects-grid">
+        {projects.map((project) => (
+          <article class="project-card">
+            <div class="project-type">{project.type}</div>
+            <h2 class="project-title">
+              {project.link ? (
+                <a href={project.link} target="_blank" rel="noopener noreferrer">{project.title}</a>
+              ) : (
+                project.title
+              )}
+            </h2>
+            <p class="project-description">{project.description}</p>
+            <div class="project-links">
+              {project.link && (
+                <a href={project.link} class="project-link" target="_blank" rel="noopener noreferrer">
+                  View Project →
+                </a>
+              )}
+              {project.github && (
+                <a href={project.github} class="project-link github-link" target="_blank" rel="noopener noreferrer">
+                  GitHub →
+                </a>
+              )}
+            </div>
+            {project.tags && project.tags.length > 0 && (
+              <div class="project-tags">
+                {project.tags.map(tag => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
+            )}
+          </article>
+        ))}
+      </div>
+    ) : (
+      <div class="empty-state">
+        <p>Projects coming soon! Check back later to see what I'm building.</p>
+      </div>
+    )}
+
+    <section class="project-ideas">
+      <h2>In Progress & Ideas</h2>
+      <p>
+        This section will grow as I build more projects. If you have ideas or want
+        to collaborate, feel free to reach out!
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .projects {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .projects-header {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .projects-header h1 {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .intro {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .project-card {
+    padding: var(--spacing-lg);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    transition: all 0.2s ease;
+  }
+
+  .project-card:hover {
+    border-color: var(--color-accent-sage);
+    box-shadow: 0 4px 12px rgba(123, 158, 137, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .project-type {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-accent-terracotta);
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .project-title {
+    margin: 0 0 var(--spacing-md) 0;
+    font-size: 1.75rem;
+  }
+
+  .project-title a {
+    color: var(--color-text-primary);
+    border: none;
+  }
+
+  .project-title a:hover {
+    color: var(--color-link-hover);
+  }
+
+  .project-description {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .project-links {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .project-link {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: var(--spacing-xs) var(--spacing-md);
+    background-color: var(--color-accent-sage);
+    color: white;
+    border-radius: var(--border-radius);
+    border: none;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+
+  .project-link:hover {
+    background-color: var(--color-link-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(123, 158, 137, 0.3);
+  }
+
+  .github-link {
+    background-color: transparent;
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+  }
+
+  .github-link:hover {
+    background-color: var(--color-bg-primary);
+    border-color: var(--color-text-primary);
+    box-shadow: none;
+  }
+
+  .project-tags {
+    display: flex;
+    gap: var(--spacing-xs);
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    padding: 0.3em 0.6em;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    border: 1px dashed var(--color-border);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .empty-state p {
+    color: var(--color-text-secondary);
+    font-style: italic;
+    margin: 0;
+  }
+
+  .project-ideas {
+    padding: var(--spacing-lg);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--color-accent-lavender);
+  }
+
+  .project-ideas h2 {
+    margin-top: 0;
+    color: var(--color-accent-lavender);
+    font-size: 1.3rem;
+  }
+
+  .project-ideas p {
+    color: var(--color-text-secondary);
+    margin: 0;
+  }
+</style>

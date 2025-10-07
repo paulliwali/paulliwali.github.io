@@ -1,0 +1,281 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+// Get all blog posts
+const allBlogPosts = await getCollection('blog');
+
+// Get all daily notes
+const allDailyNotes = await getCollection('daily-notes');
+
+// Process blog posts
+const blogEntries = allBlogPosts.map(post => ({
+  ...post,
+  type: 'blog',
+  date: post.id.match(/(\d{4}-\d{2}-\d{2})/)?.[0] || '',
+}));
+
+// Get the selected tag from URL query parameter
+const url = new URL(Astro.request.url);
+const selectedTag = url.searchParams.get('tag');
+
+// Filter by tag if one is selected
+const filteredEntries = selectedTag
+  ? blogEntries.filter(entry => entry.data.tags.includes(selectedTag))
+  : blogEntries;
+
+const sortedBlogEntries = filteredEntries.sort((a, b) => b.date.localeCompare(a.date));
+
+// Get unique tags from all blog posts (not just filtered)
+const allTags = [...new Set(blogEntries.flatMap(entry => entry.data.tags))].sort();
+---
+
+<BaseLayout title="Garden - Paul's Second Brain" description="A chronological collection of my writings, learnings, and thoughts.">
+  <div class="garden-header">
+    <h1>The Garden</h1>
+    <p class="intro">
+      A collection of digital seeds in the form of posts, essays and short-form writings.
+    </p>
+  </div>
+
+  {allTags.length > 0 && (
+    <div class="tags-filter">
+      <span class="filter-label">Filter:</span>
+      <a href="/garden" class={`filter-tag ${!selectedTag ? 'active' : ''}`}>All</a>
+      {allTags.map(tag => (
+        <a href={`/garden?tag=${tag}`} class={`filter-tag ${selectedTag === tag ? 'active' : ''}`}>{tag}</a>
+      ))}
+    </div>
+  )}
+
+  <div class="posts-list">
+    {sortedBlogEntries.map((entry) => {
+      const slug = entry.data.slug || entry.id.split('/')[0];
+      const title = entry.data.title || entry.id.split('/').pop()?.replace('.md', '') || 'Untitled';
+
+      return (
+        <article class="post-card">
+          <a href={`/garden/${slug}`} class="post-link">
+            <div class="post-header">
+              <h2 class="post-title">{title}</h2>
+              <div class="post-meta">
+                <time class="post-date" datetime={entry.date}>{entry.date}</time>
+              </div>
+            </div>
+            {entry.data.tags.length > 0 && (
+              <div class="post-tags">
+                {entry.data.tags.map(tag => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
+            )}
+          </a>
+        </article>
+      );
+    })}
+  </div>
+
+  {sortedBlogEntries.length === 0 && (
+    <p class="empty-state">No blog posts found. Start writing to grow your garden!</p>
+  )}
+
+  <div class="daily-notes-section">
+    <div class="daily-notes-card">
+      <h2>Daily Notes</h2>
+      <p>A collection of {allDailyNotes.length} daily notes and journal entries.</p>
+      <a href="/garden/daily-notes" class="daily-notes-link">Browse Daily Notes →</a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .garden-header {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .garden-header h1 {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .intro {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    max-width: 600px;
+  }
+
+  .tags-filter {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .filter-label {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+  }
+
+  .filter-tag {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    padding: 0.25em 0.6em;
+    color: var(--color-text-secondary);
+    border: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+  }
+
+  .filter-tag:hover {
+    color: var(--color-accent-sage);
+    border-bottom-color: var(--color-accent-sage);
+  }
+
+  .filter-tag.active {
+    color: var(--color-accent-sage);
+    border-bottom-color: var(--color-accent-sage);
+    font-weight: 600;
+  }
+
+  .posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .post-card {
+    padding: var(--spacing-lg);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    transition: all 0.2s ease;
+  }
+
+  .post-card:hover {
+    border-color: var(--color-accent-sage);
+    box-shadow: 0 2px 8px rgba(123, 158, 137, 0.1);
+  }
+
+  .post-link {
+    border: none;
+    display: block;
+  }
+
+  .post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .post-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+    flex: 1;
+  }
+
+  .post-link:hover .post-title {
+    color: var(--color-link-hover);
+  }
+
+  .post-meta {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: center;
+    white-space: nowrap;
+  }
+
+  .post-date {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+  }
+
+  .post-type {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    padding: 0.2em 0.5em;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .post-tags {
+    display: flex;
+    gap: var(--spacing-xs);
+    flex-wrap: wrap;
+  }
+
+  .post-tags .tag {
+    font-size: 0.75rem;
+    padding: 0.2em 0.5em;
+  }
+
+  .empty-state {
+    text-align: center;
+    color: var(--color-text-secondary);
+    font-style: italic;
+    margin: var(--spacing-xl) 0;
+  }
+
+  .daily-notes-section {
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-xl);
+    border-top: 2px solid var(--color-border);
+  }
+
+  .daily-notes-card {
+    padding: var(--spacing-xl);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    text-align: center;
+  }
+
+  .daily-notes-card h2 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-primary);
+  }
+
+  .daily-notes-card p {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+    font-size: 1rem;
+  }
+
+  .daily-notes-link {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: var(--color-accent-sage);
+    color: white;
+    border-radius: var(--border-radius);
+    border: none;
+    transition: all 0.2s ease;
+  }
+
+  .daily-notes-link:hover {
+    background-color: var(--color-link-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(123, 158, 137, 0.3);
+  }
+
+  @media (max-width: 640px) {
+    .post-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
