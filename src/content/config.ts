@@ -21,4 +21,13 @@ const notes = defineCollection({
   }),
 });
 
-export const collections = { blog, notes };
+// Point to existing docs/daily-notes directory (Obsidian daily notes)
+const dailyNotes = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: '/Users/pauldeng/Documents/paulliwali.github.io/docs/daily-notes' }),
+  schema: z.object({
+    title: z.string().optional(),
+    tags: z.array(z.string()).default([]),
+  }),
+});
+
+export const collections = { blog, notes, 'daily-notes': dailyNotes };

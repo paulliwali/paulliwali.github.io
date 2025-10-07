@@ -4,28 +4,38 @@ import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
   const blogPosts = await getCollection('blog');
-  return blogPosts.map((post) => ({
-    params: { slug: post.data.slug || post.id.split('/')[0] },
-    props: { post },
-  }));
+  const dailyNotes = await getCollection('daily-notes');
+
+  return [
+    ...blogPosts.map((post) => ({
+      params: { slug: post.data.slug || post.id.split('/')[0] },
+      props: { entry: post, type: 'blog' },
+    })),
+    ...dailyNotes.map((note) => ({
+      params: { slug: note.id },
+      props: { entry: note, type: 'daily' },
+    })),
+  ];
 }
 
-const { post } = Astro.props;
-const { Content } = await render(post);
-const date = post.id.match(/(\d{4}-\d{2}-\d{2})/)?.[0] || '';
+const { entry, type } = Astro.props;
+const { Content } = await render(entry);
+const date = entry.id.match(/(\d{4}-\d{2}-\d{2})/)?.[0] || '';
+const title = entry.data.title || entry.id.split('/').pop()?.replace('.md', '') || 'Untitled';
 ---
 
-<BaseLayout title={`${post.data.title} - Paul's Second Brain`} description={post.data.title}>
+<BaseLayout title={`${title} - Paul's Second Brain`} description={title}>
   <article class="blog-post">
     <header class="post-header">
-      <h1>{post.data.title}</h1>
+      <h1>{title}</h1>
       <div class="post-meta">
         {date && <time datetime={date}>{date}</time>}
-        {post.data.authors && <span class="author">by {post.data.authors}</span>}
+        {entry.data.authors && <span class="author">by {entry.data.authors}</span>}
+        <span class="entry-type">{type === 'blog' ? 'blog' : 'daily note'}</span>
       </div>
-      {post.data.tags.length > 0 && (
+      {entry.data.tags.length > 0 && (
         <div class="post-tags">
-          {post.data.tags.map(tag => (
+          {entry.data.tags.map(tag => (
             <a href={`/garden?tag=${tag}`} class="tag">{tag}</a>
           ))}
         </div>
@@ -73,9 +83,20 @@ const date = post.id.match(/(\d{4}-\d{2}-\d{2})/)?.[0] || '';
     font-family: var(--font-mono);
   }
 
-  .post-meta .author::before {
+  .post-meta .author::before,
+  .post-meta .entry-type::before {
     content: '•';
     margin-right: var(--spacing-md);
+  }
+
+  .entry-type {
+    font-size: 0.85rem;
+    padding: 0.2em 0.5em;
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    text-transform: uppercase;
+    font-weight: 600;
   }
 
   .post-tags {
