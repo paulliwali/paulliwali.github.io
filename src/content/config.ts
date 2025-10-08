@@ -3,7 +3,7 @@ import { glob } from 'astro/loaders';
 
 // Point to existing blog directory (Obsidian vault)
 const blog = defineCollection({
-  loader: glob({ pattern: '**/index.md', base: '/Users/pauldeng/Documents/paulliwali.github.io/blog' }),
+  loader: glob({ pattern: '**/*.md', base: '/Users/pauldeng/Documents/paulliwali.github.io/blog' }),
   schema: z.object({
     title: z.string(),
     slug: z.string().optional(),
