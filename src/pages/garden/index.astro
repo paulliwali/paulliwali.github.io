@@ -8,12 +8,17 @@ const allBlogPosts = await getCollection('blog');
 // Get all daily notes
 const allDailyNotes = await getCollection('daily-notes');
 
-// Process blog posts
-const blogEntries = allBlogPosts.map(post => ({
-  ...post,
-  type: 'blog',
-  date: post.id.match(/(\d{4}-\d{2}-\d{2})/)?.[0] || '',
-}));
+// Process blog posts - extract date from filename for sorting
+const blogEntries = allBlogPosts.map(post => {
+  // Extract date from ID (format: YYYY-MM-DD-slug or folder/YYYY-MM-DD-slug)
+  const date = post.id.match(/(\d{4}-\d{2}-\d{2})/)?.[0] || '';
+
+  return {
+    ...post,
+    type: 'blog',
+    date,
+  };
+});
 
 // Get the selected tag from URL query parameter
 const url = new URL(Astro.request.url);
@@ -24,7 +29,8 @@ const filteredEntries = selectedTag
   ? blogEntries.filter(entry => entry.data.tags.includes(selectedTag))
   : blogEntries;
 
-const sortedBlogEntries = filteredEntries.sort((a, b) => b.date.localeCompare(a.date));
+// Sort by date from filename (most recent first)
+const sortedBlogEntries = filteredEntries.sort((a, b) => a.date.localeCompare(b.date)).reverse();
 
 // Get unique tags from all blog posts (not just filtered)
 const allTags = [...new Set(blogEntries.flatMap(entry => entry.data.tags))].sort();
