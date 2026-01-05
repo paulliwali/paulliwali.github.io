@@ -1,0 +1,32 @@
+name: Claude Agent
+
+on:
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
+  pull_request:
+    types: [opened, synchronize]
+  pull_request_review_comment:
+    types: [created]
+
+jobs:
+  claude-agent:
+    # Only run if the comment contains '@Claude' OR if it's a new issue labeled 'auto-fix'
+    if: contains(github.event.comment.body, '@Claude') || contains(github.event.issue.body, '@Claude')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Claude Code
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # This passes the context of the issue/comment directly to Claude
+          prompt: "You are an autonomous developer agent. The user has triggered you with this event: ${{ toJSON(github.event.comment.body || github.event.issue.body) }}. Please analyze the repository, plan a fix or feature implementation, and create a Pull Request. If you are just answering a question, reply as a comment."
