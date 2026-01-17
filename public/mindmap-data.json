@@ -6407,6 +6407,12 @@
       "label": "Sunday, October 05, 2025",
       "category": "daily",
       "connections": 0
+    },
+    {
+      "id": "daily-notes/2025/2025-10-07",
+      "label": "Tuesday, October 07, 2025",
+      "category": "daily",
+      "connections": 0
     }
   ],
   "links": [
