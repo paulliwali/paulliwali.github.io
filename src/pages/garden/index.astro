@@ -285,3 +285,51 @@ const allTags = [...new Set(blogEntries.flatMap(entry => entry.data.tags))].sort
     }
   }
 </style>
+
+<script>
+  // Client-side tag filtering for static site
+  function initializeTagFiltering() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedTag = urlParams.get('tag');
+
+    // Get all post cards and filter tags
+    const postCards = document.querySelectorAll('.post-card');
+    const filterTags = document.querySelectorAll('.filter-tag');
+
+    // Update active state of filter tags
+    filterTags.forEach(tag => {
+      const href = tag.getAttribute('href');
+      const tagName = new URLSearchParams(href.split('?')[1] || '').get('tag');
+
+      if ((selectedTag === null && href === '/garden') || (selectedTag && tagName === selectedTag)) {
+        tag.classList.add('active');
+      } else {
+        tag.classList.remove('active');
+      }
+    });
+
+    // Filter posts based on selected tag
+    if (selectedTag) {
+      postCards.forEach(card => {
+        const postTags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent.trim());
+
+        if (postTags.includes(selectedTag)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    } else {
+      // Show all posts when no tag is selected
+      postCards.forEach(card => {
+        card.style.display = '';
+      });
+    }
+  }
+
+  // Run on page load
+  initializeTagFiltering();
+
+  // Re-run when navigating with browser back/forward
+  window.addEventListener('popstate', initializeTagFiltering);
+</script>
