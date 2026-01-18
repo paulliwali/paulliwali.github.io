@@ -1,6 +1,7 @@
 ---
 slug: how-many-things
 title: How many things do I own?
+date: "2022-02-21"
 authors: pdeng
 tags: [life]
 ---

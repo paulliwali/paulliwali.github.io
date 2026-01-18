@@ -1,6 +1,7 @@
 ---
 slug: fitbit-vs-whoop
 title: FitBit vs Whoop
+date: "2023-02-24"
 authors: pdeng
 tags: [health, life]
 ---

@@ -1,6 +1,7 @@
 ---
 slug: why-switch-to-obsidian
 title: Why I switched to obsidian
+date: "2022-12-14"
 authors: pdeng
 tags: [productivity, note-taking]
 ---

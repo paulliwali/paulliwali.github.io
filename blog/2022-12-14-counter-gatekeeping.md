@@ -1,6 +1,7 @@
 ---
 slug: counter-gatekeeping
 title: Counter Gatekeeping
+date: "2022-12-14"
 authors: pdeng
 tags: [thoughts]
 ---

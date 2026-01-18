@@ -1,6 +1,7 @@
 ---
 slug: til2021
 title: Things I TIL'ed in 2021
+date: "2022-01-24"
 authors: pdeng
 tags: [til]
 ---

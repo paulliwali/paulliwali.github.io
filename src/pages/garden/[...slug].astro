@@ -28,11 +28,11 @@ const title = entry.data.title || entry.id.split('/').pop()?.replace('.md', '') 
   <article class="blog-post">
     <header class="post-header">
       <h1>{title}</h1>
-      <div class="post-meta">
-        {date && <time datetime={date}>{date}</time>}
-        {entry.data.authors && <span class="author">by {entry.data.authors}</span>}
-        <span class="entry-type">{type === 'blog' ? 'blog' : 'daily note'}</span>
-      </div>
+      {date && (
+        <div class="post-meta">
+          <time datetime={date}>{date}</time>
+        </div>
+      )}
       {entry.data.tags.length > 0 && (
         <div class="post-tags">
           {entry.data.tags.map(tag => (
@@ -71,8 +71,9 @@ const title = entry.data.title || entry.id.split('/').pop()?.replace('.md', '') 
 
   .post-meta {
     display: flex;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
     align-items: center;
+    flex-wrap: wrap;
     font-family: var(--font-heading);
     font-size: 0.95rem;
     color: var(--color-text-secondary);
@@ -81,22 +82,6 @@ const title = entry.data.title || entry.id.split('/').pop()?.replace('.md', '') 
 
   .post-meta time {
     font-family: var(--font-mono);
-  }
-
-  .post-meta .author::before,
-  .post-meta .entry-type::before {
-    content: '•';
-    margin-right: var(--spacing-md);
-  }
-
-  .entry-type {
-    font-size: 0.85rem;
-    padding: 0.2em 0.5em;
-    background-color: var(--color-bg-secondary);
-    border-radius: var(--border-radius);
-    border: 1px solid var(--color-border);
-    text-transform: uppercase;
-    font-weight: 600;
   }
 
   .post-tags {
@@ -189,11 +174,6 @@ const title = entry.data.title || entry.id.split('/').pop()?.replace('.md', '') 
       flex-direction: column;
       align-items: flex-start;
       gap: var(--spacing-xs);
-    }
-
-    .post-meta .author::before {
-      content: '';
-      margin-right: 0;
     }
   }
 </style>
