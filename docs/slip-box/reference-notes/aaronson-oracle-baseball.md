@@ -16,8 +16,21 @@
     - update the dict with user inputs
     - calculate the rolling accuracy when making a prediction
 
-Use GPT to train this sequence
+# 2026-01-01: performance
 
-Hard part will be getting this data in a good format
+The existing performance of the models were:
+  
+| Model                    | Overall | Fast   | Breaking | Off-Speed | N Pitches |
+| ------------------------ | ------- | ------ | -------- | --------- | --------- |
+| Naive (Always Fast)      | 0.5643  | 1.0000 | 0.0000   | 0.0000    | 24,917    |
+| N-Gram (n=3)             | 0.5335  | 0.7795 | 0.2496   | 0.1121    | 24,917    |
+| N-Gram (n=4)             | 0.5376  | 0.8223 | 0.1977   | 0.0837    | 24,917    |
+| Frequency-Based (Oracle) | 0.4834  | 0.5979 | 0.3775   | 0.2104    | 24,917    |
+| Markov Context           | 0.5552  | 0.9493 | 0.0540   | 0.0175    | 24,917    |
+## 2026-03-15: autoresearch
+
+Leveraging Andrej Karthpath's [autoresearch](https://github.com/karpathy/autoresearch?tab=readme-ov-file) loop to discover better models for predicting pitch sequencing. After a night of running and my Macbook dying half way, it was able to run 35 experiments and discover a model with 0.61% accuracy on the evaluation dataset that had an architecture of 6-layer transformer, 4 heads, 128d model, FFN 6x hidden dim with some regularization. It also found that other architectures like GBM or LSTM performed much worse.
+
+Side note on how it works -> [[autoresearch]]
 
 #data-science #projects
