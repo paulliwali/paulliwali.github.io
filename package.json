@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "generate:mindmap": "node scripts/generate-mindmap.js",
+    "build:resume": "cd resume && pdflatex -interaction=nonstopmode main.tex && mv main.pdf ../public/resume.pdf && rm -f main.aux main.log main.out",
     "dev": "npm run generate:mindmap && astro dev",
     "build": "npm run generate:mindmap && astro build",
     "preview": "astro preview",
