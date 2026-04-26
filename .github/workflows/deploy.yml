@@ -21,6 +21,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Compile resume
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          working_directory: resume
+
+      - name: Move resume PDF
+        run: mkdir -p public && mv resume/main.pdf public/resume.pdf
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:

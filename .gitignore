@@ -33,3 +33,10 @@ yarn-error.log*
 # Old files
 /old-docusaurus-backup
 /new-site
+
+# LaTeX build artifacts
+resume/*.aux
+resume/*.log
+resume/*.out
+resume/*.pdf
+public/resume.pdf

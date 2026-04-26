@@ -1,0 +1,65 @@
+\documentclass[12pt,a4paper,roman]{moderncv}
+
+\moderncvstyle{banking}
+\moderncvcolor{black}
+\renewcommand{\familydefault}{\sfdefault}
+\nopagenumbers{}
+
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.85]{geometry}
+
+\name{Paul}{Deng}
+\phone[mobile]{+1~(669)~302~5129}
+\email{pauldeng93@gmail.com}
+\extrainfo{LinkedIn: https://www.linkedin.com/in/pauldeng93/}
+
+\begin{document}
+\makecvtitle
+
+\section{Work Experience}
+
+\cventry{2025 Jul - Present}{Tesla}{Senior Machine Learning Engineer}{}{Energy (Jul 2025 - Mar 2026); Vehicle (Mar 2026 - Present)}{}
+\begin{itemize}
+\item Led Megacharger network planning to support Semi truck sales, designing siting and capacity strategy for 200+ locations and a multi-billion-dollar capital plan across North America, with rollout extending to Europe.
+\item Built point-based utilization forecasting in PyTorch to size and place new sites at arbitrary candidates, iterating across classical ML (gradient boosting, sequence models, neural ensembles) and LLM-driven autoresearch loops; currently internal, productionizing for customer-facing use.
+\item Extended firmware to enable trip planner support across new vehicle variants including Cybercab and Semi, contributing firmware code that integrates routing and charging logic for the new platforms.
+\item Architected and drove adoption of the team's LLM development harness, building and testing new skills, agents, and integration setups to deliver an order-of-magnitude lift in engineering throughput.
+
+\hspace*{\fill} \\
+\end{itemize}
+
+\cventry{2020 Oct - 2025 Jul}{Tesla}{Senior Data Scientist}{}{Energy - Charging Data Modelling}{}
+\begin{itemize}
+\item Developed predictive models forecasting charging demand to guide expansion of the global Supercharger Network (4000+ sites) and Level-2 Wall Connector Network, totaling \$500M+ in capital.
+\item Designed and maintained ETL pipelines on PySpark and Airflow, integrating multi-source data into KPIs and ML features.
+\item Ran statistical analysis and causal inference to inform monthly executive reviews on network performance and investment decisions.
+\item Partnered with infrastructure to deploy ML models on AWS Lambda and Kubernetes for production serving.
+
+\hspace*{\fill} \\
+\end{itemize}
+
+\cventry{2018 Jul - 2020 Sep}{WSP}{Consultant}{}{Advisory Services - Systems Analytics Group}{}
+\begin{itemize}
+\item Built and calibrated travel demand models in Python, R, and EMME for government and transit agency infrastructure investments.
+\item Improved travel-mode forecasting accuracy with gradient boosting models over legacy logit baselines.
+
+\hspace*{\fill} \\
+\end{itemize}
+
+\pagebreak
+
+\section{Skills}
+\cvitem{Languages}{Python, SQL}
+\cvitem{Frameworks}{PyTorch, PySpark}
+\cvitem{ML}{Deep learning, time-series forecasting, gradient boosting, causal inference}
+\cvitem{AI tooling}{Agentic AI development workflows, LLM development harnesses}
+
+\section{Education}
+
+\cventry{2016--2018}{MASc}{University of Toronto}{}{Civil Engineering, Transportation specialization}{Thesis: \emph{A metaheuristic approach to vehicle routing problem with movement synchronization} --- genetic-algorithm-based metaheuristic for the traveling salesperson problem with drones.}
+\cventry{2011--2016}{BASc (with honours)}{University of Toronto}{}{Engineering Science, Infrastructure specialization}{}
+
+\vfill
+\centering{\textit{References Available Upon Request}}
+
+\end{document}
