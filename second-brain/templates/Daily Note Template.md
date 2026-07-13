@@ -1,4 +1,4 @@
-# <% moment(tp.file.title,'YYYY-MM-DD').format("dddd, MMMM DD, YYYY") %>
+# Invalid date
 
 ## 📝 Ephemeral Notes
 
@@ -8,7 +8,7 @@
 
 ```dataview
 
-List FROM "" WHERE file.cday = date("<%tp.date.now("YYYY-MM-DD")%>") SORT file.ctime asc
+List FROM "" WHERE file.cday = date("2026-07-10") SORT file.ctime asc
 
 ```
 
@@ -16,7 +16,7 @@ List FROM "" WHERE file.cday = date("<%tp.date.now("YYYY-MM-DD")%>") SORT file.c
 
 ```dataview
 
-List FROM "" WHERE file.mday = date("<%tp.date.now("YYYY-MM-DD")%>") SORT file.mtime asc
+List FROM "" WHERE file.mday = date("2026-07-10") SORT file.mtime asc
 
 ```
 
