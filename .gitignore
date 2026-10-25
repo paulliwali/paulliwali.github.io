@@ -27,8 +27,27 @@ yarn-error.log*
 # Personal notes
 /docs/personal
 
-# obsidian dot files
-.obsidian
+# ---- PRIVATE VAULT: never publish, never render, never mirror ----
+# Live Obsidian vault (journals, finance, credit cards, wardrobe). Syncs from mobile.
+/second-brain/
+*.ajson
+
+# Obsidian internals + local workspace/embedding state
+.obsidian/
+.trash/
+.smart-connections/
+**/.smart-connections/
+
+# Local agent/editor state (can carry local paths and permission lists)
+.claude/settings.local.json
+**/.claude/settings.local.json
+
+# Credentials
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
 
 # Old files
 /old-docusaurus-backup
