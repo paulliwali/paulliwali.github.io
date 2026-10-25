@@ -17,6 +17,10 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # required by the gh-pages sync step below
+      pages: write
+      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -48,6 +52,23 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
+
+      # The Pages site is configured with `gh-pages` as its source branch, so that
+      # branch has to exist for the custom domain to stay attached. Keep it equal to
+      # what this workflow just built, as a single commit — no history, no drift, and
+      # no way for old private content to survive in the branch.
+      - name: Keep the gh-pages branch in sync
+        run: |
+          cd dist
+          touch .nojekyll
+          git init -q -b gh-pages
+          git add -A
+          git -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -q -m "deploy: ${GITHUB_SHA::7}"
+          git push -q --force \
+            "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" \
+            gh-pages
 
   deploy:
     environment:
