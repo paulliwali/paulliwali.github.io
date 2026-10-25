@@ -22,26 +22,37 @@ npm run preview      # Preview production build
 │   ├── pages/           # Route pages
 │   ├── styles/          # global.css (design system)
 │   └── utils/           # wiki-resolver.js (wikilink handling)
-├── blog/                # Blog posts (Obsidian vault)
-├── docs/
-│   ├── slip-box/        # Zettelkasten notes
-│   │   ├── reference-notes/
-│   │   ├── literature-notes/
-│   │   ├── permanent-notes/
-│   │   └── writing-bin/
-│   └── daily-notes/     # Daily journal entries
+├── blog/                # Blog posts (long-form surface)
+├── garden/              # Curated publishable notes, mirrored OUT of the private vault
+│   ├── slip-box/        # Zettelkasten notes (reference/literature/permanent/writing-bin)
+│   └── daily-notes/     # Curated daily notes only
 ├── public/              # Static assets, mindmap-data.json
-└── scripts/             # generate-mindmap.js
+└── scripts/             # generate-mindmap.js, guard-public-surface.mjs
 ```
 
-## Content System
+## Content System — PUBLISH SURFACE
 
-Content is managed via Obsidian and lives in `blog/` and `docs/` directories.
+**The site renders `blog/` and `garden/` ONLY.** Nothing else in this repo is read by
+the build, by design.
 
 ### Collections (src/content/config.ts)
-- **blog**: `blog/*.md` - Blog posts with title, date, tags
-- **notes**: `docs/slip-box/**/*.md` - Zettelkasten notes
-- **daily-notes**: `docs/daily-notes/**/*.md` - Daily entries
+- **blog**: `blog/*.md` — Blog posts with title, date, tags
+- **notes**: `garden/slip-box/**/*.md` — curated Zettelkasten notes
+- **daily-notes**: `garden/daily-notes/**/*.md` — curated daily notes
+
+Anything that lands in those two directories is public the moment it is pushed.
+
+### The private vault (NEVER publish)
+The author's live Obsidian vault is `second-brain/` — 1,100+ notes: a daily journal
+back to 2020, financial plans, a credit-card/churning tracker, wardrobe notes with body
+measurements. It is `.gitignore`d and must never be tracked, rendered, or copied into
+`blog/` / `garden/` wholesale. It also syncs from a phone (GitSync) which bypasses local
+git hooks — which is why `scripts/guard-public-surface.mjs` exists, runs in CI on every
+push and PR, and is a step of the deploy workflow. Run it locally with `npm run guard`
+(it is also the first step of `npm run build`).
+
+To publish a note: copy that one note into `garden/`, strip anything private (amounts,
+account/card details, health, third parties, locations, dates that matter), then commit.
 
 ### Wikilinks
 Obsidian-style `[[wikilinks]]` are supported via `remark-wiki-link` plugin.
@@ -63,7 +74,7 @@ Resolution logic is in `src/utils/wiki-resolver.js`.
 
 Interactive visualization built with React Three Fiber.
 
-- **Data generation**: `scripts/generate-mindmap.js` scans docs/ for markdown files and extracts wikilinks
+- **Data generation**: `scripts/generate-mindmap.js` scans `garden/` for markdown files and extracts wikilinks
 - **Output**: `public/mindmap-data.json`
 - **Component**: `src/components/MindMap3D.tsx`
 - **Auto-runs**: `npm run dev` and `npm run build` run generation first
@@ -103,8 +114,13 @@ Node colors by category:
 Deploys automatically via GitHub Actions on push to `main`.
 
 Workflow: `.github/workflows/deploy.yml`
+- Runs `scripts/guard-public-surface.mjs` — a failing guard blocks the deploy
 - Runs `npm run build`
 - Deploys `dist/` to GitHub Pages
+
+The custom domain https://pauldeng.me is served from the `gh-pages` branch.
+Live journal/finance/wardrobe content must never appear in `dist/` — if it does,
+the guard is broken: fix the guard before the next push.
 
 ## Dependencies
 
@@ -127,8 +143,9 @@ tags: [tag1, tag2]
 ```
 
 ### Adding a note
-Create markdown in appropriate `docs/slip-box/` subfolder.
-Use `[[wikilinks]]` to link between notes.
+Copy the note out of the private vault into the matching `garden/slip-box/` subfolder,
+redact anything private, then commit. Use `[[wikilinks]]` to link between notes.
+Never point a collection loader at `second-brain/` or `docs/` — the guard fails the build.
 
 ### Updating the mind map
 Runs automatically on build. To regenerate manually:

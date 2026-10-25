@@ -5,11 +5,11 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.join(__dirname, '..');
 
-// Directories to scan
+// Directories to scan (publishable surface only — never the private vault)
 const dirs = [
-  { base: path.join(rootDir, 'docs/slip-box'), prefix: 'slip-box' },
-  { base: path.join(rootDir, 'docs/daily-notes'), prefix: 'daily-notes' },
-  { base: path.join(rootDir, 'docs/digital-garden'), prefix: 'digital-garden' },
+  { base: path.join(rootDir, 'garden/slip-box'), prefix: 'slip-box' },
+  { base: path.join(rootDir, 'garden/daily-notes'), prefix: 'daily-notes' },
+  { base: path.join(rootDir, 'garden/digital-garden'), prefix: 'digital-garden' },
 ];
 
 // Store all nodes and links

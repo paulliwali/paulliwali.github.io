@@ -1,0 +1,28 @@
+name: Content guard
+
+# Gate for the publish surface: fails if anything private-looking is tracked, or
+# if the content collections are re-pointed outside blog/ and garden/.
+# The same check runs inside the deploy workflow, so a failing guard blocks a deploy.
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Verify nothing private is tracked
+        run: node scripts/guard-public-surface.mjs

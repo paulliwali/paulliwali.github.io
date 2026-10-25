@@ -35,6 +35,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Guard the publish surface
+        run: node scripts/guard-public-surface.mjs
+
       - name: Install dependencies
         run: npm ci
 

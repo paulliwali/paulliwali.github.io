@@ -19,18 +19,20 @@ const blog = defineCollection({
   }),
 });
 
-// Point to existing docs/slip-box directory (Obsidian vault)
+// PUBLISHABLE SURFACE — the site reads ONLY `blog/` and `garden/`.
+// Anything outside those two directories is outside the build by construction.
+// `garden/slip-box/` holds curated notes mirrored out of the private vault by hand.
 const notes = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: path.join(projectRoot, 'docs/slip-box') }),
+  loader: glob({ pattern: '**/*.md', base: path.join(projectRoot, 'garden/slip-box') }),
   schema: z.object({
     title: z.string().optional(),
     tags: z.array(z.string()).default([]),
   }),
 });
 
-// Point to existing docs/daily-notes directory (Obsidian daily notes)
+// Curated daily notes only — never `second-brain/daily-notes` (private journal).
 const dailyNotes = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: path.join(projectRoot, 'docs/daily-notes') }),
+  loader: glob({ pattern: '**/*.md', base: path.join(projectRoot, 'garden/daily-notes') }),
   schema: z.object({
     title: z.string().optional(),
     tags: z.array(z.string()).default([]),
