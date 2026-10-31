@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      .leaf { fill: #7b9e89; }
+      .stem { fill: none; stroke: #7b9e89; stroke-width: 3; stroke-linecap: round; }
+      .initials { fill: #2d2d2d; font-family: 'Georgia', serif; font-size: 38px; font-weight: bold; }
+      @media (prefers-color-scheme: dark) {
+        .leaf { fill: #9ec2ab; }
+        .stem { stroke: #9ec2ab; }
+        .initials { fill: #f5f5f0; }
+      }
+    </style>
+  </defs>
+  <!-- Stem growing from center -->
+  <path class="stem" d="M64 42 Q64 28 58 18" />
+  <path class="stem" d="M64 36 Q64 24 70 16" />
+  <!-- Left leaf -->
+  <path class="leaf" d="M58 18 Q46 8 38 14 Q32 20 44 26 Q52 22 58 18Z" />
+  <!-- Right leaf -->
+  <path class="leaf" d="M70 16 Q78 6 88 10 Q92 18 80 22 Q74 20 70 16Z" />
+  <!-- Small center bud -->
+  <ellipse class="leaf" cx="64" cy="16" rx="4" ry="6" transform="rotate(-5 64 16)" />
+  <!-- Initials - centered as a pair -->
+  <text class="initials" text-anchor="middle" x="64" y="88">PD</text>
+  <!-- Subtle ground line -->
+  <line x1="24" y1="96" x2="104" y2="96" stroke="#7b9e89" stroke-width="2" stroke-linecap="round" opacity="0.4" />
+</svg>
