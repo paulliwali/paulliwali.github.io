@@ -1,0 +1,458 @@
+{
+  "nodes": [
+    {
+      "id": "garden/brew-logs-2014",
+      "url": "/garden/brew-logs-2014",
+      "label": "Brew Logs 2014",
+      "category": "garden",
+      "connections": 1,
+      "x": 0.2709,
+      "y": 0.8509
+    },
+    {
+      "id": "garden/brew-logs-2015",
+      "url": "/garden/brew-logs-2015",
+      "label": "Brew Logs 2015",
+      "category": "garden",
+      "connections": 2,
+      "x": 0.2113,
+      "y": 0.7667
+    },
+    {
+      "id": "garden/brew-logs-2017",
+      "url": "/garden/brew-logs-2017",
+      "label": "Brew Logs 2017",
+      "category": "garden",
+      "connections": 2,
+      "x": 0.339,
+      "y": 0.7119
+    },
+    {
+      "id": "garden/brew-logs-2018",
+      "url": "/garden/brew-logs-2018",
+      "label": "Brew Logs 2018",
+      "category": "garden",
+      "connections": 2,
+      "x": 0.3127,
+      "y": 0.6218
+    },
+    {
+      "id": "garden/brew-logs-2019",
+      "url": "/garden/brew-logs-2019",
+      "label": "Brew Logs 2019",
+      "category": "garden",
+      "connections": 3,
+      "x": 0.2504,
+      "y": 0.5328
+    },
+    {
+      "id": "garden/til2021",
+      "url": "/garden/til2021",
+      "label": "Things I TIL'ed in 2021",
+      "category": "garden",
+      "connections": 1,
+      "x": 0.3507,
+      "y": 0.3503
+    },
+    {
+      "id": "garden/how-many-things",
+      "url": "/garden/how-many-things",
+      "label": "How many things do I own?",
+      "category": "garden",
+      "connections": 2,
+      "x": 0.1678,
+      "y": 0.4531
+    },
+    {
+      "id": "garden/counter-gatekeeping",
+      "url": "/garden/counter-gatekeeping",
+      "label": "Counter Gatekeeping",
+      "category": "garden",
+      "connections": 0,
+      "x": 0.2699,
+      "y": 0.1213
+    },
+    {
+      "id": "garden/why-switch-to-obsidian",
+      "url": "/garden/why-switch-to-obsidian",
+      "label": "Why I switched to obsidian",
+      "category": "garden",
+      "connections": 1,
+      "x": 0.42,
+      "y": 0.4676
+    },
+    {
+      "id": "garden/brew-logs-2023",
+      "url": "/garden/brew-logs-2023",
+      "label": "Brew Logs 2023",
+      "category": "garden",
+      "connections": 3,
+      "x": 0.0948,
+      "y": 0.5348
+    },
+    {
+      "id": "garden/til2022",
+      "url": "/garden/til2022",
+      "label": "Things I TIL'ed in 2022",
+      "category": "garden",
+      "connections": 2,
+      "x": 0.3307,
+      "y": 0.2607
+    },
+    {
+      "id": "garden/fitbit-vs-whoop",
+      "url": "/garden/fitbit-vs-whoop",
+      "label": "FitBit vs Whoop",
+      "category": "garden",
+      "connections": 1,
+      "x": 0.08,
+      "y": 0.6317
+    },
+    {
+      "id": "garden/til2023",
+      "url": "/garden/til2023",
+      "label": "Things I TIL'ed in 2023",
+      "category": "garden",
+      "connections": 2,
+      "x": 0.1735,
+      "y": 0.2494
+    },
+    {
+      "id": "garden/til2025",
+      "url": "/garden/til2025",
+      "label": "Things I TIL'ed in 2025",
+      "category": "garden",
+      "connections": 1,
+      "x": 0.1003,
+      "y": 0.3303
+    },
+    {
+      "id": "slip-box/permanent-notes/1a-entry-to-creativity",
+      "url": "/slip-box/permanent-notes/1a-entry-to-creativity",
+      "label": "1a entry to creativity",
+      "category": "permanent-notes",
+      "connections": 1,
+      "x": 0.6363,
+      "y": 0.1701
+    },
+    {
+      "id": "slip-box/permanent-notes/1b-good-engineers-are-good-at-abstraction",
+      "url": "/slip-box/permanent-notes/1b-good-engineers-are-good-at-abstraction",
+      "label": "1b good engineers are good at abstraction",
+      "category": "permanent-notes",
+      "connections": 2,
+      "x": 0.7224,
+      "y": 0.12
+    },
+    {
+      "id": "slip-box/permanent-notes/1c-humans-cant-grasp-big-numbers",
+      "url": "/slip-box/permanent-notes/1c-humans-cant-grasp-big-numbers",
+      "label": "1c humans cant grasp big numbers",
+      "category": "permanent-notes",
+      "connections": 1,
+      "x": 0.8299,
+      "y": 0.1399
+    },
+    {
+      "id": "slip-box/permanent-notes/2a-entry-to-productivity",
+      "url": "/slip-box/permanent-notes/2a-entry-to-productivity",
+      "label": "2a entry to productivity",
+      "category": "permanent-notes",
+      "connections": 3,
+      "x": 0.8247,
+      "y": 0.6337
+    },
+    {
+      "id": "slip-box/permanent-notes/2a1-can-remote-work-be-productive",
+      "url": "/slip-box/permanent-notes/2a1-can-remote-work-be-productive",
+      "label": "2a1 can remote work be productive",
+      "category": "permanent-notes",
+      "connections": 2,
+      "x": 0.8817,
+      "y": 0.709
+    },
+    {
+      "id": "slip-box/permanent-notes/2a2-modern-offices-promotes-busyness-and-not-productiveness",
+      "url": "/slip-box/permanent-notes/2a2-modern-offices-promotes-busyness-and-not-productiveness",
+      "label": "2a2 modern offices promotes busyness and not productiveness",
+      "category": "permanent-notes",
+      "connections": 2,
+      "x": 0.7778,
+      "y": 0.716
+    },
+    {
+      "id": "slip-box/permanent-notes/2b-how-to-bridge-slip-box-with-second-brain",
+      "url": "/slip-box/permanent-notes/2b-how-to-bridge-slip-box-with-second-brain",
+      "label": "2b how to bridge slip box with second brain",
+      "category": "permanent-notes",
+      "connections": 7,
+      "x": 0.7987,
+      "y": 0.5186
+    },
+    {
+      "id": "slip-box/permanent-notes/2b1-how-i-read-books---a-guide-on-how-to-learn",
+      "url": "/slip-box/permanent-notes/2b1-how-i-read-books---a-guide-on-how-to-learn",
+      "label": "2b1 How I read books   a guide on how to learn",
+      "category": "permanent-notes",
+      "connections": 2,
+      "x": 0.7021,
+      "y": 0.4503
+    },
+    {
+      "id": "slip-box/permanent-notes/2b2-expand-the-mental-model-toolbox",
+      "url": "/slip-box/permanent-notes/2b2-expand-the-mental-model-toolbox",
+      "label": "2b2 expand the mental model toolbox",
+      "category": "permanent-notes",
+      "connections": 3,
+      "x": 0.8007,
+      "y": 0.4274
+    },
+    {
+      "id": "slip-box/permanent-notes/2b3-knowledge-as-a-tree",
+      "url": "/slip-box/permanent-notes/2b3-knowledge-as-a-tree",
+      "label": "2b3 Knowledge as a tree",
+      "category": "permanent-notes",
+      "connections": 3,
+      "x": 0.8963,
+      "y": 0.4592
+    },
+    {
+      "id": "slip-box/permanent-notes/2b4-offloading-knowledge-to-an-external-system",
+      "url": "/slip-box/permanent-notes/2b4-offloading-knowledge-to-an-external-system",
+      "label": "2b4 offloading knowledge to an external system",
+      "category": "permanent-notes",
+      "connections": 2,
+      "x": 0.92,
+      "y": 0.5337
+    },
+    {
+      "id": "slip-box/permanent-notes/2c-productivity-is-not-the-end-all-and-be-all",
+      "url": "/slip-box/permanent-notes/2c-productivity-is-not-the-end-all-and-be-all",
+      "label": "2c productivity is not the end all and be all",
+      "category": "permanent-notes",
+      "connections": 3,
+      "x": 0.6887,
+      "y": 0.5687
+    },
+    {
+      "id": "slip-box/permanent-notes/2c1-technology-productivity-leading-to-decrease-in-jobs",
+      "url": "/slip-box/permanent-notes/2c1-technology-productivity-leading-to-decrease-in-jobs",
+      "label": "2c1 technology productivity leading to decrease in jobs",
+      "category": "permanent-notes",
+      "connections": 2,
+      "x": 0.623,
+      "y": 0.6374
+    },
+    {
+      "id": "slip-box/permanent-notes/2c2-chatgpt-replacing-white-collar-jobs",
+      "url": "/slip-box/permanent-notes/2c2-chatgpt-replacing-white-collar-jobs",
+      "label": "2c2 chatgpt replacing white collar jobs",
+      "category": "permanent-notes",
+      "connections": 2,
+      "x": 0.58,
+      "y": 0.5639
+    },
+    {
+      "id": "slip-box/permanent-notes/3a-thinking-creatively",
+      "url": "/slip-box/permanent-notes/3a-thinking-creatively",
+      "label": "3a thinking creatively",
+      "category": "permanent-notes",
+      "connections": 2,
+      "x": 0.7531,
+      "y": 0.2907
+    },
+    {
+      "id": "slip-box/permanent-notes/3a1-creative-groups",
+      "url": "/slip-box/permanent-notes/3a1-creative-groups",
+      "label": "3a1 Creative Groups",
+      "category": "permanent-notes",
+      "connections": 1,
+      "x": 0.6453,
+      "y": 0.3141
+    },
+    {
+      "id": "slip-box/permanent-notes/3b-feature-positive-effect",
+      "url": "/slip-box/permanent-notes/3b-feature-positive-effect",
+      "label": "3b feature positive effect",
+      "category": "permanent-notes",
+      "connections": 1,
+      "x": 0.866,
+      "y": 0.284
+    },
+    {
+      "id": "slip-box/permanent-notes/4a-advertisement",
+      "url": "/slip-box/permanent-notes/4a-advertisement",
+      "label": "4a advertisement",
+      "category": "permanent-notes",
+      "connections": 0,
+      "x": 0.6417,
+      "y": 0.8134
+    },
+    {
+      "id": "slip-box/permanent-notes/5a-how-to-sleep",
+      "url": "/slip-box/permanent-notes/5a-how-to-sleep",
+      "label": "5a how to sleep",
+      "category": "permanent-notes",
+      "connections": 0,
+      "x": 0.7844,
+      "y": 0.88
+    }
+  ],
+  "links": [
+    {
+      "source": "garden/brew-logs-2014",
+      "target": "garden/brew-logs-2015",
+      "kind": "tag"
+    },
+    {
+      "source": "garden/brew-logs-2015",
+      "target": "garden/brew-logs-2017",
+      "kind": "tag"
+    },
+    {
+      "source": "garden/brew-logs-2017",
+      "target": "garden/brew-logs-2018",
+      "kind": "tag"
+    },
+    {
+      "source": "garden/brew-logs-2018",
+      "target": "garden/brew-logs-2019",
+      "kind": "tag"
+    },
+    {
+      "source": "garden/brew-logs-2019",
+      "target": "garden/brew-logs-2023",
+      "kind": "tag"
+    },
+    {
+      "source": "garden/brew-logs-2019",
+      "target": "garden/how-many-things",
+      "kind": "tag"
+    },
+    {
+      "source": "garden/how-many-things",
+      "target": "garden/brew-logs-2023",
+      "kind": "tag"
+    },
+    {
+      "source": "garden/brew-logs-2023",
+      "target": "garden/fitbit-vs-whoop",
+      "kind": "tag"
+    },
+    {
+      "source": "garden/til2021",
+      "target": "garden/til2022",
+      "kind": "tag"
+    },
+    {
+      "source": "garden/til2022",
+      "target": "garden/til2023",
+      "kind": "tag"
+    },
+    {
+      "source": "garden/til2023",
+      "target": "garden/til2025",
+      "kind": "tag"
+    },
+    {
+      "source": "slip-box/permanent-notes/1a-entry-to-creativity",
+      "target": "slip-box/permanent-notes/1b-good-engineers-are-good-at-abstraction",
+      "kind": "link"
+    },
+    {
+      "source": "slip-box/permanent-notes/1b-good-engineers-are-good-at-abstraction",
+      "target": "slip-box/permanent-notes/1c-humans-cant-grasp-big-numbers",
+      "kind": "link"
+    },
+    {
+      "source": "slip-box/permanent-notes/2a-entry-to-productivity",
+      "target": "slip-box/permanent-notes/2a1-can-remote-work-be-productive",
+      "kind": "link"
+    },
+    {
+      "source": "slip-box/permanent-notes/2a-entry-to-productivity",
+      "target": "slip-box/permanent-notes/2a2-modern-offices-promotes-busyness-and-not-productiveness",
+      "kind": "link"
+    },
+    {
+      "source": "slip-box/permanent-notes/2a1-can-remote-work-be-productive",
+      "target": "slip-box/permanent-notes/2a2-modern-offices-promotes-busyness-and-not-productiveness",
+      "kind": "link"
+    },
+    {
+      "source": "slip-box/permanent-notes/2a-entry-to-productivity",
+      "target": "slip-box/permanent-notes/2b-how-to-bridge-slip-box-with-second-brain",
+      "kind": "link"
+    },
+    {
+      "source": "slip-box/permanent-notes/2b-how-to-bridge-slip-box-with-second-brain",
+      "target": "slip-box/permanent-notes/2b1-how-i-read-books---a-guide-on-how-to-learn",
+      "kind": "link"
+    },
+    {
+      "source": "slip-box/permanent-notes/2b-how-to-bridge-slip-box-with-second-brain",
+      "target": "slip-box/permanent-notes/2b2-expand-the-mental-model-toolbox",
+      "kind": "link"
+    },
+    {
+      "source": "slip-box/permanent-notes/2b1-how-i-read-books---a-guide-on-how-to-learn",
+      "target": "slip-box/permanent-notes/2b2-expand-the-mental-model-toolbox",
+      "kind": "link"
+    },
+    {
+      "source": "slip-box/permanent-notes/2b-how-to-bridge-slip-box-with-second-brain",
+      "target": "slip-box/permanent-notes/2b3-knowledge-as-a-tree",
+      "kind": "link"
+    },
+    {
+      "source": "slip-box/permanent-notes/2b2-expand-the-mental-model-toolbox",
+      "target": "slip-box/permanent-notes/2b3-knowledge-as-a-tree",
+      "kind": "link"
+    },
+    {
+      "source": "slip-box/permanent-notes/2b-how-to-bridge-slip-box-with-second-brain",
+      "target": "slip-box/permanent-notes/2b4-offloading-knowledge-to-an-external-system",
+      "kind": "link"
+    },
+    {
+      "source": "slip-box/permanent-notes/2b3-knowledge-as-a-tree",
+      "target": "slip-box/permanent-notes/2b4-offloading-knowledge-to-an-external-system",
+      "kind": "link"
+    },
+    {
+      "source": "slip-box/permanent-notes/2b-how-to-bridge-slip-box-with-second-brain",
+      "target": "slip-box/permanent-notes/2c-productivity-is-not-the-end-all-and-be-all",
+      "kind": "link"
+    },
+    {
+      "source": "slip-box/permanent-notes/2c-productivity-is-not-the-end-all-and-be-all",
+      "target": "slip-box/permanent-notes/2c1-technology-productivity-leading-to-decrease-in-jobs",
+      "kind": "link"
+    },
+    {
+      "source": "slip-box/permanent-notes/2c-productivity-is-not-the-end-all-and-be-all",
+      "target": "slip-box/permanent-notes/2c2-chatgpt-replacing-white-collar-jobs",
+      "kind": "link"
+    },
+    {
+      "source": "slip-box/permanent-notes/2c1-technology-productivity-leading-to-decrease-in-jobs",
+      "target": "slip-box/permanent-notes/2c2-chatgpt-replacing-white-collar-jobs",
+      "kind": "link"
+    },
+    {
+      "source": "slip-box/permanent-notes/3a-thinking-creatively",
+      "target": "slip-box/permanent-notes/3a1-creative-groups",
+      "kind": "link"
+    },
+    {
+      "source": "slip-box/permanent-notes/3a-thinking-creatively",
+      "target": "slip-box/permanent-notes/3b-feature-positive-effect",
+      "kind": "link"
+    },
+    {
+      "source": "garden/why-switch-to-obsidian",
+      "target": "slip-box/permanent-notes/2b-how-to-bridge-slip-box-with-second-brain",
+      "kind": "tag"
+    }
+  ]
+}
