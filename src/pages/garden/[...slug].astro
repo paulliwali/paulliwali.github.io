@@ -20,8 +20,62 @@ export async function getStaticPaths() {
 
 const { entry, type } = Astro.props;
 const { Content } = await render(entry);
-const date = entry.id.match(/(\d{4}-\d{2}-\d{2})/)?.[0] || '';
+const currentSlug = type === 'blog' ? entry.data.slug || entry.id.split('/')[0] : entry.id;
+const date = entry.data.date || entry.id.match(/(\d{4}-\d{2}-\d{2})/)?.[0] || '';
 const title = entry.data.title || entry.id.split('/').pop()?.replace('.md', '') || 'Untitled';
+
+// Find connected posts & slip-box notes so readers can traverse the knowledge graph directly
+const allBlogPosts = await getCollection('blog');
+const allNotes = await getCollection('notes');
+const entryTags = new Set((entry.data.tags || []).map((t) => t.toLowerCase()));
+
+interface ConnectedItem {
+  url: string;
+  title: string;
+  surface: string;
+  date?: string;
+}
+
+const connectedMap = new Map<string, ConnectedItem>();
+
+for (const post of allBlogPosts) {
+  const postSlug = post.data.slug || post.id.split('/')[0];
+  if (postSlug === currentSlug) continue;
+  const sharesTag = post.data.tags.some((t) => entryTags.has(t.toLowerCase()));
+  const bodyLower = (post.body || '').toLowerCase();
+  const hasLink =
+    bodyLower.includes(`/garden/${currentSlug.toLowerCase()}`) ||
+    bodyLower.includes(`[[${title.toLowerCase()}`);
+
+  if (hasLink || sharesTag) {
+    const url = `/garden/${postSlug}`;
+    connectedMap.set(url, {
+      url,
+      title: post.data.title,
+      surface: 'Garden',
+      date: post.data.date,
+    });
+  }
+}
+
+for (const note of allNotes) {
+  const noteTitle = note.data.title || note.id.split('/').pop()?.replace('.md', '') || 'Untitled';
+  const bodyLower = (note.body || '').toLowerCase();
+  const hasLink =
+    bodyLower.includes(`/garden/${currentSlug.toLowerCase()}`) ||
+    bodyLower.includes(`[[${title.toLowerCase()}`) ||
+    bodyLower.includes(`[[${currentSlug.toLowerCase()}`);
+  const sharesTag = note.data.tags.some((t) => entryTags.has(t.toLowerCase()));
+
+  if (hasLink || sharesTag) {
+    const url = `/slip-box/${note.id}`;
+    connectedMap.set(url, { url, title: noteTitle, surface: 'Slip-Box' });
+  }
+}
+
+const connectedItems = Array.from(connectedMap.values())
+  .sort((a, b) => (b.date || '').localeCompare(a.date || ''))
+  .slice(0, 6);
 ---
 
 <BaseLayout title={`${title} - Paul's Second Brain`} description={title}>
@@ -35,7 +89,7 @@ const title = entry.data.title || entry.id.split('/').pop()?.replace('.md', '') 
       )}
       {entry.data.tags.length > 0 && (
         <div class="post-tags">
-          {entry.data.tags.map(tag => (
+          {entry.data.tags.map((tag) => (
             <a href={`/garden?tag=${tag}`} class="tag">{tag}</a>
           ))}
         </div>
@@ -45,6 +99,20 @@ const title = entry.data.title || entry.id.split('/').pop()?.replace('.md', '') 
     <div class="post-content">
       <Content />
     </div>
+
+    {connectedItems.length > 0 && (
+      <aside class="connected-notes">
+        <h3>Connected in the Graph</h3>
+        <ul class="connected-list">
+          {connectedItems.map((item) => (
+            <li>
+              <a href={item.url}>{item.title}</a>
+              <span class="surface-badge">{item.surface}</span>
+            </li>
+          ))}
+        </ul>
+      </aside>
+    )}
 
     <footer class="post-footer">
       <a href="/garden" class="back-link">← Back to Garden</a>
@@ -94,7 +162,7 @@ const title = entry.data.title || entry.id.split('/').pop()?.replace('.md', '') 
     font-family: var(--font-heading);
     font-size: 0.85rem;
     padding: 0.3em 0.7em;
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg-secondary-translucent);
     color: var(--color-text-secondary);
     border-radius: var(--border-radius);
     border: 1px solid var(--color-border);
@@ -153,6 +221,46 @@ const title = entry.data.title || entry.id.split('/').pop()?.replace('.md', '') 
 
   .post-content :global(hr) {
     margin: var(--spacing-xl) 0;
+  }
+
+  .connected-notes {
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: var(--color-bg-secondary-translucent);
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--color-accent-sage);
+  }
+
+  .connected-notes h3 {
+    margin: 0 0 var(--spacing-sm) 0;
+    font-size: 1.05rem;
+    color: var(--color-accent-sage);
+  }
+
+  .connected-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .connected-list li {
+    display: flex;
+    align-items: baseline;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .connected-list a {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+  }
+
+  .surface-badge {
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    color: var(--color-text-secondary);
+    opacity: 0.8;
   }
 
   .post-footer {

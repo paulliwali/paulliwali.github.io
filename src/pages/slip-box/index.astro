@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 
 // Get all notes and organize by folder
 const allNotes = await getCollection('notes');
+const publishedIds = new Set(allNotes.map((n) => n.id));
 
 // Group notes by their folder structure
 const notesByFolder = allNotes.reduce((acc, note) => {
@@ -18,7 +19,7 @@ const notesByFolder = allNotes.reduce((acc, note) => {
 }, {} as Record<string, typeof allNotes>);
 
 // Sort notes within each folder alphabetically
-Object.keys(notesByFolder).forEach(folder => {
+Object.keys(notesByFolder).forEach((folder) => {
   notesByFolder[folder].sort((a, b) => {
     const titleA = a.data.title || a.id;
     const titleB = b.data.title || b.id;
@@ -26,16 +27,41 @@ Object.keys(notesByFolder).forEach(folder => {
   });
 });
 
-const folderNames = {
+const folderNames: Record<string, string> = {
   'permanent-notes': 'Permanent Notes',
   'literature-notes': 'Literature Notes',
   'reference-notes': 'Reference Notes',
   'writing-bin': 'Writing Bin',
+  unorganized: 'Unorganized Notes',
+  root: 'Unorganized Notes',
 };
 
 // Define the order of folders
-const folderOrder = ['permanent-notes', 'literature-notes', 'reference-notes', 'writing-bin'];
-const orderedFolders = folderOrder.filter(folder => notesByFolder[folder]);
+const folderOrder = [
+  'permanent-notes',
+  'literature-notes',
+  'reference-notes',
+  'writing-bin',
+  'unorganized',
+  'root',
+];
+const orderedFolders = folderOrder.filter((folder) => notesByFolder[folder]);
+
+const indexEntries = [
+  { slug: 'permanent-notes/1a-entry-to-creativity', label: '1a entry to creativity', children: [] },
+  {
+    slug: 'permanent-notes/2a-entry-to-productivity',
+    label: '2a entry to productivity',
+    children: [
+      {
+        slug: 'permanent-notes/2a1-can-remote-work-be-productive',
+        label: '2a1 can remote work be productive',
+      },
+    ],
+  },
+  { slug: 'permanent-notes/3a-thinking-creatively', label: '3a thinking creatively', children: [] },
+];
+const zettelkastenSlug = 'reference-notes/zettelkasten-method';
 ---
 
 <BaseLayout title="Slip-Box - Paul's Second Brain" description="My slip-box: a collection of reference notes, literature notes, and permanent notes.">
@@ -53,15 +79,37 @@ const orderedFolders = folderOrder.filter(folder => notesByFolder[folder]);
     <div class="index-content">
       <p>Here lies the index to my permanent notes:</p>
       <ul class="index-list">
-        <li><a href="/slip-box/permanent-notes/1a-entry-to-creativity">1a entry to creativity</a></li>
-        <li><a href="/slip-box/permanent-notes/2a-entry-to-productivity">2a entry to productivity</a>
-          <ul>
-            <li><a href="/slip-box/permanent-notes/2a1-can-remote-work-be-productive">2a1 can remote work be productive</a></li>
-          </ul>
-        </li>
-        <li><a href="/slip-box/permanent-notes/3a-thinking-creatively">3a thinking creatively</a></li>
+        {indexEntries.map((entry) => (
+          <li>
+            {publishedIds.has(entry.slug) ? (
+              <a href={`/slip-box/${entry.slug}`}>{entry.label}</a>
+            ) : (
+              <span class="unpublished-note">{entry.label}</span>
+            )}
+            {entry.children.length > 0 && (
+              <ul>
+                {entry.children.map((child) => (
+                  <li>
+                    {publishedIds.has(child.slug) ? (
+                      <a href={`/slip-box/${child.slug}`}>{child.label}</a>
+                    ) : (
+                      <span class="unpublished-note">{child.label}</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
       </ul>
-      <p class="index-reference">Reference: <a href="/slip-box/reference-notes/zettelkasten-method">Zettelkasten Method</a></p>
+      <p class="index-reference">
+        Reference:{' '}
+        {publishedIds.has(zettelkastenSlug) ? (
+          <a href={`/slip-box/${zettelkastenSlug}`}>Zettelkasten Method</a>
+        ) : (
+          <span class="unpublished-note">Zettelkasten Method</span>
+        )}
+      </p>
       <div class="index-questions">
         <p><strong>Try to answer the following questions in order to convert fleeting notes into permanent notes:</strong></p>
         <ul>
@@ -80,40 +128,42 @@ const orderedFolders = folderOrder.filter(folder => notesByFolder[folder]);
       const notes = notesByFolder[folder];
       return (
         <section class="notes-folder">
-          <h2 class="folder-title">{folderNames[folder]}</h2>
+          <h2 class="folder-title">{folderNames[folder] || folder}</h2>
           <p class="folder-count">{notes.length} {notes.length === 1 ? 'note' : 'notes'}</p>
 
-        <ul class="notes-list">
-          {notes.map((note) => {
-            const slug = note.id;
-            const title = note.data.title || note.id.split('/').pop()?.replace('.md', '') || 'Untitled';
+          <ul class="notes-list">
+            {notes.map((note) => {
+              const slug = note.id;
+              const title = note.data.title || note.id.split('/').pop()?.replace('.md', '') || 'Untitled';
 
-            return (
-              <li class="note-item">
-                <a href={`/slip-box/${slug}`} class="note-link">
-                  <span class="note-title">{title}</span>
-                  {note.data.tags.length > 0 && (
-                    <div class="note-tags">
-                      {note.data.tags.slice(0, 3).map(tag => (
-                        <span class="tag">{tag}</span>
-                      ))}
-                      {note.data.tags.length > 3 && (
-                        <span class="tag-more">+{note.data.tags.length - 3}</span>
-                      )}
-                    </div>
-                  )}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
+              return (
+                <li class="note-item">
+                  <a href={`/slip-box/${slug}`} class="note-link">
+                    <span class="note-title">{title}</span>
+                    {note.data.tags.length > 0 && (
+                      <div class="note-tags">
+                        {note.data.tags.slice(0, 3).map((tag) => (
+                          <span class="tag">{tag}</span>
+                        ))}
+                        {note.data.tags.length > 3 && (
+                          <span class="tag-more">+{note.data.tags.length - 3}</span>
+                        )}
+                      </div>
+                    )}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
       );
     })}
   </div>
 
   {Object.keys(notesByFolder).length === 0 && (
-    <p class="empty-state">No notes found. Start taking notes to build your slip-box!</p>
+    <p class="empty-state">
+      Curated notes from the private vault are being reviewed and published gradually.
+    </p>
   )}
 </BaseLayout>
 
@@ -136,7 +186,7 @@ const orderedFolders = folderOrder.filter(folder => notesByFolder[folder]);
   .index-section {
     margin-bottom: var(--spacing-xl);
     padding: var(--spacing-lg);
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg-secondary-translucent);
     border-radius: var(--border-radius);
     border-left: 4px solid var(--color-accent-sage);
   }
@@ -166,6 +216,11 @@ const orderedFolders = folderOrder.filter(folder => notesByFolder[folder]);
     font-weight: 500;
   }
 
+  .unpublished-note {
+    font-family: var(--font-heading);
+    color: var(--color-text-secondary);
+  }
+
   .index-list ul {
     margin-top: var(--spacing-xs);
     padding-left: var(--spacing-lg);
@@ -179,7 +234,7 @@ const orderedFolders = folderOrder.filter(folder => notesByFolder[folder]);
 
   .index-questions {
     padding: var(--spacing-md);
-    background-color: var(--color-bg-primary);
+    background-color: rgba(245, 245, 240, 0.85);
     border-radius: var(--border-radius);
     border: 1px solid var(--color-border);
   }
@@ -206,7 +261,7 @@ const orderedFolders = folderOrder.filter(folder => notesByFolder[folder]);
 
   .notes-folder {
     padding: var(--spacing-lg);
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg-secondary-translucent);
     border-radius: var(--border-radius);
     border: 1px solid var(--color-border);
   }
@@ -239,7 +294,7 @@ const orderedFolders = folderOrder.filter(folder => notesByFolder[folder]);
   .note-link {
     display: block;
     padding: var(--spacing-sm);
-    background-color: var(--color-bg-primary);
+    background-color: rgba(245, 245, 240, 0.85);
     border-radius: var(--border-radius);
     border: 1px solid var(--color-border);
     transition: all 0.2s ease;

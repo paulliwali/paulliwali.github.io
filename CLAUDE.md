@@ -1,154 +1,93 @@
 # Paul's Second Brain - Digital Garden
 
-Personal website built with Astro, featuring a digital garden, Zettelkasten notes, and 3D mind map visualization.
+Personal website built with Astro, featuring a digital garden, Zettelkasten slip-box notes, and an ambient background knowledge graph.
 
-**Live site**: https://paulliwali.github.io
+**Live site**: https://paulliwali.github.io (https://pauldeng.me)
 
 ## Quick Reference
 
 ```bash
-npm run dev          # Start dev server (runs generate:mindmap first)
-npm run build        # Production build
-npm run preview      # Preview production build
+npm run sync:garden:dry  # Preview which Obsidian notes (`publish: true`) would sync
+npm run sync:garden      # Sync opted-in Obsidian notes -> garden/ + regenerate graph
+npm run guard            # Run privacy & publish-surface gate locally
+npm run dev              # Sync garden, regenerate graph, and start dev server
+npm run build            # Run guard, regenerate graph, and build production site
+npm run preview          # Preview production build
 ```
 
 ## Project Structure
 
 ```
 ├── src/
-│   ├── components/      # React components (MindMap3D.tsx)
-│   ├── content/         # Astro content config
-│   ├── layouts/         # BaseLayout.astro
-│   ├── pages/           # Route pages
+│   ├── components/      # BackgroundGraph.astro (persistent ambient 2D graph)
+│   ├── content/         # Astro content config (enforces publish: true on garden/)
+│   ├── layouts/         # BaseLayout.astro (View Transitions + BackgroundGraph)
+│   ├── pages/           # Route pages (/, /garden, /slip-box, /projects, /resume, /about)
 │   ├── styles/          # global.css (design system)
-│   └── utils/           # wiki-resolver.js (wikilink handling)
-├── blog/                # Blog posts (long-form surface)
-├── garden/              # Curated publishable notes, mirrored OUT of the private vault
-│   ├── slip-box/        # Zettelkasten notes (reference/literature/permanent/writing-bin)
-│   └── daily-notes/     # Curated daily notes only
+│   └── utils/           # wiki-resolver.js (wikilink handling across blog/ and garden/)
+├── blog/                # Published Garden essays & long-form posts
+├── garden/              # Opted-in notes synced out of `second-brain/` via sync-garden.mjs
+│   ├── slip-box/        # Zettelkasten notes (permanent/literature/reference/writing-bin/unorganized)
+│   └── daily-notes/     # Curated daily notes (requires publish: true + allow_public_journal: true)
 ├── public/              # Static assets, mindmap-data.json
-└── scripts/             # generate-mindmap.js, guard-public-surface.mjs
+└── scripts/             # sync-garden.mjs, privacy-rules.mjs, guard-public-surface.mjs, generate-mindmap.js
 ```
 
-## Content System — PUBLISH SURFACE
+## Content System & Privacy Gate — PUBLISH SURFACE
 
-**The site renders `blog/` and `garden/` ONLY.** Nothing else in this repo is read by
-the build, by design.
+**The site renders `blog/` and `garden/` ONLY.** Nothing else in this repo is read by the build.
 
-### Collections (src/content/config.ts)
-- **blog**: `blog/*.md` — Blog posts with title, date, tags
-- **notes**: `garden/slip-box/**/*.md` — curated Zettelkasten notes
-- **daily-notes**: `garden/daily-notes/**/*.md` — curated daily notes
+### Multi-Layer Privacy Defense (Deny-by-Default)
+The author's live Obsidian vault (`second-brain/`) is `.gitignore`d and never tracked by git. Publishing from `second-brain/` into `garden/` is gated by three independent layers:
 
-Anything that lands in those two directories is public the moment it is pushed.
+1. **Explicit Opt-In Sync (`scripts/sync-garden.mjs`)**:
+   - Only notes in `second-brain/slip-box/` with `publish: true` in YAML frontmatter are eligible.
+   - Journal entries in `second-brain/daily-notes/` are blocked unless **both** `publish: true` and `allow_public_journal: true` are set.
+   - Strips Obsidian `%% ... %%` comments and `<!-- private -->...<!-- /private -->` blocks before writing.
+   - Rewrites `[[wikilinks]]` pointing to unpublished/private notes into plain text so private note paths never leak and visitors never hit 404s.
+   - Runs `scripts/privacy-rules.mjs` (blocks secrets, SSNs, card numbers, phone/email, compensation/interview/HR keywords, financial/net-worth terms, and any custom terms in local `.privacy-blocklist.txt`).
+   - Removes notes from `garden/` if `publish: true` is later removed in Obsidian.
+2. **Astro Schema Gate (`src/content/config.ts`)**:
+   - `notes` and `daily-notes` collections require `publish: z.literal(true)` (and `allow_public_journal: z.literal(true)` for daily notes), failing compilation if an unvetted file is placed in `garden/`.
+3. **CI & Build Guard (`scripts/guard-public-surface.mjs`)**:
+   - Runs in CI on every push/PR (`.github/workflows/content-guard.yml`, `.github/workflows/deploy.yml`) and locally on `npm run build`.
+   - Fails if any private path (`second-brain/`, `.obsidian/`, `.smart-connections/`, `.privacy-blocklist.txt`, keys, `.env`) is tracked, if collection loaders point outside `blog/` or `garden/`, or if any published markdown fails privacy checks.
 
-### The private vault (NEVER publish)
-The author's live Obsidian vault is `second-brain/` — 1,100+ notes: a daily journal
-back to 2020, financial plans, a credit-card/churning tracker, wardrobe notes with body
-measurements. It is `.gitignore`d and must never be tracked, rendered, or copied into
-`blog/` / `garden/` wholesale. It also syncs from a phone (GitSync) which bypasses local
-git hooks — which is why `scripts/guard-public-surface.mjs` exists, runs in CI on every
-push and PR, and is a step of the deploy workflow. Run it locally with `npm run guard`
-(it is also the first step of `npm run build`).
+### Local Private Blocklist (`.privacy-blocklist.txt`)
+Copy `.privacy-blocklist.example.txt` to `.privacy-blocklist.txt` (gitignored and blocked from commits by `guard-public-surface.mjs`) and list employer names, project codenames, home street names, or personal contacts that must never appear on the public site.
 
-To publish a note: copy that one note into `garden/`, strip anything private (amounts,
-account/card details, health, third parties, locations, dates that matter), then commit.
+### Publishing an Obsidian Note
+1. In Obsidian (`second-brain/slip-box/...`), add `publish: true` to the note's YAML frontmatter:
+   ```yaml
+   ---
+   publish: true
+   title: "Optional Display Title"
+   tags: [topic1, topic2]
+   ---
+   ```
+   *(If a benign book/essay note triggers a heuristic keyword check after you've verified it is 100% safe, add `privacy_reviewed: true` to frontmatter. Hard rules and `.privacy-blocklist.txt` hits can never be overridden.)*
+2. Preview & sync:
+   ```bash
+   npm run sync:garden:dry
+   npm run sync:garden
+   ```
+3. Review `git diff garden/` and commit.
 
-### Wikilinks
-Obsidian-style `[[wikilinks]]` are supported via `remark-wiki-link` plugin.
-Resolution logic is in `src/utils/wiki-resolver.js`.
+## Ambient Background Knowledge Graph
+
+- **Generator**: `scripts/generate-mindmap.js` scans `blog/` and `garden/`, extracts `[[wikilinks]]`, internal markdown links, and sparse shared-tag bridges, and computes a deterministic 2D force-directed layout into `public/mindmap-data.json`.
+- **Component**: `src/components/BackgroundGraph.astro` renders a non-interactive, subtle 2D constellation behind all pages (persisted across client-side navigations via Astro `<ClientRouter />` + `transition:persist`).
+- **Active Note Indicator**: When viewing a post or note, a calm vermilion-red dot breathes steadily on that note's node in the graph, and smoothly glides along an arc to the next node when navigating between notes.
 
 ## Key Pages
 
 | Route | File | Description |
 |-------|------|-------------|
-| `/` | `pages/index.astro` | Homepage with recent posts |
-| `/garden` | `pages/garden/index.astro` | All blog posts |
-| `/garden/[slug]` | `pages/garden/[...slug].astro` | Individual post |
-| `/slip-box` | `pages/slip-box/index.astro` | Zettelkasten notes |
-| `/explore` | `pages/explore/index.astro` | 3D mind map |
+| `/` | `pages/index.astro` | Homepage with recent Garden posts |
+| `/garden` | `pages/garden/index.astro` | All Garden posts & tag filter |
+| `/garden/[slug]` | `pages/garden/[...slug].astro` | Individual Garden post or curated daily note |
+| `/slip-box` | `pages/slip-box/index.astro` | Curated Zettelkasten notes |
+| `/slip-box/[slug]` | `pages/slip-box/[...slug].astro` | Individual Slip-Box note |
 | `/projects` | `pages/projects.astro` | Portfolio |
+| `/resume` | `pages/resume.astro` | HTML & PDF resume |
 | `/about` | `pages/about.astro` | About page |
-
-## 3D Mind Map
-
-Interactive visualization built with React Three Fiber.
-
-- **Data generation**: `scripts/generate-mindmap.js` scans `garden/` for markdown files and extracts wikilinks
-- **Output**: `public/mindmap-data.json`
-- **Component**: `src/components/MindMap3D.tsx`
-- **Auto-runs**: `npm run dev` and `npm run build` run generation first
-
-Node colors by category:
-- Reference notes: sage (`#7b9e89`)
-- Literature notes: lavender (`#b8a9c9`)
-- Permanent notes: terracotta (`#d4a574`)
-- Writing bin: dusty rose (`#c9ada7`)
-- Daily notes: steel blue (`#9eb3c2`)
-
-## Design System (src/styles/global.css)
-
-### Colors
-```css
---color-bg-primary: #f5f5f0      /* warm off-white */
---color-bg-secondary: #e8e5d8    /* cream */
---color-accent-sage: #7b9e89     /* muted green */
---color-accent-terracotta: #c38370
---color-accent-lavender: #8b8fa8
---color-text-primary: #2d2d2d
---color-text-secondary: #5a5a5a
---color-link: #5b7c6d
-```
-
-### Typography
-- Headings: Inter
-- Body: Georgia / Crimson Pro (serif)
-- Code: JetBrains Mono
-
-### Layout
-- Max content width: 680px
-- Spacing scale: xs (0.5rem) → xl (3rem)
-
-## Deployment
-
-Deploys automatically via GitHub Actions on push to `main`.
-
-Workflow: `.github/workflows/deploy.yml`
-- Runs `scripts/guard-public-surface.mjs` — a failing guard blocks the deploy
-- Runs `npm run build`
-- Deploys `dist/` to GitHub Pages
-
-The custom domain https://pauldeng.me is served from the `gh-pages` branch.
-Live journal/finance/wardrobe content must never appear in `dist/` — if it does,
-the guard is broken: fix the guard before the next push.
-
-## Dependencies
-
-- **astro**: Static site generator
-- **@astrojs/react**: React integration for interactive components
-- **react-three-fiber** + **drei**: 3D visualization
-- **three**: 3D graphics library
-- **remark-wiki-link**: Obsidian wikilink support
-
-## Common Tasks
-
-### Adding a blog post
-Create `blog/YYYY-MM-DD-title/index.md` with frontmatter:
-```yaml
----
-title: "Post Title"
-date: "YYYY-MM-DD"
-tags: [tag1, tag2]
----
-```
-
-### Adding a note
-Copy the note out of the private vault into the matching `garden/slip-box/` subfolder,
-redact anything private, then commit. Use `[[wikilinks]]` to link between notes.
-Never point a collection loader at `second-brain/` or `docs/` — the guard fails the build.
-
-### Updating the mind map
-Runs automatically on build. To regenerate manually:
-```bash
-npm run generate:mindmap
-```

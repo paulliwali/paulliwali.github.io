@@ -1,0 +1,14 @@
+# Local Privacy Blocklist (copy to `.privacy-blocklist.txt` — gitignored!)
+#
+# Put sensitive personal or professional strings here (one per line, case-insensitive)
+# that must NEVER appear in any published note or blog post. Because `.privacy-blocklist.txt`
+# is gitignored and blocked by `scripts/guard-public-surface.mjs`, the words themselves
+# stay strictly on your machine while gating every `npm run sync:garden` and local `npm run build`.
+#
+# Prefix a line with `re:` to use a regular expression instead of a literal substring.
+#
+# Examples:
+# Current or past employer / internal codenames
+# Home street address or apartment number
+# Names of family members, partners, managers, or coworkers
+# re:\b123\s+Main\s+St\b

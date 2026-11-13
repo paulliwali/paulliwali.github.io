@@ -7,7 +7,15 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, '../..');
 
-// Point to existing blog directory (Obsidian vault)
+// Normalize Obsidian frontmatter tags (handles null, single string, or string[])
+const tagsSchema = z
+  .preprocess(
+    (val) => (val == null ? [] : Array.isArray(val) ? val.map(String) : [String(val)]),
+    z.array(z.string())
+  )
+  .default([]);
+
+// Blog posts (`blog/`) — rendered under `/garden`
 const blog = defineCollection({
   loader: glob({ pattern: '**/*.md', base: path.join(projectRoot, 'blog') }),
   schema: z.object({
@@ -15,27 +23,34 @@ const blog = defineCollection({
     slug: z.string().optional(),
     date: z.string().optional(),
     authors: z.string().optional(),
-    tags: z.array(z.string()).default([]),
+    tags: tagsSchema,
   }),
 });
 
 // PUBLISHABLE SURFACE — the site reads ONLY `blog/` and `garden/`.
-// Anything outside those two directories is outside the build by construction.
-// `garden/slip-box/` holds curated notes mirrored out of the private vault by hand.
+// Every note in `garden/` MUST carry `publish: true` (enforced by sync-garden, guard, and schema).
 const notes = defineCollection({
   loader: glob({ pattern: '**/*.md', base: path.join(projectRoot, 'garden/slip-box') }),
   schema: z.object({
+    publish: z.literal(true),
+    privacy_reviewed: z.boolean().optional(),
     title: z.string().optional(),
-    tags: z.array(z.string()).default([]),
+    date: z.string().optional(),
+    source: z.string().optional(),
+    author: z.string().optional(),
+    tags: tagsSchema,
   }),
 });
 
-// Curated daily notes only — never `second-brain/daily-notes` (private journal).
+// Curated daily notes only — requires BOTH `publish: true` and `allow_public_journal: true`.
 const dailyNotes = defineCollection({
   loader: glob({ pattern: '**/*.md', base: path.join(projectRoot, 'garden/daily-notes') }),
   schema: z.object({
+    publish: z.literal(true),
+    allow_public_journal: z.literal(true),
+    privacy_reviewed: z.boolean().optional(),
     title: z.string().optional(),
-    tags: z.array(z.string()).default([]),
+    tags: tagsSchema,
   }),
 });
 

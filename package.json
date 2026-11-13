@@ -4,24 +4,23 @@
   "version": "0.0.1",
   "scripts": {
     "guard": "node scripts/guard-public-surface.mjs",
+    "sync:garden": "node scripts/sync-garden.mjs",
+    "sync:garden:dry": "node scripts/sync-garden.mjs --dry-run",
     "generate:mindmap": "node scripts/generate-mindmap.js",
     "build:resume": "cd resume && pdflatex -interaction=nonstopmode main.tex && mv main.pdf ../public/resume.pdf && rm -f main.aux main.log main.out",
-    "dev": "npm run generate:mindmap && astro dev",
+    "dev": "npm run sync:garden && astro dev",
     "build": "npm run guard && npm run generate:mindmap && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.0",
-    "@react-three/drei": "^10.7.6",
-    "@react-three/fiber": "^9.3.0",
     "astro": "^5.14.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0",
     "remark-wiki-link": "^2.0.1",
-    "three": "^0.180.0",
     "unist-util-visit": "^5.0.0"
   },
   "engines": {

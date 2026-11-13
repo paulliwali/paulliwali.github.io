@@ -80,13 +80,15 @@ const allTags = [...new Set(allBlogPosts.flatMap(post => post.data.tags))].sort(
     <p class="empty-state">No blog posts found. Start writing to grow your garden!</p>
   )}
 
-  <div class="daily-notes-section">
-    <div class="daily-notes-card">
-      <h2>Daily Notes</h2>
-      <p>A collection of {allDailyNotes.length} daily notes and journal entries.</p>
-      <a href="/garden/daily-notes" class="daily-notes-link">Browse Daily Notes →</a>
+  {allDailyNotes.length > 0 && (
+    <div class="daily-notes-section">
+      <div class="daily-notes-card">
+        <h2>Daily Notes</h2>
+        <p>A collection of {allDailyNotes.length} curated daily notes and reflections.</p>
+        <a href="/garden/daily-notes" class="daily-notes-link">Browse Daily Notes →</a>
+      </div>
     </div>
-  </div>
+  )}
 </BaseLayout>
 
 <style>
@@ -148,7 +150,7 @@ const allTags = [...new Set(allBlogPosts.flatMap(post => post.data.tags))].sort(
 
   .post-card {
     padding: var(--spacing-lg);
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg-secondary-translucent);
     border-radius: var(--border-radius);
     border: 1px solid var(--color-border);
     transition: all 0.2s ease;
@@ -322,9 +324,7 @@ const allTags = [...new Set(allBlogPosts.flatMap(post => post.data.tags))].sort(
     }
   }
 
-  // Run on page load
-  initializeTagFiltering();
-
-  // Re-run when navigating with browser back/forward
+  // Run on initial load and every Astro client-side page transition
+  document.addEventListener('astro:page-load', initializeTagFiltering);
   window.addEventListener('popstate', initializeTagFiltering);
 </script>

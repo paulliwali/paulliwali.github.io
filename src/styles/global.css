@@ -4,6 +4,7 @@
   /* Colors - Muted & Playful */
   --color-bg-primary: #f5f5f0;
   --color-bg-secondary: #e8e5d8;
+  --color-bg-secondary-translucent: rgba(232, 229, 216, 0.8);
   --color-accent-sage: #7b9e89;
   --color-accent-terracotta: #c38370;
   --color-accent-lavender: #8b8fa8;

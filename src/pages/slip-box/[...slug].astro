@@ -16,17 +16,67 @@ const { Content } = await render(note);
 // Get title from frontmatter or filename
 const title = note.data.title || note.id.split('/').pop()?.replace('.md', '') || 'Untitled';
 
-// Find backlinks - notes that link to this note
+// Cross-surface graph connections (Slip-Box notes + Garden posts)
 const allNotes = await getCollection('notes');
-const noteFileName = note.id.split('/').pop()?.replace('.md', '');
+const allBlogPosts = await getCollection('blog');
+const noteFileName = (note.id.split('/').pop()?.replace('.md', '') || '').toLowerCase();
+const noteTags = new Set(note.data.tags.map((t) => t.toLowerCase()));
 
-// Simple backlink detection - check if the current note's filename appears in other notes
-// This is a basic implementation; you can enhance it to parse actual wiki-links [[note]]
-const backlinks = allNotes.filter(otherNote => {
-  if (otherNote.id === note.id) return false;
-  // This is a simplified check - in a real implementation you'd parse the markdown
-  return otherNote.body?.includes(noteFileName || '');
-});
+interface ConnectedEntry {
+  url: string;
+  title: string;
+  surface: string;
+}
+
+const connectedMap = new Map<string, ConnectedEntry>();
+const currentFolgezettel = title.match(/^(\d+[a-z]+(?:\d+[a-z]*)*)\b/i)?.[1]?.toLowerCase() || '';
+
+function isFolgezettelNeighbor(codeA: string, codeB: string): boolean {
+  if (!codeA || !codeB || codeA === codeB) return false;
+  if (codeA.slice(0, -1) === codeB || codeB.slice(0, -1) === codeA) return true;
+  if (
+    codeA.length === codeB.length &&
+    codeA.slice(0, -1) === codeB.slice(0, -1) &&
+    Math.abs(codeA.charCodeAt(codeA.length - 1) - codeB.charCodeAt(codeB.length - 1)) === 1
+  ) {
+    return true;
+  }
+  return false;
+}
+
+for (const otherNote of allNotes) {
+  if (otherNote.id === note.id) continue;
+  const otherTitle = otherNote.data.title || otherNote.id.split('/').pop()?.replace('.md', '') || 'Untitled';
+  const otherFolgezettel = otherTitle.match(/^(\d+[a-z]+(?:\d+[a-z]*)*)\b/i)?.[1]?.toLowerCase() || '';
+  const bodyLower = (otherNote.body || '').toLowerCase();
+  const hasWikilink =
+    (noteFileName && bodyLower.includes(`[[${noteFileName}`)) ||
+    bodyLower.includes(`[[${title.toLowerCase()}`);
+  const sharesTag = otherNote.data.tags.some((t) => noteTags.has(t.toLowerCase()));
+  const isFolgezettel = isFolgezettelNeighbor(currentFolgezettel, otherFolgezettel);
+
+  if (hasWikilink || sharesTag || isFolgezettel) {
+    const url = `/slip-box/${otherNote.id}`;
+    connectedMap.set(url, { url, title: otherTitle, surface: 'Slip-Box' });
+  }
+}
+
+for (const post of allBlogPosts) {
+  const postSlug = post.data.slug || post.id.split('/')[0];
+  const postUrl = `/garden/${postSlug}`;
+  const bodyLower = (post.body || '').toLowerCase();
+  const hasLink =
+    (noteFileName && bodyLower.includes(`[[${noteFileName}`)) ||
+    bodyLower.includes(`[[${title.toLowerCase()}`) ||
+    bodyLower.includes(`/slip-box/${note.id.toLowerCase()}`);
+  const sharesTag = post.data.tags.some((t) => noteTags.has(t.toLowerCase()));
+
+  if (hasLink || sharesTag) {
+    connectedMap.set(postUrl, { url: postUrl, title: post.data.title, surface: 'Garden' });
+  }
+}
+
+const connectedEntries = Array.from(connectedMap.values()).slice(0, 8);
 ---
 
 <BaseLayout title={`${title} - Slip-Box`} description={title}>
@@ -37,7 +87,7 @@ const backlinks = allNotes.filter(otherNote => {
         {note.id.includes('/') && (
           <>
             <span class="separator">/</span>
-            <span class="folder">{note.id.split('/')[0]}</span>
+            <span class="folder">{note.id.split('/')[0].replace(/-/g, ' ')}</span>
           </>
         )}
       </nav>
@@ -46,7 +96,7 @@ const backlinks = allNotes.filter(otherNote => {
 
       {note.data.tags.length > 0 && (
         <div class="note-tags">
-          {note.data.tags.map(tag => (
+          {note.data.tags.map((tag) => (
             <span class="tag">{tag}</span>
           ))}
         </div>
@@ -57,20 +107,16 @@ const backlinks = allNotes.filter(otherNote => {
       <Content />
     </div>
 
-    {backlinks.length > 0 && (
+    {connectedEntries.length > 0 && (
       <aside class="backlinks">
-        <h3>Linked from</h3>
+        <h3>Connected Notes</h3>
         <ul class="backlinks-list">
-          {backlinks.map(backlink => {
-            const backlinkTitle = backlink.data.title || backlink.id.split('/').pop()?.replace('.md', '') || 'Untitled';
-            return (
-              <li>
-                <a href={`/slip-box/${backlink.id}`}>
-                  {backlinkTitle}
-                </a>
-              </li>
-            );
-          })}
+          {connectedEntries.map((item) => (
+            <li>
+              <a href={item.url}>{item.title}</a>
+              <span class="surface-badge">{item.surface}</span>
+            </li>
+          ))}
         </ul>
       </aside>
     )}
@@ -128,7 +174,7 @@ const backlinks = allNotes.filter(otherNote => {
     font-family: var(--font-heading);
     font-size: 0.85rem;
     padding: 0.3em 0.7em;
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg-secondary-translucent);
     color: var(--color-text-secondary);
     border-radius: var(--border-radius);
     border: 1px solid var(--color-border);
@@ -138,7 +184,6 @@ const backlinks = allNotes.filter(otherNote => {
     margin-bottom: var(--spacing-xl);
   }
 
-  /* Enhanced content styles for notes */
   .note-content :global(h2) {
     margin-top: var(--spacing-xl);
     margin-bottom: var(--spacing-md);
@@ -172,7 +217,7 @@ const backlinks = allNotes.filter(otherNote => {
   .backlinks {
     margin-top: var(--spacing-xl);
     padding: var(--spacing-md);
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg-secondary-translucent);
     border-radius: var(--border-radius);
     border-left: 3px solid var(--color-accent-terracotta);
   }
@@ -190,12 +235,22 @@ const backlinks = allNotes.filter(otherNote => {
   }
 
   .backlinks-list li {
+    display: flex;
+    align-items: baseline;
+    gap: var(--spacing-xs);
     margin-bottom: var(--spacing-xs);
   }
 
   .backlinks-list a {
     font-family: var(--font-heading);
     font-size: 0.95rem;
+  }
+
+  .surface-badge {
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    color: var(--color-text-secondary);
+    opacity: 0.8;
   }
 
   .note-footer {

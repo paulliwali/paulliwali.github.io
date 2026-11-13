@@ -1,0 +1,453 @@
+---
+/**
+ * Persistent, non-interactive ambient background graph of published notes.
+ *
+ * Places nodes in the left and right margins outside the central reading column
+ * and softly masks cross-column lines behind text so reading is completely distraction-free.
+ */
+---
+
+<div
+  id="knowledge-graph-bg"
+  class="knowledge-graph-bg"
+  transition:persist="knowledge-graph-bg"
+  aria-hidden="true"
+>
+  <canvas id="knowledge-graph-canvas"></canvas>
+</div>
+
+<style>
+  .knowledge-graph-bg {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  #knowledge-graph-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<script>
+  interface RawNode {
+    id: string;
+    url: string;
+    label: string;
+    category?: string;
+    connections?: number;
+    x: number;
+    y: number;
+  }
+
+  interface GraphNode extends RawNode {
+    radius: number;
+    rgb: [number, number, number];
+  }
+
+  interface GraphLink {
+    source: string;
+    target: string;
+    kind?: 'link' | 'tag';
+  }
+
+  const CATEGORY_RGB: Record<string, [number, number, number]> = {
+    garden: [118, 145, 128],           // muted sage
+    'permanent-notes': [182, 138, 98], // warm ochre-terracotta
+    'literature-notes': [144, 134, 164], // muted lavender
+    'reference-notes': [118, 145, 128], // sage
+    'writing-bin': [172, 140, 134],    // dusty rose
+    'daily-notes': [134, 154, 170],    // slate blue
+    unorganized: [145, 150, 140],      // warm stone
+  };
+
+  const RED_RGB: [number, number, number] = [204, 68, 68]; // calm editorial vermilion
+
+  function normalizePath(pathname: string): string {
+    const decoded = decodeURIComponent(pathname || '/');
+    if (decoded.length > 1 && decoded.endsWith('/')) {
+      return decoded.slice(0, -1);
+    }
+    return decoded;
+  }
+
+  function easeInOutCubic(t: number): number {
+    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  }
+
+  const win = window as unknown as { __bgGraphInitialized?: boolean };
+  if (!win.__bgGraphInitialized) {
+    win.__bgGraphInitialized = true;
+
+    let nodes: GraphNode[] = [];
+    let nodeById = new Map<string, GraphNode>();
+    let nodeByUrl = new Map<string, GraphNode>();
+    let links: GraphLink[] = [];
+    let neighborIds = new Map<string, Set<string>>();
+    let dataLoaded = false;
+
+    let activeNodeId: string | null = null;
+    let lastVisitedNodeId: string | null = null;
+
+    let transitionFromId: string | null = null;
+    let transitionToId: string | null = null;
+    let transitionStartMs = 0;
+    const TRANSITION_DURATION_MS = 850;
+
+    let presenceAlpha = 0;
+    let lastFrameMs = performance.now();
+    let rafId: number | null = null;
+
+    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let prefersReducedMotion = reducedMotionQuery.matches;
+    reducedMotionQuery.addEventListener('change', (e) => {
+      prefersReducedMotion = e.matches;
+    });
+
+    function getCanvas(): HTMLCanvasElement | null {
+      return document.getElementById('knowledge-graph-canvas') as HTMLCanvasElement | null;
+    }
+
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    let dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    function resizeCanvas() {
+      const canvas = getCanvas();
+      if (!canvas) return;
+      width = window.innerWidth;
+      height = window.innerHeight;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.round(width * dpr);
+      canvas.height = Math.round(height * dpr);
+    }
+
+    /**
+     * Map normalized [0..1] node coordinates into the left and right page margins
+     * so no dots or blinking indicators ever sit behind the 680px reading column.
+     */
+    function getScreenPos(node: GraphNode): [number, number] {
+      const topPad = 92;
+      const bottomPad = 48;
+      const usableH = Math.max(120, height - topPad - bottomPad);
+      const y = topPad + ((node.y - 0.12) / 0.76) * usableH;
+
+      const centerX = width * 0.5;
+      const halfColumn = 365; // half of 680px reading column + breathing room
+      const outerPad = Math.max(24, Math.min(56, width * 0.035));
+      const marginWidth = centerX - halfColumn - outerPad;
+
+      if (marginWidth >= 48) {
+        // Desktop / tablet: place left-half nodes in the left gutter, right-half nodes in the right gutter
+        const normX = Math.max(0, Math.min(1, (node.x - 0.08) / 0.84));
+        if (normX < 0.5) {
+          const t = normX / 0.5; // 0..1 within left margin
+          const x = outerPad + t * marginWidth;
+          return [x, y];
+        } else {
+          const t = (normX - 0.5) / 0.5; // 0..1 within right margin
+          const x = centerX + halfColumn + t * marginWidth;
+          return [x, y];
+        }
+      }
+
+      // Narrow mobile fallback: hug the very outer edges
+      const x = 16 + node.x * Math.max(80, width - 32);
+      return [x, y];
+    }
+
+    function quadraticPoint(
+      p0: [number, number],
+      ctrl: [number, number],
+      p1: [number, number],
+      t: number
+    ): [number, number] {
+      const mt = 1 - t;
+      return [
+        mt * mt * p0[0] + 2 * mt * t * ctrl[0] + t * t * p1[0],
+        mt * mt * p0[1] + 2 * mt * t * ctrl[1] + t * t * p1[1],
+      ];
+    }
+
+    function computeControlPoint(p0: [number, number], p1: [number, number]): [number, number] {
+      const mx = (p0[0] + p1[0]) * 0.5;
+      const my = (p0[1] + p1[1]) * 0.5;
+      const dx = p1[0] - p0[0];
+      const dy = p1[1] - p0[1];
+      const dist = Math.hypot(dx, dy) || 1;
+      const offset = Math.min(40, dist * 0.08);
+      return [mx - (dy / dist) * offset, my + (dx / dist) * offset];
+    }
+
+    function syncRouteState() {
+      if (!dataLoaded) return;
+      const currentPath = normalizePath(window.location.pathname);
+      const matched = nodeByUrl.get(currentPath) || null;
+      const now = performance.now();
+
+      if (matched) {
+        const previousId = activeNodeId ?? lastVisitedNodeId;
+        if (previousId && previousId !== matched.id && nodeById.has(previousId) && !prefersReducedMotion) {
+          transitionFromId = previousId;
+          transitionToId = matched.id;
+          transitionStartMs = now;
+          presenceAlpha = Math.max(presenceAlpha, 0.85);
+        } else if (activeNodeId !== matched.id) {
+          transitionFromId = null;
+          transitionToId = null;
+        }
+        activeNodeId = matched.id;
+        lastVisitedNodeId = matched.id;
+      } else {
+        activeNodeId = null;
+        transitionFromId = null;
+        transitionToId = null;
+      }
+    }
+
+    function renderFrame(nowMs: number) {
+      const dt = Math.min(64, Math.max(0, nowMs - lastFrameMs));
+      lastFrameMs = nowMs;
+
+      const canvas = getCanvas();
+      if (!canvas || !dataLoaded) {
+        rafId = requestAnimationFrame(renderFrame);
+        return;
+      }
+
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      const targetAlpha = activeNodeId ? 1 : 0;
+      const fadeRate = dt / 420;
+      if (presenceAlpha < targetAlpha) {
+        presenceAlpha = Math.min(1, presenceAlpha + fadeRate);
+      } else if (presenceAlpha > targetAlpha) {
+        presenceAlpha = Math.max(0, presenceAlpha - fadeRate);
+      }
+
+      ctx.save();
+      ctx.scale(dpr, dpr);
+      ctx.clearRect(0, 0, width, height);
+
+      // Stationary positions (no distracting jitter while reading)
+      const positions = new Map<string, [number, number]>();
+      for (const nd of nodes) {
+        positions.set(nd.id, getScreenPos(nd));
+      }
+
+      const activeSet = activeNodeId ? neighborIds.get(activeNodeId) : null;
+
+      // 1. Draw whisper-subtle connecting edges
+      for (const link of links) {
+        const pA = positions.get(link.source);
+        const pB = positions.get(link.target);
+        if (!pA || !pB) continue;
+
+        const touchesActive =
+          activeNodeId !== null && (link.source === activeNodeId || link.target === activeNodeId);
+
+        let alpha = link.kind === 'link' ? 0.085 : 0.055;
+        let lineWidth = 0.85;
+
+        if (touchesActive) {
+          alpha = 0.085 + 0.10 * presenceAlpha;
+          lineWidth = 1.05;
+        }
+
+        ctx.beginPath();
+        ctx.moveTo(pA[0], pA[1]);
+        ctx.lineTo(pB[0], pB[1]);
+        ctx.strokeStyle = `rgba(115, 138, 124, ${alpha.toFixed(3)})`;
+        ctx.lineWidth = lineWidth;
+        ctx.stroke();
+      }
+
+      // 2. Mask out any cross-page lines passing behind the central 680px reading column
+      const centerX = width * 0.5;
+      const maskHalf = 375;
+      if (width > 760) {
+        ctx.save();
+        ctx.globalCompositeOperation = 'destination-out';
+        const maskGrad = ctx.createLinearGradient(centerX - maskHalf, 0, centerX + maskHalf, 0);
+        maskGrad.addColorStop(0, 'rgba(0, 0, 0, 0)');
+        maskGrad.addColorStop(0.12, 'rgba(0, 0, 0, 0.92)');
+        maskGrad.addColorStop(0.5, 'rgba(0, 0, 0, 0.97)');
+        maskGrad.addColorStop(0.88, 'rgba(0, 0, 0, 0.92)');
+        maskGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+        ctx.fillStyle = maskGrad;
+        ctx.fillRect(centerX - maskHalf, 0, maskHalf * 2, height);
+        ctx.restore();
+      }
+
+      // 3. Draw subtle margin note dots
+      for (const nd of nodes) {
+        const pos = positions.get(nd.id);
+        if (!pos) continue;
+
+        const isCurrent = nd.id === activeNodeId;
+        const isNeighbor = activeSet ? activeSet.has(nd.id) : false;
+        const [r, g, b] = nd.rgb;
+
+        let alpha = 0.16;
+        let radius = nd.radius;
+        if (isNeighbor) {
+          alpha = 0.16 + 0.12 * presenceAlpha;
+          radius += 0.25 * presenceAlpha;
+        }
+        if (isCurrent && presenceAlpha < 0.98) {
+          alpha = 0.22;
+        }
+
+        ctx.beginPath();
+        ctx.arc(pos[0], pos[1], radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${alpha.toFixed(3)})`;
+        ctx.fill();
+      }
+
+      // 4. Draw calm blinking red dot (or gliding transition between dots)
+      const displayNodeId = activeNodeId ?? lastVisitedNodeId;
+      if (presenceAlpha > 0.005 && displayNodeId && positions.has(displayNodeId)) {
+        const [rr, rg, rb] = RED_RGB;
+        let dotPos = positions.get(displayNodeId)!;
+        let isGliding = false;
+
+        if (
+          transitionFromId &&
+          transitionToId &&
+          positions.has(transitionFromId) &&
+          positions.has(transitionToId)
+        ) {
+          const rawT = (nowMs - transitionStartMs) / TRANSITION_DURATION_MS;
+          if (rawT < 1) {
+            isGliding = true;
+            const easedT = easeInOutCubic(Math.max(0, rawT));
+            const p0 = positions.get(transitionFromId)!;
+            const p1 = positions.get(transitionToId)!;
+            const ctrl = computeControlPoint(p0, p1);
+            dotPos = quadraticPoint(p0, ctrl, p1, easedT);
+
+            // Delicate fading trail during transition
+            const trailSpan = 0.20;
+            const steps = 12;
+            for (let s = 0; s < steps; s++) {
+              const tA = Math.max(0, easedT - trailSpan * (1 - s / steps));
+              const tB = Math.max(0, easedT - trailSpan * (1 - (s + 1) / steps));
+              if (tB <= tA) continue;
+              const segA = quadraticPoint(p0, ctrl, p1, tA);
+              const segB = quadraticPoint(p0, ctrl, p1, tB);
+              const frac = (s + 1) / steps;
+              ctx.beginPath();
+              ctx.moveTo(segA[0], segA[1]);
+              ctx.lineTo(segB[0], segB[1]);
+              ctx.strokeStyle = `rgba(${rr}, ${rg}, ${rb}, ${(0.28 * frac * frac * presenceAlpha).toFixed(3)})`;
+              ctx.lineWidth = 1 + frac * 1.4;
+              ctx.lineCap = 'round';
+              ctx.stroke();
+            }
+          } else {
+            transitionFromId = null;
+            transitionToId = null;
+          }
+        }
+
+        // Slow, calm ~4.2s meditative breathing cycle
+        const breath = prefersReducedMotion
+          ? 0.7
+          : (Math.sin((nowMs * Math.PI * 2) / 4200) + 1) * 0.5;
+
+        const coreOpacity = (isGliding ? 0.85 : 0.35 + 0.45 * breath) * presenceAlpha;
+        const haloRadius = isGliding ? 8.5 : 5.5 + 4.5 * breath;
+        const haloOpacity = (isGliding ? 0.16 : 0.14 * (1 - breath * 0.5)) * presenceAlpha;
+
+        // Soft outer breathing halo
+        const grad = ctx.createRadialGradient(
+          dotPos[0],
+          dotPos[1],
+          1,
+          dotPos[0],
+          dotPos[1],
+          haloRadius + 3
+        );
+        grad.addColorStop(0, `rgba(${rr}, ${rg}, ${rb}, ${(haloOpacity * 1.2).toFixed(3)})`);
+        grad.addColorStop(0.6, `rgba(${rr}, ${rg}, ${rb}, ${(haloOpacity * 0.5).toFixed(3)})`);
+        grad.addColorStop(1, `rgba(${rr}, ${rg}, ${rb}, 0)`);
+
+        ctx.beginPath();
+        ctx.arc(dotPos[0], dotPos[1], haloRadius + 3, 0, Math.PI * 2);
+        ctx.fillStyle = grad;
+        ctx.fill();
+
+        // Core red dot
+        ctx.beginPath();
+        ctx.arc(dotPos[0], dotPos[1], 3.4, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${rr}, ${rg}, ${rb}, ${coreOpacity.toFixed(3)})`;
+        ctx.fill();
+      }
+
+      ctx.restore();
+
+      if (!document.hidden) {
+        rafId = requestAnimationFrame(renderFrame);
+      } else {
+        rafId = null;
+      }
+    }
+
+    function ensureLoopRunning() {
+      if (rafId === null && !document.hidden) {
+        lastFrameMs = performance.now();
+        rafId = requestAnimationFrame(renderFrame);
+      }
+    }
+
+    fetch('/mindmap-data.json')
+      .then((res) => res.json())
+      .then((data: { nodes?: RawNode[]; links?: GraphLink[] }) => {
+        const rawNodes = data.nodes || [];
+        nodes = rawNodes.map((n) => ({
+          ...n,
+          url: normalizePath(n.url || `/${n.id}`),
+          radius: Math.max(2.0, Math.min(3.5, 2.0 + (n.connections || 0) * 0.25)),
+          rgb: CATEGORY_RGB[n.category || 'garden'] || CATEGORY_RGB.garden,
+        }));
+
+        nodeById = new Map(nodes.map((n) => [n.id, n]));
+        nodeByUrl = new Map(nodes.map((n) => [n.url, n]));
+        links = data.links || [];
+
+        neighborIds = new Map();
+        for (const n of nodes) neighborIds.set(n.id, new Set());
+        for (const l of links) {
+          neighborIds.get(l.source)?.add(l.target);
+          neighborIds.get(l.target)?.add(l.source);
+        }
+
+        dataLoaded = true;
+        resizeCanvas();
+        syncRouteState();
+        if (activeNodeId) presenceAlpha = 1;
+        ensureLoopRunning();
+      })
+      .catch((err) => {
+        console.error('Failed to load background graph data:', err);
+      });
+
+    window.addEventListener('resize', resizeCanvas);
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) ensureLoopRunning();
+    });
+
+    document.addEventListener('astro:page-load', () => {
+      resizeCanvas();
+      syncRouteState();
+      ensureLoopRunning();
+    });
+    window.addEventListener('popstate', syncRouteState);
+  }
+</script>
